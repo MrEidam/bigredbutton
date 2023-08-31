@@ -1,0 +1,69 @@
+                        v38
+  Added: Snakes + Cheetas
+         new UI design for Shop Goer buttons and click displayer
+         new UI for flags
+         !!FIXED_BUTTONS_AND_CLICKS_IN_SHOP
+         Animated clicking for click displayer
+
+  Removed: Nothing
+
+  Fixed: Nothing
+
+  Note: FIRST VERSION ON DA NEEEW DOMAIN 
+        + onto wallpaper engine :D
+
+                        v37
+  Added: Better Language
+         Porcupines + Hippos
+         Buy Option - Clicks for E V E R Y T H I N G*
+         *exept Lemonds + L. Trees (Upgrades)
+         into local.storage almost 20 new animals (I HOPE)
+         Hidden Prestige multiplier (¯\_(ツ)_/¯) 
+         'Coming soon...' to Upgrade menu
+
+  Removed: Nothing 
+
+  Fixed: !!!!BRAND_NEW_SHOP_USER_INteRFACE!!!!
+         Shop I fixed shop (hapines)
+              - Shop.pain
+                     -wanna cry 
+
+  Note: Make the game harder (To eazy)
+        Main.js - 274 lines
+        Shop.js - 631 lines
+         
+
+                        v36
+  Added: Better Czech version
+         Buy Option - Clicks for Cats
+
+  Fixed: BRB now still
+  
+                        v35
+  Added: Platapuses
+         Better Ui
+         Now Czech Version
+
+  Fixed: Items not loading propebly
+
+  
+                        v34
+  Added: New Button to Upgrades menu
+         Shop UI
+
+  Fixed: Finally fixed NaN, Undefined, Null error
+        
+                        v33
+  Added: New UI for shop
+
+                        v32 /* 18.4. 2023 */
+  Added:  max value shop for wolfs, whales, hamsters, capybaras
+          icons for said animals 
+          new interface for BRB clicking 
+  
+  Removed: scrolling in BRB clicking 
+  
+  Fixed: button to get to the shop was updated
+
+                          v31
+  undefined and NaN fix for adding new animals

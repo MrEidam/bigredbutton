@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 15pt;
+  /*background: linear-gradient(#009000, black);*/
+  background-color: #ccc;
+}
+
+#links{
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.link {
+  position: relative;
+  text-align: center;
+  background-color: var(--color);
+  width: 200px;
+  height: 50px;
+  margin: 1rem auto;
+  padding: 10px;
+  border: 3.69px solid #333333;
+  border-radius: 69px;
+}
+/* By MrEidam */
+
+/* Clisks */
+#loglm{
+  background-color: papayawhip;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5ch;
+  margin: 0 5vw 0 5vw;
+  padding: 1rem;
+  border: 5px dashed #effd5f66;
+  border-radius: 1rem;
+}
+
+#imglm{
+  width: 40px;
+  height: 40px;
+  margin: 0.1rem;
+}
+/* By MrEidam */

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BRB - Clicking</title>
+  
+  <!-- By MrEidam && Standa Chlup -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./css/brb.css">
+  <link rel="icon" href="./img/brb-still.png">
+</head>
+
+<body>
+  <button id="LANGMISS">You didn't have the language changer activated<br />Now you do<br /><br /><br />Please reload with "F5"</button>
+  <!-- Shop -->
+  <div id="tycoon">
+    <a href="shop.html" id="shop"><p>Click me to get to the Shop!</p></a>
+  </div>
+
+  <!-- Clicks -->
+  <div id="logclick">
+    <p id="disclick">
+  </div>
+  
+  <!-- BRB -->
+  <div id="button" onclick="clicking()">
+    <img src = "./img/brb-still.png" id="unpressed" draggable="false">
+    <img src = "./img/brb-pressed.png" id="pressed" draggable="false">
+</div>
+
+
+<section class="btns">
+    <button class="reset" id="del" onclick="reset()"><!-- RESET -->
+      RESET
+    </button>
+  
+    <button class="help" id="sos" onclick="help()"><!-- Tutorial -->
+      HELP
+    </button>
+</section>
+
+  <!-- Language -->
+<img id="flag" class="flag" onclick="language()"> Error with da flag
+
+  <!-- YouTube -->
+<div class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
+  <img style="position:absolute;width:100%;height:100%;" src="./img/YT.png" title="Můj YT kanál">
+  <a style="position:absolute;width:100%;height:100%;" href="https://www.youtube.com/@mreidam" title="Můj YouTube kanál" target="_blank"></a>
+</div>
+
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>

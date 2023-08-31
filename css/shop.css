@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 15pt;
+  /*background: linear-gradient(#009000, black);*/
+  background-color: #ccc;
+} 
+
+/* Clisks */
+#logclick{
+  background-color: papayawhip;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5ch;
+  margin: 0 5vw 0 5vw;
+  padding: 1rem;
+  border: 5px dashed blue;
+  border-radius: 1rem;
+  z-index: 69;
+  width: auto;
+  height: 85px;
+  filter: drop-shadow(10px 8px 6px #333);
+}
+
+#imgcli{
+  width: 50px;
+  height: 50px;
+  margin: 0.1rem;
+  width: 100px;
+  aspect-ratio: 1/1;
+  margin: 0.5rem;
+  object-fit: contain;
+  pointer-events: none
+}
+
+#links{
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.link{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color);
+  min-width: 200px;
+  height: 50px;
+  margin: 1rem auto;
+  border: 3.69px none #333333;
+  filter: drop-shadow(10px 8px 6px #333);
+  border-radius: 69px;
+}
+
+.backtop{
+  height: 230px;
+  max-width: auto;
+  margin: 0 1.5vw 0 1.5vw;
+  border-radius: 0 0 90px 90px;
+  background: linear-gradient(#11ABFF, #ccccccab);
+  /*border: red solid 5px;*/
+}
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* By MrEidam */
+.item{
+  background-color: papayawhip/*var(--color)*/;
+  /*border: 2px solid #333;*/
+  border: none;
+  top: 5px;
+  margin: 2rem 3vw 2rem 3vw;
+  padding: 1rem;
+  border-radius: 6.9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: 340px;
+  filter: drop-shadow(0px 20px 14px #444);
+}
+
+.item img{
+  width: 100px;
+  aspect-ratio: 1/1;
+  margin: 0.5rem;
+  object-fit: contain;
+  
+  filter: drop-shadow(10px 8px 6px #333);
+  pointer-events: none
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+/* By MrEidam */
+.buttons button{
+  background-color: var(--Bcolor);
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.buyone{
+  width: 200px;
+  height: 50px;
+}
+
+.buymax{
+  width: 50px;
+  height: 50px;
+}
+
+main{
+  position: relative;
+}
+
+
+/* By MrEidam */
+
+.clickbtn{
+  display: flex;
+  justify-content: space-around;
+}
+.clickbtn button{
+  background-color: var(--Bcolor);
+  border-radius: 8px;
+  margin: 0 1rem 0.5rem 1rem;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*@media only screen and (max-width: 1100px){
+  .row .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    transform: translateXyy(-50%);
+  }
+}*/
+
+button{
+  border: none;
+  filter: drop-shadow(8px 6px 4px #555);
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+  .row{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .item{
+    width: auto;
+    margin: 2rem 10vw 2rem 10vw;
+  }
+}
