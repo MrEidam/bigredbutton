@@ -22,7 +22,7 @@ let  = document.getElementById('')
 function update(){
   let i = JSON.stringify(items);
   localStorage.setItem('items', i);
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000;
 }
 function c(x){
   items.clicks += x;
