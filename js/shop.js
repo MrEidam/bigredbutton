@@ -15,7 +15,11 @@ function c(x){
 // Load
 function load(){
   items = JSON.parse(localStorage.getItem('items'));
+<<<<<<< HEAD:js/shop.js
   cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400;
+=======
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000;
+>>>>>>> side:shop.js
 
   if(items.lang == 1){
     document.documentElement.setAttribute('lang', 'en');
