@@ -31,7 +31,10 @@ max 5 hour
 1 bear 
 1 pig
 
+
 1 citronovník = 30 lemons/h
+
+
 
 36,7% k 10 citronum že vyroste citronovník
 
