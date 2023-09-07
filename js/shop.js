@@ -1,28 +1,10 @@
 let cs
 
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-let  = document.getElementById('')
-
 // Update
 function update(){
   let i = JSON.stringify(items);
   localStorage.setItem('items', i);
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000  + items.pythons*7800 + items.girrafes*8400;
 }
 function c(x){
   items.clicks += x;
@@ -33,10 +15,11 @@ function c(x){
 // Load
 function load(){
   items = JSON.parse(localStorage.getItem('items'));
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400;
 
   if(items.lang == 1){
-    disclick.innerHTML=`You've got ${fornum(items.clicks)} clicks, and making ${fornum(cs)} c/s!`
+    document.documentElement.setAttribute('lang', 'en');
+    disclick.innerHTML=`You've got ${fornum(items.clicks)} clicks, and making ${fornum(cs)} each second!`
     disdog.innerHTML=`You've got ${fornum(items.dogs)} dogs!`
     discat.innerHTML=`You've got ${fornum(items.cats)} cats!`
     disfox.innerHTML=`You've got ${fornum(items.foxes)} foxes!`
@@ -49,6 +32,8 @@ function load(){
     diship.innerHTML=`You've got ${fornum(items.hippos)} hippopotamuses!`
     dissna.innerHTML=`You've got ${fornum(items.snakes)} snakes!`
     dische.innerHTML=`You've got ${fornum(items.cheetahs)} cheetahs!`
+    dispyt.innerHTML=`You've got ${fornum(items.pythons)} pythons!`
+    disgir.innerHTML=`You've got ${fornum(items.girrafes)} giraffes!`
     
     
     
@@ -69,9 +54,9 @@ function load(){
     dishimake.innerHTML=`They're generating ${fornum(items.hippos*950)} clicks per second!`
     dissnmake.innerHTML=`They're generating ${fornum(items.snakes*1000)} clicks per second!`
     dischmake.innerHTML=`They're generating ${fornum(items.cheetahs*3000)} clicks per second!`
+    dispymake.innerHTML=`They're generating ${fornum(items.pythons*7800)} clicks per second!`
+    disgimake.innerHTML=`They're generating ${fornum(items.girrafes*8400)} clicks per second!`
 
-    brb.innerHTML = 'Go to BRB!'
-    upg.innerHTML = 'Go to Upgrades!'
     dg1.innerHTML = 'Buy a Dog for 100 clicks'
     ct1.innerHTML = 'Buy a Cat for 10 dogs'
     fx1.innerHTML = 'Buy a Fox for 15 dogs'
@@ -84,6 +69,8 @@ function load(){
     hi1.innerHTML = 'Buy a Hippopotamus for <br /> 1 porcupine and 2 hamsters'
     sn1.innerHTML = 'Buy a Snake for <br /> 2 whales and 4 hamsters'
     ch1.innerHTML = 'Buy a Cheetah for <br /> 2 snakes and 2 platypuses'
+    py1.innerHTML = 'Buy a Python for <br /> 1 cheetah and 5 hippos'
+    gi1.innerHTML = 'Buy a Giraffe for <br /> 1 python and 20 foxes'
 
     lm1.innerHTML = 'Buy a Lemon for <b style="font-weight: 1000;">some</b> cats'
     lt1.innerHTML = 'Buy a Lemon Tree for 5 lemons'
@@ -100,9 +87,12 @@ function load(){
     Chi1.innerHTML = 'Buy a Hippopotamus for <br /> 100 k clicks'
     Csn1.innerHTML = 'Buy a Snake for <br /> 150 k clicks'
     Cch1.innerHTML = 'Buy a Cheetah for <br /> 350 k clicks'
+    Cpy1.innerHTML = 'Buy a Python for <br /> 820 k clicks'
+    Cgi1.innerHTML = 'Buy a Giraffe for <br /> 880 k clicks'
   }
   if(items.lang == 0){
-    document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs)} k/s!`
+    document.documentElement.setAttribute('lang', 'cz');
+    document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs)} každou sekundu!`
     document.getElementById('disdog').innerHTML=`Právě máš ${fornum(items.dogs)} psů!`
     document.getElementById('discat').innerHTML=`Právě máš ${fornum(items.cats)} koček!`
     document.getElementById('disfox').innerHTML=`Právě máš ${fornum(items.foxes)} lišek!`
@@ -115,6 +105,8 @@ function load(){
     document.getElementById('diship').innerHTML=`Právě máš ${fornum(items.hippos)} hrochů!`
     document.getElementById('dissna').innerHTML=`Právě máš ${fornum(items.snakes)} hadů!`
     document.getElementById('dische').innerHTML=`Právě máš ${fornum(items.cheetahs)} gepardů!`
+    document.getElementById('dispyt').innerHTML=`Právě máš ${fornum(items.pythons)} kober!`
+    document.getElementById('disgir').innerHTML=`Právě máš ${fornum(items.girrafes)} gepardů!`
     
     
     
@@ -135,10 +127,9 @@ function load(){
     document.getElementById('dishimake').innerHTML=`Generují ${fornum(items.hippos*950)} kliků za sekundu!`
     document.getElementById('dissnmake').innerHTML=`Generují ${fornum(items.snakes*1000)} kliků za sekundu!`
     document.getElementById('dischmake').innerHTML=`Generují ${fornum(items.cheetahs*3000)} kliků za sekundu!`
+    document.getElementById('dispymake').innerHTML=`Generují ${fornum(items.pythons*7800)} kliků za sekundu!`
+    document.getElementById('disgimake').innerHTML=`Generují ${fornum(items.girrafes*8400)} kliků za sekundu!`
 
-
-    brb.innerHTML = 'B.R.B.'
-    upg.innerHTML = 'Vylepšení'
     dg1.innerHTML = 'Kup Psa za 100 kliků'
     ct1.innerHTML = 'Kup Kočku za 10 psů'
     fx1.innerHTML = 'Kup Lišku za 15 psů'
@@ -151,6 +142,8 @@ function load(){
     hi1.innerHTML = 'Kup Hrocha za <br /> 1 dikobraza a 2 křečků'
     sn1.innerHTML = 'Kup Hada za <br /> 2 velryby a 4 křečky'
     ch1.innerHTML = 'Kup Geparda za <br /> 2 hady a 2 ptakopysky'
+    py1.innerHTML = 'Kup Kobru za <br /> 1 geparda a 5 hrochů'
+    gi1.innerHTML = 'Kup Žirafu za <br /> 1 kobru a 20 lišek'
 
     lm1.innerHTML = 'Kup Citrón za <b style="font-weight: 1000;">pár</b> koček'
     lt1.innerHTML = 'Kup Citrónovník za 5 citrónů'
@@ -167,6 +160,8 @@ function load(){
     Chi1.innerHTML = 'Kup Hrocha za <br /> 100 k kliků'
     Csn1.innerHTML = 'Kup Hada za <br /> 150 k kliků'
     Cch1.innerHTML = 'Kup Geparda za <br /> 350 k kliků'
+    Cpy1.innerHTML = 'Kup Kobru za <br /> 820 k kliků'
+    Cgi1.innerHTML = 'Kup Žirafu za <br /> 880 k kliků'
   }
 }
 load();
@@ -178,7 +173,7 @@ function cash(){
   setTimeout (function money(){
     items.clicks += cs;
     upload();
-    cash();click()
+    cash();click();
   },1000)
 }
 cash();
@@ -286,6 +281,23 @@ function buyche(){
   } 
   upload();
 }
+function buypyt(){
+  if(items.cheetahs>=1 && items.hippos>=5){
+    items.cheetahs-=1;
+    items.hippos-=5;
+    items.pythons++;
+  } 
+  upload();
+}
+function buygir(){
+  if(items.pythons>=1 && items.foxes>=20){
+    items.pythons-=1;
+    items.foxes-=20;
+    items.girrafes++;
+  } 
+  upload();
+}
+
 
 
 
@@ -505,6 +517,41 @@ function mxch(){
   }
   upload();
 }
+function mxpy(){
+  one = Math.floor(items.cheetahs/1);
+  two = Math.floor(items.hippos/5);
+  
+  if(one<=two){
+    items.cheetahs -= one*1;
+    items.hippos -= one*5;
+    items.pythons += one;
+  }else if(one>=two){
+    items.cheetahs -= two*1;
+    items.hippos -= two*5;
+    items.pythons += two;
+  }else{
+    console.log('You fucked up you stupid bitch')
+  }
+  upload();
+}
+function mxgi(){
+  one = Math.floor(items.pythons/1);
+  two = Math.floor(items.foxes/20);
+  
+  if(one<=two){
+    items.pythons -= one*1;
+    items.foxes -= one*20;
+    items.girrafes += one;
+  }else if(one>=two){
+    items.pythons -= two*1;
+    items.foxes -= two*20;
+    items.girrafes += two;
+  }else{
+    console.log('You fucked up you stupid bitch')
+  }
+  upload();
+}
+
 
 
 
@@ -679,6 +726,70 @@ function mxChi(){
   
   items.clicks -= one * 100000
   items.hippos += one
+  upload();
+}
+
+// Snuk
+function buyCsna(){
+  if(items.clicks >= 150000){
+    items.snakes++;
+    items.clicks -= 150000;
+    upload();
+  }
+}
+function mxCsn(){
+  one = Math.floor(items.clicks / 150000)
+  
+  items.clicks -= one * 150000
+  items.snakes += one
+  upload();
+}
+
+// Chetuch
+function buyCche(){
+  if(items.clicks >= 350000){
+    items.cheetahs++;
+    items.clicks -= 350000;
+    upload();
+  }
+}
+function mxCch(){
+  one = Math.floor(items.clicks / 350000)
+  
+  items.clicks -= one * 350000
+  items.cheetahs += one
+  upload();
+}
+
+// .py
+function buyCpyt(){
+  if(items.clicks >= 820000){
+    items.pythons++;
+    items.clicks -= 820000;
+    upload();
+  }
+}
+function mxCpy(){
+  one = Math.floor(items.clicks / 820000)
+  
+  items.clicks -= one * 820000
+  items.pythons += one
+  upload();
+}
+
+// Gurllaf
+function buyCgir(){
+  if(items.clicks >= 880000){
+    items.girrafes++;
+    items.clicks -= 880000;
+    upload();
+  }
+}
+function mxCgi(){
+  one = Math.floor(items.clicks / 880000)
+  
+  items.clicks -= one * 880000
+  items.girrafes += one
   upload();
 }
 

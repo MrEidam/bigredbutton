@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
   <title>BRB - Shop</title>
 
@@ -16,26 +18,13 @@
 </head>
 
 <body>
-
-  <!-- BRB -->
-  <header style="position: fixed; width: 100%;margin-top: -230px;z-index: 500;">
-    <div class="backtop">
-      <div id="links">
-        <p class="link" style="--color:#ff6655">
-          <a href="index.html" id="brb">Go to BRB!</a>
-        </p>
-        <p class="link" style="--color:yellow">
-          <a href="upgrade.html" id="upg">Go to Upgrades!</a>
-        </p>
-      </div>
-
-      <!-- Clicks -->
-      <div id="logclick">
-        <img src="./img/icons8-rest.svg" id="imgcli" draggable="false">
-        <p id="disclick"></p>
-      </div>
+  <!-- Clicks -->
+  <section class="joe">
+    <div id="logclick">
+      <img src="./img/icons8-rest.svg" id="imgcli" draggable="false">
+      <p id="disclick"></p>
     </div>
-  </header>
+  </section>
 
 
 
@@ -311,6 +300,52 @@
         <p id="dischmake"></p>
       </div>
 
+      <!-- Pythons -->
+      <div class="item">
+        <img src="./img/python.svg">
+        <div class="buttons" style="--Bcolor: CornflowerBlue">
+          <button onclick="buypyt()" class="buyone" id="py1">
+            Buy a Python
+          </button>
+          <button onclick="mxpy()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: CornflowerBlue">
+          <button onclick="buyCpyt()" class="buyone" id="Cpy1">
+            Buy a Python for clicks
+          </button>
+          <button onclick="mxCpy()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dispyt"></p>
+        <p id="dispymake"></p>
+      </div>
+
+      <!-- Giraffe -->
+      <div class="item">
+        <img src="./img/girafe.svg">
+        <div class="buttons" style="--Bcolor: #ffdb4d">
+          <button onclick="buygir()" class="buyone" id="gi1">
+            Buy a Giraffe
+          </button>
+          <button onclick="mxgi()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #ffdb4d">
+          <button onclick="buyCgir()" class="buyone" id="Cgi1">
+            Buy a Giraffe for clicks
+          </button>
+          <button onclick="mxCgi()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disgir"></p>
+        <p id="disgimake"></p>
+      </div>
+
     </article>
 
 
@@ -348,8 +383,39 @@
     </section>
   </main>
 
+  <div class="menu-container">
+    <div class="button">Menu
+        <span class="fas fa-bars"></span>
+    </div>
+    <ul>
+        <li><a href="index.html" id="brb">BRB</a></li>
+        <li><a href="upgrade.html" id="upg">Upgrades</a></li>
+        <li onclick="reset()"><a id="del">RESET</a></li>
+        <li onclick="help()"><a id="sos">???</a></li>
+        <li style="display: none;" onclick="LDmodes()"><a id="modes">Dark Mode</a></li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function(){
+        $('.button').click(function(){
+            if($(this).hasClass('expand')){
+                $('ul').slideUp(function(){
+                    $('.button').removeClass('expand');
+                    $('.fas').removeClass('expand');
+                })
+            }else{
+                $(this).addClass('expand');
+                setTimeout(function(){
+                    $('.fas').addClass('expand');
+                    $('ul').stop().slideDown();
+                },200);
+            }
+        })
+    })
+  </script>
+
   <!-- By MrEidam -->
-  <script src="shop.js"></script>
+  <script src="./js/shop.js"></script>
 </body>
 
 </html>

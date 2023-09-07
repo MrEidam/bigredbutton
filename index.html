@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <title>BRB - Clicking</title>
   
   <!-- By MrEidam && Standa Chlup -->
@@ -19,7 +20,7 @@
   <button id="LANGMISS">You didn't have the language changer activated<br />Now you do<br /><br /><br />Please reload with "F5"</button>
   <!-- Shop -->
   <div id="tycoon">
-    <a href="shop.html" id="shop"><p>Click me to get to the Shop!</p></a>
+    <!--<a href="shop.html" id="shop"><p></p></a>-->
   </div>
 
   <!-- Clicks -->
@@ -29,31 +30,49 @@
   
   <!-- BRB -->
   <div id="button" onclick="clicking()">
-    <img src = "./img/brb-still.png" id="unpressed" draggable="false">
-    <img src = "./img/brb-pressed.png" id="pressed" draggable="false">
-</div>
+    <img src="./img/brb-still.png" id="unpressed" draggable="false">
+    <img src="./img/brb-pressed.png" id="pressed" draggable="false">
+  </div>
 
-
-<section class="btns">
-    <button class="reset" id="del" onclick="reset()"><!-- RESET -->
-      RESET
-    </button>
-  
-    <button class="help" id="sos" onclick="help()"><!-- Tutorial -->
-      HELP
-    </button>
-</section>
-
-  <!-- Language -->
-<img id="flag" class="flag" onclick="language()"> Error with da flag
+  <div class="menu-container">
+    <div class="button">Menu
+        <span class="fas fa-bars"></span>
+    </div>
+    <ul>
+        <li><a href="shop.html" id="shop">Shop</a></li>
+        <li><a href="upgrade.html" id="upg">Upgrades</a></li>
+        <li onclick="reset()"><a id="del">RESET</a></li>
+        <li onclick="help()"><a id="sos">???</a></li>
+        <li style="display: none;" onclick="LDmodes()"><a id="modes">Dark Mode</a></li>
+        <li onclick="language()"><a id="langs">Change Language into Czech</a></li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function(){
+        $('.button').click(function(){
+            if($(this).hasClass('expand')){
+                $('ul').slideUp(function(){
+                    $('.button').removeClass('expand');
+                    $('.fas').removeClass('expand');
+                })
+            }else{
+                $(this).addClass('expand');
+                setTimeout(function(){
+                    $('.fas').addClass('expand');
+                    $('ul').stop().slideDown();
+                },200);
+            }
+        })
+    })
+  </script>
 
   <!-- YouTube -->
-<div class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
-  <img style="position:absolute;width:100%;height:100%;" src="./img/YT.png" title="Můj YT kanál">
-  <a style="position:absolute;width:100%;height:100%;" href="https://www.youtube.com/@mreidam" title="Můj YouTube kanál" target="_blank"></a>
-</div>
+  <div class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
+    <img style="position:absolute;width:100%;height:100%;" src="./img/YT.png" title="Můj YT kanál">
+    <a style="position:absolute;width:100%;height:100%;" href="https://www.youtube.com/@mreidam" title="Můj YouTube kanál" target="_blank"></a>
+  </div>
 
   <!-- Project -->
-  <script src="main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

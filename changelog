@@ -1,3 +1,22 @@
+                        v39
+  Added: Pythons + Giraffes
+         New Nav. bar for Shop
+         New Navigation bar for BRB
+         Setting in the nav bar (mostly in BRB)
+
+  Removed: From BRB:
+                     Go to Shop btn
+                     Flag for lang
+                     Reset
+                     Help
+           From Shop:
+                     Go to BRB
+                     Go to Shop
+
+  Fixed: Clicks number in Shop
+
+  Note: please add Dark mode and into Wall. eng
+
                         v38
   Added: Snakes + Cheetas
          new UI design for Shop Goer buttons and click displayer
