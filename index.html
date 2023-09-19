@@ -16,8 +16,7 @@
   <link rel="icon" href="./img/brb-still.png">
 </head>
 
-<body>
-  <button id="LANGMISS">You didn't have the language changer activated<br />Now you do<br /><br /><br />Please reload with "F5"</button>
+<body id="body">
   <!-- Shop -->
   <div id="tycoon">
     <!--<a href="shop.html" id="shop"><p></p></a>-->
@@ -43,7 +42,7 @@
         <li><a href="upgrade.html" id="upg">Upgrades</a></li>
         <li onclick="reset()"><a id="del">RESET</a></li>
         <li onclick="help()"><a id="sos">???</a></li>
-        <li style="display: none;" onclick="LDmodes()"><a id="modes">Dark Mode</a></li>
+        <li onclick="SLDmodes()"><a id="modes">Dark Mode</a></li>
         <li onclick="language()"><a id="langs">Change Language into Czech</a></li>
     </ul>
   </div>
@@ -67,7 +66,7 @@
   </script>
 
   <!-- YouTube -->
-  <div class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
+  <div id="yt" class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
     <img style="position:absolute;width:100%;height:100%;" src="./img/YT.png" title="Můj YT kanál">
     <a style="position:absolute;width:100%;height:100%;" href="https://www.youtube.com/@mreidam" title="Můj YouTube kanál" target="_blank"></a>
   </div>

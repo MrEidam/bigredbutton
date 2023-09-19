@@ -14,7 +14,7 @@ body {
 } 
 
 /* Clisks */
-.joe{
+#jonathan{
   position: fixed;
   z-index: 1;
   display: flex;
@@ -54,7 +54,7 @@ body {
   aspect-ratio: 1/1;
   margin: 0.5rem;
   object-fit: contain;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .backtop{
@@ -114,17 +114,14 @@ body {
 .buyone{
   width: 200px;
   height: 50px;
+  cursor: pointer;
 }
 
 .buymax{
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
-
-main{
-  position: relative;
-}
-
 
 /* By MrEidam */
 
@@ -151,7 +148,7 @@ button{
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 555px){
   .row{
     flex-direction: column;
     justify-content: center;
@@ -233,7 +230,7 @@ ul li:hover:last-child{
   border-radius: 0 0 5px 5px;
 }
 ul li:hover{
-  box-shadow: inset 0 0 5px #33ff33,
+  box-shadow: inset 0 0 5px  #33ff33,
               inset 0 0 10px #66ff66;
 }
 ul li:last-child{

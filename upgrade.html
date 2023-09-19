@@ -5,34 +5,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <title>BRB - Upgrades</title>
 
   <link rel="stylesheet" href="./css/upgr.css">
   <link rel="icon" href="./img/upgrade-icon-png-12.jpg">
 </head>
 
-<body>
+<body id="body">
   <!-- BRB -->
   <header>
-    <div id="links">
-      <p class="link" style="--color:#ff6655">
-        <a href="index.html">Go to BRB!</a>
-      </p>
-      <p class="link" style="--color:darkorange">
-        <a href="shop.html" id="clickbrb">Go back to Shop!</a>
-      </p>
-  </div>
-
-  <!-- lemons -->
-    <div id="loglm">
-      <img src="./img/Lemons.png" id="imglm" draggable="false">
-      <p id="dislm"></p>
-    </div>
+    <!-- lemons -->
+    <section class="joe" id="jonathan">
+      <div id="loglm">
+        <img src="./img/lemon.svg" id="imglm" draggable="false">
+        <p id="dislm"></p>
+      </div>
+    </section>
+    
   </header>
-  <h1 style="text-align:center;margin-top:5rem;">
-    COMING SOON...
-  </h1>
+  <main style="margin-top: 210px;">
+    <!-- Example -->
+    <div class="item" style="--color: ">
+      <h2>BRB</h2>
+      <img src="./img/brb-still.png">
+      <div class="buttons" style="--Bcolor: darkred">
+        <button onclick="buyMcc()" class="buyone" id="Mc1">
+          Buy a Lorem ipsum, dolor sit amet consectetur
+        </button><!--
+        <button onclick="mxMc()" class="buymax">
+          MAX
+        </button>-->
+      </div>
+      
+      <p id="disMcmake"></p>
+    </div>
+
+  
+    <div class="item">
+      <h2>Prestige</h2>
+      <img src="./img/angel-wings.svg">
+      <div>
+        <progress id="prog" min="0" max="1000" value="0"></progress>
+      </div>
+      <div class="buttons" style="--Bcolor: gold">
+        <button class="buyTone" onclick="tblb()" id="presBT1">
+          Buy 1 ticket
+        </button>
+        <button class="buyTone" onclick="tmlm()" id="presBT10">
+          Buy 10 tickets
+        </button>
+        <button class="buyTone" onclick="talb()" id="presBTmax">
+          Buy All tickets
+        </button>
+      </div>
+      <button id="ItsTime" onclick="TheThing();"></button>
+      <p id="progva"></p>
+      <p id="got"></p>
+    </div>
+  </main>
+
+  <div class="menu-container">
+    <div class="button">Menu
+        <span class="fas fa-bars"></span>
+    </div>
+    <ul>
+      <li><a href="index.html" id="BRB">BRB</a></li>
+        <li><a href="shop.html" id="shop">Shop</a></li>
+        <li onclick="SLDmodes()"><a id="modes">Dark Mode</a></li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function(){
+        $('.button').click(function(){
+            if($(this).hasClass('expand')){
+                $('ul').slideUp(function(){
+                    $('.button').removeClass('expand');
+                    $('.fas').removeClass('expand');
+                })
+            }else{
+                $(this).addClass('expand');
+                setTimeout(function(){
+                    $('.fas').addClass('expand');
+                    $('ul').stop().slideDown();
+                },200);
+            }
+        })
+    })
+  </script>
   <script src="./js/upgr.js"></script>
 </body>
 

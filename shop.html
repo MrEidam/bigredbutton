@@ -17,9 +17,9 @@
   <link rel="icon" href="./img/shop.png">
 </head>
 
-<body>
+<body id="body">
   <!-- Clicks -->
-  <section class="joe">
+  <section class="joe" id="jonathan">
     <div id="logclick">
       <img src="./img/icons8-rest.svg" id="imgcli" draggable="false">
       <p id="disclick"></p>
@@ -346,11 +346,103 @@
         <p id="disgimake"></p>
       </div>
 
+      <!-- Otter -->
+      <div class="item">
+        <img src="./img/otter.svg">
+        <div class="buttons" style="--Bcolor: #bc8f8f">
+          <button onclick="buyoth()" class="buyone" id="ot1">
+            Buy a Otter
+          </button>
+          <button onclick="mxot()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #bc8f8f">
+          <button onclick="buyCoth()" class="buyone" id="Cot1">
+            Buy a Otter for clicks
+          </button>
+          <button onclick="mxCot()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disoth"></p>
+        <p id="disotmake"></p>
+      </div>
+
+      <!-- Meerkat -->
+      <div class="item">
+        <img src="./img/meerkat.svg">
+        <div class="buttons" style="--Bcolor: #cd853f">
+          <button onclick="buymee()" class="buyone" id="me1">
+            Buy a Meerkat
+          </button>
+          <button onclick="mxme()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #cd853f">
+          <button onclick="buyCmee()" class="buyone" id="Cme1">
+            Buy a Meerkat for clicks
+          </button>
+          <button onclick="mxCme()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dismee"></p>
+        <p id="dismeemake"></p>
+      </div>
+
+      <!-- Racoon -->
+      <div class="item">
+        <img src="./img/racoon.svg">
+        <div class="buttons" style="--Bcolor: #708090">
+          <button onclick="buyrac()" class="buyone" id="ra1">
+            Buy a Racoon
+          </button>
+          <button onclick="mxra()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #708090">
+          <button onclick="buyCrac()" class="buyone" id="Cra1">
+            Buy a Racoon for clicks
+          </button>
+          <button onclick="mxCra()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disrac"></p>
+        <p id="disramake"></p>
+      </div>
+
+      <!-- Owl -->
+      <div class="item">
+        <img src="./img/owl.svg">
+        <div class="buttons" style="--Bcolor: #f4a460">
+          <button onclick="buyowl()" class="buyone" id="ow1">
+            Buy a Owl
+          </button>
+          <button onclick="mxow()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #f4a460">
+          <button onclick="buyCowl()" class="buyone" id="Cow1">
+            Buy a Owl for clicks
+          </button>
+          <button onclick="mxCow()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disowl"></p>
+        <p id="disowmake"></p>
+      </div>
+
     </article>
 
 
 
-    <section class="row">
+    <article class="main">
       <!-- Lemons -->
       <div class="item">
         <img src="./img/lemon.svg" draggable="false">
@@ -380,7 +472,8 @@
         <p id="dislt3"></p>
         <p id="disltmake"></p>
       </div>
-    </section>
+    </article>
+      
   </main>
 
   <div class="menu-container">
@@ -390,9 +483,7 @@
     <ul>
         <li><a href="index.html" id="brb">BRB</a></li>
         <li><a href="upgrade.html" id="upg">Upgrades</a></li>
-        <li style="display: none;" onclick="reset()"><a id="del">RESET</a></li>
-        <li style="display: none;" onclick="help()"><a id="sos">???</a></li>
-        <li style="display: none;" onclick="LDmodes()"><a id="modes">Dark Mode</a></li>
+        <li onclick="SLDmodes()"><a id="modes">Dark Mode</a></li>
     </ul>
   </div>
   <script>
