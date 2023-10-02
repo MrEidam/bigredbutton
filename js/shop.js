@@ -182,10 +182,10 @@ function load(){
     ch1.innerHTML = 'Kup Geparda za <br /> 2 hady a 2 ptakopysky'
     py1.innerHTML = 'Kup Kobru za <br /> 1 geparda a 5 hrochů'
     gi1.innerHTML = 'Kup Žirafu za <br /> 1 kobru a 20 lišek'
-    ot1.innerHTML = 'Kup Vydru za <br /> 1 žirafu a 20 lišek'
-    me1.innerHTML = 'Kup Surikatu za <br /> 1 kobru a 20 lišek'
-    ra1.innerHTML = 'Kup Mývala za <br /> 1 kobru a 20 lišek'
-    ow1.innerHTML = 'Kup Sovu za <br /> 1 kobru a 20 lišek'
+    ot1.innerHTML = 'Kup Vydru za <br /> 1 žirafu a 2 capybary'
+    me1.innerHTML = 'Kup Surikatu za <br /> 1 vydru a 3 velryby'
+    ra1.innerHTML = 'Kup Mývala za <br /> 1 surikatu a 7 dikobrazů'
+    ow1.innerHTML = 'Kup Sovu za <br /> 1 mývala a 1 hada'
 
     lm1.innerHTML = 'Kup Citrón za <b style="font-weight: 1000;">pár</b> koček'
     lt1.innerHTML = 'Kup Citrónovník za 5 citrónů'
@@ -449,252 +449,181 @@ function mxlt(){
   upload()
 }
 function mxwh(){
-  one = Math.floor(items.wolfs/2)
+  let amount = Math.floor(items.wolfs/2);
   
-  items.wolfs -= one*2
-  items.whales += one
-  upload()
+  items.wolfs -= amount*2;
+  items.whales += amount;
+  upload();
 }
 let one,two,val
 
-// Max Wolf 
+// Max Shop
 
 function mxwl(){
-  one = Math.floor(items.foxes/5)
-  two = Math.floor(items.dogs/6)
-  
-  if(one<=two){
-    items.foxes -= one*5
-    items.dogs  -= one*6
-    items.wolfs += one
-  }else if(one>=two){
-    items.foxes -= two*5
-    items.dogs  -= two*6
-    items.wolfs += two
+  let amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
+
+  if(amount > 0){
+    items.foxes -= amount*5
+    items.dogs  -= amount*6
+    items.wolfs += amount
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
-
 function mxhm(){
-  one = Math.floor(items.wolfs/1)
-  two = Math.floor(items.cats/2)
-  
-  if(one<=two){
-    items.wolfs -= one*1
-    items.cats  -= one*2
-    items.hamsters += one
-  }else if(one>=two){
-    items.wolfs -= two*1
-    items.cats  -= two*2
-    items.hamsters += two
+  let amount = Math.min(Math.floor(items.wolfs/1), Math.floor(items.cats/2));
+
+  if(amount > 0){
+    items.wolfs -= amount*1;
+    items.cats  -= amount*2;
+    items.hamsters += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxcp(){
-  one = Math.floor(items.whales/1)
-  two = Math.floor(items.cats/4)
+  let amount = Math.min(Math.floor(items.whales/1), Math.floor(items.cats/4));
   
-  if(one<=two){
-    items.whales -= one*1
-    items.cats  -= one*4
-    items.capybaras += one
-  }else if(one>=two){
-    items.whales -= two*1
-    items.cats  -= two*4
-    items.capybaras += two
+  if(amount > 0){
+    items.whales -= amount*1;
+    items.cats  -= amount*4;
+    items.capybaras += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpl(){
-  one = Math.floor(items.capybaras/1)
-  two = Math.floor(items.wolfs/1)
+  let amount = Math.min(Math.floor(items.capybaras/1), Math.floor(items.wolfs/1));
   
-  if(one<=two){
-    items.capybaras -= one*1
-    items.wolfs  -= one*1
-    items.platapuses += one
-  }else if(one>=two){
-    items.capybaras -= two*1
-    items.wolfs  -= two*1
-    items.platapuses += two
+  if(amount > 0){
+    items.capybaras -= amount*1;
+    items.wolfs  -= amount*1;
+    items.platapuses += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpr(){
-  one = Math.floor(items.platapuses/1)
-  two = Math.floor(items.whales/1)
+  let amount = Math.min(Math.floor(items.platapuses/1), Math.floor(items.whales/1));
   
-  if(one<=two){
-    items.platapuses -= one*1
-    items.whales -= one*1
-    items.porcupines += one
-  }else if(one>=two){
-    items.platapuses -= two*1
-    items.whales -= two*1
-    items.porcupines += two
+  if(amount > 0){
+    items.platapuses -= amount*1;
+    items.whales -= amount*1;
+    items.porcupines += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxhi(){
-  one = Math.floor(items.porcupines/1)
-  two = Math.floor(items.hamsters/2)
+  let amount = Math.min(Math.floor(items.porcupines/1), Math.floor(items.hamsters/2));
   
-  if(one<=two){
-    items.porcupines -= one*1
-    items.hamsters -= one*2
-    items.hippos += one
-  }else if(one>=two){
-    items.porcupines -= two*1
-    items.hamsters -= two*2
-    items.hippos += two
+  if(amount > 0){
+    items.porcupines -= amount*1;
+    items.hamsters -= amount*2;
+    items.hippos += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxsn(){
-  one = Math.floor(items.whales/2);
-  two = Math.floor(items.hamsters/4);
+  let amount = Math.min(Math.floor(items.whales/2), Math.floor(items.hamsters/4));
   
-  if(one<=two){
-    items.whales -= one*2;
-    items.hamsters -= one*4;
-    items.snakes += one;
-  }else if(one>=two){
-    items.whales -= two*2;
-    items.hamsters -= two*4;
-    items.snakes += two;
+  if(amount > 0){
+    items.whales -= amount*2;
+    items.hamsters -= amount*4;
+    items.snakes += amount;
   }else{
     console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxch(){
-  one = Math.floor(items.snakes/2);
-  two = Math.floor(items.platapuses/2);
+  let amount = Math.min(Math.floor(items.snakes/2), Math.floor(items.platapuses/2));
   
-  if(one<=two){
-    items.snakes -= one*2;
-    items.platapuses -= one*2;
-    items.cheetahs += one;
-  }else if(one>=two){
-    items.snakes -= two*2;
-    items.platapuses -= two*2;
-    items.cheetahs += two;
+  if(amount > 0){
+    items.snakes -= amount*2;
+    items.platapuses -= amount*2;
+    items.cheetahs += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpy(){
-  one = Math.floor(items.cheetahs/1);
-  two = Math.floor(items.hippos/5);
+  let amount = Math.min(Math.floor(items.cheetahs/1), Math.floor(items.hippos/5));
   
-  if(one<=two){
-    items.cheetahs -= one*1;
-    items.hippos -= one*5;
-    items.pythons += one;
-  }else if(one>=two){
-    items.cheetahs -= two*1;
-    items.hippos -= two*5;
-    items.pythons += two;
+  if(amount > 0){
+    items.cheetahs -= amount*1;
+    items.hippos -= amount*5;
+    items.pythons += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxgi(){
-  one = Math.floor(items.pythons/1);
-  two = Math.floor(items.foxes/20);
+  let amount = Math.min(Math.floor(items.pythons/1), Math.floor(items.foxes/20));
   
-  if(one<=two){
-    items.pythons -= one*1;
-    items.foxes -= one*20;
-    items.girrafes += one;
-  }else if(one>=two){
-    items.pythons -= two*1;
-    items.foxes -= two*20;
-    items.girrafes += two;
+  if(amount){
+    items.pythons -= amount*1;
+    items.foxes -= amount*20;
+    items.girrafes += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxot(){
-  one = Math.floor(items.girrafes/1);
-  two = Math.floor(items.capybaras/2);
+  let amount = Math.min(Math.floor(items.girrafes/1), Math.floor(items.capybaras/2));
   
-  if(one<=two){
-    items.girrafes -= one*1;
-    items.capybaras -= one*2;
-    items.otters += one;
-  }else if(one>=two){
-    items.girrafes -= two*1;
-    items.capybaras -= two*2;
-    items.otters += two;
+  if(amount > 0){
+    items.girrafes -= amount*1;
+    items.capybaras -= amount*2;
+    items.otters += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxme(){
-  one = Math.floor(items.otters/1);
-  two = Math.floor(items.whales/3);
+  let amount = Math.min(Math.floor(items.otters/1), Math.floor(items.whales/3));
   
-  if(one<=two){
-    items.otters -= one*1;
-    items.whales -= one*3;
-    items.meerkat += one;
-  }else if(one>=two){
-    items.otters -= two*1;
-    items.whales -= two*3;
-    items.meerkat += two;
+  if(amount > 0){
+    items.otters -= amount*1;
+    items.whales -= amount*3;
+    items.meerkat += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxra(){
-  one = Math.floor(items.meerkat/1);
-  two = Math.floor(items.porcupines/7);
+  let amount = Math.min(Math.floor(items.meerkat/1), Math.floor(items.porcupines/7));
   
-  if(one<=two){
-    items.meerkat -= one*1;
-    items.porcupines -= one*7;
-    items.raccoon += one;
-  }else if(one>=two){
-    items.meerkat -= two*1;
-    items.porcupines -= two*7;
-    items.raccoon += two;
+  if(amount > 0){
+    items.meerkat -= amount*1;
+    items.porcupines -= amount*7;
+    items.raccoon += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxow(){
-  one = Math.floor(items.raccoon/1);
-  two = Math.floor(items.snakes/1);
+  let amount = Math.min(Math.floor(items.raccoon/1), Math.floor(items.snakes/1));
   
-  if(one<=two){
-    items.raccoon -= one*1;
-    items.snakes -= one*1;
-    items.owl += one;
-  }else if(one>=two){
-    items.raccoon -= two*1;
-    items.snakes -= two*1;
-    items.owl += two;
+  if(amount > 0){
+    items.raccoon -= amount*1;
+    items.snakes -= amount*1;
+    items.owl += amount;
   }else{
-    console.log('You fucked up you stupid bitch')
+    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
@@ -760,6 +689,21 @@ function fornum(num) {
 
 
 /* SHOPPING WITH ONLY CLICKS */
+
+function buyAnimal(animal, cost) {
+  const quantity = Math.floor(items.clicks / cost);
+
+  if (quantity > 0) {
+    items[animal] += quantity;
+    items.clicks -= quantity * cost;
+    upload();
+  }
+}
+
+// Example usage for buying cats
+function buyCat() {
+  buyAnimal('cats', 1200);
+}
 
 // cat
 function buyCcat(){
