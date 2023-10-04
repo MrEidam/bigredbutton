@@ -175,14 +175,14 @@ function load(){
     hm1.innerHTML = 'Kup Křečka za <br /> 1 vlka a 2 kočky'
     wh1.innerHTML = 'Kup Velrybu za 2 vlky'
     cp1.innerHTML = 'Kup Kapybaru za <br /> 1 velrybu a 4 kočky'
-    pl1.innerHTML = 'Kup Ptakopyska za <br /> 1 capybaru a 1 vlka'
+    pl1.innerHTML = 'Kup Ptakopyska za <br /> 1 kapybaru a 1 vlka'
     pr1.innerHTML = 'Kup Dikobraza za <br /> 1 ptakopyska a 1 velrybu'
     hi1.innerHTML = 'Kup Hrocha za <br /> 1 dikobraza a 2 křečků'
     sn1.innerHTML = 'Kup Hada za <br /> 2 velryby a 4 křečky'
     ch1.innerHTML = 'Kup Geparda za <br /> 2 hady a 2 ptakopysky'
     py1.innerHTML = 'Kup Kobru za <br /> 1 geparda a 5 hrochů'
     gi1.innerHTML = 'Kup Žirafu za <br /> 1 kobru a 20 lišek'
-    ot1.innerHTML = 'Kup Vydru za <br /> 1 žirafu a 2 capybary'
+    ot1.innerHTML = 'Kup Vydru za <br /> 1 žirafu a 2 kapybary'
     me1.innerHTML = 'Kup Surikatu za <br /> 1 vydru a 3 velryby'
     ra1.innerHTML = 'Kup Mývala za <br /> 1 surikatu a 7 dikobrazů'
     ow1.innerHTML = 'Kup Sovu za <br /> 1 mývala a 1 hada'
@@ -369,7 +369,7 @@ function buyrac(){
 }
 function buyowl(){
   if(items.raccoon>=1 && items.snakes>=1){
-    items.pythons-=1;
+    items.raccoon-=1;
     items.snakes-=1;
     items.owl++;
   } 
@@ -648,6 +648,7 @@ function LDmodes(){
       e.style.background = '#ffefd5';
     });
     logclick.style.background = '#ffefd5';
+    disclick.style.textShadow = "";
     logclick.style.border = '5px dashed #00f';
     logclick.style.filter = 'drop-shadow(10px 8px 6px #222)';
   }else if(items.mode == 1){// Dark Mode
@@ -658,6 +659,7 @@ function LDmodes(){
       e.style.background = '#666055';
     });
     logclick.style.background = '#666055';
+    disclick.style.textShadow = "2px 2px 4px #000";
     logclick.style.border = '5px dashed #006';
     logclick.style.filter = 'drop-shadow(10px 8px 6px #222)';
   }

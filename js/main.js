@@ -187,7 +187,6 @@ function beriba(){
 
 function clicking(){
   items.clicks += 1*(items.Mclick||1)*items.pres;
-  console.log(items.clicks);
   update();
   
   document.getElementById('unpressed').style.visibility='hidden'
@@ -282,10 +281,14 @@ function LDmodes(){
   if((items.mode||0) == 0){// Light Mode
     body.style.background = '#fff';
     tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#fff 70%)';
+    disclick.style.color = '#000';
+    disclick.style.textShadow = "";
     yt.style.filter = 'drop-shadow(10px 8px 6px #333)';
   }else if(items.mode == 1){// Dark Mode
     body.style.background = '#333';
     tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#333 70%)';
+    disclick.style.color = '#f5f5f5';
+    disclick.style.textShadow = "2px 2px 4px #000";
     yt.style.filter = 'drop-shadow(10px 8px 6px #666)';
   }
   upload();

@@ -1,3 +1,10 @@
+                        v40.5.2
+  Added: Metatags for BRB
+
+  Fixed: Buying Single Owls causing deleting pythons not snakes
+         <a> in the "cool" menu
+         flashbang (loading window were always white at the start (now great with my eys))
+         text color in main brb + text shadow!
                         v40.5
   Added: Edited scrollbar
 
