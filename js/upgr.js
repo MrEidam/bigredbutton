@@ -25,11 +25,9 @@ function load(){
   }
   if(items.lang == 0){        // CZ
     document.documentElement.setAttribute('lang', 'cz');
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Změn do Temného módu';
-    }else if((items.mode||0) == 1){
-      modes.innerHTML = 'Změn do Světlého módu';
-    }
+    shop.innerHTML = 'Obchod';
+    upg.innerHTML = 'Vylepšení';
+    sett.innerHTML = 'Nastavení';
     dislm.innerHTML = `Právě máš ${fornum(items.lemons)} citrónů!`;
     disMcmake.innerHTML = `Zatím ti každý klik dává ${fornum((items.Mclick||1)*items.pres)} kliků!`;
     Mc1.innerHTML = `Kup si vylepšení na kliky za <br> ${fornum(20+(items.Mclick||1)*(items.Mclick||1))} citrónů`;
@@ -49,11 +47,9 @@ function load(){
 
   }else if(items.lang == 1){  // En
     document.documentElement.setAttribute('lang', 'en');
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Switch into Dark Mode';
-    }else if((items.mode||0) == 1){
-      modes.innerHTML = 'Switch into Light Mode';
-    }
+    shop.innerHTML = 'Shop';
+    upg.innerHTML = 'Upgrades';
+    sett.innerHTML = 'Settings';
     dislm.innerHTML = `You've got ${fornum(items.lemons)} lemons!`;
     disMcmake.innerHTML = `So far every click gives you ${fornum((items.Mclick||1)*items.pres)} clicks!`;
     Mc1.innerHTML = `Buy an upgrade for your clicks<br> for ${fornum(20+(items.Mclick||1)*(items.Mclick||1))} lemons`;
@@ -159,9 +155,6 @@ function progress(){
   upload();
 }
 
-
-
-
 function TheThing(){
   if(items.lang == 0 && items.token >= (1000*items.pres) && confirm(`Za Prestiže budeš získávat více kliků, ale tvůj postup se vynuluje (až na Prestiž body). Chceš se 'Znovuzrodit'?`)){        // CZ
       alert(`Získal jsi 0.5 prestiže bodů!`);
@@ -265,22 +258,11 @@ function TheThing(){
 
 
 // Dark || Light Mode
-function SLDmodes(){
-  if(items.mode == 0){
-    items.mode = 1;
-  }else if(items.mode == 1){
-    items.mode = 0;
-  }
-  LDmodes();
-  upload();
-  console.log(items.mode);
-}
 function LDmodes(){
   let Bimts = document.querySelectorAll('.item');
   if((items.mode||0) == 0){// Light Mode
     body.style.background = '#ddd';
     body.style.color = '#000';
-    jonathan.style.background = 'linear-gradient(#11ABFF, #ccccccab)';
     Bimts.forEach((e) => {
       e.style.background = '#ffefd5';
     });
@@ -289,7 +271,6 @@ function LDmodes(){
   }else if(items.mode == 1){// Dark Mode
     body.style.background = '#333';
     body.style.color = '#fff';
-    jonathan.style.background = 'linear-gradient(#11ABFF, #333333ab)';
     Bimts.forEach((e) => {
       e.style.background = '#666055';
     });

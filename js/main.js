@@ -1,7 +1,6 @@
 // Items
 let items;
 let cs = 0;
-let e = 0;
 let anime = false;
 
 function load(){
@@ -65,100 +64,6 @@ window.onload = function(){
   LDmodes()
 }
 
-// Reset
-function reset(){
-  if((items.lang == 1) && confirm('Do you really want to reset everything?') && confirm('Are you sure?')){
-    alert('Everything Reseted');
-    items = {
-      clicks:0,
-      dogs:0, 
-      cats:0, 
-      foxes:0, 
-      wolfs:0, 
-      hamsters:0, 
-      whales:0, 
-      capybaras:0, 
-      platapuses:0,
-      porcupines:0,
-      hippos:0,
-      snakes:0,
-      cheetahs:0,
-      pythons:0,
-      girrafes:0,
-      lions:0,
-      otters:0,
-      meerkat:0, 
-      raccoon:0, 
-      owl:0, 
-      badger:0, 
-      squirrel:0, 
-      chameleon:0, 
-      chicken:0, 
-      wombat:0, 
-      panther:0, 
-      coyote:0, 
-      frog:0, 
-      bear:0, 
-      pig:0, 
-  
-  
-      
-      lemons:0, 
-      lt3:0,
-      lang:items.lang,
-      pres:1,
-      mode:items.mode,
-      Mclick:1,
-      token:0,
-    }
-  }
-  if((items.lang == 0) && confirm('Vážně chceš všechno resetovat?') && confirm('Seš si jistý?')){
-    alert('Vše resetováno');
-    items = {
-      clicks:0,
-      dogs:0, 
-      cats:0, 
-      foxes:0, 
-      wolfs:0, 
-      hamsters:0, 
-      whales:0, 
-      capybaras:0, 
-      platapuses:0,
-      porcupines:0,
-      hippos:0,
-      snakes:0,
-      cheetahs:0,
-      pythons:0,
-      girrafes:0,
-      lions:0,
-      otters:0,
-      meerkat:0, 
-      raccoon:0, 
-      owl:0, 
-      badger:0, 
-      squirrel:0, 
-      chameleon:0, 
-      chicken:0, 
-      wombat:0, 
-      panther:0, 
-      coyote:0, 
-      frog:0, 
-      bear:0, 
-      pig:0, 
-
-
-      
-      lemons:0, 
-      lt3:0,
-      lang:items.lang,
-      pres:1,
-      mode:items.mode,
-      Mclick:1,
-      token:0,
-    }
-  }
-}
-
 // Update
 function update(){
   let i = JSON.stringify(items);
@@ -204,24 +109,17 @@ function cash(){
   },1000)
 }
 
-// HELP
-function help(){
-  if(items.lang == 1){ /* EN */
-    window.open('https://youtu.be/G0fP-l-05dM');
-  }else if(items.lang == 0){ /* CZ */
-    window.open('https://youtu.be/XhmETe4MSVI');
-  }
-}
 // Languages Cz || Uk
 function language(){
   if(items.lang == 0){ /* CZ */
     items.lang = 1;
     console.log(items.lang);
     document.documentElement.setAttribute('lang', 'cz');
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Pomoc';
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
+    sett.innerHTML = 'Nastavení';
+    del.innerHTML = 'Reset';
+    sos.innerHTML = 'Pomoc';
     modes.innerHTML = 'Změn do Temného módu';
     langs.innerHTML = 'Switch into English';
 
@@ -229,10 +127,11 @@ function language(){
     items.lang = 0;
     console.log(items.lang);
     document.documentElement.setAttribute('lang', 'en');
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Help';
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
+    sett.innerHTML = 'Settings';
+    del.innerHTML = 'Reset';
+    sos.innerHTML = 'Help';
     modes.innerHTML = 'Switch into Dark Mode';
     langs.innerHTML = 'Změň si jazyk do Češtiny';
   }
@@ -242,41 +141,18 @@ function language(){
 function checklang(){
   if(items.lang == 0){ /* CZ */
     document.documentElement.setAttribute('lang', 'cz');
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Pomoc';
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Změn do Temného módu';
-    }else if(items.mode == 1){
-      modes.innerHTML = 'Změn do Světlého módu';
-    }
-    langs.innerHTML = 'Switch into English';
+    sett.innerHTML = 'Nastavení';
   }else if(items.lang == 1){ /* UK */
     document.documentElement.setAttribute('lang', 'en');
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Help';
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Switch into Dark Mode';
-    }else if(items.mode == 1){
-      modes.innerHTML = 'Switch into Light Mode';
-    }
-    langs.innerHTML = 'Změň si jazyk do Češtiny';
+    sett.innerHTML = 'Settings';
   
 }
 }
 // Dark || Light Mode
-function SLDmodes(){
-  if(items.mode == 0){
-    items.mode = 1;
-  }else if(items.mode == 1){
-    items.mode = 0;
-  }
-  LDmodes()
-  console.log(items.mode);
-}
 function LDmodes(){
   if((items.mode||0) == 0){// Light Mode
     body.style.background = '#fff';

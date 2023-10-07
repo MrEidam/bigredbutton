@@ -27,7 +27,7 @@
   </header>
   <main style="margin-top: 210px;">
     <!-- Example -->
-    <div class="item" style="--color: ">
+    <div class="item">
       <h2>BRB</h2>
       <img src="./img/brb-still.png">
       <div class="buttons" style="--Bcolor: darkred">
@@ -71,29 +71,13 @@
         <span class="fas fa-bars"></span>
     </div>
     <ul>
-      <li><a href="index.html" id="BRB">BRB</a></li>
-        <li><a href="shop.html" id="shop">Shop</a></li>
-        <li onclick="SLDmodes()"><a id="modes">Dark Mode</a></li>
+      <li><a href="./" id="brb">BRB</a></li>
+      <li><a href="shop.html" id="shop"></a></li>
+      <li><a href="upgrade.html" id="upg"></a></li>
+      <li><a href="settings.html" id="sett"></a></li>
     </ul>
   </div>
-  <script>
-    $(document).ready(function(){
-        $('.button').click(function(){
-            if($(this).hasClass('expand')){
-                $('ul').slideUp(function(){
-                    $('.button').removeClass('expand');
-                    $('.fas').removeClass('expand');
-                })
-            }else{
-                $(this).addClass('expand');
-                setTimeout(function(){
-                    $('.fas').addClass('expand');
-                    $('ul').stop().slideDown();
-                },200);
-            }
-        })
-    })
-  </script>
+  <script src="./js/menu.js"></script>
   <script src="./js/upgr.js"></script>
 </body>
 

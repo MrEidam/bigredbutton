@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="./css/sett.css">
+        <link rel="shortcut icon" href="./img/settings.svg" type="image/x-icon">
+        <title>BRB - Settings</title>
+    </head>
+    <body id="body">
+        <section class="joe" id="jonathan"></section>
+
+        <main class="main" style="margin-top: 210px;">
+            <section class="item">
+                <article id="dlmode"><h3 id="ld"></h3></article>
+                <button class="change" onclick="SLDmodes()"></button>
+            </section>
+            <section class="item">
+                <article id="lgmode"><h3 id="lg"></h3></article>
+                <button class="change" onclick="language()"></button>
+            </section>
+            <section class="item">
+                <article id="help"><h3 id="hl"></h3></article>
+                <button class="change" onclick="help()"></button>
+            </section>
+            <section class="item">
+                <article id="suicide"><h3 id="rs"></h3></article>
+                <button class="change" onclick="reset()"></button>
+            </section>
+        </main>
+
+
+        <div class="menu-container">
+            <div class="button">Menu
+                <span class="fas fa-bars"></span>
+            </div>
+            <ul>
+                <li><a href="./" id="brb">BRB</a></li>
+                <li><a href="shop.html" id="shop"></a></li>
+                <li><a href="upgrade.html" id="upg"></a></li>
+                <li><a href="settings.html" id="sett"></a></li>
+            </ul>
+        </div>
+        <script src="./js/menu.js"></script>
+        <script src="./js/sett.js"></script>
+    </body>
+</html>

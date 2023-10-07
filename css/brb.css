@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-body {
+body{
     user-select: none;
     padding: 0;
     margin: 0;
@@ -16,7 +16,7 @@ body {
 #logclick{
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: 60px;
   left: 50%;
   text-align: center;
   transform: translate(-50%,0);
@@ -63,7 +63,7 @@ body {
 
 .menu-container{
   position: absolute;
-  top: 30px;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;

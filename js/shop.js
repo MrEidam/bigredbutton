@@ -20,12 +20,9 @@ function load(){
 
   if(items.lang == 1){
     document.documentElement.setAttribute('lang', 'en');
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Switch into Dark Mode';
-    }else if((items.mode||0) == 1){
-      modes.innerHTML = 'Switch into Light Mode';
-    }
-    upg.innerHTML = 'Upgrades'
+    shop.innerHTML = 'Shop';
+    upg.innerHTML = 'Upgrades';
+    sett.innerHTML = 'Settings';
     disclick.innerHTML=`You've got ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
     disdog.innerHTML=`You've got ${fornum(items.dogs)} dogs!`
     discat.innerHTML=`You've got ${fornum(items.cats)} cats!`
@@ -115,12 +112,9 @@ function load(){
   }
   if(items.lang == 0){
     document.documentElement.setAttribute('lang', 'cz');
-    if((items.mode||0) == 0){
-      modes.innerHTML = 'Změn do Temného módu';
-    }else if((items.mode||0) == 1){
-      modes.innerHTML = 'Změn do Světlého módu';
-    }
-    upg.innerHTML = 'Vylepšení'
+    shop.innerHTML = 'Obchod';
+    upg.innerHTML = 'Vylepšení';
+    sett.innerHTML = 'Nastavení';
     document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
     document.getElementById('disdog').innerHTML=`Právě máš ${fornum(items.dogs)} psů!`
     document.getElementById('discat').innerHTML=`Právě máš ${fornum(items.cats)} koček!`
@@ -629,21 +623,11 @@ function mxow(){
 }
 
 // Dark || Light Mode
-function SLDmodes(){
-  if(items.mode == 0){
-    items.mode = 1;
-  }else if(items.mode == 1){
-    items.mode = 0;
-  }
-  LDmodes()
-  console.log(items.mode);
-}
 function LDmodes(){
   let Bimts = document.querySelectorAll('.item');
   if((items.mode||0) == 0){// Light Mode
     body.style.background = '#ddd';
     body.style.color = '#000';
-    jonathan.style.background = 'linear-gradient(#11ABFF, #ccccccab)';
     Bimts.forEach((e) => {
       e.style.background = '#ffefd5';
     });
@@ -654,7 +638,6 @@ function LDmodes(){
   }else if(items.mode == 1){// Dark Mode
     body.style.background = '#333';
     body.style.color = '#fff';
-    jonathan.style.background = 'linear-gradient(#11ABFF, #333333ab)';
     Bimts.forEach((e) => {
       e.style.background = '#666055';
     });

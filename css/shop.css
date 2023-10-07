@@ -10,7 +10,6 @@
 
 body {
   font-size: 15pt;
-  /*background: linear-gradient(#009000, black);*/
   background-color: #333;
 } 
 
@@ -25,7 +24,7 @@ body {
   width: 100%;
   margin: 0;
   top: 0;
-  border-radius: 0 0 90px 90px;
+  background: radial-gradient(125% 100% at 50% 0%,#11ABFF 20%,transparent 70%);
 /* By MrEidam */
 }
 #logclick{
@@ -138,10 +137,6 @@ button{
   border: none;
   filter: drop-shadow(8px 6px 4px #555);
 }
-
-
-
-
 @media only screen and (max-width: 555px){
   .row{
     flex-direction: column;
@@ -153,6 +148,8 @@ button{
   }
 }
 
+
+/* Menu */
 
 .menu-container{
   position: fixed;
