@@ -110,34 +110,6 @@ function cash(){
 }
 
 // Languages Cz || Uk
-function language(){
-  if(items.lang == 0){ /* CZ */
-    items.lang = 1;
-    console.log(items.lang);
-    document.documentElement.setAttribute('lang', 'cz');
-    shop.innerHTML = 'Obchod';
-    upg.innerHTML = 'Vylepšení';
-    sett.innerHTML = 'Nastavení';
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Pomoc';
-    modes.innerHTML = 'Změn do Temného módu';
-    langs.innerHTML = 'Switch into English';
-
-  }else if(items.lang == 1){ /* UK */
-    items.lang = 0;
-    console.log(items.lang);
-    document.documentElement.setAttribute('lang', 'en');
-    shop.innerHTML = 'Shop';
-    upg.innerHTML = 'Upgrades';
-    sett.innerHTML = 'Settings';
-    del.innerHTML = 'Reset';
-    sos.innerHTML = 'Help';
-    modes.innerHTML = 'Switch into Dark Mode';
-    langs.innerHTML = 'Změň si jazyk do Češtiny';
-  }
-  upload();
-}
-
 function checklang(){
   if(items.lang == 0){ /* CZ */
     document.documentElement.setAttribute('lang', 'cz');
@@ -149,9 +121,9 @@ function checklang(){
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
     sett.innerHTML = 'Settings';
-  
+  }
 }
-}
+
 // Dark || Light Mode
 function LDmodes(){
   if((items.mode||0) == 0){// Light Mode
@@ -170,7 +142,6 @@ function LDmodes(){
   upload();
 }
 
-
 // Function to convert a number into a more readable format
 function fornum(num) {
   // Define the suffixes for thousands and millions
@@ -185,3 +156,9 @@ function fornum(num) {
   num = Math.floor(num * 10) / 10;
   return num + suffixes[i];
 }
+
+addEventListener("keydown", (event) => {
+  if(event.key == ' ' || event.key == 'Enter'){
+    clicking();
+  }
+})
