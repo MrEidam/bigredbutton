@@ -14,6 +14,17 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310992147638822" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTW2M8Q7SB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CTW2M8Q7SB');
+  </script>
   <title>BRB - Clicking</title>
   
   <!-- By MrEidam && Standa Chlup -->
@@ -48,10 +59,15 @@
     </ul>
   </div>
 
-  <!-- YouTube -->
-  <div id="yt" class="Yt" style="position:absolute;width:110px;height:40px;overflow:hidden;background:linear-gradient(#d44,#722);border:none;border-radius:1rem;filter:drop-shadow(10px 8px 6px #333);"> 
-    <img style="width:100%;height:100%;" src="./img/YT.png" title="Můj YT kanál">
-    <a style="width:100%;height:100%;" href="https://www.youtube.com/@mreidam" title="Můj YouTube kanál" target="_blank"></a>
+  <!-- Soc. -->
+  <div class="socmenu">
+    <li style="--i:1;--clr:#f00;">
+        <a href="https://www.youtube.com/@mreidam" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+    </li>
+    <div class="toggle" id="soctog">
+        <ion-icon name="share-social"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
   </div>
 
   <!-- Project -->

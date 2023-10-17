@@ -131,34 +131,48 @@ function LDmodes(){
     tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#fff 70%)';
     disclick.style.color = '#000';
     disclick.style.textShadow = "";
-    yt.style.filter = 'drop-shadow(10px 8px 6px #333)';
+    soctog.style.color ='#000';
   }else if(items.mode == 1){// Dark Mode
     body.style.background = '#333';
     tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#333 70%)';
     disclick.style.color = '#f5f5f5';
     disclick.style.textShadow = "2px 2px 4px #000";
-    yt.style.filter = 'drop-shadow(10px 8px 6px #666)';
+    soctog.style.color = '#fff';
   }
   upload();
 }
 
 // Function to convert a number into a more readable format
-function fornum(num) {
-  // Define the suffixes for thousands and millions
-  const suffixes = ['', ' k', ' mil', ' mld', ' bil', ' bld', ' tri', ' tld', ' qua', ' qld', ' kvi', ' kld', ' sex', ' sld', ' sep', ' spld', ' okt', ' okld', ' non', ' nld', ' dec', ' dld'];
-
-  // Divide the number by 1000 until it is less than 1000
-  let i = 0;
-  while (num >= 1000 && i < suffixes.length - 1) {
-    num /= 1000;
-    i++;
+function fornum(num){
+  if(items.lang == 0){
+    const suffixes = ['', ' tis.', ' mil.', ' mld.', ' bil.', ' bld.', ' tril.', ' trild.', ' kvad.', ' kvadld.', ' quint.', ' quintld.', ' sext.', ' sextld.', ' sept.', ' septld.', ' okt.', ' oktld.', ' non.', ' nonld.', ' dec.', ' decld.', ' undec.', ' undecld.', ' duodec.', ' duodecld.', ' tredec.', ' tredecld.', ' kvaddec.', ' kvaddecld.', ' quintdec.', ' quintdecld.', ' sextdec.', ' sextdecld.', ' googol'];
+    let i = 0;
+    while (num >= 1000 && i < suffixes.length - 1) {
+      num /= 1000;
+      i++;
+    }
+    num = Math.floor(num * 10) / 10;
+    return num + suffixes[i];
+  }else{
+    const suffixes = ['', ' k', ' mil', ' bil', ' tri', ' quad', ' qui', ' sex', ' sep', ' oct', ' non', ' dec', ' und', ' duo', ' tre', ' qua', ' qui', ' sex', ' sep', ' oct', ' nov', ' vig', ' uvi', ' dvi', ' tvi', ' qvi', ' qv', ' svi', ' spv', ' ov', ' nv', ' cen', ' ucn', ' dcn', ' googol'];
+    let i = 0;
+    while (num >= 1000 && i < suffixes.length - 1) {
+      num /= 1000;
+      i++;
+    }
+    num = Math.floor(num * 10) / 10;
+    return num + suffixes[i];
   }
-  num = Math.floor(num * 10) / 10;
-  return num + suffixes[i];
 }
 
-addEventListener("keydown", (event) => {
+addEventListener("keyup", (event) => {
   if(event.key == ' ' || event.key == 'Enter'){
     clicking();
   }
 })
+
+let toggle = document.querySelector('.toggle');
+let socmenu = document.querySelector('.socmenu');
+toggle.onclick = function(){
+    socmenu.classList.toggle('active');
+};
