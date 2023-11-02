@@ -3,6 +3,28 @@ let items;
 let cs = 0;
 let anime = false;
 
+const changeEN = `                        v43
+Added: Small changelog button (this)
+            Squrrel + Badger
+            Better function for buying animals for clicks
+            Better jonathan in BRB
+
+Fixed: Menu hitbox
+          lag while loading BRB
+
+Removed: text shadow in light mode settings`
+
+const changeCZ = `                        v43
+Přidáno: Malé tlačítko s aktualizacemi (toto)
+              Veverka + Jezevec
+              Lepší funkci pro nakupování zvířátek za kliky
+              Lepší jonathan v BRB
+
+Upraveno: Hitboxy Menu
+                 Sekání během načítání BRB
+
+Smazáno: stín textu behem světlého módu v nastavení`
+
 function load(){
   if (localStorage.getItem('items')!=null){
     items = JSON.parse(localStorage.getItem('items'));
@@ -74,9 +96,6 @@ function update(){
   if(items.lang == 0){
     document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a generuješ ${fornum(cs*items.pres)} k/s!`
   }
-  if((items.mode != 0)&&(items.mode != 1)){
-    items.mode = 0;
-  }
   checklang();
 }
 
@@ -128,16 +147,14 @@ function checklang(){
 function LDmodes(){
   if((items.mode||0) == 0){// Light Mode
     body.style.background = '#fff';
-    tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#fff 70%)';
+    jonathan.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#fff 70%)';
     disclick.style.color = '#000';
     disclick.style.textShadow = "";
-    soctog.style.color ='#000';
   }else if(items.mode == 1){// Dark Mode
     body.style.background = '#333';
-    tycoon.style.background = 'radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#333 70%)';
+    jonathan.style.background = 'radial-gradient(125% 100% at 50% 0%,#5add5a 20%,#333 70%)';
     disclick.style.color = '#f5f5f5';
     disclick.style.textShadow = "2px 2px 4px #000";
-    soctog.style.color = '#fff';
   }
   upload();
 }
@@ -165,12 +182,27 @@ function fornum(num){
   }
 }
 
+// šmol change
+function change(){
+  if(items.lang == 0){ // CZ
+    alert(changeCZ);
+  }else{
+    alert(changeEN);
+  }
+}
+
+
+
+// keybinds
 addEventListener("keyup", (event) => {
   if(event.key == ' ' || event.key == 'Enter'){
     clicking();
   }
 })
 
+
+
+// social
 let toggle = document.querySelector('.toggle');
 let socmenu = document.querySelector('.socmenu');
 toggle.onclick = function(){

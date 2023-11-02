@@ -16,7 +16,7 @@ function c(x){
 function load(){
   items = JSON.parse(localStorage.getItem('items'));
   LDmodes()
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000;
 
   if(items.lang == 1){
     document.documentElement.setAttribute('lang', 'en');
@@ -42,6 +42,8 @@ function load(){
     dismee.innerHTML=`You've got ${fornum(items.meerkat)} meerkats!`
     disrac.innerHTML=`You've got ${fornum(items.raccoon)} racoons!`
     disowl.innerHTML=`You've got ${fornum(items.owl)} owls!`
+    disbad.innerHTML=`You've got ${fornum(items.badger)} badgers!`
+    dissqu.innerHTML=`You've got ${fornum(items.squirrel)} squirrels!`
     
     
     
@@ -68,6 +70,8 @@ function load(){
     dismeemake.innerHTML=`They're generating ${fornum((items.meerkat*9800)*items.pres)} clicks per second!`
     disramake.innerHTML=`They're generating ${fornum((items.raccoon*14500)*items.pres)} clicks per second!`
     disowmake.innerHTML=`They're generating ${fornum((items.owl*16000)*items.pres)} clicks per second!`
+    disbamake.innerHTML=`They're generating ${fornum((items.badger*32000)*items.pres)} clicks per second!`
+    dissqmake.innerHTML=`They're generating ${fornum((items.squirrel*50000)*items.pres)} clicks per second!`
 
     dg1.innerHTML = 'Buy a Dog for 100 clicks'
     ct1.innerHTML = 'Buy a Cat for 10 dogs'
@@ -87,6 +91,8 @@ function load(){
     me1.innerHTML = 'Buy a Meerkat for <br /> 1 otter and 3 whales'
     ra1.innerHTML = 'Buy a Raccoon for <br /> 1 meerkat and 7 porcupines'
     ow1.innerHTML = 'Buy a Owl for <br /> 1 racoon and 1 snake'
+    ba1.innerHTML = 'Buy a Badger for <br /> 1 owl and 2 pythons'
+    sq1.innerHTML = 'Buy a Squirrel for <br /> 1 badger and 5 cheetah'
 
     lm1.innerHTML = 'Buy a Lemon for <b style="font-weight: 1000;">some</b> cats'
     lt1.innerHTML = 'Buy a Lemon Tree for 5 lemons'
@@ -109,6 +115,8 @@ function load(){
     Cme1.innerHTML = 'Buy a Meerkat for <br> 1 mil clicks'
     Cra1.innerHTML = 'Buy a Raccoon for <br> 1.5 mil clicks'
     Cow1.innerHTML = 'Buy a Owl for <br> 1.8 mil clicks'
+    Cba1.innerHTML = 'Buy a Badger for <br> 3.5 mil clicks'
+    Csq1.innerHTML = 'Buy a Squirrel for <br> 5.5 mil clicks'
   }
   if(items.lang == 0){
     document.documentElement.setAttribute('lang', 'cz');
@@ -134,6 +142,8 @@ function load(){
     document.getElementById('dismee').innerHTML=`Právě máš ${fornum(items.meerkat)} surikat!`
     document.getElementById('disrac').innerHTML=`Právě máš ${fornum(items.raccoon)} mývalů!`
     document.getElementById('disowl').innerHTML=`Právě máš ${fornum(items.owl)} sov!`
+    document.getElementById('disbad').innerHTML=`Právě máš ${fornum(items.badger)} jezevců!`
+    document.getElementById('dissqu').innerHTML=`Právě máš ${fornum(items.squirrel)} veverek!`
     
     
     
@@ -160,6 +170,8 @@ function load(){
     document.getElementById('dismeemake').innerHTML=`Generují ${fornum((items.meerkat*9800)*items.pres)} kliků za sekundu!`
     document.getElementById('disramake').innerHTML=`Generují ${fornum((items.raccoon*14500)*items.pres)} kliků za sekundu!`
     document.getElementById('disowmake').innerHTML=`Generují ${fornum((items.owl*16000)*items.pres)} kliků za sekundu!`
+    document.getElementById('disbamake').innerHTML=`Generují ${fornum((items.badger*32000)*items.pres)} kliků za sekundu!`
+    document.getElementById('dissqmake').innerHTML=`Generují ${fornum((items.squirrel*50000)*items.pres)} kliků za sekundu!`
 
 
     dg1.innerHTML = 'Kup Psa za 100 kliků'
@@ -180,6 +192,8 @@ function load(){
     me1.innerHTML = 'Kup Surikatu za <br /> 1 vydru a 3 velryby'
     ra1.innerHTML = 'Kup Mývala za <br /> 1 surikatu a 7 dikobrazů'
     ow1.innerHTML = 'Kup Sovu za <br /> 1 mývala a 1 hada'
+    ba1.innerHTML = 'Kup Jezevce za <br /> 1 sovu a 2 kobry'
+    sq1.innerHTML = 'Kup Veverku za <br /> 1 jezevce a 5 gepardů'
 
     lm1.innerHTML = 'Kup Citrón za <b style="font-weight: 1000;">pár</b> koček'
     lt1.innerHTML = 'Kup Citrónovník za 5 citrónů'
@@ -202,6 +216,8 @@ function load(){
     Cme1.innerHTML = 'Kup Surikatu za <br /> 1 mil kliků'
     Cra1.innerHTML = 'Kup Mývala za <br /> 1,5 mil kliků'
     Cow1.innerHTML = 'Kup Sovu za <br /> 1,8 mil kliků'
+    Cba1.innerHTML = 'Kup Jezevce za <br /> 3,5 mil kliků'
+    Csq1.innerHTML = 'Kup Veverku za <br /> 5,5 mil kliků'
   }
 }
 load();
@@ -369,6 +385,22 @@ function buyowl(){
   } 
   upload();
 }
+function buybad(){
+  if(items.owl>=1 && items.pythons>=2){
+    items.owl-=1;
+    items.pythons-=2;
+    items.badger++;
+  } 
+  upload();
+}
+function buysqu(){
+  if(items.badger>=1 && items.cheetahs>=5){
+    items.badger-=1;
+    items.cheetahs-=5;
+    items.squirrel++;
+  } 
+  upload();
+}
 
 
 
@@ -396,7 +428,7 @@ function buylt3(){
 
 
 
-/* Max Shop */
+/*  Max Shop  */
 function mxdg(){
   one = Math.floor(items.clicks / 100)
   
@@ -443,181 +475,173 @@ function mxlt(){
   upload()
 }
 function mxwh(){
-  let amount = Math.floor(items.wolfs/2);
+  const amount = Math.floor(items.wolfs/2);
   
   items.wolfs -= amount*2;
   items.whales += amount;
   upload();
 }
-let one,two,val
+let one;
 
 // Max Shop
 
 function mxwl(){
-  let amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
+  const amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
 
   if(amount > 0){
     items.foxes -= amount*5
     items.dogs  -= amount*6
     items.wolfs += amount
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxhm(){
-  let amount = Math.min(Math.floor(items.wolfs/1), Math.floor(items.cats/2));
+  const amount = Math.min(Math.floor(items.wolfs/1), Math.floor(items.cats/2));
 
   if(amount > 0){
     items.wolfs -= amount*1;
     items.cats  -= amount*2;
     items.hamsters += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxcp(){
-  let amount = Math.min(Math.floor(items.whales/1), Math.floor(items.cats/4));
+  const amount = Math.min(Math.floor(items.whales/1), Math.floor(items.cats/4));
   
   if(amount > 0){
     items.whales -= amount*1;
     items.cats  -= amount*4;
     items.capybaras += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpl(){
-  let amount = Math.min(Math.floor(items.capybaras/1), Math.floor(items.wolfs/1));
+  const amount = Math.min(Math.floor(items.capybaras/1), Math.floor(items.wolfs/1));
   
   if(amount > 0){
     items.capybaras -= amount*1;
     items.wolfs  -= amount*1;
     items.platapuses += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpr(){
-  let amount = Math.min(Math.floor(items.platapuses/1), Math.floor(items.whales/1));
+  const amount = Math.min(Math.floor(items.platapuses/1), Math.floor(items.whales/1));
   
   if(amount > 0){
     items.platapuses -= amount*1;
     items.whales -= amount*1;
     items.porcupines += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxhi(){
-  let amount = Math.min(Math.floor(items.porcupines/1), Math.floor(items.hamsters/2));
+  const amount = Math.min(Math.floor(items.porcupines/1), Math.floor(items.hamsters/2));
   
   if(amount > 0){
     items.porcupines -= amount*1;
     items.hamsters -= amount*2;
     items.hippos += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxsn(){
-  let amount = Math.min(Math.floor(items.whales/2), Math.floor(items.hamsters/4));
+  const amount = Math.min(Math.floor(items.whales/2), Math.floor(items.hamsters/4));
   
   if(amount > 0){
     items.whales -= amount*2;
     items.hamsters -= amount*4;
     items.snakes += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxch(){
-  let amount = Math.min(Math.floor(items.snakes/2), Math.floor(items.platapuses/2));
+  const amount = Math.min(Math.floor(items.snakes/2), Math.floor(items.platapuses/2));
   
   if(amount > 0){
     items.snakes -= amount*2;
     items.platapuses -= amount*2;
     items.cheetahs += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxpy(){
-  let amount = Math.min(Math.floor(items.cheetahs/1), Math.floor(items.hippos/5));
+  const amount = Math.min(Math.floor(items.cheetahs/1), Math.floor(items.hippos/5));
   
   if(amount > 0){
     items.cheetahs -= amount*1;
     items.hippos -= amount*5;
     items.pythons += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxgi(){
-  let amount = Math.min(Math.floor(items.pythons/1), Math.floor(items.foxes/20));
+  const amount = Math.min(Math.floor(items.pythons/1), Math.floor(items.foxes/20));
   
   if(amount){
     items.pythons -= amount*1;
     items.foxes -= amount*20;
     items.girrafes += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxot(){
-  let amount = Math.min(Math.floor(items.girrafes/1), Math.floor(items.capybaras/2));
+  const amount = Math.min(Math.floor(items.girrafes/1), Math.floor(items.capybaras/2));
   
   if(amount > 0){
     items.girrafes -= amount*1;
     items.capybaras -= amount*2;
     items.otters += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxme(){
-  let amount = Math.min(Math.floor(items.otters/1), Math.floor(items.whales/3));
+  const amount = Math.min(Math.floor(items.otters/1), Math.floor(items.whales/3));
   
   if(amount > 0){
     items.otters -= amount*1;
     items.whales -= amount*3;
     items.meerkat += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxra(){
-  let amount = Math.min(Math.floor(items.meerkat/1), Math.floor(items.porcupines/7));
+  const amount = Math.min(Math.floor(items.meerkat/1), Math.floor(items.porcupines/7));
   
   if(amount > 0){
     items.meerkat -= amount*1;
     items.porcupines -= amount*7;
     items.raccoon += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
   }
   upload();
 }
 function mxow(){
-  let amount = Math.min(Math.floor(items.raccoon/1), Math.floor(items.snakes/1));
+  const amount = Math.min(Math.floor(items.raccoon/1), Math.floor(items.snakes/1));
   
   if(amount > 0){
     items.raccoon -= amount*1;
     items.snakes -= amount*1;
     items.owl += amount;
-  }else{
-    console.log('You fucked up you stupid bitch');
+  }
+  upload();
+}
+function mxba(){
+  const amount = Math.min(Math.floor(items.owl/1), Math.floor(items.pythons/2));
+  
+  if(amount > 0){
+    items.owl -= amount*1;
+    items.pythons -= amount*2;
+    items.badger += amount;
+  }
+  upload();
+}
+function mxsq(){
+  const amount = Math.min(Math.floor(items.badger/1), Math.floor(items.cheetahs/5));
+  
+  if(amount > 0){
+    items.badger -= amount*1;
+    items.cheetahs -= amount*5;
+    items.squirrel += amount;
   }
   upload();
 }
@@ -679,7 +703,15 @@ function fornum(num){
 
 /* SHOPPING WITH ONLY CLICKS */
 
-function buyAnimal(animal, cost) {
+function canimal(animal, cost){
+  if(items.clicks >= cost){
+    items[animal]++;
+    items.clicks -= cost;
+    upload();
+  }
+}
+
+function cManimal(animal, cost) {
   const quantity = Math.floor(items.clicks / cost);
 
   if (quantity > 0) {
@@ -689,279 +721,78 @@ function buyAnimal(animal, cost) {
   }
 }
 
-// Example usage for buying cats
-function buyCat() {
-  buyAnimal('cats', 1200);
-}
-
 // cat
-function buyCcat(){
-  if(items.clicks >= 1200){
-    items.cats++;
-    items.clicks -= 1200;
-    upload();
-  }
-}
-function mxCct(){
-  one = Math.floor(items.clicks / 1200)
-  
-  items.clicks -= one * 1200
-  items.cats += one
-  upload();
-}
+function buyCcat(){canimal('cats', 1200)}
+function mxCct(){cManimal('cats', 1200)}
 
 // fox
-function buyCfox(){
-  if(items.clicks >= 1800){
-    items.foxes++;
-    items.clicks -= 1800;
-    upload();
-  }
-}
-function mxCfx(){
-  one = Math.floor(items.clicks / 1800)
-  
-  items.clicks -= one * 1800
-  items.foxes += one
-  upload();
-}
+function buyCfox(){canimal('foxes', 1800)}
+function mxCfx(){cManimal('foxes', 1800)}
 
 // wolf
-function buyCwol(){
-  if(items.clicks >= 10000){
-    items.wolfs++;
-    items.clicks -= 10000;
-    upload();
-  }
-}
-function mxCwl(){
-  one = Math.floor(items.clicks / 10000)
-  
-  items.clicks -= one * 10000
-  items.wolfs += one
-  upload();
-}
+function buyCwol(){canimal('wolfs', 10000)}
+function mxCwl(){cManimal('wolfs', 10000)}
 
 // hamster
-function buyCham(){
-  if(items.clicks >= 13000){
-    items.hamsters++;
-    items.clicks -= 13000;
-    upload();
-  }
-}
-function mxChm(){
-  one = Math.floor(items.clicks / 13000)
-  
-  items.clicks -= one * 13000
-  items.hamsters += one
-  upload();
-}
+function buyCham(){canimal('hamsters', 13000)}
+function mxChm(){cManimal('hamsters', 13000)}
 
 // whale
-function buyCwha(){
-  if(items.clicks >= 22000){
-    items.whales++;
-    items.clicks -= 22000;
-    upload();
-  }
-}
-function mxCwh(){
-  one = Math.floor(items.clicks / 22000)
-  
-  items.clicks -= one * 22000
-  items.whales += one
-  upload();
-}
+function buyCwha(){canimal('whales', 22000)}
+function mxCwh(){cManimal('whales', 22000)}
 
 // cappybarra
-function buyCcap(){
-  if(items.clicks >= 28000){
-    items.capybaras++;
-    items.clicks -= 28000;
-    upload();
-  }
-}
-function mxCcp(){
-  one = Math.floor(items.clicks / 28000)
-  
-  items.clicks -= one * 28000
-  items.capybaras += one
-  upload();
-}
+function buyCcap(){canimal('capybaras', 28000)}
+function mxCcp(){cManimal('capybaras', 28000)}
 
 // platypussy
-function buyCpla(){
-  if(items.clicks >= 42000){
-    items.platapuses++;
-    items.clicks -= 42000;
-    upload();
-  }
-}
-function mxCpl(){
-  one = Math.floor(items.clicks / 42000)
-  
-  items.clicks -= one * 42000
-  items.platapuses += one
-  upload();
-}
+function buyCpla(){canimal('platapuses', 42000)}
+function mxCpl(){cManimal('platapuses', 42000)}
 
 // porcupine
-function buyCpor(){
-  if(items.clicks >= 70000){
-    items.porcupines++;
-    items.clicks -= 70000;
-    upload();
-  }
-}
-function mxCpr(){
-  one = Math.floor(items.clicks / 70000)
-  
-  items.clicks -= one * 70000
-  items.porcupines += one
-  upload();
-}
+function buyCpor(){canimal('porcupines', 70000)}
+function mxCpr(){cManimal('porcupines', 70000)}
 
 // hippopopopotamusss
-function buyChip(){
-  if(items.clicks >= 100000){
-    items.hippos++;
-    items.clicks -= 100000;
-    upload();
-  }
-}
-function mxChi(){
-  one = Math.floor(items.clicks / 100000)
-  
-  items.clicks -= one * 100000
-  items.hippos += one
-  upload();
-}
+function buyChip(){canimal('hippos', 100000)}
+function mxChi(){cManimal('hippos', 100000)}
 
 // Snuk
-function buyCsna(){
-  if(items.clicks >= 150000){
-    items.snakes++;
-    items.clicks -= 150000;
-    upload();
-  }
-}
-function mxCsn(){
-  one = Math.floor(items.clicks / 150000)
-  
-  items.clicks -= one * 150000
-  items.snakes += one
-  upload();
-}
+function buyCsna(){canimal('snakes', 150000)}
+function mxCsn(){cManimal('snakes', 150000)}
 
 // Chetuch
-function buyCche(){
-  if(items.clicks >= 350000){
-    items.cheetahs++;
-    items.clicks -= 350000;
-    upload();
-  }
-}
-function mxCch(){
-  one = Math.floor(items.clicks / 350000)
-  
-  items.clicks -= one * 350000
-  items.cheetahs += one
-  upload();
-}
+function buyCche(){canimal('cheetahs', 350000)}
+function mxCch(){cManimal('cheetahs', 350000)}
 
 // .py
-function buyCpyt(){
-  if(items.clicks >= 820000){
-    items.pythons++;
-    items.clicks -= 820000;
-    upload();
-  }
-}
-function mxCpy(){
-  one = Math.floor(items.clicks / 820000)
-  
-  items.clicks -= one * 820000
-  items.pythons += one
-  upload();
-}
+function buyCpyt(){canimal('pythons', 820000)}
+function mxCpy(){cManimal('pythons', 820000)}
 
 // Gurllaf
-function buyCgir(){
-  if(items.clicks >= 880000){
-    items.girrafes++;
-    items.clicks -= 880000;
-    upload();
-  }
-}
-function mxCgi(){
-  one = Math.floor(items.clicks / 880000)
-  
-  items.clicks -= one * 880000
-  items.girrafes += one
-  upload();
-}
+function buyCgir(){canimal('girrafes', 880000)}
+function mxCgi(){cManimal('girrafes', 880000)}
 
 // Other space
-function buyCoth(){
-  if(items.clicks >= 950000){
-    items.otters++;
-    items.clicks -= 950000;
-    upload();
-  }
-}
-function mxCot(){
-  one = Math.floor(items.clicks / 950000)
-  
-  items.clicks -= one * 950000
-  items.otters += one
-  upload();
-}
+function buyCoth(){canimal('otters', 950000)}
+function mxCot(){cManimal('otters', 950000)}
 
 // Mii Cat
-function buyCmee(){
-  if(items.clicks >= 1000000){
-    items.meerkat++;
-    items.clicks -= 1000000;
-    upload();
-  }
-}
-function mxCme(){
-  one = Math.floor(items.clicks / 1000000)
-  
-  items.clicks -= one * 1000000
-  items.meerkat += one
-  upload();
-}
+function buyCmee(){canimal('meerkat', 1000000)}
+function mxCme(){cManimal('meerkat', 1000000)}
 
 // C rac
-function buyCrac(){
-  if(items.clicks >= 1500000){
-    items.raccoon++;
-    items.clicks -= 1500000;
-    upload();
-  }
-}
-function mxCra(){
-  one = Math.floor(items.clicks / 1500000)
-  
-  items.clicks -= one * 1500000
-  items.raccoon += one
-  upload();
-}
+function buyCrac(){canimal('raccoon', 1500000)}
+function mxCra(){cManimal('raccoon', 1500000)}
 
 // O
-function buyCowl(){
-  if(items.clicks >= 1800000){
-    items.owl++;
-    items.clicks -= 1800000;
-    upload();
-  }
-}
-function mxCow(){
-  one = Math.floor(items.clicks / 1800000)
-  
-  items.clicks -= one * 1800000
-  items.owl += one
-  upload();
-}
+function buyCowl(){canimal('owl', 1800000)}
+function mxCow(){cManimal('owl', 1800000)}
+
+// bad
+function buyCbad(){canimal('badger', 3500000)}
+function mxCba(){cManimal('badger', 3500000)}
+
+// squirt
+function buyCsqu(){canimal('squirrel', 5500000)}
+function mxCsq(){cManimal('squirrel', 5500000)}

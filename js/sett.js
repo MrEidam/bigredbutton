@@ -74,12 +74,12 @@ function LDmodes(){
         });
         Btns.forEach((e) => {
             e.style.background = '#8FBC8F';
-            e.style.color = '#ccc';
-            e.style.textShadow = "2px 2px 4px #000";
+            e.style.color = '#fff';
+            e.style.textShadow = "";
         });
         hhh.forEach((e) => {
             e.style.color = '#000';
-            e.style.textShadow = "2px 2px 4px #000";
+            e.style.textShadow = "";
         });
     }else if(items.mode == 1){// Dark Mode
         body.style.background = '#333';
@@ -89,7 +89,7 @@ function LDmodes(){
         });
         Btns.forEach((e) => {
             e.style.background = '#008B8B';
-            e.style.color = '#ccc';
+            e.style.color = '#fff';
             e.style.textShadow = "2px 2px 4px #000";
         });
         hhh.forEach((e) => {

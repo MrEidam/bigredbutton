@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310992147638822" crossorigin="anonymous"></script>
-  <script>
+
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -18,7 +17,7 @@
 
   <!-- By MrEidam & Standa Chlup -->
 
-
+  <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/shop.css">
   <link rel="icon" href="./img/shop.png">
 </head>
@@ -444,6 +443,52 @@
         <p id="disowmake"></p>
       </div>
 
+      <!-- Badger -->
+      <div class="item">
+        <img src="./img/badger.svg">
+        <div class="buttons" style="--Bcolor: #D8D6CA">
+          <button onclick="buybad()" class="buyone" id="ba1">
+            Buy a Badger
+          </button>
+          <button onclick="mxba()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #D8D6CA">
+          <button onclick="buyCbad()" class="buyone" id="Cba1">
+            Buy a Badger for clicks
+          </button>
+          <button onclick="mxCba()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disbad"></p>
+        <p id="disbamake"></p>
+      </div>
+
+      <!-- Squirrel -->
+      <div class="item">
+        <img src="./img/squirell.svg">
+        <div class="buttons" style="--Bcolor: #CFB190">
+          <button onclick="buysqu()" class="buyone" id="sq1">
+            Buy a Squirrel
+          </button>
+          <button onclick="mxsq()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #CFB190">
+          <button onclick="buyCsqu()" class="buyone" id="Csq1">
+            Buy a Squirrel for clicks
+          </button>
+          <button onclick="mxCsq()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dissqu"></p>
+        <p id="dissqmake"></p>
+      </div>
+
     </article>
 
 
@@ -482,9 +527,12 @@
       
   </main>
 
-  <div class="menu-container">
+  <div class="menu-container" style="z-index: 500; position: fixed;">
     <div class="button">Menu
-        <span class="fas fa-bars"></span>
+        <span class="fas">
+            <svg height="1em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <svg height="1em" viewBox="0 0 384 512"><style>svg{fill:#ffffff}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </span>
     </div>
     <ul>
         <li><a href="./" id="brb">BRB</a></li>

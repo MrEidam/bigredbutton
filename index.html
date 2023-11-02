@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Webová Clicker hra s Červeným tlačítkem a zvířátky!">
   <meta name="keywords" content="BRB, MrEidam, Eidam, Clicker, Button, Red, Big, Shop, Ajdam, MrAjdam, paneidam, merida">
-  <meta name="description" content="Clicker hra s červeným tlačítkem a zvířátky!">
   <meta name="author" content="MrEidam">
-  <meta property="og:url" content="https://www.mreidam-brb.com">
+
+  <!-- Social -->
   <meta property="og:title" content="BRB">
-  <meta property="og:description" content="Clicker hra s červeným tlačítkem a zvířátky!">
+  <meta property="og:url" content="https://www.mreidam-brb.com">
+  <meta property="og:site_name" content="BRB"/>
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Webová Clicker hra s Červeným tlačítkem a zvířátky!">
   <meta property="og:image" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/brb-still.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310992147638822" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/21ea186610.js" crossorigin="anonymous"></script>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="BRB"/>
+  <meta name="twitter:url" content="https://www.mreidam-brb.com"/>
+  <meta property="twitter:description" content="Webová Clicker hra s Červeným tlačítkem a zvířátky!">
+  <meta name="twitter:image:src" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/brb-still.png"/>
+
+  <!-- Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTW2M8Q7SB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-CTW2M8Q7SB');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CTW2M8Q7SB');</script>
   <title>BRB - Clicking</title>
   
   <!-- By MrEidam && Standa Chlup -->
 
+  <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/brb.css">
   <link rel="icon" href="./img/brb-still.png">
 </head>
 
 <body id="body">
-  <div id="tycoon"></div>
+  <div id="jonathan"></div>
   
   <!-- Clicks -->
   <div id="logclick">
@@ -47,9 +53,18 @@
     <img src="./img/brb-pressed.png" id="pressed" draggable="false">
   </div>
 
-  <div class="menu-container">
+  <!-- Šmol changelog -->
+  <div class="changelog" onclick="change()">
+    <svg height="1em" viewBox="0 0 512 512"><path d="M256 56C145.72 56 56 145.72 56 256s89.72 200 200 200 200-89.72 200-200S366.28 56 256 56zm0 82a26 26 0 11-26 26 26 26 0 0126-26zm48 226h-88a16 16 0 010-32h28v-88h-16a16 16 0 010-32h32a16 16 0 0116 16v104h28a16 16 0 010 32z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu-container" style="z-index: 500;">
     <div class="button">Menu
-        <span class="fas fa-bars"></span>
+        <span class="fas">
+          <svg height="1em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+          <svg height="1em" viewBox="0 0 384 512"><style>svg{fill:#ffffff}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </span>
     </div>
     <ul>
       <li><a href="./" id="brb">BRB</a></li>
@@ -62,11 +77,14 @@
   <!-- Soc. -->
   <div class="socmenu">
     <li style="--i:1;--clr:#f00;">
-        <a href="https://www.youtube.com/@mreidam" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        <a href="https://www.youtube.com/@mreidam" target="_blank"><img src="./img/youtube.svg"></a>
     </li>
+    <!-- <li style="--i:2;--clr:#00acee;">
+      <a href="https://twitter.com/EidamMr" target="_blank"><img src="./img/twitter.svg"></a>
+    </li> -->
     <div class="toggle" id="soctog">
-        <ion-icon name="share-social"></ion-icon>
-        <ion-icon name="close-outline"></ion-icon>
+      <svg height="1em" viewBox="0 0 512 512"><path d="M384 336a63.78 63.78 0 00-46.12 19.7l-148-83.27a63.85 63.85 0 000-32.86l148-83.27a63.8 63.8 0 10-15.73-27.87l-148 83.27a64 64 0 100 88.6l148 83.27A64 64 0 10384 336z" fill="currentColor"/></svg>
+      <svg height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" fill="currentColor"/></svg>
     </div>
   </div>
 

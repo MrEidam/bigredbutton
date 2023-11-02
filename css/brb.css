@@ -7,7 +7,7 @@ body{
     box-sizing: border-box;
     overflow: hidden;
 }
-#tycoon{
+#jonathan{
   position: absolute;
   width: 100%;
   height: 200px;
@@ -56,93 +56,29 @@ body{
 }
 /* Other BTNS */
 
-.menu-container{
+/* Šmol change */
+.changelog{
   position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins';
+  width: 75px;
+  height: 75px;
+  bottom: 10px;
+  right: 10px;
+  filter: drop-shadow(0 0 10px #000);
+  background: #0098FF;
+  border-radius: 50%;
 }
-.button{
-  position: relative;
-  background: #1b1b1b;
+.changelog svg{
+  border-radius: 50%;
+  height: 99%;
+  filter: drop-shadow(0 0 10px #000);
   color: #fff;
-  font-size: 20px;
-  padding: 8px 20px;
-  width: 150px;/* 100% */
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: width .4s;
+  transition: 0.5s;
 }
-.button.expand{
-  width: 100%;
-}
-.fas.expand:before{
-  content: '\f00d';
-}
-ul{
-  list-style: none;
-  position: absolute;
-  top: 65px;
-  display: block;
-  background: #1b1b1b;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  display: none;
-  box-shadow: 0 3px 6px rgba(0,0,0,.3);
-  padding-inline-start: 0px;
-}
-ul:before{
-  position: absolute;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: #1b1b1b;
-  top: -10px;
-  right: 15px;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-ul li{
-  line-height: 35px;
-  padding: 8px 20px;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-}
-ul li:hover:first-child{
-  border-radius: 5px 5px 0 0;
-}
-ul li:hover:last-child{
-  border-radius: 0 0 5px 5px;
-}
-ul li:hover{
-  box-shadow: inset 0 0 5px #33ff33,
-              inset 0 0 10px #66ff66;
-}
-ul li:last-child{
-  border-bottom: none;
-}
-ul li a{
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-}
-ul li:hover a{
-  color: #44dd44;
+.changelog:hover svg{
+  color: #d33;
 }
 
+/* Social */
 .socmenu{
   position: absolute;
   left: -45px;
@@ -163,6 +99,7 @@ ul li:hover a{
       0 25px 15px rgba(0,0,0,0.25),
       0 25px 20px rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
+  filter: drop-shadow(0 0 10px rgba(0,0,0,.75));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,11 +108,17 @@ ul li:hover a{
   color: #fff;
   z-index: 1000000;
 }
-.socmenu .toggle ion-icon{position:absolute;opacity:0;transition:0.5s;}
-.socmenu .toggle ion-icon:nth-child(1){opacity:1;transform:rotate(360deg);}
-.socmenu.active .toggle ion-icon:nth-child(1){opacity:0;transform:rotate(0deg);}
-.socmenu .toggle ion-icon:nth-child(2){opacity:0;transform:rotate(0deg);}
-.socmenu.active .toggle ion-icon:nth-child(2){opacity:1;transform:rotate(360deg);}
+.socmenu .toggle svg{
+  position: absolute;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,.75));
+  opacity: 0;
+  transition: 0.5s; 
+}
+.socmenu .toggle svg{transition: 0.5s;}
+.socmenu .toggle svg:nth-child(1){opacity:1;transform:rotate(360deg);}
+.socmenu.active .toggle svg:nth-child(1){opacity:0;transform:rotate(0deg);}
+.socmenu .toggle svg:nth-child(2){opacity:0;transform:rotate(0deg);}
+.socmenu.active .toggle svg:nth-child(2){opacity:1;transform:rotate(360deg);}
 .socmenu li{
   position: absolute;
   left: 0;
@@ -221,3 +164,4 @@ ul li:hover a{
   transform: rotate(calc(360deg/-4*var(--i)));
   box-shadow: 0 3px 4px rgba(0,0,0,0.15)
 }
+.socmenu li a img{width:1em;}
