@@ -149,6 +149,32 @@ button{
   }
 }
 
+.upwards{
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(10px 8px 6px #333);
+  background: #999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+.upwards.active{
+  bottom: 32px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.upwards img{
+  width: 1.25em;
+  filter: drop-shadow(10px 8px 6px #333);
+}
+
 ::-webkit-scrollbar{
   background: transparent;
   width: 5px;

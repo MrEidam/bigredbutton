@@ -3,27 +3,25 @@ let items;
 let cs = 0;
 let anime = false;
 
-const changeEN = `                        v43
-Added: Small changelog button (this)
-            Squrrel + Badger
-            Better function for buying animals for clicks
-            Better jonathan in BRB
+const changeEN = `                        v44
+Added: NEW ANIMAL - Chameleon
+            Better language choosing method for newcommers
+            Official Reddit community
+            Button in shop that will scroll you to the top of the page
+            Complete history in https://history.mreidam-brb.com
 
-Fixed: Menu hitbox
-          lag while loading BRB
+Fixed: Menu in upgrades was not at fixed position
+          `
 
-Removed: text shadow in light mode settings`
+const changeCZ = `                        v44
+Přidáno: NOVÉ ZVÍŘE - Chameleón
+              Lepší výběr jazyků pro ty co nikdy nehráli BRB
+              Oficiání Reddit comunita
+              Tlačítko v obchodě, které vás přenese na začátek stránky
+              Celá historie BRB na stránce https://history.mreidam-brb.com
 
-const changeCZ = `                        v43
-Přidáno: Malé tlačítko s aktualizacemi (toto)
-              Veverka + Jezevec
-              Lepší funkci pro nakupování zvířátek za kliky
-              Lepší jonathan v BRB
-
-Upraveno: Hitboxy Menu
-                 Sekání během načítání BRB
-
-Smazáno: stín textu behem světlého módu v nastavení`
+Upraveno: Menu ve Vylepšení nebylo na stále pozici
+                 `
 
 function load(){
   if (localStorage.getItem('items')!=null){
@@ -73,17 +71,19 @@ window.onload = function(){
     mode:0,
     Mclick:1,
     token:0,
+    joke:0,
   }
   load();
   update();
   for(let item in items){
-    if(!items.item){
-      items.item = 0;
+    if(!items[item]){
+      items[item] = 0;
     }
   }
+  if(items.joke==0||!items.joke){location.href = './lang';}
   cash();
-  checklang()
-  LDmodes()
+  checklang();
+  LDmodes();
 }
 
 // Update

@@ -192,7 +192,7 @@
 
       <!-- Platypus-->
       <div class="item">
-        <img src="./img/platapus.png" draggable="false">
+        <img src="./img/platypus.svg" draggable="false">
         <div class="buttons" style="--Bcolor: Sienna">
           <button onclick="buypla()" class="buyone" id="pl1">
             Buy a Platypus for 1 cappybarra and 1 wolf
@@ -215,7 +215,7 @@
 
       <!-- Porcupine -->
       <div class="item">
-        <img src="./img/Porcupine.png" draggable="false">
+        <img src="./img/Porcupine.svg" draggable="false">
         <div class="buttons" style="--Bcolor: SaddleBrown">
           <button onclick="buypor()" class="buyone" id="pr1">
             Buy a Porcupine for 1 whale and 4 cats
@@ -238,7 +238,7 @@
 
       <!-- Hippopotamus -->
       <div class="item">
-        <img src="./img/hippopotamus.png" draggable="false">
+        <img src="./img/hippopotamus.svg" draggable="false">
         <div class="buttons" style="--Bcolor: LightSlateGray">
           <button onclick="buyhip()" class="buyone" id="hi1">
             Buy a Hippopotamus for
@@ -489,6 +489,29 @@
         <p id="dissqmake"></p>
       </div>
 
+      <!-- Chameleon -->
+      <div class="item">
+        <img src="./img/chameleon.svg">
+        <div class="buttons" style="--Bcolor: #BED15F">
+          <button onclick="buycha()" class="buyone" id="cha1">
+            Buy a Chameleon
+          </button>
+          <button onclick="mxcha()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #BED15F">
+          <button onclick="buyCcha()" class="buyone" id="Ccha1">
+            Buy a Chameleon for clicks
+          </button>
+          <button onclick="mxCcha()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="discha"></p>
+        <p id="dischamake"></p>
+      </div>
+
     </article>
 
 
@@ -527,7 +550,7 @@
       
   </main>
 
-  <div class="menu-container" style="z-index: 500; position: fixed;">
+  <div class="menu-container">
     <div class="button">Menu
         <span class="fas">
             <svg height="1em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
@@ -542,6 +565,9 @@
     </ul>
   </div>
   
+  <a href="#" class="upwards">
+    <img src="./img/arrow-up.svg" alt="">
+  </a>
   <!-- By MrEidam -->
   <script src="./js/menu.js"></script>
   <script src="./js/shop.js"></script>

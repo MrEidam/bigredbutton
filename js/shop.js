@@ -4,7 +4,7 @@ let cs
 function update(){
   let i = JSON.stringify(items);
   localStorage.setItem('items', i);
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
 }
 function c(x){
   items.clicks += x;
@@ -16,7 +16,7 @@ function c(x){
 function load(){
   items = JSON.parse(localStorage.getItem('items'));
   LDmodes()
-  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000;
+  cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
 
   if(items.lang == 1){
     document.documentElement.setAttribute('lang', 'en');
@@ -44,6 +44,7 @@ function load(){
     disowl.innerHTML=`You've got ${fornum(items.owl)} owls!`
     disbad.innerHTML=`You've got ${fornum(items.badger)} badgers!`
     dissqu.innerHTML=`You've got ${fornum(items.squirrel)} squirrels!`
+    discha.innerHTML=`You've got ${fornum(items.chameleon)} chameleons!`
     
     
     
@@ -72,51 +73,54 @@ function load(){
     disowmake.innerHTML=`They're generating ${fornum((items.owl*16000)*items.pres)} clicks per second!`
     disbamake.innerHTML=`They're generating ${fornum((items.badger*32000)*items.pres)} clicks per second!`
     dissqmake.innerHTML=`They're generating ${fornum((items.squirrel*50000)*items.pres)} clicks per second!`
+    dischamake.innerHTML=`They're generating ${fornum((items.chameleon*70000)*items.pres)} clicks per second!`
 
     dg1.innerHTML = 'Buy a Dog for 100 clicks'
     ct1.innerHTML = 'Buy a Cat for 10 dogs'
     fx1.innerHTML = 'Buy a Fox for 15 dogs'
-    wl1.innerHTML = 'Buy a Wolf for <br /> 6 dogs and 5 foxes'
-    hm1.innerHTML = 'Buy a Hamster for <br /> 1 wolf and 2 cats'
+    wl1.innerHTML = 'Buy a Wolf for <br> 6 dogs and 5 foxes'
+    hm1.innerHTML = 'Buy a Hamster for <br> 1 wolf and 2 cats'
     wh1.innerHTML = 'Buy a Whale for 2 wolfs'
-    cp1.innerHTML = 'Buy a Capybara for <br /> 1 whale and 4 cats'
-    pl1.innerHTML = 'Buy a Platypus for <br /> 1 capybara and 1 wolf'
-    pr1.innerHTML = 'Buy a Porcupine for <br /> 1 platypus and 1 whale'
-    hi1.innerHTML = 'Buy a Hippopotamus for <br /> 1 porcupine and 2 hamsters'
-    sn1.innerHTML = 'Buy a Snake for <br /> 2 whales and 4 hamsters'
-    ch1.innerHTML = 'Buy a Cheetah for <br /> 2 snakes and 2 platypuses'
-    py1.innerHTML = 'Buy a Python for <br /> 1 cheetah and 5 hippos'
-    gi1.innerHTML = 'Buy a Giraffe for <br /> 1 python and 20 foxes'
-    ot1.innerHTML = 'Buy a Otter for <br /> 1 giraffe and 2 capybaras'
-    me1.innerHTML = 'Buy a Meerkat for <br /> 1 otter and 3 whales'
-    ra1.innerHTML = 'Buy a Raccoon for <br /> 1 meerkat and 7 porcupines'
-    ow1.innerHTML = 'Buy a Owl for <br /> 1 racoon and 1 snake'
-    ba1.innerHTML = 'Buy a Badger for <br /> 1 owl and 2 pythons'
-    sq1.innerHTML = 'Buy a Squirrel for <br /> 1 badger and 5 cheetah'
+    cp1.innerHTML = 'Buy a Capybara for <br> 1 whale and 4 cats'
+    pl1.innerHTML = 'Buy a Platypus for <br> 1 capybara and 1 wolf'
+    pr1.innerHTML = 'Buy a Porcupine for <br> 1 platypus and 1 whale'
+    hi1.innerHTML = 'Buy a Hippopotamus for <br> 1 porcupine and 2 hamsters'
+    sn1.innerHTML = 'Buy a Snake for <br> 2 whales and 4 hamsters'
+    ch1.innerHTML = 'Buy a Cheetah for <br> 2 snakes and 2 platypuses'
+    py1.innerHTML = 'Buy a Python for <br> 1 cheetah and 5 hippos'
+    gi1.innerHTML = 'Buy a Giraffe for <br> 1 python and 20 foxes'
+    ot1.innerHTML = 'Buy a Otter for <br> 1 giraffe and 2 capybaras'
+    me1.innerHTML = 'Buy a Meerkat for <br> 1 otter and 3 whales'
+    ra1.innerHTML = 'Buy a Raccoon for <br> 1 meerkat and 7 porcupines'
+    ow1.innerHTML = 'Buy a Owl for <br> 1 racoon and 1 snake'
+    ba1.innerHTML = 'Buy a Badger for <br> 1 owl and 2 pythons'
+    sq1.innerHTML = 'Buy a Squirrel for <br> 1 badger and 5 cheetah'
+    cha1.innerHTML = 'Buy a Chameleon for <br> 1 squirrel and 2 meerkats'
 
     lm1.innerHTML = 'Buy a Lemon for <b style="font-weight: 1000;">some</b> cats'
     lt1.innerHTML = 'Buy a Lemon Tree for 5 lemons'
 
     // Buying for clicks
-    Cct1.innerHTML = 'Buy a Cat for <br /> 1,2 k clicks'
-    Cfx1.innerHTML = 'Buy a Fox for <br /> 1,8 k clicks'
-    Cwl1.innerHTML = 'Buy a Wolf for <br /> 10 k clicks'
-    Chm1.innerHTML = 'Buy a Hamster for <br /> 13 k clicks'
-    Cwh1.innerHTML = 'Buy a Whale for <br /> 22 k clicks'
-    Ccp1.innerHTML = 'Buy a Capybara for <br /> 28 k clicks'
-    Cpl1.innerHTML = 'Buy a Platypus for <br /> 42 k clicks'
-    Cpr1.innerHTML = 'Buy a Porcupine for <br /> 70 k clicks'
-    Chi1.innerHTML = 'Buy a Hippopotamus for <br /> 100 k clicks'
-    Csn1.innerHTML = 'Buy a Snake for <br /> 150 k clicks'
-    Cch1.innerHTML = 'Buy a Cheetah for <br /> 350 k clicks'
-    Cpy1.innerHTML = 'Buy a Python for <br /> 820 k clicks'
-    Cgi1.innerHTML = 'Buy a Giraffe for <br /> 880 k clicks'
+    Cct1.innerHTML = 'Buy a Cat for <br> 1,2 k clicks'
+    Cfx1.innerHTML = 'Buy a Fox for <br> 1,8 k clicks'
+    Cwl1.innerHTML = 'Buy a Wolf for <br> 10 k clicks'
+    Chm1.innerHTML = 'Buy a Hamster for <br> 13 k clicks'
+    Cwh1.innerHTML = 'Buy a Whale for <br> 22 k clicks'
+    Ccp1.innerHTML = 'Buy a Capybara for <br> 28 k clicks'
+    Cpl1.innerHTML = 'Buy a Platypus for <br> 42 k clicks'
+    Cpr1.innerHTML = 'Buy a Porcupine for <br> 70 k clicks'
+    Chi1.innerHTML = 'Buy a Hippopotamus for <br> 100 k clicks'
+    Csn1.innerHTML = 'Buy a Snake for <br> 150 k clicks'
+    Cch1.innerHTML = 'Buy a Cheetah for <br> 350 k clicks'
+    Cpy1.innerHTML = 'Buy a Python for <br> 820 k clicks'
+    Cgi1.innerHTML = 'Buy a Giraffe for <br> 880 k clicks'
     Cot1.innerHTML = 'Buy a Otter for <br> 950 k clicks'
     Cme1.innerHTML = 'Buy a Meerkat for <br> 1 mil clicks'
     Cra1.innerHTML = 'Buy a Raccoon for <br> 1.5 mil clicks'
     Cow1.innerHTML = 'Buy a Owl for <br> 1.8 mil clicks'
     Cba1.innerHTML = 'Buy a Badger for <br> 3.5 mil clicks'
     Csq1.innerHTML = 'Buy a Squirrel for <br> 5.5 mil clicks'
+    Ccha1.innerHTML = 'Buy a Chameleon for <br> 7.7 mil clicks'
   }
   if(items.lang == 0){
     document.documentElement.setAttribute('lang', 'cz');
@@ -144,6 +148,7 @@ function load(){
     document.getElementById('disowl').innerHTML=`Právě máš ${fornum(items.owl)} sov!`
     document.getElementById('disbad').innerHTML=`Právě máš ${fornum(items.badger)} jezevců!`
     document.getElementById('dissqu').innerHTML=`Právě máš ${fornum(items.squirrel)} veverek!`
+    document.getElementById('discha').innerHTML=`Právě máš ${fornum(items.chameleon)} chameleónů!`
     
     
     
@@ -172,52 +177,55 @@ function load(){
     document.getElementById('disowmake').innerHTML=`Generují ${fornum((items.owl*16000)*items.pres)} kliků za sekundu!`
     document.getElementById('disbamake').innerHTML=`Generují ${fornum((items.badger*32000)*items.pres)} kliků za sekundu!`
     document.getElementById('dissqmake').innerHTML=`Generují ${fornum((items.squirrel*50000)*items.pres)} kliků za sekundu!`
+    document.getElementById('dischamake').innerHTML=`Generují ${fornum((items.chameleon*70000)*items.pres)} kliků za sekundu!`
 
 
     dg1.innerHTML = 'Kup Psa za 100 kliků'
     ct1.innerHTML = 'Kup Kočku za 10 psů'
     fx1.innerHTML = 'Kup Lišku za 15 psů'
-    wl1.innerHTML = 'Kup Vlka za <br /> 6 psů a 5 lišek'
-    hm1.innerHTML = 'Kup Křečka za <br /> 1 vlka a 2 kočky'
+    wl1.innerHTML = 'Kup Vlka za <br> 6 psů a 5 lišek'
+    hm1.innerHTML = 'Kup Křečka za <br> 1 vlka a 2 kočky'
     wh1.innerHTML = 'Kup Velrybu za 2 vlky'
-    cp1.innerHTML = 'Kup Kapybaru za <br /> 1 velrybu a 4 kočky'
-    pl1.innerHTML = 'Kup Ptakopyska za <br /> 1 kapybaru a 1 vlka'
-    pr1.innerHTML = 'Kup Dikobraza za <br /> 1 ptakopyska a 1 velrybu'
-    hi1.innerHTML = 'Kup Hrocha za <br /> 1 dikobraza a 2 křečků'
-    sn1.innerHTML = 'Kup Hada za <br /> 2 velryby a 4 křečky'
-    ch1.innerHTML = 'Kup Geparda za <br /> 2 hady a 2 ptakopysky'
-    py1.innerHTML = 'Kup Kobru za <br /> 1 geparda a 5 hrochů'
-    gi1.innerHTML = 'Kup Žirafu za <br /> 1 kobru a 20 lišek'
-    ot1.innerHTML = 'Kup Vydru za <br /> 1 žirafu a 2 kapybary'
-    me1.innerHTML = 'Kup Surikatu za <br /> 1 vydru a 3 velryby'
-    ra1.innerHTML = 'Kup Mývala za <br /> 1 surikatu a 7 dikobrazů'
-    ow1.innerHTML = 'Kup Sovu za <br /> 1 mývala a 1 hada'
-    ba1.innerHTML = 'Kup Jezevce za <br /> 1 sovu a 2 kobry'
-    sq1.innerHTML = 'Kup Veverku za <br /> 1 jezevce a 5 gepardů'
+    cp1.innerHTML = 'Kup Kapybaru za <br> 1 velrybu a 4 kočky'
+    pl1.innerHTML = 'Kup Ptakopyska za <br> 1 kapybaru a 1 vlka'
+    pr1.innerHTML = 'Kup Dikobraza za <br> 1 ptakopyska a 1 velrybu'
+    hi1.innerHTML = 'Kup Hrocha za <br> 1 dikobraza a 2 křečků'
+    sn1.innerHTML = 'Kup Hada za <br> 2 velryby a 4 křečky'
+    ch1.innerHTML = 'Kup Geparda za <br> 2 hady a 2 ptakopysky'
+    py1.innerHTML = 'Kup Kobru za <br> 1 geparda a 5 hrochů'
+    gi1.innerHTML = 'Kup Žirafu za <br> 1 kobru a 20 lišek'
+    ot1.innerHTML = 'Kup Vydru za <br> 1 žirafu a 2 kapybary'
+    me1.innerHTML = 'Kup Surikatu za <br> 1 vydru a 3 velryby'
+    ra1.innerHTML = 'Kup Mývala za <br> 1 surikatu a 7 dikobrazů'
+    ow1.innerHTML = 'Kup Sovu za <br> 1 mývala a 1 hada'
+    ba1.innerHTML = 'Kup Jezevce za <br> 1 sovu a 2 kobry'
+    sq1.innerHTML = 'Kup Veverku za <br> 1 jezevce a 5 gepardů'
+    cha1.innerHTML = 'Kup Chameleóna za <br> 1 veverku a 2 surikaty'
 
     lm1.innerHTML = 'Kup Citrón za <b style="font-weight: 1000;">pár</b> koček'
     lt1.innerHTML = 'Kup Citrónovník za 5 citrónů'
 
     // Buying for clicks
-    Cct1.innerHTML = 'Kup Kočku za <br /> 1,2 k kliků'
-    Cfx1.innerHTML = 'Kup Lišku za <br /> 1,8 k kliků'
-    Cwl1.innerHTML = 'Kup Vlka za <br /> 10 k kliků'
-    Chm1.innerHTML = 'Kup Křečka za <br /> 13 k kliků'
-    Cwh1.innerHTML = 'Kup Velrybu za <br /> 22 k kliků'
-    Ccp1.innerHTML = 'Kup Kapybaru za <br /> 28 k kliků'
-    Cpl1.innerHTML = 'Kup Ptakopyska za <br /> 42 k kliků'
-    Cpr1.innerHTML = 'Kup Dikobraza za <br /> 70 k kliků'
-    Chi1.innerHTML = 'Kup Hrocha za <br /> 100 k kliků'
-    Csn1.innerHTML = 'Kup Hada za <br /> 150 k kliků'
-    Cch1.innerHTML = 'Kup Geparda za <br /> 350 k kliků'
-    Cpy1.innerHTML = 'Kup Kobru za <br /> 820 k kliků'
-    Cgi1.innerHTML = 'Kup Žirafu za <br /> 880 k kliků'
-    Cot1.innerHTML = 'Kup Vydru za <br /> 950 k kliků'
-    Cme1.innerHTML = 'Kup Surikatu za <br /> 1 mil kliků'
-    Cra1.innerHTML = 'Kup Mývala za <br /> 1,5 mil kliků'
-    Cow1.innerHTML = 'Kup Sovu za <br /> 1,8 mil kliků'
-    Cba1.innerHTML = 'Kup Jezevce za <br /> 3,5 mil kliků'
-    Csq1.innerHTML = 'Kup Veverku za <br /> 5,5 mil kliků'
+    Cct1.innerHTML = 'Kup Kočku za <br> 1,2 k kliků'
+    Cfx1.innerHTML = 'Kup Lišku za <br> 1,8 k kliků'
+    Cwl1.innerHTML = 'Kup Vlka za <br> 10 k kliků'
+    Chm1.innerHTML = 'Kup Křečka za <br> 13 k kliků'
+    Cwh1.innerHTML = 'Kup Velrybu za <br> 22 k kliků'
+    Ccp1.innerHTML = 'Kup Kapybaru za <br> 28 k kliků'
+    Cpl1.innerHTML = 'Kup Ptakopyska za <br> 42 k kliků'
+    Cpr1.innerHTML = 'Kup Dikobraza za <br> 70 k kliků'
+    Chi1.innerHTML = 'Kup Hrocha za <br> 100 k kliků'
+    Csn1.innerHTML = 'Kup Hada za <br> 150 k kliků'
+    Cch1.innerHTML = 'Kup Geparda za <br> 350 k kliků'
+    Cpy1.innerHTML = 'Kup Kobru za <br> 820 k kliků'
+    Cgi1.innerHTML = 'Kup Žirafu za <br> 880 k kliků'
+    Cot1.innerHTML = 'Kup Vydru za <br> 950 k kliků'
+    Cme1.innerHTML = 'Kup Surikatu za <br> 1 mil kliků'
+    Cra1.innerHTML = 'Kup Mývala za <br> 1,5 mil kliků'
+    Cow1.innerHTML = 'Kup Sovu za <br> 1,8 mil kliků'
+    Cba1.innerHTML = 'Kup Jezevce za <br> 3,5 mil kliků'
+    Csq1.innerHTML = 'Kup Veverku za <br> 5,5 mil kliků'
+    Ccha1.innerHTML = 'Kup Chameleóna za <br> 7,7 mil kliků'
   }
 }
 load();
@@ -250,7 +258,6 @@ function buydog(){
     items.dogs += 1;
   }
   upload();
-  click()
 }
 function buycat(){
   if(items.dogs>=10){
@@ -401,6 +408,14 @@ function buysqu(){
   } 
   upload();
 }
+function buycha(){
+  if(items.squirrel>=1 && items.meerkat>=2){
+    items.squirrel-=1;
+    items.meerkat-=2;
+    items.chameleon++;
+  } 
+  upload();
+}
 
 
 
@@ -450,15 +465,6 @@ function mxfx(){
   items.foxes += one
   upload();
 }
-/*
-function lemmvalue(){
-  mdog = items.cats/20;
-  maxdog = Math.floor(mdog);
-  floordog = maxdog*20
-  items.cats -= floordog
-  items.lemons += maxdog 
-  upload();
-}*/
 function mxlm(){
   let RanLemCost = Math.floor(Math.random()*100);
   one = Math.floor(items.cats/RanLemCost)
@@ -645,6 +651,15 @@ function mxsq(){
   }
   upload();
 }
+function mxcha(){
+  const amount = Math.min(Math.floor(items.squirrel/1), Math.floor(items.meerkat/2));
+  if(amount > 0){
+    items.squirrel -= amount*1;
+    items.meerkat -= amount*2;
+    items.chameleon += amount;
+  }
+  upload();
+}
 
 // Dark || Light Mode
 function LDmodes(){
@@ -796,3 +811,17 @@ function mxCba(){cManimal('badger', 3500000)}
 // squirt
 function buyCsqu(){canimal('squirrel', 5500000)}
 function mxCsq(){cManimal('squirrel', 5500000)}
+
+// cha cha
+function buyCcha(){canimal('chameleon', 7700000)}
+function mxCcha(){cManimal('chameleon', 7700000)}
+
+const upArr = document.querySelector('.upwards');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY >= 600){
+    upArr.classList.add('active');
+  }else{
+    upArr.classList.remove('active');
+  }
+})

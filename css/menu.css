@@ -1,5 +1,5 @@
 .menu-container{
-    position: absolute;
+    position: fixed;
     top: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';
+    z-index: 500;
 }
 .button{
     position: relative;
