@@ -80,7 +80,14 @@ window.onload = function(){
       items[item] = 0;
     }
   }
-  if(items.joke==0||!items.joke){location.href = './lang';}
+  if(items.joke==0||!items.joke){
+    if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
+      items.lang = 0;
+    }else{
+      items.lang = 1;
+    }
+    items.joke = 69;
+  }
   cash();
   checklang();
   LDmodes();
