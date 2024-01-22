@@ -8,12 +8,10 @@ function update(){
   if(items.token >= 1000*items.pres){
     prog.style.display = 'none';
     presBT1.style.display = 'none';
-    presBT10.style.display = 'none';
     presBTmax.style.display = 'none';
     progva.style.display = 'none';
     ItsTime.style.display = 'block';
   }
-  
 }
 
 function load(){
@@ -30,14 +28,13 @@ function load(){
     sett.innerHTML = 'Nastavení';
     dislm.innerHTML = `Právě máš ${fornum(items.lemons)} citrónů!`;
     disMcmake.innerHTML = `Zatím ti každý klik dává ${fornum((items.Mclick||1)*items.pres)} kliků!`;
-    Mc1.innerHTML = `Kup si vylepšení na kliky za <br> ${fornum(20+(items.Mclick||1)*(items.Mclick||1))} citrónů`;
+    Mc1.innerHTML = `Kup si vylepšení na kliky za <br> ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} citrónů`;
     progva.innerHTML = `Zatím máš jen ${items.token} lístků z ${1000*items.pres}!`
 
 
 
     
     presBT1.innerHTML = `1 Lístek za <br> <b style="font-weight: 1000;">pár</b> Citrónů`
-    presBT10.innerHTML = `10 Lístků za <br> <b style="font-weight: 1000;">10 párů</b> Citrónů`
     presBTmax.innerHTML = `Max lístků za <br> <b style="font-weight: 1000;">několik</b> Citrónů`
     ItsTime.innerHTML = `Pojďme jít!`;
     if(items.pres > 1){
@@ -52,15 +49,14 @@ function load(){
     sett.innerHTML = 'Settings';
     dislm.innerHTML = `You've got ${fornum(items.lemons)} lemons!`;
     disMcmake.innerHTML = `So far every click gives you ${fornum((items.Mclick||1)*items.pres)} clicks!`;
-    Mc1.innerHTML = `Buy an upgrade for your clicks<br> for ${fornum(20+(items.Mclick||1)*(items.Mclick||1))} lemons`;
+    Mc1.innerHTML = `Buy an upgrade for your clicks<br> for ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} lemons`;
     progva.innerHTML = `So far you got ${items.token} token out of ${1000*items.pres}!`
     
     
     
     
     presBT1.innerHTML = `1 Ticket for <br> <b style="font-weight: 1000;">some</b> Lemons`
-    presBT10.innerHTML = `10 Tickets for <br> <b style="font-weight: 1000;">some more</b> Lemons`
-    presBTmax.innerHTML = `Buy all Ticket for <br> <b style="font-weight: 1000;">some</b> Lemons`
+    presBTmax.innerHTML = `Max Tickets for <br> <b style="font-weight: 1000;">some</b> Lemons`
     ItsTime.innerHTML = `Let's do this!`;
     if(items.pres > 1){
       got.innerHTML = `You've got ${items.pres-1} Prestige points`
@@ -113,8 +109,8 @@ window.onload = function(){
 /* U P G R A D E S */
 
 function buyMcc(){
-  if(items.lemons>=20+(items.Mclick||1)*(items.Mclick||1)){
-    items.lemons -= 20+(items.Mclick||1)*(items.Mclick||1);
+  if(items.lemons>=10+(items.Mclick||1)*(items.Mclick||1)-1){
+    items.lemons -= 10+(items.Mclick||1)*(items.Mclick||1)-1;
     if((items.Mclick != 1)&&(items.Mclick < 2)){
       items.Mclick = 1;
     }
@@ -128,33 +124,16 @@ function tblb(){ // Token Basic Lemon Buy
   if(items.lemons >= 2000){
     items.lemons -= 2000;
     items.token++;
-    console.log(items.token);
-  }
-  progress();
-  upload();
-}
-
-function tmlm(){ // Token More Lemon Buy
-  if(items.lemons >= 20000){
-    items.lemons -= 20000;
-    items.token += 10;
-    console.log(items.token);
   }
   progress();
   upload();
 }
 
 function talb(){ // Token All Lemon Buy
-  let C = ((1000*items.pres) - items.token)
-  for(let i = 0; i<C; i++){
-    if(items.lemons >= 2000){
-      items.lemons -= 2000;
-      items.token++;
-      console.log(items.token);
-    }
-    progress();
-    upload();
-  }
+  const amount = Math.floor(items.lemons / 2000);
+  
+  items.lemons -= amount * 2000;
+  items.token += amount;
 }
 
 function progress(){
