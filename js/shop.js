@@ -244,10 +244,10 @@ cash();
 
 function click(){
   setTimeout(function decoration(){
-    document.getElementById('imgcli').src = './img/icons8-clicked.png'
+    document.getElementById('imgcli').src = '../img/icons8-clicked.png'
   },500);
   setTimeout(function decoration(){
-    document.getElementById('imgcli').src = './img/icons8-rest.svg'
+    document.getElementById('imgcli').src = '../img/icons8-rest.svg'
   },1000)
 }
 
