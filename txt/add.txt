@@ -23,8 +23,8 @@ max 5 hour
 1 badger     = 32 000 c/s     =  2 080 400 | 1 owl + 2 python
 1 squirrel   = 50 000 c/s     =  3 091 400 | 1 badger + 5 cheetah
 1 chameleon  = 70 000 c/s     =  4 380 800 | 1 squirrel + 2 meerkat
-1 chicken    =
-1 wombat     =
+1 chicken    = 120 000 c/s    =  7 211 800 | 2 squirrel + 1 owl
+1 wombat     = 280 000 c/s    = 15 973 400 | 1 chimken + 2 chameleon
 1 panther    =
 1 coyote     =
 1 frog       =

@@ -5,17 +5,18 @@ let items
 function update(){
     let i = JSON.stringify(items);
     localStorage.setItem('items', i);
-    cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
 }
 
 // Load
 function load(){
     items = JSON.parse(localStorage.getItem('items'));
     LDmodes();
-    cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
     let Btns = document.querySelectorAll('.change');
     if(items.lang == 1){  // EN
         document.documentElement.setAttribute('lang', 'en');
+        document.title = 'BRB - Settings'
         shop.innerHTML = 'Shop';
         upg.innerHTML = 'Upgrades';
         sett.innerHTML = 'Settings';
@@ -30,6 +31,7 @@ function load(){
     }
     if(items.lang == 0){  // CZ
         document.documentElement.setAttribute('lang', 'cz');
+        document.title = 'BRB - Nastavení'
         shop.innerHTML = 'Obchod';
         upg.innerHTML = 'Vylepšení';
         sett.innerHTML = 'Nastavení';
@@ -81,6 +83,8 @@ function LDmodes(){
             e.style.color = '#000';
             e.style.textShadow = "";
         });
+        document.getElementById('sites').style.color = '#000';
+        document.getElementById('sites').style.textShadow = '';
     }else if(items.mode == 1){// Dark Mode
         body.style.background = '#333';
         Bimts.forEach((e) => {
@@ -96,6 +100,8 @@ function LDmodes(){
             e.style.color = '#eee';
             e.style.textShadow = "2px 2px 4px #000";
         });
+        document.getElementById('sites').style.color = '#fff';
+        document.getElementById('sites').style.textShadow = '2px 2px 4px #000';
     }
 }
 

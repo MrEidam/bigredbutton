@@ -4,10 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     user-select: none;
     background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #jonathan{
     position: fixed;
@@ -37,13 +42,52 @@ body{
     height: 100px;
     filter: drop-shadow(0px 20px 14px #444);
 }
-button{
+main section button{
     width: 32px;
     height: 32px;
     border-radius: 0.5rem;
     border: none;
     filter: drop-shadow(10px 10px 14px #444);
 }
+
+.sites{
+    width: 350px;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sites h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.site{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6.9px;
+    text-decoration: none;
+}
+
+.site button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.site img{
+    height: 25px;
+}
+
 ::-webkit-scrollbar{
     background: transparent;
     width: 5px;

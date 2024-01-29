@@ -3,25 +3,30 @@ let items;
 let cs = 0;
 let anime = false;
 
-const changeEN = `                        v44
-Added: NEW ANIMAL - Chameleon
-            Better language choosing method for newcommers
-            Official Reddit community
-            Button in shop that will scroll you to the top of the page
-            Complete history in https://history.mreidam-brb.com
+const changeEN = `                        v45
+Added: ANIMALS - Chimken + Wombat
+             New Main menu with the "social tab"
+             Better language detector
+             New path to Shop, Sett., Upg., Clicking
+             Titles of the sites changes to coresponding language
+             Sites to setting :)
 
-Fixed: Menu in upgrades was not at fixed position
-          `
+Fixed: Buying tokens is now more practical
+          Margin of every main section under the Jonathans
 
-const changeCZ = `                        v44
-Přidáno: NOVÉ ZVÍŘE - Chameleón
-              Lepší výběr jazyků pro ty co nikdy nehráli BRB
-              Oficiání Reddit comunita
-              Tlačítko v obchodě, které vás přenese na začátek stránky
-              Celá historie BRB na stránce https://history.mreidam-brb.com
+Removed: I guess /lang/ but I don't know it 100%`
 
-Upraveno: Menu ve Vylepšení nebylo na stále pozici
-                 `
+const changeCZ = `                        v45
+Přidáno: ZVÍŘATA - Slépka + Wombat
+              Nové hlavní menu s 'sociálními síti'
+              Nová cesta do Obchodu atd v mreidam-brb.com/Shop/
+              Názvy stránek jsou v jazyce korespondující k jazyku uživatele
+              Seznam stránek v Nastavení
+
+Upraveno: Nakupování Tokenů na Prestige je jednoduší
+                 Mezera všech hlavních sekcí pod Jonathanem
+
+Smazáno: Asi /lang/ ale nejsem si jistý`
 
 function load(){
   if (localStorage.getItem('items')!=null){
@@ -129,7 +134,7 @@ function clicking(){
 
 function cash(){
   setTimeout (function money(){
-    cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
     items.clicks += cs*items.pres;
     update();cash();
   },1000)
@@ -139,11 +144,13 @@ function cash(){
 function checklang(){
   if(items.lang == 0){ /* CZ */
     document.documentElement.setAttribute('lang', 'cz');
+    document.title = 'BRB - Klikání'
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
     sett.innerHTML = 'Nastavení';
   }else if(items.lang == 1){ /* UK */
     document.documentElement.setAttribute('lang', 'en');
+    document.title = 'BRB - Clicking'
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
     sett.innerHTML = 'Settings';
@@ -206,12 +213,3 @@ addEventListener("keyup", (event) => {
     clicking();
   }
 })
-
-
-
-// social
-let toggle = document.querySelector('.toggle');
-let socmenu = document.querySelector('.socmenu');
-toggle.onclick = function(){
-    socmenu.classList.toggle('active');
-};

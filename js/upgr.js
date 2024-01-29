@@ -23,6 +23,7 @@ function load(){
   }
   if(items.lang == 0){        // CZ
     document.documentElement.setAttribute('lang', 'cz');
+    document.title = 'BRB - Vylepšení'
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
     sett.innerHTML = 'Nastavení';
@@ -44,6 +45,7 @@ function load(){
 
   }else if(items.lang == 1){  // En
     document.documentElement.setAttribute('lang', 'en');
+    document.title = 'BRB - Upgrades'
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
     sett.innerHTML = 'Settings';
@@ -71,7 +73,7 @@ function upload(){update();load();}
 
 function cash(){
   setTimeout (function money(){
-    cs = items.dogs + items.cats*12 + items.foxes*18 + items.wolfs*100 + items.hamsters*130 + items.whales*220 + items.capybaras*280 + items.platapuses*400 + items.porcupines*650 + items.hippos*950 + items.snakes*1000 + items.cheetahs*3000 + items.pythons*7800 + items.girrafes*8400 + items.otters*9000 + items.meerkat*9800 + items.raccoon*14500 + items.owl*16000 + items.badger*32000 + items.squirrel*50000 + items.chameleon*70000;
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
     items.clicks += cs*items.pres;
     update();cash();
   },1000)
@@ -134,6 +136,7 @@ function talb(){ // Token All Lemon Buy
   
   items.lemons -= amount * 2000;
   items.token += amount;
+  upload();
 }
 
 function progress(){
@@ -144,8 +147,13 @@ function progress(){
 
 function TheThing(){
   if(items.lang == 0 && items.token >= (1000*items.pres) && confirm(`Za Prestiže budeš získávat více kliků, ale tvůj postup se vynuluje (až na Prestiž body). Chceš se 'Znovuzrodit'?`)){        // CZ
+    if(items.pres>=5){
+      alert(`Získal jsi 1 prestiže bod!`);
+      items.pres += 1;
+    }else{
       alert(`Získal jsi 0.5 prestiže bodů!`);
       items.pres += 0.5;
+    }
       upload();
       items = {
       clicks:0,
@@ -194,8 +202,13 @@ function TheThing(){
 
 
   }else if(items.lang == 1 && items.token >= (1000*items.pres) && confirm(`For Prestige You'll earn more clicks, but your progress resets (except prestige points). Do you wish to 'Rebirth'?`)){  // En
+    if(items.pres>=5){
+      alert(`You've earn 1 prestige point!`);
+      items.pres += 1;
+    }else{
       alert(`You've earn 0.5 prestige points!`);
       items.pres += 0.5;
+    }
       upload();
       items = {
       clicks:0,

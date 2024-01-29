@@ -25,12 +25,6 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CTW2M8Q7SB');
-</script>
   <title>BRB - Shop</title>
 
   <!-- By MrEidam & Standa Chlup -->
@@ -530,6 +524,52 @@
         <p id="dischamake"></p>
       </div>
 
+      <!-- Chicken -->
+      <div class="item">
+        <img src="../img/chickens.svg">
+        <div class="buttons" style="--Bcolor: #D1DCE6">
+          <button onclick="buychi()" class="buyone" id="chi1">
+            Buy a Chicken
+          </button>
+          <button onclick="mxchi()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #D1DCE6">
+          <button onclick="buyCchi()" class="buyone" id="Cchi1">
+            Buy a Chicken for clicks
+          </button>
+          <button onclick="mxCchi()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dischi"></p>
+        <p id="dischimake"></p>
+      </div>
+
+      <!-- Wombat -->
+      <div class="item">
+        <img src="../img/wombats.svg">
+        <div class="buttons" style="--Bcolor: #B3B3B3">
+          <button onclick="buywom()" class="buyone" id="wom1">
+            Buy a Wombat
+          </button>
+          <button onclick="mxwom()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #B3B3B3">
+          <button onclick="buyCwom()" class="buyone" id="Cwom1">
+            Buy a Wombat for clicks
+          </button>
+          <button onclick="mxCwom()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="diswom"></p>
+        <p id="diswommake"></p>
+      </div>
+
     </article>
 
 
@@ -576,7 +616,7 @@
         </span>
     </div>
     <ul>
-        <li><a href="../" id="brb">BRB</a></li>
+        <li><a href="../Clicking/" id="brb">BRB</a></li>
         <li><a href="../Shop/" id="shop"></a></li>
         <li><a href="../Upgrade/" id="upg"></a></li>
         <li><a href="../Settings/" id="sett"></a></li>
