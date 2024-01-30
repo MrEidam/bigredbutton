@@ -869,12 +869,12 @@ function buyCcha(){canimal('chameleon', 7700000)}
 function mxCcha(){cManimal('chameleon', 7700000)}
 
 // chimken
-function buyCcha(){canimal('chicken', 13000000)}
-function mxCcha(){cManimal('chicken', 13000000)}
+function buyCchi(){canimal('chicken', 13000000)}
+function mxCchi(){cManimal('chicken', 13000000)}
 
 // Write Only Memory
-function buyCcha(){canimal('wombat', 31000000)}
-function mxCcha(){cManimal('wombat', 31000000)}
+function buyCwom(){canimal('wombat', 31000000)}
+function mxCwom(){cManimal('wombat', 31000000)}
 
 const upArr = document.querySelector('.upwards');
 
