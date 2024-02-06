@@ -136,6 +136,7 @@ function talb(){ // Token All Lemon Buy
   
   items.lemons -= amount * 2000;
   items.token += amount;
+  progress();
   upload();
 }
 
