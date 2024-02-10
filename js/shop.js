@@ -385,7 +385,7 @@ function load(){
     wom1.innerHTML = 'Kup za:<br> 1 slepici a 2 chameleóny'
     pan1.innerHTML = 'Kup za:<br> 1 wombata a 2 slepice'
     coy1.innerHTML = 'Kup za:<br> 1 pantera a 4 chameleóny'
-    fro1.innerHTML = 'Kup za:<br> 1 cojota a 40 hadů'
+    fro1.innerHTML = 'Kup za:<br> 1 kojota a 40 hadů'
     bea1.innerHTML = 'Kup za:<br> 1 žábu a 5 žiraf'
     pig1.innerHTML = 'Kup za:<br> 1 medvěda a 6 jezevců'
     sea1.innerHTML = 'Kup za:<br> 1 prase a 9 vyder'
