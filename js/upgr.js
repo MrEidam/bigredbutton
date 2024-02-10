@@ -27,16 +27,15 @@ function load(){
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
     sett.innerHTML = 'Nastavení';
-    dislm.innerHTML = `Právě máš ${fornum(items.lemons)} citrónů!`;
-    disMcmake.innerHTML = `Zatím ti každý klik dává ${fornum((items.Mclick||1)*items.pres)} kliků!`;
-    Mc1.innerHTML = `Kup si vylepšení na kliky za <br> ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} citrónů`;
-    progva.innerHTML = `Zatím máš jen ${items.token} lístků z ${1000*items.pres}!`
+    dislm.innerHTML = `Máš ${fornum(items.lemons)} citrónů!`;
+    disMcmake.innerHTML = `Každý klik ti dává ${fornum((items.Mclick||1)*items.pres)} kliků!`;
+    Mc1.innerHTML = `Vylepšení na kliky za <br> ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} citrónů`;
+    progva.innerHTML = `Máš ${items.token} lístků z ${1000*items.pres}!`
 
 
 
     
-    presBT1.innerHTML = `1 Lístek za <br> <b style="font-weight: 1000;">pár</b> Citrónů`
-    presBTmax.innerHTML = `Max lístků za <br> <b style="font-weight: 1000;">několik</b> Citrónů`
+    presBT1.innerHTML = `1 Lístek za<br>${fornum(2000)} Citrónů`
     ItsTime.innerHTML = `Pojďme jít!`;
     if(items.pres > 1){
       got.innerHTML = `Právě máš ${items.pres-1} Prestiž bodů`
@@ -50,18 +49,17 @@ function load(){
     upg.innerHTML = 'Upgrades';
     sett.innerHTML = 'Settings';
     dislm.innerHTML = `You've got ${fornum(items.lemons)} lemons!`;
-    disMcmake.innerHTML = `So far every click gives you ${fornum((items.Mclick||1)*items.pres)} clicks!`;
-    Mc1.innerHTML = `Buy an upgrade for your clicks<br> for ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} lemons`;
-    progva.innerHTML = `So far you got ${items.token} token out of ${1000*items.pres}!`
+    disMcmake.innerHTML = `Every click gives you ${fornum((items.Mclick||1)*items.pres)} clicks!`;
+    Mc1.innerHTML = `Upgrade for your clicks<br> for ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} lemons`;
+    progva.innerHTML = `You have ${items.token} tokens out of ${1000*items.pres}!`
     
     
     
     
-    presBT1.innerHTML = `1 Ticket for <br> <b style="font-weight: 1000;">some</b> Lemons`
-    presBTmax.innerHTML = `Max Tickets for <br> <b style="font-weight: 1000;">some</b> Lemons`
+    presBT1.innerHTML = `1 Ticket for ${fornum(2000)} Lemons`
     ItsTime.innerHTML = `Let's do this!`;
     if(items.pres > 1){
-      got.innerHTML = `You've got ${items.pres-1} Prestige points`
+      got.innerHTML = `You have ${items.pres-1} Prestige points`
     }
   }
 
@@ -73,32 +71,11 @@ function upload(){update();load();}
 
 function cash(){
   setTimeout (function money(){
-    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
     items.clicks += cs*items.pres;
-    update();cash();
+    items.lemons += (items.lt3/100)*items.pres;
+    upload();cash();
   },1000)
-}
-
-function fornum(num){
-  if(items.lang == 0){
-    const suffixes = ['', ' tis.', ' mil.', ' mld.', ' bil.', ' bld.', ' tril.', ' trild.', ' kvad.', ' kvadld.', ' quint.', ' quintld.', ' sext.', ' sextld.', ' sept.', ' septld.', ' okt.', ' oktld.', ' non.', ' nonld.', ' dec.', ' decld.', ' undec.', ' undecld.', ' duodec.', ' duodecld.', ' tredec.', ' tredecld.', ' kvaddec.', ' kvaddecld.', ' quintdec.', ' quintdecld.', ' sextdec.', ' sextdecld.', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }else{
-    const suffixes = ['', ' k', ' mil', ' bil', ' tri', ' quad', ' qui', ' sex', ' sep', ' oct', ' non', ' dec', ' und', ' duo', ' tre', ' qua', ' qui', ' sex', ' sep', ' oct', ' nov', ' vig', ' uvi', ' dvi', ' tvi', ' qvi', ' qv', ' svi', ' spv', ' ov', ' nv', ' cen', ' ucn', ' dcn', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }
 }
 
 window.onload = function(){
@@ -187,7 +164,7 @@ function TheThing(){
       frog:0, 
       bear:0, 
       pig:0, 
-
+      seal:0,
 
       
       lemons:0, 
@@ -242,7 +219,7 @@ function TheThing(){
       frog:0, 
       bear:0, 
       pig:0, 
-
+      seal:0,
 
       
       lemons:0, 

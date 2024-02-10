@@ -1,22 +1,19 @@
-let cs;
 let items
 
 // Update
 function update(){
     let i = JSON.stringify(items);
     localStorage.setItem('items', i);
-    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
 }
 
 // Load
 function load(){
     items = JSON.parse(localStorage.getItem('items'));
     LDmodes();
-    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
     let Btns = document.querySelectorAll('.change');
     if(items.lang == 1){  // EN
         document.documentElement.setAttribute('lang', 'en');
-        document.title = 'BRB - Settings'
+        document.title = 'BRB - Settings';
         shop.innerHTML = 'Shop';
         upg.innerHTML = 'Upgrades';
         sett.innerHTML = 'Settings';
@@ -24,14 +21,15 @@ function load(){
         }else if(items.mode == 1){ld.innerHTML = 'Do you want to <br> switch to Light mode?';}
         lg.innerHTML = 'Do you want to <br> switch to Czech?';
         hl.innerHTML = 'Do you want to <br> wantch a video for help?';
-        rs.innerHTML = 'Do you want to <br> completely reset?'
+        rs.innerHTML = 'Do you want to <br> completely reset?';
         Btns.forEach((e) => {
             e.innerHTML = 'Yes!';
         });
+        sites.innerHTML = 'Other Sites';
     }
     if(items.lang == 0){  // CZ
         document.documentElement.setAttribute('lang', 'cz');
-        document.title = 'BRB - Nastavení'
+        document.title = 'BRB - Nastavení';
         shop.innerHTML = 'Obchod';
         upg.innerHTML = 'Vylepšení';
         sett.innerHTML = 'Nastavení';
@@ -39,10 +37,11 @@ function load(){
         }else if(items.mode == 1){ld.innerHTML = 'Chceš si zapnout <br> Světlý mód?';}
         lg.innerHTML = 'Chceš si přepnout <br> jazyk do Angličtiny?';
         hl.innerHTML = 'Chceš si pustit <br> video pro pomoc?';
-        rs.innerHTML = 'Chceš kompletně <br> resetovat postup?'
+        rs.innerHTML = 'Chceš kompletně <br> resetovat postup?';
         Btns.forEach((e) => {
             e.innerHTML = 'Ano!';
         });
+        sites.innerHTML = 'Další stránky';
 }
 }
 load();
@@ -52,9 +51,11 @@ function upload(){update();load();}
 
 function cash(){
     setTimeout (function money(){
-    items.clicks += cs*items.pres;
-    upload();
-    cash();
+        let cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+items.seal*1300000;
+        items.clicks += cs*items.pres;
+        items.lemons += (items.lt3/100)*items.pres;
+        upload();
+        cash();
     },1000);
 }
 cash();

@@ -10,7 +10,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $('.fas').addClass('expand');
                 $('ul').stop().slideDown();
-            },200);
+            },50);
         }
     })
 })

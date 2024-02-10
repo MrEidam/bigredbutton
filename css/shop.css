@@ -6,6 +6,7 @@
   user-select: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -73,15 +74,15 @@ body {
 .item{
   border: none;
   top: 5px;
-  margin: 2rem 3vw 2rem 3vw;
+  margin: 2rem/* 1.5vw 2rem 1.5vw*/;
   padding: 1rem;
   border-radius: 6.9px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 500px;
-  height: 340px;
+  width: 400px;
+  min-height: 340px;
   filter: drop-shadow(0px 20px 14px #444);
   text-align: center;
 }
@@ -137,16 +138,6 @@ body {
 button{
   border: none;
   filter: drop-shadow(8px 6px 4px #555);
-}
-@media only screen and (max-width: 555px){
-  .row{
-    flex-direction: column;
-    justify-content: center;
-  }
-  .item{
-    width: auto;
-    margin: 2rem 10vw 2rem 10vw;
-  }
 }
 
 .upwards{

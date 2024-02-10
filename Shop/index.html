@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -15,13 +14,13 @@
   <meta property="og:site_name" content="BRB"/>
   <meta property="og:type" content="website">
   <meta property="og:description" content="Webová Clicker hra s Červeným tlačítkem a zvířátky!">
-  <meta property="og:image" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/brb-still.png">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/BRB-Version.png">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="BRB"/>
   <meta name="twitter:url" content="https://www.mreidam-brb.com"/>
   <meta property="twitter:description" content="Webová Clicker hra s Červeným tlačítkem a zvířátky!">
-  <meta name="twitter:image:src" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/brb-still.png"/>
+  <meta name="twitter:image:src" content="https://raw.githubusercontent.com/MrEidam/bigredbutton/main/img/BRB-Version.png"/>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
@@ -50,6 +49,7 @@
     <article class="main">
       <!-- Dog -->
       <div class="item" style="--color: ">
+        <h2 id="disdogName"></h2>
         <img src="../img/dog.svg">
         <div class="buttons" style="--Bcolor: darkorange">
           <button onclick="buydog()" class="buyone" id="dg1">
@@ -61,11 +61,11 @@
         </div>
         
         <p id="disdog"></p>
-        <p id="disdgmake"></p>
       </div>
 
       <!-- Cat -->
       <div class="item">
+        <h2 id="discatName"></h2>
         <img src="../img/cat-body.svg">
         <div class="buttons" style="--Bcolor: orange">
           <button onclick="buycat()" class="buyone" id="ct1">
@@ -84,11 +84,11 @@
           </button>
         </div>
         <p id="discat"></p>
-        <p id="disctmake"></p>
       </div>
 
       <!-- Fox -->
       <div class="item">
+        <h2 id="disfoxName"></h2>
         <img src="../img/fox.svg">
         <div class="buttons" style="--Bcolor: lightsalmon">
           <button onclick="buyfox()" class="buyone" id="fx1">
@@ -107,11 +107,11 @@
           </button>
         </div>
         <p id="disfox"></p>
-        <p id="disfxmake"></p>
       </div>
 
       <!-- Wolf -->
       <div class="item">
+        <h2 id="diswolName"></h2>
         <img src="../img/wolf.svg">
         <div class="buttons" style="--Bcolor: lightgray">
           <button onclick="buywol()" class="buyone" id="wl1">
@@ -130,11 +130,11 @@
           </button>
         </div>
         <p id="diswol"></p>
-        <p id="diswlmake"></p>
       </div>
 
       <!-- Hamster -->
       <div class="item">
+        <h2 id="dishamName"></h2>
         <img src="../img/hamster.svg" draggable="false">
         <div class="buttons" style="--Bcolor: wheat">
           <button onclick="buyham()" class="buyone" id="hm1">
@@ -153,11 +153,11 @@
           </button>
         </div>
         <p id="disham"></p>
-        <p id="dishmmake"></p>
       </div>
 
       <!-- Whales -->
       <div class="item">
+        <h2 id="diswhaName"></h2>
         <img src="../img/whale.svg" draggable="false">
         <div class="buttons" style="--Bcolor: MediumAquamarine">
           <button onclick="buywha()" class="buyone" id="wh1">
@@ -176,11 +176,11 @@
           </button>
         </div>
         <p id="diswha"></p>
-        <p id="diswhmake"></p>
       </div>
 
       <!-- Capybara -->
       <div class="item">
+        <h2 id="discapName"></h2>
         <img src="../img/capybara.svg" draggable="false">
         <div class="buttons" style="--Bcolor: rosybrown">
           <button onclick="buycap()" class="buyone" id="cp1">
@@ -199,11 +199,11 @@
           </button>
         </div>
         <p id="discap"></p>
-        <p id="discpmake"></p>
       </div>
 
       <!-- Platypus-->
       <div class="item">
+        <h2 id="displaName"></h2>
         <img src="../img/platypus.svg" draggable="false">
         <div class="buttons" style="--Bcolor: Sienna">
           <button onclick="buypla()" class="buyone" id="pl1">
@@ -222,11 +222,11 @@
           </button>
         </div>
         <p id="displa"></p>
-        <p id="displmake"></p>
       </div>
 
       <!-- Porcupine -->
       <div class="item">
+        <h2 id="disporName"></h2>
         <img src="../img/porcupine.svg" draggable="false">
         <div class="buttons" style="--Bcolor: SaddleBrown">
           <button onclick="buypor()" class="buyone" id="pr1">
@@ -245,11 +245,11 @@
           </button>
         </div>
         <p id="dispor"></p>
-        <p id="disprmake"></p>
       </div>
 
       <!-- Hippopotamus -->
       <div class="item">
+        <h2 id="dishipName"></h2>
         <img src="../img/hippopotamus.svg" draggable="false">
         <div class="buttons" style="--Bcolor: LightSlateGray">
           <button onclick="buyhip()" class="buyone" id="hi1">
@@ -268,11 +268,11 @@
           </button>
         </div>
         <p id="diship"></p>
-        <p id="dishimake"></p>
       </div>
 
       <!-- Snake -->
       <div class="item">
+        <h2 id="dissnaName"></h2>
         <img src="../img/snake.svg">
         <div class="buttons" style="--Bcolor: green">
           <button onclick="buysna()" class="buyone" id="sn1">
@@ -291,11 +291,11 @@
           </button>
         </div>
         <p id="dissna"></p>
-        <p id="dissnmake"></p>
       </div>
 
       <!-- Cheetah -->
       <div class="item">
+        <h2 id="discheName"></h2>
         <img src="../img/cheetah.svg">
         <div class="buttons" style="--Bcolor: GoldenRod">
           <button onclick="buyche()" class="buyone" id="ch1">
@@ -314,11 +314,11 @@
           </button>
         </div>
         <p id="dische"></p>
-        <p id="dischmake"></p>
       </div>
 
       <!-- Pythons -->
       <div class="item">
+        <h2 id="dispytName"></h2>
         <img src="../img/python.svg">
         <div class="buttons" style="--Bcolor: CornflowerBlue">
           <button onclick="buypyt()" class="buyone" id="py1">
@@ -337,11 +337,11 @@
           </button>
         </div>
         <p id="dispyt"></p>
-        <p id="dispymake"></p>
       </div>
 
       <!-- Giraffe -->
       <div class="item">
+        <h2 id="disgirName"></h2>
         <img src="../img/girafe.svg">
         <div class="buttons" style="--Bcolor: #ffdb4d">
           <button onclick="buygir()" class="buyone" id="gi1">
@@ -360,11 +360,11 @@
           </button>
         </div>
         <p id="disgir"></p>
-        <p id="disgimake"></p>
       </div>
 
       <!-- Otter -->
       <div class="item">
+        <h2 id="disottName"></h2>
         <img src="../img/otter.svg">
         <div class="buttons" style="--Bcolor: #bc8f8f">
           <button onclick="buyoth()" class="buyone" id="ot1">
@@ -383,11 +383,11 @@
           </button>
         </div>
         <p id="disoth"></p>
-        <p id="disotmake"></p>
       </div>
 
       <!-- Meerkat -->
       <div class="item">
+        <h2 id="dismeeName"></h2>
         <img src="../img/meerkat.svg">
         <div class="buttons" style="--Bcolor: #cd853f">
           <button onclick="buymee()" class="buyone" id="me1">
@@ -406,11 +406,11 @@
           </button>
         </div>
         <p id="dismee"></p>
-        <p id="dismeemake"></p>
       </div>
 
       <!-- Racoon -->
       <div class="item">
+        <h2 id="disracName"></h2>
         <img src="../img/racoon.svg">
         <div class="buttons" style="--Bcolor: #708090">
           <button onclick="buyrac()" class="buyone" id="ra1">
@@ -429,11 +429,11 @@
           </button>
         </div>
         <p id="disrac"></p>
-        <p id="disramake"></p>
       </div>
 
       <!-- Owl -->
       <div class="item">
+        <h2 id="disowlName"></h2>
         <img src="../img/owl.svg">
         <div class="buttons" style="--Bcolor: #f4a460">
           <button onclick="buyowl()" class="buyone" id="ow1">
@@ -452,11 +452,11 @@
           </button>
         </div>
         <p id="disowl"></p>
-        <p id="disowmake"></p>
       </div>
 
       <!-- Badger -->
       <div class="item">
+        <h2 id="disbadName"></h2>
         <img src="../img/badger.svg">
         <div class="buttons" style="--Bcolor: #D8D6CA">
           <button onclick="buybad()" class="buyone" id="ba1">
@@ -475,11 +475,11 @@
           </button>
         </div>
         <p id="disbad"></p>
-        <p id="disbamake"></p>
       </div>
 
       <!-- Squirrel -->
       <div class="item">
+        <h2 id="dissquName"></h2>
         <img src="../img/squirell.svg">
         <div class="buttons" style="--Bcolor: #CFB190">
           <button onclick="buysqu()" class="buyone" id="sq1">
@@ -498,11 +498,11 @@
           </button>
         </div>
         <p id="dissqu"></p>
-        <p id="dissqmake"></p>
       </div>
 
       <!-- Chameleon -->
       <div class="item">
+        <h2 id="dischaName"></h2>
         <img src="../img/chameleon.svg">
         <div class="buttons" style="--Bcolor: #BED15F">
           <button onclick="buycha()" class="buyone" id="cha1">
@@ -521,11 +521,11 @@
           </button>
         </div>
         <p id="discha"></p>
-        <p id="dischamake"></p>
       </div>
 
       <!-- Chicken -->
       <div class="item">
+        <h2 id="dischiName"></h2>
         <img src="../img/chickens.svg">
         <div class="buttons" style="--Bcolor: #D1DCE6">
           <button onclick="buychi()" class="buyone" id="chi1">
@@ -544,11 +544,11 @@
           </button>
         </div>
         <p id="dischi"></p>
-        <p id="dischimake"></p>
       </div>
 
       <!-- Wombat -->
       <div class="item">
+        <h2 id="diswomName"></h2>
         <img src="../img/wombats.svg">
         <div class="buttons" style="--Bcolor: #B3B3B3">
           <button onclick="buywom()" class="buyone" id="wom1">
@@ -567,7 +567,144 @@
           </button>
         </div>
         <p id="diswom"></p>
-        <p id="diswommake"></p>
+      </div>
+
+      <!-- Panther -->
+      <div class="item">
+        <h2 id="dispanName"></h2>
+        <img src="../img/panther.svg">
+        <div class="buttons" style="--Bcolor: #000;">
+          <button onclick="buypan()" class="buyone" id="pan1" style="color:#fff;">
+            Buy a Panther
+          </button>
+          <button onclick="mxpan()" class="buymax" style="color:#fff;">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #000;">
+          <button onclick="buyCpan()" class="buyone" id="Cpan1" style="color:#fff;">
+            Buy a Panther for clicks
+          </button>
+          <button onclick="mxCpan()" class="buymax" style="color:#fff;">
+            MAX
+          </button>
+        </div>
+        <p id="dispan"></p>
+      </div>
+
+      <!-- Coyote -->
+      <div class="item">
+        <h2 id="discoyName"></h2>
+        <img src="../img/coyote.svg">
+        <div class="buttons" style="--Bcolor: #E7B76B;">
+          <button onclick="buycoy()" class="buyone" id="coy1">
+            Buy a Coyote
+          </button>
+          <button onclick="mxcoy()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #E7B76B;">
+          <button onclick="buyCcoy()" class="buyone" id="Ccoy1">
+            Buy a Coyote for clicks
+          </button>
+          <button onclick="mxCcoy()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="discoy"></p>
+      </div>
+
+      <!-- Frog -->
+      <div class="item">
+        <h2 id="disfroName"></h2>
+        <img src="../img/frog.svg">
+        <div class="buttons" style="--Bcolor: #97BF0D;">
+          <button onclick="buyfro()" class="buyone" id="fro1">
+            Buy a Frog
+          </button>
+          <button onclick="mxfro()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #97BF0D;">
+          <button onclick="buyCfro()" class="buyone" id="Cfro1">
+            Buy a Frog for clicks
+          </button>
+          <button onclick="mxCfro()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disfro"></p>
+      </div>
+
+      <!-- Bear -->
+      <div class="item">
+        <h2 id="disbeaName"></h2>
+        <img src="../img/bear.svg">
+        <div class="buttons" style="--Bcolor: #7C512C;">
+          <button onclick="buybea()" class="buyone" id="bea1">
+            Buy a Bear
+          </button>
+          <button onclick="mxbea()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #7C512C;">
+          <button onclick="buyCbea()" class="buyone" id="Cbea1">
+            Buy a Bear for clicks
+          </button>
+          <button onclick="mxCbea()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="disbea"></p>
+      </div>
+
+      <!-- Pig -->
+      <div class="item">
+        <h2 id="dispigName"></h2>
+        <img src="../img/pig.svg">
+        <div class="buttons" style="--Bcolor: #F9CCCE;">
+          <button onclick="buypig()" class="buyone" id="pig1">
+            Buy a Pig
+          </button>
+          <button onclick="mxpig()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #F9CCCE;">
+          <button onclick="buyCpig()" class="buyone" id="Cpig1">
+            Buy a Pig for clicks
+          </button>
+          <button onclick="mxCpig()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dispig"></p>
+      </div>
+
+      <!-- Seal -->
+      <div class="item">
+        <h2 id="disseaName"></h2>
+        <img src="../img/seal.svg">
+        <div class="buttons" style="--Bcolor: #7B7E87;">
+          <button onclick="buysea()" class="buyone" id="sea1">
+            Buy a Seal
+          </button>
+          <button onclick="mxsea()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <div class="clickbtn" style="--Bcolor: #7B7E87;">
+          <button onclick="buyCsea()" class="buyone" id="Csea1">
+            Buy a Seal for clicks
+          </button>
+          <button onclick="mxCsea()" class="buymax">
+            MAX
+          </button>
+        </div>
+        <p id="dissea"></p>
       </div>
 
     </article>
@@ -577,6 +714,7 @@
     <article class="main">
       <!-- Lemons -->
       <div class="item">
+        <h2 id="dislemName"></h2>
         <img src="../img/lemon.svg" draggable="false">
         <div class="buttons" style="--Bcolor: yellow">
           <button onclick="buylem()" class="buyone" id="lm1">
@@ -592,6 +730,7 @@
 
       <!-- Lemon t3-->
       <div class="item">
+        <h2 id="dislt3Name"></h2>
         <img src="../img/lemon-tree.svg" draggable="false">
         <div class="buttons" style="--Bcolor: lightgoldenrodyellow">
           <button onclick="buylt3()" class="buyone" id="lt1">
@@ -628,6 +767,7 @@
   </a>
   <!-- By MrEidam -->
   <script src="../js/menu.js"></script>
+  <script src="../js/fornum.js"></script>
   <script src="../js/shop.js"></script>
 </body>
 

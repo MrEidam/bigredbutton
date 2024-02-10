@@ -1,3 +1,19 @@
+                        v46
+  Added: Animals - Panthers, Coyotes, Frogs, Bears, Pigs, Seals
+         New formating of the text and font in Clicking, Shop, Upgrades
+         Names in the window of the Animals and Upgrades
+         Lemon Trees finally have an function
+         Menu (black bar) was changed from 200ms to 50ms
+         After 5 pres. points you will get not 0.5 but 1
+         New cost (aka not randomised) for lemons
+         New Design of the tiles in the Shop
+         Revealed cost of Tokens
+         Now bugs will have their number :D
+
+  Fixed: Text for buying wombats for clicks (BRB-44)
+
+  Removed: Nothing
+
                         v45
   Added: ANIMALS - Chimken + Wombat
          New Main menu with the "social tab"
@@ -63,6 +79,7 @@
   Added: Edited scrollbar
 
   Fixed: Shop buttons for Czech
+
                         v40
   Added: Otters + Meerkats + Raccoons + Owls
          Prestige!
@@ -85,8 +102,6 @@
         Add Complete history page
         Sounds?
 
-
-  
                         v39
   Added: Pythons + Giraffes
          New Nav. bar for Shop

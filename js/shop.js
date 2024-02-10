@@ -4,7 +4,7 @@ let cs
 function update(){
   let i = JSON.stringify(items);
   localStorage.setItem('items', i);
-  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000;
+  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
 }
 function c(x){
   items.clicks += x;
@@ -16,7 +16,7 @@ function c(x){
 function load(){
   items = JSON.parse(localStorage.getItem('items'));
   LDmodes()
-  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000;
+  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
 
   if(items.lang == 1){
     document.documentElement.setAttribute('lang', 'en');
@@ -24,112 +24,204 @@ function load(){
     shop.innerHTML = 'Shop';
     upg.innerHTML = 'Upgrades';
     sett.innerHTML = 'Settings';
-    disclick.innerHTML=`You've got ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
-    disdog.innerHTML=`You've got ${fornum(items.dogs)} dogs!`
-    discat.innerHTML=`You've got ${fornum(items.cats)} cats!`
-    disfox.innerHTML=`You've got ${fornum(items.foxes)} foxes!`
-    diswol.innerHTML=`You've got ${fornum(items.wolfs)} wolfs!`
-    disham.innerHTML=`You've got ${fornum(items.hamsters)} hamsters!`
-    diswha.innerHTML=`You've got ${fornum(items.whales)} whales!`
-    discap.innerHTML=`You've got ${fornum(items.capybaras)} capybaras!`
-    displa.innerHTML=`You've got ${fornum(items.platapuses)} platypuses!`
-    dispor.innerHTML=`You've got ${fornum(items.porcupines)} porcupines!`
-    diship.innerHTML=`You've got ${fornum(items.hippos)} hippopotamuses!`
-    dissna.innerHTML=`You've got ${fornum(items.snakes)} snakes!`
-    dische.innerHTML=`You've got ${fornum(items.cheetahs)} cheetahs!`
-    dispyt.innerHTML=`You've got ${fornum(items.pythons)} pythons!`
-    disgir.innerHTML=`You've got ${fornum(items.girrafes)} giraffes!`
-    disoth.innerHTML=`You've got ${fornum(items.otters)} otters!`
-    dismee.innerHTML=`You've got ${fornum(items.meerkat)} meerkats!`
-    disrac.innerHTML=`You've got ${fornum(items.raccoon)} racoons!`
-    disowl.innerHTML=`You've got ${fornum(items.owl)} owls!`
-    disbad.innerHTML=`You've got ${fornum(items.badger)} badgers!`
-    dissqu.innerHTML=`You've got ${fornum(items.squirrel)} squirrels!`
-    discha.innerHTML=`You've got ${fornum(items.chameleon)} chameleons!`
-    dischi.innerHTML=`You've got ${fornum(items.chicken)} chickens!`
-    diswom.innerHTML=`You've got ${fornum(items.wombat)} wombats!`
+
+
+    disclick.innerHTML=`You have ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
+
+
+    disdog.innerHTML=
+    `You have ${fornum(items.dogs)}<br>
+    Generating ${fornum((items.dogs*1)*items.pres)} clicks!`
+    discat.innerHTML=
+    `You have ${fornum(items.cats)}<br>
+    Generating ${fornum((items.cats*12)*items.pres)} clicks!`
+    disfox.innerHTML=
+    `You have ${fornum(items.foxes)}<br>
+    Generating ${fornum((items.foxes*18)*items.pres)} clicks!`
+    diswol.innerHTML=
+    `You have ${fornum(items.wolfs)}<br>
+    Generating ${fornum((items.wolfs*100)*items.pres)} clicks!`
+    disham.innerHTML=
+    `You have ${fornum(items.hamsters)}<br>
+    Generating ${fornum((items.hamsters*130)*items.pres)} clicks!`
+    diswha.innerHTML=
+    `You have ${fornum(items.whales)}<br>
+    Generating ${fornum((items.whales*220)*items.pres)} clicks!`
+    discap.innerHTML=
+    `You have ${fornum(items.capybaras)}<br>
+    Generating ${fornum((items.capybaras*280)*items.pres)} clicks!`
+    displa.innerHTML=
+    `You have ${fornum(items.platapuses)}<br>
+    Generating ${fornum((items.platapuses*400)*items.pres)} clicks!`
+    dispor.innerHTML=
+    `You have ${fornum(items.porcupines)}<br>
+    Generating ${fornum((items.porcupines*650)*items.pres)} clicks!`
+    diship.innerHTML=
+    `You have ${fornum(items.hippos)}<br>
+    Generating ${fornum((items.hippos*950)*items.pres)} clicks!`
+    dissna.innerHTML=
+    `You have ${fornum(items.snakes)}<br>
+    Generating ${fornum((items.snakes*1000)*items.pres)} clicks!`
+    dische.innerHTML=
+    `You have ${fornum(items.cheetahs)}<br>
+    Generating ${fornum((items.cheetahs*3000)*items.pres)} clicks!`
+    dispyt.innerHTML=
+    `You have ${fornum(items.pythons)}<br>
+    Generating ${fornum((items.pythons*7800)*items.pres)} clicks!`
+    disgir.innerHTML=
+    `You have ${fornum(items.girrafes)}<br>
+    Generating ${fornum((items.girrafes*8400)*items.pres)} clicks!`
+    disoth.innerHTML=
+    `You have ${fornum(items.otters)}<br>
+    Generating ${fornum((items.otters*9000)*items.pres)} clicks!`
+    dismee.innerHTML=
+    `You have ${fornum(items.meerkat)}<br>
+    Generating ${fornum((items.meerkat*9800)*items.pres)} clicks!`
+    disrac.innerHTML=
+    `You have ${fornum(items.raccoon)}<br>
+    Generating ${fornum((items.raccoon*14500)*items.pres)} clicks!`
+    disowl.innerHTML=
+    `You have ${fornum(items.owl)}<br>
+    Generating ${fornum((items.owl*16000)*items.pres)} clicks!`
+    disbad.innerHTML=
+    `You have ${fornum(items.badger)}<br>
+    Generating ${fornum((items.badger*32000)*items.pres)} clicks!`
+    dissqu.innerHTML=
+    `You have ${fornum(items.squirrel)}<br>
+    Generating ${fornum((items.squirrel*50000)*items.pres)} clicks!`
+    discha.innerHTML=
+    `You have ${fornum(items.chameleon)}<br>
+    Generating ${fornum((items.chameleon*70000)*items.pres)} clicks!`
+    dischi.innerHTML=
+    `You have ${fornum(items.chicken)}<br>
+    Generating ${fornum((items.chicken*120000)*items.pres)} clicks!`
+    diswom.innerHTML=
+    `You have ${fornum(items.wombat)}<br>
+    Generating ${fornum((items.wombat*280000)*items.pres)} clicks!`
+    dispan.innerHTML=
+    `You have ${fornum(items.panther)}<br>
+    Generating ${fornum((items.panther*550000)*items.pres)} clicks!`
+    discoy.innerHTML=
+    `You have ${fornum(items.coyote)}<br>
+    Generating ${fornum((items.coyote*840000)*items.pres)} clicks!`
+    disfro.innerHTML=
+    `You have ${fornum(items.frog)}<br>
+    Generating ${fornum((items.frog*900000)*items.pres)} clicks!`
+    disbea.innerHTML=
+    `You have ${fornum(items.bear)}<br>
+    Generating ${fornum((items.bear*950000)*items.pres)} clicks!`
+    dispig.innerHTML=
+    `You have ${fornum(items.pig)}<br>
+    Generating ${fornum((items.pig*1150000)*items.pres)} clicks!`
+    dissea.innerHTML=
+    `You have ${fornum(items.seal)}<br>
+    Generating ${fornum((items.seal*1300000)*items.pres)} clicks!`
     
     
     
     
-    document.getElementById('dislem').innerHTML=`You've got ${fornum(items.lemons)} lemons!`
-    document.getElementById('dislt3').innerHTML=`You've got ${fornum(items.lt3)} lemon trees!`
+    document.getElementById('dislem').innerHTML=`You have ${fornum(items.lemons)}!`
+    document.getElementById('dislt3').innerHTML=
+    `You have ${fornum(items.lt3)}!<br>
+    Generating ${fornum((items.lt3*items.pres))} Lemons<br>every 100 sec.`
     
 
-    disdgmake.innerHTML=`They're generating ${fornum((items.dogs*1)*items.pres)} clicks per second!`
-    disctmake.innerHTML=`They're generating ${fornum((items.cats*12)*items.pres)} clicks per second!`
-    disfxmake.innerHTML=`They're generating ${fornum((items.foxes*18)*items.pres)} clicks per second!`
-    diswlmake.innerHTML=`They're generating ${fornum((items.wolfs*100)*items.pres)} clicks per second!`
-    dishmmake.innerHTML=`They're generating ${fornum((items.hamsters*130)*items.pres)} clicks per second!`
-    diswhmake.innerHTML=`They're generating ${fornum((items.whales*220)*items.pres)} clicks per second!`
-    discpmake.innerHTML=`They're generating ${fornum((items.capybaras*280)*items.pres)} clicks per second!`
-    displmake.innerHTML=`They're generating ${fornum((items.platapuses*400)*items.pres)} clicks per second!`
-    disprmake.innerHTML=`They're generating ${fornum((items.porcupines*650)*items.pres)} clicks per second!`
-    dishimake.innerHTML=`They're generating ${fornum((items.hippos*950)*items.pres)} clicks per second!`
-    dissnmake.innerHTML=`They're generating ${fornum((items.snakes*1000)*items.pres)} clicks per second!`
-    dischmake.innerHTML=`They're generating ${fornum((items.cheetahs*3000)*items.pres)} clicks per second!`
-    dispymake.innerHTML=`They're generating ${fornum((items.pythons*7800)*items.pres)} clicks per second!`
-    disgimake.innerHTML=`They're generating ${fornum((items.girrafes*8400)*items.pres)} clicks per second!`
-    disotmake.innerHTML=`They're generating ${fornum((items.otters*9000)*items.pres)} clicks per second!`
-    dismeemake.innerHTML=`They're generating ${fornum((items.meerkat*9800)*items.pres)} clicks per second!`
-    disramake.innerHTML=`They're generating ${fornum((items.raccoon*14500)*items.pres)} clicks per second!`
-    disowmake.innerHTML=`They're generating ${fornum((items.owl*16000)*items.pres)} clicks per second!`
-    disbamake.innerHTML=`They're generating ${fornum((items.badger*32000)*items.pres)} clicks per second!`
-    dissqmake.innerHTML=`They're generating ${fornum((items.squirrel*50000)*items.pres)} clicks per second!`
-    dischamake.innerHTML=`They're generating ${fornum((items.chameleon*70000)*items.pres)} clicks per second!`
-    dischimake.innerHTML=`They're generating ${fornum((items.chicken*120000)*items.pres)} clicks per second!`
-    diswommake.innerHTML=`They're generating ${fornum((items.wombat*280000)*items.pres)} clicks per second!`
+    disdogName.innerHTML=`Dogs`
+    discatName.innerHTML=`Cats`
+    disfoxName.innerHTML=`Foxes`
+    diswolName.innerHTML=`Wolfs`
+    dishamName.innerHTML=`Hamsters`
+    diswhaName.innerHTML=`Whales`
+    discapName.innerHTML=`Capybaras`
+    displaName.innerHTML=`Platypuses`
+    disporName.innerHTML=`Porcupines`
+    dishipName.innerHTML=`Hippopotamuses`
+    dissnaName.innerHTML=`Snakes`
+    discheName.innerHTML=`Cheetahs`
+    dispytName.innerHTML=`Pythons`
+    disgirName.innerHTML=`Girafes`
+    disottName.innerHTML=`Otters`
+    dismeeName.innerHTML=`Meerkats`
+    disracName.innerHTML=`Racoons`
+    disowlName.innerHTML=`Owls`
+    disbadName.innerHTML=`Badgers`
+    dissquName.innerHTML=`Squirrels`
+    dischaName.innerHTML=`Chameleons`
+    dischiName.innerHTML=`Chickens`
+    diswomName.innerHTML=`Wombats`
+    dispanName.innerHTML=`Panthers`
+    discoyName.innerHTML=`Coyotes`
+    disfroName.innerHTML=`Frogs`
+    disbeaName.innerHTML=`Bears`
+    dispigName.innerHTML=`Pigs`
+    disseaName.innerHTML=`Seals`
 
-    dg1.innerHTML = 'Buy a Dog for 100 clicks'
-    ct1.innerHTML = 'Buy a Cat for 10 dogs'
-    fx1.innerHTML = 'Buy a Fox for 15 dogs'
-    wl1.innerHTML = 'Buy a Wolf for <br> 6 dogs and 5 foxes'
-    hm1.innerHTML = 'Buy a Hamster for <br> 1 wolf and 2 cats'
-    wh1.innerHTML = 'Buy a Whale for 2 wolfs'
-    cp1.innerHTML = 'Buy a Capybara for <br> 1 whale and 4 cats'
-    pl1.innerHTML = 'Buy a Platypus for <br> 1 capybara and 1 wolf'
-    pr1.innerHTML = 'Buy a Porcupine for <br> 1 platypus and 1 whale'
-    hi1.innerHTML = 'Buy a Hippopotamus for <br> 1 porcupine and 2 hamsters'
-    sn1.innerHTML = 'Buy a Snake for <br> 2 whales and 4 hamsters'
-    ch1.innerHTML = 'Buy a Cheetah for <br> 2 snakes and 2 platypuses'
-    py1.innerHTML = 'Buy a Python for <br> 1 cheetah and 5 hippos'
-    gi1.innerHTML = 'Buy a Giraffe for <br> 1 python and 20 foxes'
-    ot1.innerHTML = 'Buy a Otter for <br> 1 giraffe and 2 capybaras'
-    me1.innerHTML = 'Buy a Meerkat for <br> 1 otter and 3 whales'
-    ra1.innerHTML = 'Buy a Raccoon for <br> 1 meerkat and 7 porcupines'
-    ow1.innerHTML = 'Buy a Owl for <br> 1 racoon and 1 snake'
-    ba1.innerHTML = 'Buy a Badger for <br> 1 owl and 2 pythons'
-    sq1.innerHTML = 'Buy a Squirrel for <br> 1 badger and 5 cheetah'
-    cha1.innerHTML = 'Buy a Chameleon for <br> 1 squirrel and 2 meerkats'
-    chi1.innerHTML = 'Buy a Chicken for <br> 2 squirrels and 1 owl'
-    wom1.innerHTML = 'Buy a Wombat for <br> 1 chicken and 2 chameleons'
 
-    lm1.innerHTML = 'Buy a Lemon for <b style="font-weight: 1000;">some</b> cats'
-    lt1.innerHTML = 'Buy a Lemon Tree for 5 lemons'
+    dislemName.innerHTML=`Lemons`
+    dislt3Name.innerHTML=`Lemon Trees`
+
+    dg1.innerHTML =  'Buy for 100 clicks'
+    ct1.innerHTML =  'Buy for 10 dogs'
+    fx1.innerHTML =  'Buy for 15 dogs'
+    wl1.innerHTML =  'Buy for:<br> 6 dogs and 5 foxes'
+    hm1.innerHTML =  'Buy for:<br> 1 wolf and 2 cats'
+    wh1.innerHTML =  'Buy for 2 wolfs'
+    cp1.innerHTML =  'Buy for:<br> 1 whale and 4 cats'
+    pl1.innerHTML =  'Buy for:<br> 1 capybara and 1 wolf'
+    pr1.innerHTML =  'Buy for:<br> 1 platypus and 1 whale'
+    hi1.innerHTML =  'Buy for:<br> 1 porcupine and 2 hamsters'
+    sn1.innerHTML =  'Buy for:<br> 2 whales and 4 hamsters'
+    ch1.innerHTML =  'Buy for:<br> 2 snakes and 2 platypuses'
+    py1.innerHTML =  'Buy for:<br> 1 cheetah and 5 hippos'
+    gi1.innerHTML =  'Buy for:<br> 1 python and 20 foxes'
+    ot1.innerHTML =  'Buy for:<br> 1 giraffe and 2 capybaras'
+    me1.innerHTML =  'Buy for:<br> 1 otter and 3 whales'
+    ra1.innerHTML =  'Buy for:<br> 1 meerkat and 7 porcupines'
+    ow1.innerHTML =  'Buy for:<br> 1 racoon and 1 snake'
+    ba1.innerHTML =  'Buy for:<br> 1 owl and 2 pythons'
+    sq1.innerHTML =  'Buy for:<br> 1 badger and 5 cheetah'
+    cha1.innerHTML = 'Buy for:<br> 1 squirrel and 2 meerkats'
+    chi1.innerHTML = 'Buy for:<br> 2 squirrels and 1 owl'
+    wom1.innerHTML = 'Buy for:<br> 1 chicken and 2 chameleons'
+    pan1.innerHTML = 'Buy for:<br> 1 wombat and 2 chickens'
+    coy1.innerHTML = 'Buy for:<br> 1 panther and 4 chameleons'
+    fro1.innerHTML = 'Buy for:<br> 1 coyote and 40 snakes'
+    bea1.innerHTML = 'Buy for:<br> 1 frog and 5 giraffes'
+    pig1.innerHTML = 'Buy for:<br> 1 bear and 6 badgers'
+    sea1.innerHTML = 'Buy for:<br> 1 pig and 9 otters'
+
+    lm1.innerHTML = 'Buy for 20 cats'
+    lt1.innerHTML = 'Buy for 5 lemons'
 
     // Buying for clicks
-    Cct1.innerHTML = 'Buy a Cat for <br> 1,2 k clicks'
-    Cfx1.innerHTML = 'Buy a Fox for <br> 1,8 k clicks'
-    Cwl1.innerHTML = 'Buy a Wolf for <br> 10 k clicks'
-    Chm1.innerHTML = 'Buy a Hamster for <br> 13 k clicks'
-    Cwh1.innerHTML = 'Buy a Whale for <br> 22 k clicks'
-    Ccp1.innerHTML = 'Buy a Capybara for <br> 28 k clicks'
-    Cpl1.innerHTML = 'Buy a Platypus for <br> 42 k clicks'
-    Cpr1.innerHTML = 'Buy a Porcupine for <br> 70 k clicks'
-    Chi1.innerHTML = 'Buy a Hippopotamus for <br> 100 k clicks'
-    Csn1.innerHTML = 'Buy a Snake for <br> 150 k clicks'
-    Cch1.innerHTML = 'Buy a Cheetah for <br> 350 k clicks'
-    Cpy1.innerHTML = 'Buy a Python for <br> 820 k clicks'
-    Cgi1.innerHTML = 'Buy a Giraffe for <br> 880 k clicks'
-    Cot1.innerHTML = 'Buy a Otter for <br> 950 k clicks'
-    Cme1.innerHTML = 'Buy a Meerkat for <br> 1 mil clicks'
-    Cra1.innerHTML = 'Buy a Raccoon for <br> 1.5 mil clicks'
-    Cow1.innerHTML = 'Buy a Owl for <br> 1.8 mil clicks'
-    Cba1.innerHTML = 'Buy a Badger for <br> 3.5 mil clicks'
-    Csq1.innerHTML = 'Buy a Squirrel for <br> 5.5 mil clicks'
-    Ccha1.innerHTML = 'Buy a Chameleon for <br> 7.7 mil clicks'
-    Cchi1.innerHTML = 'Buy a Chicken for <br> 13 mil clicks'
-    Cwom1.innerHTML = 'Buy a Chameleon for <br> 31 mil clicks'
+    Cct1.innerHTML =  'Buy for 1,2 k clicks'
+    Cfx1.innerHTML =  'Buy for 1,8 k clicks'
+    Cwl1.innerHTML =  'Buy for 10 k clicks'
+    Chm1.innerHTML =  'Buy for 13 k clicks'
+    Cwh1.innerHTML =  'Buy for 22 k clicks'
+    Ccp1.innerHTML =  'Buy for 28 k clicks'
+    Cpl1.innerHTML =  'Buy for 42 k clicks'
+    Cpr1.innerHTML =  'Buy for 70 k clicks'
+    Chi1.innerHTML =  'Buy for 100 k clicks'
+    Csn1.innerHTML =  'Buy for 150 k clicks'
+    Cch1.innerHTML =  'Buy for 350 k clicks'
+    Cpy1.innerHTML =  'Buy for 820 k clicks'
+    Cgi1.innerHTML =  'Buy for 880 k clicks'
+    Cot1.innerHTML =  'Buy for 950 k clicks'
+    Cme1.innerHTML =  'Buy for 1 mil clicks'
+    Cra1.innerHTML =  'Buy for 1.5 mil clicks'
+    Cow1.innerHTML =  'Buy for 1.8 mil clicks'
+    Cba1.innerHTML =  'Buy for 3.5 mil clicks'
+    Csq1.innerHTML =  'Buy for 5.5 mil clicks'
+    Ccha1.innerHTML = 'Buy for 7.7 mil clicks'
+    Cchi1.innerHTML = 'Buy for 13 mil clicks'
+    Cwom1.innerHTML = 'Buy for 31 mil clicks'
+    Cpan1.innerHTML = 'Buy for 60.5 mil clicks'
+    Ccoy1.innerHTML = 'Buy for 92.4 mil clicks'
+    Cfro1.innerHTML = 'Buy for 99 mil clicks'
+    Cbea1.innerHTML = 'Buy for 104.5 mil clicks'
+    Cpig1.innerHTML = 'Buy for 126.5 mil clicks'
+    Csea1.innerHTML = 'Buy for 143 mil clicks'
   }
   if(items.lang == 0){
     document.documentElement.setAttribute('lang', 'cz');
@@ -137,113 +229,199 @@ function load(){
     shop.innerHTML = 'Obchod';
     upg.innerHTML = 'Vylepšení';
     sett.innerHTML = 'Nastavení';
-    document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
-    document.getElementById('disdog').innerHTML=`Právě máš ${fornum(items.dogs)} psů!`
-    document.getElementById('discat').innerHTML=`Právě máš ${fornum(items.cats)} koček!`
-    document.getElementById('disfox').innerHTML=`Právě máš ${fornum(items.foxes)} lišek!`
-    document.getElementById('diswol').innerHTML=`Právě máš ${fornum(items.wolfs)} vlků!`
-    document.getElementById('disham').innerHTML=`Právě máš ${fornum(items.hamsters)} křečků!`
-    document.getElementById('diswha').innerHTML=`Právě máš ${fornum(items.whales)} velryb!`
-    document.getElementById('discap').innerHTML=`Právě máš ${fornum(items.capybaras)} kapybar!`
-    document.getElementById('displa').innerHTML=`Právě máš ${fornum(items.platapuses)} ptakopysků!`
-    document.getElementById('dispor').innerHTML=`Právě máš ${fornum(items.porcupines)} dikobrazů!`
-    document.getElementById('diship').innerHTML=`Právě máš ${fornum(items.hippos)} hrochů!`
-    document.getElementById('dissna').innerHTML=`Právě máš ${fornum(items.snakes)} hadů!`
-    document.getElementById('dische').innerHTML=`Právě máš ${fornum(items.cheetahs)} gepardů!`
-    document.getElementById('dispyt').innerHTML=`Právě máš ${fornum(items.pythons)} kober!`
-    document.getElementById('disgir').innerHTML=`Právě máš ${fornum(items.girrafes)} žiraf!`
-    document.getElementById('disoth').innerHTML=`Právě máš ${fornum(items.otters)} vyder!`
-    document.getElementById('dismee').innerHTML=`Právě máš ${fornum(items.meerkat)} surikat!`
-    document.getElementById('disrac').innerHTML=`Právě máš ${fornum(items.raccoon)} mývalů!`
-    document.getElementById('disowl').innerHTML=`Právě máš ${fornum(items.owl)} sov!`
-    document.getElementById('disbad').innerHTML=`Právě máš ${fornum(items.badger)} jezevců!`
-    document.getElementById('dissqu').innerHTML=`Právě máš ${fornum(items.squirrel)} veverek!`
-    document.getElementById('discha').innerHTML=`Právě máš ${fornum(items.chameleon)} chameleónů!`
-    document.getElementById('dischi').innerHTML=`Právě máš ${fornum(items.chicken)} slepic!`
-    document.getElementById('diswom').innerHTML=`Právě máš ${fornum(items.wombat)} wombatů!`
-    
-    
-    
-    
-    document.getElementById('dislem').innerHTML=`Právě máš ${fornum(items.lemons)} citrónů!`
-    document.getElementById('dislt3').innerHTML=`Právě máš ${fornum(items.lt3)} citronovníků!`
-    
 
-    document.getElementById('disdgmake').innerHTML=`Generují ${fornum((items.dogs*1)*items.pres)} kliků za sekundu!`
-    document.getElementById('disctmake').innerHTML=`Generují ${fornum((items.cats*12)*items.pres)} kliků za sekundu!`
-    document.getElementById('disfxmake').innerHTML=`Generují ${fornum((items.foxes*18)*items.pres)} kliků za sekundu!`
-    document.getElementById('diswlmake').innerHTML=`Generují ${fornum((items.wolfs*100)*items.pres)} kliků za sekundu!`
-    document.getElementById('dishmmake').innerHTML=`Generují ${fornum((items.hamsters*130)*items.pres)} kliků za sekundu!`
-    document.getElementById('diswhmake').innerHTML=`Generují ${fornum((items.whales*220)*items.pres)} kliků za sekundu!`
-    document.getElementById('discpmake').innerHTML=`Generují ${fornum((items.capybaras*280)*items.pres)} kliků za sekundu!`
-    document.getElementById('displmake').innerHTML=`Generují ${fornum((items.platapuses*400)*items.pres)} kliků za sekundu!`
-    document.getElementById('disprmake').innerHTML=`Generují ${fornum((items.porcupines*650)*items.pres)} kliků za sekundu!`
-    document.getElementById('dishimake').innerHTML=`Generují ${fornum((items.hippos*950)*items.pres)} kliků za sekundu!`
-    document.getElementById('dissnmake').innerHTML=`Generují ${fornum((items.snakes*1000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dischmake').innerHTML=`Generují ${fornum((items.cheetahs*3000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dispymake').innerHTML=`Generují ${fornum((items.pythons*7800)*items.pres)} kliků za sekundu!`
-    document.getElementById('disgimake').innerHTML=`Generují ${fornum((items.girrafes*8400)*items.pres)} kliků za sekundu!`
-    document.getElementById('disotmake').innerHTML=`Generují ${fornum((items.otters*9000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dismeemake').innerHTML=`Generují ${fornum((items.meerkat*9800)*items.pres)} kliků za sekundu!`
-    document.getElementById('disramake').innerHTML=`Generují ${fornum((items.raccoon*14500)*items.pres)} kliků za sekundu!`
-    document.getElementById('disowmake').innerHTML=`Generují ${fornum((items.owl*16000)*items.pres)} kliků za sekundu!`
-    document.getElementById('disbamake').innerHTML=`Generují ${fornum((items.badger*32000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dissqmake').innerHTML=`Generují ${fornum((items.squirrel*50000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dischamake').innerHTML=`Generují ${fornum((items.chameleon*70000)*items.pres)} kliků za sekundu!`
-    document.getElementById('dischimake').innerHTML=`Generují ${fornum((items.chicken*120000)*items.pres)} kliků za sekundu!`
-    document.getElementById('diswommake').innerHTML=`Generují ${fornum((items.wombat*280000)*items.pres)} kliků za sekundu!`
+    document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
 
 
-    dg1.innerHTML = 'Kup Psa za 100 kliků'
-    ct1.innerHTML = 'Kup Kočku za 10 psů'
-    fx1.innerHTML = 'Kup Lišku za 15 psů'
-    wl1.innerHTML = 'Kup Vlka za <br> 6 psů a 5 lišek'
-    hm1.innerHTML = 'Kup Křečka za <br> 1 vlka a 2 kočky'
-    wh1.innerHTML = 'Kup Velrybu za 2 vlky'
-    cp1.innerHTML = 'Kup Kapybaru za <br> 1 velrybu a 4 kočky'
-    pl1.innerHTML = 'Kup Ptakopyska za <br> 1 kapybaru a 1 vlka'
-    pr1.innerHTML = 'Kup Dikobraza za <br> 1 ptakopyska a 1 velrybu'
-    hi1.innerHTML = 'Kup Hrocha za <br> 1 dikobraza a 2 křečků'
-    sn1.innerHTML = 'Kup Hada za <br> 2 velryby a 4 křečky'
-    ch1.innerHTML = 'Kup Geparda za <br> 2 hady a 2 ptakopysky'
-    py1.innerHTML = 'Kup Kobru za <br> 1 geparda a 5 hrochů'
-    gi1.innerHTML = 'Kup Žirafu za <br> 1 kobru a 20 lišek'
-    ot1.innerHTML = 'Kup Vydru za <br> 1 žirafu a 2 kapybary'
-    me1.innerHTML = 'Kup Surikatu za <br> 1 vydru a 3 velryby'
-    ra1.innerHTML = 'Kup Mývala za <br> 1 surikatu a 7 dikobrazů'
-    ow1.innerHTML = 'Kup Sovu za <br> 1 mývala a 1 hada'
-    ba1.innerHTML = 'Kup Jezevce za <br> 1 sovu a 2 kobry'
-    sq1.innerHTML = 'Kup Veverku za <br> 1 jezevce a 5 gepardů'
-    cha1.innerHTML = 'Kup Chameleóna za <br> 1 veverku a 2 surikaty'
-    chi1.innerHTML = 'Kup Slepici za <br> 2 veverky a 1 sovu'
-    wom1.innerHTML = 'Kup Wombata za <br> 1 slepici a 2 chameleóny'
+    disdog.innerHTML=
+    `Máš ${fornum(items.dogs)}<br>
+    Tvořící ${fornum((items.dogs*1)*items.pres)} kliků!`
+    discat.innerHTML=
+    `Máš ${fornum(items.cats)}<br>
+    Tvořící ${fornum((items.cats*12)*items.pres)} kliků!`
+    disfox.innerHTML=
+    `Máš ${fornum(items.foxes)}<br>
+    Tvořící ${fornum((items.foxes*18)*items.pres)} kliků!`
+    diswol.innerHTML=
+    `Máš ${fornum(items.wolfs)}<br>
+    Tvořící ${fornum((items.wolfs*100)*items.pres)} kliků!`
+    disham.innerHTML=
+    `Máš ${fornum(items.hamsters)}<br>
+    Tvořící ${fornum((items.hamsters*130)*items.pres)} kliků!`
+    diswha.innerHTML=
+    `Máš ${fornum(items.whales)}<br>
+    Tvořící ${fornum((items.whales*220)*items.pres)} kliků!`
+    discap.innerHTML=
+    `Máš ${fornum(items.capybaras)}<br>
+    Tvořící ${fornum((items.capybaras*280)*items.pres)} kliků!`
+    displa.innerHTML=
+    `Máš ${fornum(items.platapuses)}<br>
+    Tvořící ${fornum((items.platapuses*400)*items.pres)} kliků!`
+    dispor.innerHTML=
+    `Máš ${fornum(items.porcupines)}<br>
+    Tvořící ${fornum((items.porcupines*650)*items.pres)} kliků!`
+    diship.innerHTML=
+    `Máš ${fornum(items.hippos)}<br>
+    Tvořící ${fornum((items.hippos*950)*items.pres)} kliků!`
+    dissna.innerHTML=
+    `Máš ${fornum(items.snakes)}<br>
+    Tvořící ${fornum((items.snakes*1000)*items.pres)} kliků!`
+    dische.innerHTML=
+    `Máš ${fornum(items.cheetahs)}<br>
+    Tvořící ${fornum((items.cheetahs*3000)*items.pres)} kliků!`
+    dispyt.innerHTML=
+    `Máš ${fornum(items.pythons)}<br>
+    Tvořící ${fornum((items.pythons*7800)*items.pres)} kliků!`
+    disgir.innerHTML=
+    `Máš ${fornum(items.girrafes)}<br>
+    Tvořící ${fornum((items.girrafes*8400)*items.pres)} kliků!`
+    disoth.innerHTML=
+    `Máš ${fornum(items.otters)}<br>
+    Tvořící ${fornum((items.otters*9000)*items.pres)} kliků!`
+    dismee.innerHTML=
+    `Máš ${fornum(items.meerkat)}<br>
+    Tvořící ${fornum((items.meerkat*9800)*items.pres)} kliků!`
+    disrac.innerHTML=
+    `Máš ${fornum(items.raccoon)}<br>
+    Tvořící ${fornum((items.raccoon*14500)*items.pres)} kliků!`
+    disowl.innerHTML=
+    `Máš ${fornum(items.owl)}<br>
+    Tvořící ${fornum((items.owl*16000)*items.pres)} kliků!`
+    disbad.innerHTML=
+    `Máš ${fornum(items.badger)}<br>
+    Tvořící ${fornum((items.badger*32000)*items.pres)} kliků!`
+    dissqu.innerHTML=
+    `Máš ${fornum(items.squirrel)}<br>
+    Tvořící ${fornum((items.squirrel*50000)*items.pres)} kliků!`
+    discha.innerHTML=
+    `Máš ${fornum(items.chameleon)}<br>
+    Tvořící ${fornum((items.chameleon*70000)*items.pres)} kliků!`
+    dischi.innerHTML=
+    `Máš ${fornum(items.chicken)}<br>
+    Tvořící ${fornum((items.chicken*120000)*items.pres)} kliků!`
+    diswom.innerHTML=
+    `Máš ${fornum(items.wombat)}<br>
+    Tvořící ${fornum((items.wombat*280000)*items.pres)} kliků!`
+    dispan.innerHTML=
+    `Máš ${fornum(items.panther)}<br>
+    Tvořící ${fornum((items.panther*550000)*items.pres)} kliků!`
+    discoy.innerHTML=
+    `Máš ${fornum(items.coyote)}<br>
+    Tvořící ${fornum((items.coyote*840000)*items.pres)} kliků!`
+    disfro.innerHTML=
+    `Máš ${fornum(items.frog)}<br>
+    Tvořící ${fornum((items.frog*900000)*items.pres)} kliků!`
+    disbea.innerHTML=
+    `Máš ${fornum(items.bear)}<br>
+    Tvořící ${fornum((items.bear*950000)*items.pres)} kliků!`
+    dispig.innerHTML=
+    `Máš ${fornum(items.pig)}<br>
+    Tvořící ${fornum((items.pig*1150000)*items.pres)} kliků!`
+    dissea.innerHTML=
+    `Máš ${fornum(items.seal)}<br>
+    Tvořící ${fornum((items.seal*1300000)*items.pres)} kliků!`
+    
+    
+    document.getElementById('dislem').innerHTML=
+    `Máš ${fornum(items.lemons)} citrónů!`
+    document.getElementById('dislt3').innerHTML=
+    `Máš ${fornum(items.lt3)} citronovníků!<br>
+    Tvořící ${fornum((items.lt3*items.pres))} citrónů<br>za 100 sec.`
+    
+    disdogName.innerHTML=`Psy`
+    discatName.innerHTML=`Kočky`
+    disfoxName.innerHTML=`Lišky`
+    diswolName.innerHTML=`Vlci`
+    dishamName.innerHTML=`Křečci`
+    diswhaName.innerHTML=`Velryby`
+    discapName.innerHTML=`Kapybary`
+    displaName.innerHTML=`Ptakopyskové`
+    disporName.innerHTML=`Dikobrazové`
+    dishipName.innerHTML=`Hrochové`
+    dissnaName.innerHTML=`Hadi`
+    discheName.innerHTML=`Gepardi`
+    dispytName.innerHTML=`Kobry`
+    disgirName.innerHTML=`Žirafy`
+    disottName.innerHTML=`Vydry`
+    dismeeName.innerHTML=`Surikaty`
+    disracName.innerHTML=`Mývalové`
+    disowlName.innerHTML=`Sovy`
+    disbadName.innerHTML=`Jezevci`
+    dissquName.innerHTML=`Veverky`
+    dischaName.innerHTML=`Chameleóni`
+    dischiName.innerHTML=`Slepice`
+    diswomName.innerHTML=`Wombati`
+    dispanName.innerHTML=`Panteři`
+    discoyName.innerHTML=`Kojoti`
+    disfroName.innerHTML=`Žáby`
+    disbeaName.innerHTML=`Medvědi`
+    dispigName.innerHTML=`Prasata`
+    disseaName.innerHTML=`Tuleni`
+    dislemName.innerHTML=`Citróny`
+    dislt3Name.innerHTML=`Citrónovníky`
 
-    lm1.innerHTML = 'Kup Citrón za <b style="font-weight: 1000;">pár</b> koček'
-    lt1.innerHTML = 'Kup Citrónovník za 5 citrónů'
+    dg1.innerHTML =  'Kup za 100 kliků'
+    ct1.innerHTML =  'Kup za 10 psů'
+    fx1.innerHTML =  'Kup za 15 psů'
+    wl1.innerHTML =  'Kup za:<br> 6 psů a 5 lišek'
+    hm1.innerHTML =  'Kup za:<br> 1 vlka a 2 kočky'
+    wh1.innerHTML =  'Kup za 2 vlky'
+    cp1.innerHTML =  'Kup za:<br> 1 velrybu a 4 kočky'
+    pl1.innerHTML =  'Kup za:<br> 1 kapybaru a 1 vlka'
+    pr1.innerHTML =  'Kup za:<br> 1 ptakopyska a 1 velrybu'
+    hi1.innerHTML =  'Kup za:<br> 1 dikobraza a 2 křečků'
+    sn1.innerHTML =  'Kup za:<br> 2 velryby a 4 křečky'
+    ch1.innerHTML =  'Kup za:<br> 2 hady a 2 ptakopysky'
+    py1.innerHTML =  'Kup za:<br> 1 geparda a 5 hrochů'
+    gi1.innerHTML =  'Kup za:<br> 1 kobru a 20 lišek'
+    ot1.innerHTML =  'Kup za:<br> 1 žirafu a 2 kapybary'
+    me1.innerHTML =  'Kup za:<br> 1 vydru a 3 velryby'
+    ra1.innerHTML =  'Kup za:<br> 1 surikatu a 7 dikobrazů'
+    ow1.innerHTML =  'Kup za:<br> 1 mývala a 1 hada'
+    ba1.innerHTML =  'Kup za:<br> 1 sovu a 2 kobry'
+    sq1.innerHTML =  'Kup za:<br> 1 jezevce a 5 gepardů'
+    cha1.innerHTML = 'Kup za:<br> 1 veverku a 2 surikaty'
+    chi1.innerHTML = 'Kup za:<br> 2 veverky a 1 sovu'
+    wom1.innerHTML = 'Kup za:<br> 1 slepici a 2 chameleóny'
+    pan1.innerHTML = 'Kup za:<br> 1 wombata a 2 slepice'
+    coy1.innerHTML = 'Kup za:<br> 1 pantera a 4 chameleóny'
+    fro1.innerHTML = 'Kup za:<br> 1 cojota a 40 hadů'
+    bea1.innerHTML = 'Kup za:<br> 1 žábu a 5 žiraf'
+    pig1.innerHTML = 'Kup za:<br> 1 medvěda a 6 jezevců'
+    sea1.innerHTML = 'Kup za:<br> 1 prase a 9 vyder'
+
+    lm1.innerHTML = 'Kup za 20 koček'
+    lt1.innerHTML = 'Kup za 5 citrónů'
 
     // Buying for clicks
-    Cct1.innerHTML = 'Kup Kočku za <br> 1,2 k kliků'
-    Cfx1.innerHTML = 'Kup Lišku za <br> 1,8 k kliků'
-    Cwl1.innerHTML = 'Kup Vlka za <br> 10 k kliků'
-    Chm1.innerHTML = 'Kup Křečka za <br> 13 k kliků'
-    Cwh1.innerHTML = 'Kup Velrybu za <br> 22 k kliků'
-    Ccp1.innerHTML = 'Kup Kapybaru za <br> 28 k kliků'
-    Cpl1.innerHTML = 'Kup Ptakopyska za <br> 42 k kliků'
-    Cpr1.innerHTML = 'Kup Dikobraza za <br> 70 k kliků'
-    Chi1.innerHTML = 'Kup Hrocha za <br> 100 k kliků'
-    Csn1.innerHTML = 'Kup Hada za <br> 150 k kliků'
-    Cch1.innerHTML = 'Kup Geparda za <br> 350 k kliků'
-    Cpy1.innerHTML = 'Kup Kobru za <br> 820 k kliků'
-    Cgi1.innerHTML = 'Kup Žirafu za <br> 880 k kliků'
-    Cot1.innerHTML = 'Kup Vydru za <br> 950 k kliků'
-    Cme1.innerHTML = 'Kup Surikatu za <br> 1 mil kliků'
-    Cra1.innerHTML = 'Kup Mývala za <br> 1,5 mil kliků'
-    Cow1.innerHTML = 'Kup Sovu za <br> 1,8 mil kliků'
-    Cba1.innerHTML = 'Kup Jezevce za <br> 3,5 mil kliků'
-    Csq1.innerHTML = 'Kup Veverku za <br> 5,5 mil kliků'
-    Ccha1.innerHTML = 'Kup Chameleóna za <br> 7,7 mil kliků'
-    Cchi1.innerHTML = 'Kup Slepici za <br> 13 mil kliků'
-    Cwom1.innerHTML = 'Kup Chameleóna za <br> 31 mil kliků'
+    Cct1.innerHTML =  'Kup za 1,2 k kliků'
+    Cfx1.innerHTML =  'Kup za 1,8 k kliků'
+    Cwl1.innerHTML =  'Kup za 10 k kliků'
+    Chm1.innerHTML =  'Kup za 13 k kliků'
+    Cwh1.innerHTML =  'Kup za 22 k kliků'
+    Ccp1.innerHTML =  'Kup za 28 k kliků'
+    Cpl1.innerHTML =  'Kup za 42 k kliků'
+    Cpr1.innerHTML =  'Kup za 70 k kliků'
+    Chi1.innerHTML =  'Kup za 100 k kliků'
+    Csn1.innerHTML =  'Kup za 150 k kliků'
+    Cch1.innerHTML =  'Kup za 350 k kliků'
+    Cpy1.innerHTML =  'Kup za 820 k kliků'
+    Cgi1.innerHTML =  'Kup za 880 k kliků'
+    Cot1.innerHTML =  'Kup za 950 k kliků'
+    Cme1.innerHTML =  'Kup za 1 mil kliků'
+    Cra1.innerHTML =  'Kup za 1,5 mil kliků'
+    Cow1.innerHTML =  'Kup za 1,8 mil kliků'
+    Cba1.innerHTML =  'Kup za 3,5 mil kliků'
+    Csq1.innerHTML =  'Kup za 5,5 mil kliků'
+    Ccha1.innerHTML = 'Kup za 7,7 mil kliků'
+    Cchi1.innerHTML = 'Kup za 13 mil kliků'
+    Cwom1.innerHTML = 'Kup za 31 mil kliků'
+    Cpan1.innerHTML = 'Kup za 60,5 mil kliků'
+    Ccoy1.innerHTML = 'Kup za 92,4 mil kliků'
+    Cfro1.innerHTML = 'Kup za 99 mil kliků'
+    Cbea1.innerHTML = 'Kup za 104,5 mil kliků'
+    Cpig1.innerHTML = 'Kup za 126,5 mil kliků'
+    Csea1.innerHTML = 'Kup za 143 mil kliků'
   }
 }
 load();
@@ -254,6 +432,7 @@ function upload(){update();load();}
 function cash(){
   setTimeout (function money(){
     items.clicks += cs*items.pres;
+    items.lemons += (items.lt3/100)*items.pres;
     upload();
     cash();click();
   },1000)
@@ -263,7 +442,7 @@ cash();
 function click(){
   setTimeout(function decoration(){
     document.getElementById('imgcli').src = '../img/icons8-clicked.png'
-  },500);
+  },750);
   setTimeout(function decoration(){
     document.getElementById('imgcli').src = '../img/icons8-rest.svg'
   },1000)
@@ -450,16 +629,58 @@ function buywom(){
   } 
   upload();
 }
-
-
-
-
-
+function buypan(){
+  if(items.wombat>=1 && items.chicken>=2){
+    items.wombat-=1;
+    items.chicken-=2;
+    items.panther++;
+  } 
+  upload();
+}
+function buycoy(){
+  if(items.panther>=1 && items.chameleon>=4){
+    items.panther-=1;
+    items.chameleon-=4;
+    items.coyote++;
+  } 
+  upload();
+}
+function buyfro(){
+  if(items.coyote>=1 && items.snakes>=40){
+    items.coyote-=1;
+    items.snakes-=40;
+    items.frog++;
+  } 
+  upload();
+}
+function buybea(){
+  if(items.frog>=1 && items.girrafes>=5){
+    items.frog-=1;
+    items.girrafes-=5;
+    items.bear++;
+  } 
+  upload();
+}
+function buypig(){
+  if(items.bear>=1 && items.badger>=6){
+    items.bear-=1;
+    items.badger-=6;
+    items.pig++;
+  } 
+  upload();
+}
+function buysea(){
+  if(items.pig>=1 && items.otters>=9){
+    items.pig-=1;
+    items.otters-=9;
+    items.seal++;
+  } 
+  upload();
+}
 
 function buylem(){
-  let RanLemCost = Math.floor(Math.random()*100);
-  if(items.cats>=RanLemCost){
-    items.cats-=RanLemCost;
+  if(items.cats>=20){
+    items.cats-=20;
     items.lemons+=1;
   }
   upload();
@@ -474,44 +695,50 @@ function buylt3(){
 
 
 
-
-
-
-/*  Max Shop  */
+/*
+ __  __                       _____   _                     
+|  \/  |                     / ____| | |                    
+| \  / |   __ _  __  __     | (___   | |__     ___     _ __  
+| |\/| |  / _` | \ \/ /      \___ \  | '_ \   / _ \   | '_ \ 
+| |  | | | (_| |  >  <       ____) | | | | | | (_) |  | |_) |
+|_|  |_|  \__,_| /_/\_\     |_____/  |_| |_|  \___/   | .__/ 
+                                                      | |    
+                                                      |_|    
+*/
 function mxdg(){
-  one = Math.floor(items.clicks / 100)
+  const amount = Math.floor(items.clicks / 100)
   
-  items.clicks -= one * 100
-  items.dogs += one
+  items.clicks -= amount * 100
+  items.dogs += amount
   upload();
 }
 function mxct(){
-  one = Math.floor(items.dogs / 10)
+  const amount = Math.floor(items.dogs / 10)
   
-  items.dogs -= one * 10
-  items.cats += one
+  items.dogs -= amount * 10
+  items.cats += amount
   upload();
 }
 function mxfx(){
-  one = Math.floor(items.dogs/15)
+  const amount = Math.floor(items.dogs/15)
 
-  items.dogs -= one*15
-  items.foxes += one
+  items.dogs -= amount*15
+  items.foxes += amount
   upload();
 }
 function mxlm(){
   let RanLemCost = Math.floor(Math.random()*100);
-  one = Math.floor(items.cats/RanLemCost)
+  const amount = Math.floor(items.cats/RanLemCost)
   
-  items.cats   -= one*RanLemCost
-  items.lemons += one
+  items.cats   -= amount*RanLemCost
+  items.lemons += amount
   upload();
 }
 function mxlt(){
-  one = Math.floor(items.lemons/5)
+  const amount = Math.floor(items.lemons/5)
   
-  items.lemons -= one*5
-  items.lt3 += one
+  items.lemons -= amount*5
+  items.lt3 += amount
   upload()
 }
 function mxwh(){
@@ -521,10 +748,6 @@ function mxwh(){
   items.whales += amount;
   upload();
 }
-let one;
-
-// Max Shop
-
 function mxwl(){
   const amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
 
@@ -712,6 +935,60 @@ function mxwom(){
   }
   upload();
 }
+function mxpan(){
+  const amount = Math.min(Math.floor(items.wombat/1), Math.floor(items.chicken/2));
+  if(amount > 0){
+    items.wombat -= amount*1;
+    items.chicken -= amount*2;
+    items.panther += amount;
+  }
+  upload();
+}
+function mxcoy(){
+  const amount = Math.min(Math.floor(items.panther/1), Math.floor(items.chameleon/4));
+  if(amount > 0){
+    items.panther -= amount*1;
+    items.chameleon -= amount*4;
+    items.coyote += amount;
+  }
+  upload();
+}
+function mxfro(){
+  const amount = Math.min(Math.floor(items.coyote/1), Math.floor(items.snakes/40));
+  if(amount > 0){
+    items.coyote -= amount*1;
+    items.snakes -= amount*40;
+    items.frog += amount;
+  }
+  upload();
+}
+function mxbea(){
+  const amount = Math.min(Math.floor(items.frog/1), Math.floor(items.girrafes/5));
+  if(amount > 0){
+    items.frog -= amount*1;
+    items.girrafes -= amount*5;
+    items.bear += amount;
+  }
+  upload();
+}
+function mxpig(){
+  const amount = Math.min(Math.floor(items.bear/1), Math.floor(items.badger/6));
+  if(amount > 0){
+    items.bear -= amount*1;
+    items.badger -= amount*6;
+    items.pig += amount;
+  }
+  upload();
+}
+function mxsea(){
+  const amount = Math.min(Math.floor(items.pig/1), Math.floor(items.otters/9));
+  if(amount > 0){
+    items.pig -= amount*1;
+    items.otters -= amount*9;
+    items.seal += amount;
+  }
+  upload();
+}
 
 // Dark || Light Mode
 function LDmodes(){
@@ -738,35 +1015,6 @@ function LDmodes(){
     logclick.style.filter = 'drop-shadow(10px 8px 6px #222)';
   }
 }
-
-
-// Function to convert a number into a more readable format
-function fornum(num){
-  if(items.lang == 0){
-    const suffixes = ['', ' tis.', ' mil.', ' mld.', ' bil.', ' bld.', ' tril.', ' trild.', ' kvad.', ' kvadld.', ' quint.', ' quintld.', ' sext.', ' sextld.', ' sept.', ' septld.', ' okt.', ' oktld.', ' non.', ' nonld.', ' dec.', ' decld.', ' undec.', ' undecld.', ' duodec.', ' duodecld.', ' tredec.', ' tredecld.', ' kvaddec.', ' kvaddecld.', ' quintdec.', ' quintdecld.', ' sextdec.', ' sextdecld.', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }else{
-    const suffixes = ['', ' k', ' mil', ' bil', ' tri', ' quad', ' qui', ' sex', ' sep', ' oct', ' non', ' dec', ' und', ' duo', ' tre', ' qua', ' qui', ' sex', ' sep', ' oct', ' nov', ' vig', ' uvi', ' dvi', ' tvi', ' qvi', ' qv', ' svi', ' spv', ' ov', ' nv', ' cen', ' ucn', ' dcn', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }
-}
-
-
-
-
-
 
 /* SHOPPING WITH ONLY CLICKS */
 
@@ -876,6 +1124,30 @@ function mxCchi(){cManimal('chicken', 13000000)}
 function buyCwom(){canimal('wombat', 31000000)}
 function mxCwom(){cManimal('wombat', 31000000)}
 
+// panta
+function buyCpan(){canimal('panther', 60500000)}
+function mxCpan(){cManimal('panther', 60500000)}
+
+// cojojojojojo
+function buyCcoy(){canimal('coyote', 92400000)}
+function mxCcoy(){cManimal('coyote', 92400000)}
+
+// fjog
+function buyCfro(){canimal('frog', 99000000)}
+function mxCfro(){cManimal('frog', 99000000)}
+
+// cocaina bear
+function buyCbea(){canimal('bear', 104500000)}
+function mxCbea(){cManimal('bear', 104500000)}
+
+// TECHNOBLADE
+function buyCpig(){canimal('pig', 126500000)}
+function mxCpig(){cManimal('pig', 126500000)}
+
+// Seal of approval
+function buyCsea(){canimal('seal', 143000000)}
+function mxCsea(){cManimal('seal', 143000000)}
+
 const upArr = document.querySelector('.upwards');
 
 window.addEventListener('scroll', () => {
@@ -885,3 +1157,4 @@ window.addEventListener('scroll', () => {
     upArr.classList.remove('active');
   }
 })
+// 892 před V46 | 1160 ve V46

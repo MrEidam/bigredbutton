@@ -3,30 +3,37 @@ let items;
 let cs = 0;
 let anime = false;
 
-const changeEN = `                        v45
-Added: ANIMALS - Chimken + Wombat
-             New Main menu with the "social tab"
-             Better language detector
-             New path to Shop, Sett., Upg., Clicking
-             Titles of the sites changes to coresponding language
-             Sites to setting :)
+const changeEN = `                                          Version - 46
+Added: Animals - Panthers, Coyotes, Frogs, Bears, Pigs, Seals
+             New formating of the text and font in Clicking, Shop, Upgrades
+             Names in the window of the Animals and Upgrades
+             Lemon Trees finally have an function
+             Menu (black bar) was changed from 200 ms to 50 ms
+             After 5 pres. points you will get not 0.5 but 1
+             New cost (aka not randomised) for lemons
+             New Design of the tiles in the Shop
+             Revealed cost of Tokens
+             Now bugs will have their number :D
 
-Fixed: Buying tokens is now more practical
-          Margin of every main section under the Jonathans
+Fixed: Text for buying wombats for clicks (BRB-44)
 
-Removed: I guess /lang/ but I don't know it 100%`
+Removed: ✨ Nothing ✨`
 
-const changeCZ = `                        v45
-Přidáno: ZVÍŘATA - Slépka + Wombat
-              Nové hlavní menu s 'sociálními síti'
-              Nová cesta do Obchodu atd v mreidam-brb.com/Shop/
-              Názvy stránek jsou v jazyce korespondující k jazyku uživatele
-              Seznam stránek v Nastavení
+const changeCZ = `                                            Verze - 46
+Přidáno: ZVÍŘATA - Panteři, Kojoti, Žáby, Medvědi, Prasata, Tuleni
+              Nové formátování textu a fontu všude kromě nastavení
+              Jména zvířat a vylepšení
+              Citrónovníky mají konečně využití
+              Rychlost menu změněna z 200 ms na 50
+              Po 5 pres. bodů získáte ne 0,5 ale 1
+              Nová cena (už ne random) pro citróny
+              Nový vzhled dlaždiček v Obchodě
+              Odkryta cena Lístků
+              Každý bug bude mít svoje číslo :D
 
-Upraveno: Nakupování Tokenů na Prestige je jednoduší
-                 Mezera všech hlavních sekcí pod Jonathanem
+Upraveno: Text pro nakupování wombatů za kliky (BRB-44)
 
-Smazáno: Asi /lang/ ale nejsem si jistý`
+Smazáno: ✨ Nic ✨`
 
 function load(){
   if (localStorage.getItem('items')!=null){
@@ -66,6 +73,7 @@ window.onload = function(){
     frog:0, 
     bear:0, 
     pig:0, 
+    seal:0, 
 
 
     
@@ -103,10 +111,10 @@ function update(){
   let i = JSON.stringify(items);
   localStorage.setItem('items', i);
   if(items.lang == 1){
-    document.getElementById('disclick').innerHTML=`You've got ${fornum(items.clicks)} clicks, and generating ${fornum(cs*items.pres)} c/s!`
+    document.getElementById('disclick').innerHTML=`You have ${fornum(items.clicks)} clicks, and generating ${fornum(cs*items.pres)} c/s!`
   }
   if(items.lang == 0){
-    document.getElementById('disclick').innerHTML=`Právě máš ${fornum(items.clicks)} kliků a generuješ ${fornum(cs*items.pres)} k/s!`
+    document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a generuješ ${fornum(cs*items.pres)} k/s!`
   }
   checklang();
 }
@@ -134,8 +142,9 @@ function clicking(){
 
 function cash(){
   setTimeout (function money(){
-    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000
+    cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
     items.clicks += cs*items.pres;
+    items.lemons += (items.lt3/100)*items.pres;
     update();cash();
   },1000)
 }
@@ -173,29 +182,6 @@ function LDmodes(){
   upload();
 }
 
-// Function to convert a number into a more readable format
-function fornum(num){
-  if(items.lang == 0){
-    const suffixes = ['', ' tis.', ' mil.', ' mld.', ' bil.', ' bld.', ' tril.', ' trild.', ' kvad.', ' kvadld.', ' quint.', ' quintld.', ' sext.', ' sextld.', ' sept.', ' septld.', ' okt.', ' oktld.', ' non.', ' nonld.', ' dec.', ' decld.', ' undec.', ' undecld.', ' duodec.', ' duodecld.', ' tredec.', ' tredecld.', ' kvaddec.', ' kvaddecld.', ' quintdec.', ' quintdecld.', ' sextdec.', ' sextdecld.', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }else{
-    const suffixes = ['', ' k', ' mil', ' bil', ' tri', ' quad', ' qui', ' sex', ' sep', ' oct', ' non', ' dec', ' und', ' duo', ' tre', ' qua', ' qui', ' sex', ' sep', ' oct', ' nov', ' vig', ' uvi', ' dvi', ' tvi', ' qvi', ' qv', ' svi', ' spv', ' ov', ' nv', ' cen', ' ucn', ' dcn', ' googol'];
-    let i = 0;
-    while (num >= 1000 && i < suffixes.length - 1) {
-      num /= 1000;
-      i++;
-    }
-    num = Math.floor(num * 10) / 10;
-    return num + suffixes[i];
-  }
-}
-
 // šmol change
 function change(){
   if(items.lang == 0){ // CZ
@@ -204,8 +190,6 @@ function change(){
     alert(changeEN);
   }
 }
-
-
 
 // keybinds
 addEventListener("keyup", (event) => {

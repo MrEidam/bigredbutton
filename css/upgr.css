@@ -4,6 +4,7 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -73,8 +74,8 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 500px;
-  height: 390px;
+  width: 400px;
+  min-height: 340px;
   filter: drop-shadow(0px 20px 14px #444);
 }
 
@@ -83,7 +84,6 @@ main{
   aspect-ratio: 1/1;
   margin: 0.5rem;
   object-fit: contain;
-  
   filter: drop-shadow(10px 8px 6px #333);
   pointer-events: none
 }
