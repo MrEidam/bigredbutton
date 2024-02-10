@@ -114,8 +114,8 @@ function load(){
     `You have ${fornum(items.pig)}<br>
     Generating ${fornum((items.pig*1150000)*items.pres)} clicks!`
     dissea.innerHTML=
-    `You have ${fornum(items.seal)}<br>
-    Generating ${fornum((items.seal*1300000)*items.pres)} clicks!`
+    `You have ${fornum((items.seal||0))}<br>
+    Generating ${fornum(((items.seal||0)*1300000)*items.pres)} clicks!`
     
     
     
@@ -318,8 +318,8 @@ function load(){
     `Máš ${fornum(items.pig)}<br>
     Tvořící ${fornum((items.pig*1150000)*items.pres)} kliků!`
     dissea.innerHTML=
-    `Máš ${fornum(items.seal)}<br>
-    Tvořící ${fornum((items.seal*1300000)*items.pres)} kliků!`
+    `Máš ${fornum((items.seal||0))}<br>
+    Tvořící ${fornum(((items.seal||0)*1300000)*items.pres)} kliků!`
     
     
     document.getElementById('dislem').innerHTML=
