@@ -24,49 +24,40 @@ const monsterStats = document.querySelector('#monsterStats');
 const monsterName = document.querySelector('#monsterName');
 const monsterHpText = document.querySelector('#monsterHp');
 
-const monsters = [
-    {
+const monsters = [{
         name: 'Slime',
         level: 2,
         hp: 15,
-    },
-    {
+    },{
         name: 'Unicorn',
         level: 8,
         hp: 70,
-    },
-    {
+    },{
         name: 'Dragon',
         level: 25,
         hp: 500,
     },
 ];
 
-const weapons = [
-    {
+const weapons = [{
         name: 'Boxing gloves',
         power: 1,
-    },
-    {
+    },{
         name: 'Oak Stick',
         power: 5,
-    },
-    {
+    },{
         name: 'Iron Dagger',
         power: 25,
-    },
-    {
+    },{
         name: 'Nordic Hammer',
         power: 50,
-    },
-    {
+    },{
         name: 'Royal Broadsword',
         power: 100,
     },
 ];
 
-const locations = [
-    {
+const locations = [{
         name: 'Town Square',
         'btn text': [
             `Go to Store`,
@@ -91,7 +82,7 @@ const locations = [
             buyWeapon,
             goTown,
         ],
-        text: `You've entered the store. You can buy something from Jonathan or go back to Town square. Note that your current weapon is ${weapons[currentWeapon].name}.`,
+        text: `You've entered the store. You can buy something from Jonathan or go back to Town square.`,
     },{
         name: 'Cave',
         'btn text': [
@@ -130,7 +121,7 @@ const locations = [
             goTown,
             egg,
         ],
-        text: `Exiting the nearby cavern, one ${monsters[fighting].name} lies defeated. Its final cry fades as you gain experience. Among the remnants, you find gold—a reward for your bravery.`,
+        text: `Exiting the nearby cavern, one monster lies defeated. Its final cry fades as you gain experience. Among the remnants, you find gold—a reward for your bravery.`,
     },{
         name: 'Lose',
         'btn text': [
@@ -143,7 +134,7 @@ const locations = [
             restart,
             restart,
         ],
-        text: `Your resolve falters as weariness sets in, and the ground trembles with the arrival of another ${monsters[fighting].name} from the shadows. Despite your valiant efforts in battle, the relentless onslaught proves too much, and you find yourself overpowered. As darkness descends upon your vision, the echoing roar of the ${monsters[fighting].name} serves as a grim reminder of your valiant but ultimately unsuccessful struggle.`,
+        text: `Your resolve falters as weariness sets in, and the ground trembles with the arrival of another monster from the shadows. Despite your valiant efforts in battle, the relentless onslaught proves too much, and you find yourself overpowered. As darkness descends upon your vision, the echoing roar of the that monster serves as a grim reminder of your valiant but ultimately unsuccessful struggle.`,
     },{
         name: 'Win',
         'btn text': [
@@ -199,6 +190,7 @@ function goTown(){
 
 function goStore(){
     update(locations[1]);
+    text.innerText += ` Remember that your weapon is ${weapons[currentWeapon].name}.`
 }
 
 function goCave(){
@@ -211,11 +203,12 @@ function buyHp(){
         gold -= 10;
         hp += 10;
         textUp();
+        text.innerText = `You bought 10 more Health Points.`
     }else{
         text.innerText = `You need ${10-gold} more Gold to buy more HP.`
     }
 }
-function buyWeapon(){//TODO current weapon in shop entry
+function buyWeapon(){
     if(currentWeapon < weapons.length-1){
         if(gold>=30){
             gold -= 30;
@@ -273,7 +266,7 @@ function attack(){
     if(isMonsterHit()){
         hp -= getMonsterAttackValue(monsters[fighting].level);
     }else{
-        text.innerText += ` You missed.`
+        text.innerText += ` ${monsters[fighting].name} missed.`
     }
     monsterHp -= weapons[currentWeapon].power + Math.floor(Math.random()*xp) + 1;
     textUp();
@@ -281,7 +274,7 @@ function attack(){
     else if(monsterHp<=0){
         fighting === 2 ? winGame() : defeatMonster();
     }
-
+    
     if(Math.random() <= .1 && inventory.length !== 1){
         text.innerText += `Your ${inventory.pop()} breaks.`;
         currentWeapon--;
@@ -289,15 +282,22 @@ function attack(){
 }
 
 function getMonsterAttackValue(level){
-    return (level*5) - (Math.floor(Math.random()*xp));
+    return Math.max(1, (level*5) - (Math.floor(Math.random()*xp)));
 }
 
 function isMonsterHit(){
     return Math.random()>.2 || hp<20;
 }
 
-function dodge(){ //TODO round up when monster hits (lichá) % sudá misses
-    text.innerText = `You dodge the attack from the ${monsters[fighting].name}.`
+function dodge(){
+    if(Math.floor(Math.random()*10)%2){
+        text.innerText = `You dodge the attack from the ${monsters[fighting].name}.`;
+    }else{
+        text.innerText = `You didn't dodge the attack from the ${monsters[fighting].name}.`;
+        hp -= getMonsterAttackValue(monsters[fighting].level);
+        textUp();
+        if(hp<=0) lose();
+    }
 }
 
 function defeatMonster(){
@@ -369,4 +369,3 @@ function textUp(){
     goldText.innerText = gold;
     monsterHpText.innerText = monsterHp;
 }
-//TODO 1:12:00 https://www.youtube.com/watch?v=SYx885hX0OY
