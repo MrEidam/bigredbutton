@@ -1,235 +1,17 @@
-let cs
+while(document.title === 'BRB - Obchod'||document.title === 'BRB - Shop'){ //! Shopdope
+  let upArr = document.querySelector('.upwards');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY >= 600){
+      upArr.classList.add('active');
+    }else{
+      upArr.classList.remove('active');
+    }
+  })
 
-// Update
-function update(){
-  let i = JSON.stringify(items);
-  localStorage.setItem('items', i);
-  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
-}
-function c(x){
-  items.clicks += x;
-  console.log(x + ' clicks added!');
-  upload();
 }
 
-// Load
-function load(){
-  items = JSON.parse(localStorage.getItem('items'));
-  LDmodes()
-  cs = items.dogs+items.cats*12+items.foxes*18+items.wolfs*100+items.hamsters*130+items.whales*220+items.capybaras*280+items.platapuses*400+items.porcupines*650+items.hippos*950+items.snakes*1000+items.cheetahs*3000+items.pythons*7800+items.girrafes*8400+items.otters*9000+items.meerkat*9800+items.raccoon*14500+items.owl*16000+items.badger*32000+items.squirrel*50000+items.chameleon*70000+items.chicken*120000+items.wombat*280000+items.panther*550000+items.coyote*840000+items.frog*900000+items.bear*950000+items.pig*1150000+(items.seal||0)*1300000;
-
-  if(items.lang == 1){
-    document.documentElement.setAttribute('lang', 'en');
-    document.title = 'BRB - Shop';
-    shop.innerHTML = 'Shop';
-    upg.innerHTML = 'Upgrades';
-    sett.innerHTML = 'Settings';
-
-
-    disclick.innerHTML=`You have ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
-
-
-    disdog.innerHTML=
-    `You have ${fornum(items.dogs)}<br>
-    Generating ${fornum((items.dogs*1)*items.pres)} clicks!`
-    discat.innerHTML=
-    `You have ${fornum(items.cats)}<br>
-    Generating ${fornum((items.cats*12)*items.pres)} clicks!`
-    disfox.innerHTML=
-    `You have ${fornum(items.foxes)}<br>
-    Generating ${fornum((items.foxes*18)*items.pres)} clicks!`
-    diswol.innerHTML=
-    `You have ${fornum(items.wolfs)}<br>
-    Generating ${fornum((items.wolfs*100)*items.pres)} clicks!`
-    disham.innerHTML=
-    `You have ${fornum(items.hamsters)}<br>
-    Generating ${fornum((items.hamsters*130)*items.pres)} clicks!`
-    diswha.innerHTML=
-    `You have ${fornum(items.whales)}<br>
-    Generating ${fornum((items.whales*220)*items.pres)} clicks!`
-    discap.innerHTML=
-    `You have ${fornum(items.capybaras)}<br>
-    Generating ${fornum((items.capybaras*280)*items.pres)} clicks!`
-    displa.innerHTML=
-    `You have ${fornum(items.platapuses)}<br>
-    Generating ${fornum((items.platapuses*400)*items.pres)} clicks!`
-    dispor.innerHTML=
-    `You have ${fornum(items.porcupines)}<br>
-    Generating ${fornum((items.porcupines*650)*items.pres)} clicks!`
-    diship.innerHTML=
-    `You have ${fornum(items.hippos)}<br>
-    Generating ${fornum((items.hippos*950)*items.pres)} clicks!`
-    dissna.innerHTML=
-    `You have ${fornum(items.snakes)}<br>
-    Generating ${fornum((items.snakes*1000)*items.pres)} clicks!`
-    dische.innerHTML=
-    `You have ${fornum(items.cheetahs)}<br>
-    Generating ${fornum((items.cheetahs*3000)*items.pres)} clicks!`
-    dispyt.innerHTML=
-    `You have ${fornum(items.pythons)}<br>
-    Generating ${fornum((items.pythons*7800)*items.pres)} clicks!`
-    disgir.innerHTML=
-    `You have ${fornum(items.girrafes)}<br>
-    Generating ${fornum((items.girrafes*8400)*items.pres)} clicks!`
-    disoth.innerHTML=
-    `You have ${fornum(items.otters)}<br>
-    Generating ${fornum((items.otters*9000)*items.pres)} clicks!`
-    dismee.innerHTML=
-    `You have ${fornum(items.meerkat)}<br>
-    Generating ${fornum((items.meerkat*9800)*items.pres)} clicks!`
-    disrac.innerHTML=
-    `You have ${fornum(items.raccoon)}<br>
-    Generating ${fornum((items.raccoon*14500)*items.pres)} clicks!`
-    disowl.innerHTML=
-    `You have ${fornum(items.owl)}<br>
-    Generating ${fornum((items.owl*16000)*items.pres)} clicks!`
-    disbad.innerHTML=
-    `You have ${fornum(items.badger)}<br>
-    Generating ${fornum((items.badger*32000)*items.pres)} clicks!`
-    dissqu.innerHTML=
-    `You have ${fornum(items.squirrel)}<br>
-    Generating ${fornum((items.squirrel*50000)*items.pres)} clicks!`
-    discha.innerHTML=
-    `You have ${fornum(items.chameleon)}<br>
-    Generating ${fornum((items.chameleon*70000)*items.pres)} clicks!`
-    dischi.innerHTML=
-    `You have ${fornum(items.chicken)}<br>
-    Generating ${fornum((items.chicken*120000)*items.pres)} clicks!`
-    diswom.innerHTML=
-    `You have ${fornum(items.wombat)}<br>
-    Generating ${fornum((items.wombat*280000)*items.pres)} clicks!`
-    dispan.innerHTML=
-    `You have ${fornum(items.panther)}<br>
-    Generating ${fornum((items.panther*550000)*items.pres)} clicks!`
-    discoy.innerHTML=
-    `You have ${fornum(items.coyote)}<br>
-    Generating ${fornum((items.coyote*840000)*items.pres)} clicks!`
-    disfro.innerHTML=
-    `You have ${fornum(items.frog)}<br>
-    Generating ${fornum((items.frog*900000)*items.pres)} clicks!`
-    disbea.innerHTML=
-    `You have ${fornum(items.bear)}<br>
-    Generating ${fornum((items.bear*950000)*items.pres)} clicks!`
-    dispig.innerHTML=
-    `You have ${fornum(items.pig)}<br>
-    Generating ${fornum((items.pig*1150000)*items.pres)} clicks!`
-    dissea.innerHTML=
-    `You have ${fornum((items.seal||0))}<br>
-    Generating ${fornum(((items.seal||0)*1300000)*items.pres)} clicks!`
-    
-    
-    
-    
-    document.getElementById('dislem').innerHTML=`You have ${fornum(items.lemons)}!`
-    document.getElementById('dislt3').innerHTML=
-    `You have ${fornum(items.lt3)}!<br>
-    Generating ${fornum((items.lt3*items.pres))} Lemons<br>every 100 sec.`
-    
-
-    disdogName.innerHTML=`Dogs`
-    discatName.innerHTML=`Cats`
-    disfoxName.innerHTML=`Foxes`
-    diswolName.innerHTML=`Wolfs`
-    dishamName.innerHTML=`Hamsters`
-    diswhaName.innerHTML=`Whales`
-    discapName.innerHTML=`Capybaras`
-    displaName.innerHTML=`Platypuses`
-    disporName.innerHTML=`Porcupines`
-    dishipName.innerHTML=`Hippopotamuses`
-    dissnaName.innerHTML=`Snakes`
-    discheName.innerHTML=`Cheetahs`
-    dispytName.innerHTML=`Pythons`
-    disgirName.innerHTML=`Girafes`
-    disottName.innerHTML=`Otters`
-    dismeeName.innerHTML=`Meerkats`
-    disracName.innerHTML=`Racoons`
-    disowlName.innerHTML=`Owls`
-    disbadName.innerHTML=`Badgers`
-    dissquName.innerHTML=`Squirrels`
-    dischaName.innerHTML=`Chameleons`
-    dischiName.innerHTML=`Chickens`
-    diswomName.innerHTML=`Wombats`
-    dispanName.innerHTML=`Panthers`
-    discoyName.innerHTML=`Coyotes`
-    disfroName.innerHTML=`Frogs`
-    disbeaName.innerHTML=`Bears`
-    dispigName.innerHTML=`Pigs`
-    disseaName.innerHTML=`Seals`
-
-
-    dislemName.innerHTML=`Lemons`
-    dislt3Name.innerHTML=`Lemon Trees`
-
-    dg1.innerHTML =  'Buy for 100 clicks'
-    ct1.innerHTML =  'Buy for 10 dogs'
-    fx1.innerHTML =  'Buy for 15 dogs'
-    wl1.innerHTML =  'Buy for:<br> 6 dogs and 5 foxes'
-    hm1.innerHTML =  'Buy for:<br> 1 wolf and 2 cats'
-    wh1.innerHTML =  'Buy for 2 wolfs'
-    cp1.innerHTML =  'Buy for:<br> 1 whale and 4 cats'
-    pl1.innerHTML =  'Buy for:<br> 1 capybara and 1 wolf'
-    pr1.innerHTML =  'Buy for:<br> 1 platypus and 1 whale'
-    hi1.innerHTML =  'Buy for:<br> 1 porcupine and 2 hamsters'
-    sn1.innerHTML =  'Buy for:<br> 2 whales and 4 hamsters'
-    ch1.innerHTML =  'Buy for:<br> 2 snakes and 2 platypuses'
-    py1.innerHTML =  'Buy for:<br> 1 cheetah and 5 hippos'
-    gi1.innerHTML =  'Buy for:<br> 1 python and 20 foxes'
-    ot1.innerHTML =  'Buy for:<br> 1 giraffe and 2 capybaras'
-    me1.innerHTML =  'Buy for:<br> 1 otter and 3 whales'
-    ra1.innerHTML =  'Buy for:<br> 1 meerkat and 7 porcupines'
-    ow1.innerHTML =  'Buy for:<br> 1 racoon and 1 snake'
-    ba1.innerHTML =  'Buy for:<br> 1 owl and 2 pythons'
-    sq1.innerHTML =  'Buy for:<br> 1 badger and 5 cheetah'
-    cha1.innerHTML = 'Buy for:<br> 1 squirrel and 2 meerkats'
-    chi1.innerHTML = 'Buy for:<br> 2 squirrels and 1 owl'
-    wom1.innerHTML = 'Buy for:<br> 1 chicken and 2 chameleons'
-    pan1.innerHTML = 'Buy for:<br> 1 wombat and 2 chickens'
-    coy1.innerHTML = 'Buy for:<br> 1 panther and 4 chameleons'
-    fro1.innerHTML = 'Buy for:<br> 1 coyote and 40 snakes'
-    bea1.innerHTML = 'Buy for:<br> 1 frog and 5 giraffes'
-    pig1.innerHTML = 'Buy for:<br> 1 bear and 6 badgers'
-    sea1.innerHTML = 'Buy for:<br> 1 pig and 9 otters'
-
-    lm1.innerHTML = 'Buy for 20 cats'
-    lt1.innerHTML = 'Buy for 5 lemons'
-
-    // Buying for clicks
-    Cct1.innerHTML =  'Buy for 1,2 k clicks'
-    Cfx1.innerHTML =  'Buy for 1,8 k clicks'
-    Cwl1.innerHTML =  'Buy for 10 k clicks'
-    Chm1.innerHTML =  'Buy for 13 k clicks'
-    Cwh1.innerHTML =  'Buy for 22 k clicks'
-    Ccp1.innerHTML =  'Buy for 28 k clicks'
-    Cpl1.innerHTML =  'Buy for 42 k clicks'
-    Cpr1.innerHTML =  'Buy for 70 k clicks'
-    Chi1.innerHTML =  'Buy for 100 k clicks'
-    Csn1.innerHTML =  'Buy for 150 k clicks'
-    Cch1.innerHTML =  'Buy for 350 k clicks'
-    Cpy1.innerHTML =  'Buy for 820 k clicks'
-    Cgi1.innerHTML =  'Buy for 880 k clicks'
-    Cot1.innerHTML =  'Buy for 950 k clicks'
-    Cme1.innerHTML =  'Buy for 1 mil clicks'
-    Cra1.innerHTML =  'Buy for 1.5 mil clicks'
-    Cow1.innerHTML =  'Buy for 1.8 mil clicks'
-    Cba1.innerHTML =  'Buy for 3.5 mil clicks'
-    Csq1.innerHTML =  'Buy for 5.5 mil clicks'
-    Ccha1.innerHTML = 'Buy for 7.7 mil clicks'
-    Cchi1.innerHTML = 'Buy for 13 mil clicks'
-    Cwom1.innerHTML = 'Buy for 31 mil clicks'
-    Cpan1.innerHTML = 'Buy for 60.5 mil clicks'
-    Ccoy1.innerHTML = 'Buy for 92.4 mil clicks'
-    Cfro1.innerHTML = 'Buy for 99 mil clicks'
-    Cbea1.innerHTML = 'Buy for 104.5 mil clicks'
-    Cpig1.innerHTML = 'Buy for 126.5 mil clicks'
-    Csea1.innerHTML = 'Buy for 143 mil clicks'
-  }
-  if(items.lang == 0){
-    document.documentElement.setAttribute('lang', 'cz');
-    document.title = 'BRB - Obchod';
-    shop.innerHTML = 'Obchod';
-    upg.innerHTML = 'Vylepšení';
-    sett.innerHTML = 'Nastavení';
-
+function loadShop(){
+  if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
     document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
 
 
@@ -328,7 +110,7 @@ function load(){
     `Máš ${fornum(items.lt3)} citronovníků!<br>
     Tvořící ${fornum((items.lt3*items.pres))} citrónů<br>za 100 sec.`
     
-    disdogName.innerHTML=`Psy`
+    disdogName.innerHTML=`Psi`
     discatName.innerHTML=`Kočky`
     disfoxName.innerHTML=`Lišky`
     diswolName.innerHTML=`Vlci`
@@ -422,31 +204,207 @@ function load(){
     Cbea1.innerHTML = 'Kup za 104,5 mil kliků'
     Cpig1.innerHTML = 'Kup za 126,5 mil kliků'
     Csea1.innerHTML = 'Kup za 143 mil kliků'
+  }else{
+    disclick.innerHTML=`You have ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
+
+
+    disdog.innerHTML=
+    `You have ${fornum(items.dogs)}<br>
+    Generating ${fornum((items.dogs*1)*items.pres)} clicks!`
+    discat.innerHTML=
+    `You have ${fornum(items.cats)}<br>
+    Generating ${fornum((items.cats*12)*items.pres)} clicks!`
+    disfox.innerHTML=
+    `You have ${fornum(items.foxes)}<br>
+    Generating ${fornum((items.foxes*18)*items.pres)} clicks!`
+    diswol.innerHTML=
+    `You have ${fornum(items.wolfs)}<br>
+    Generating ${fornum((items.wolfs*100)*items.pres)} clicks!`
+    disham.innerHTML=
+    `You have ${fornum(items.hamsters)}<br>
+    Generating ${fornum((items.hamsters*130)*items.pres)} clicks!`
+    diswha.innerHTML=
+    `You have ${fornum(items.whales)}<br>
+    Generating ${fornum((items.whales*220)*items.pres)} clicks!`
+    discap.innerHTML=
+    `You have ${fornum(items.capybaras)}<br>
+    Generating ${fornum((items.capybaras*280)*items.pres)} clicks!`
+    displa.innerHTML=
+    `You have ${fornum(items.platapuses)}<br>
+    Generating ${fornum((items.platapuses*400)*items.pres)} clicks!`
+    dispor.innerHTML=
+    `You have ${fornum(items.porcupines)}<br>
+    Generating ${fornum((items.porcupines*650)*items.pres)} clicks!`
+    diship.innerHTML=
+    `You have ${fornum(items.hippos)}<br>
+    Generating ${fornum((items.hippos*950)*items.pres)} clicks!`
+    dissna.innerHTML=
+    `You have ${fornum(items.snakes)}<br>
+    Generating ${fornum((items.snakes*1000)*items.pres)} clicks!`
+    dische.innerHTML=
+    `You have ${fornum(items.cheetahs)}<br>
+    Generating ${fornum((items.cheetahs*3000)*items.pres)} clicks!`
+    dispyt.innerHTML=
+    `You have ${fornum(items.pythons)}<br>
+    Generating ${fornum((items.pythons*7800)*items.pres)} clicks!`
+    disgir.innerHTML=
+    `You have ${fornum(items.girrafes)}<br>
+    Generating ${fornum((items.girrafes*8400)*items.pres)} clicks!`
+    disoth.innerHTML=
+    `You have ${fornum(items.otters)}<br>
+    Generating ${fornum((items.otters*9000)*items.pres)} clicks!`
+    dismee.innerHTML=
+    `You have ${fornum(items.meerkat)}<br>
+    Generating ${fornum((items.meerkat*9800)*items.pres)} clicks!`
+    disrac.innerHTML=
+    `You have ${fornum(items.raccoon)}<br>
+    Generating ${fornum((items.raccoon*14500)*items.pres)} clicks!`
+    disowl.innerHTML=
+    `You have ${fornum(items.owl)}<br>
+    Generating ${fornum((items.owl*16000)*items.pres)} clicks!`
+    disbad.innerHTML=
+    `You have ${fornum(items.badger)}<br>
+    Generating ${fornum((items.badger*32000)*items.pres)} clicks!`
+    dissqu.innerHTML=
+    `You have ${fornum(items.squirrel)}<br>
+    Generating ${fornum((items.squirrel*50000)*items.pres)} clicks!`
+    discha.innerHTML=
+    `You have ${fornum(items.chameleon)}<br>
+    Generating ${fornum((items.chameleon*70000)*items.pres)} clicks!`
+    dischi.innerHTML=
+    `You have ${fornum(items.chicken)}<br>
+    Generating ${fornum((items.chicken*120000)*items.pres)} clicks!`
+    diswom.innerHTML=
+    `You have ${fornum(items.wombat)}<br>
+    Generating ${fornum((items.wombat*280000)*items.pres)} clicks!`
+    dispan.innerHTML=
+    `You have ${fornum(items.panther)}<br>
+    Generating ${fornum((items.panther*550000)*items.pres)} clicks!`
+    discoy.innerHTML=
+    `You have ${fornum(items.coyote)}<br>
+    Generating ${fornum((items.coyote*840000)*items.pres)} clicks!`
+    disfro.innerHTML=
+    `You have ${fornum(items.frog)}<br>
+    Generating ${fornum((items.frog*900000)*items.pres)} clicks!`
+    disbea.innerHTML=
+    `You have ${fornum(items.bear)}<br>
+    Generating ${fornum((items.bear*950000)*items.pres)} clicks!`
+    dispig.innerHTML=
+    `You have ${fornum(items.pig)}<br>
+    Generating ${fornum((items.pig*1150000)*items.pres)} clicks!`
+    dissea.innerHTML=
+    `You have ${fornum((items.seal||0))}<br>
+    Generating ${fornum(((items.seal||0)*1300000)*items.pres)} clicks!`
+    
+    
+    document.getElementById('dislem').innerHTML=
+    `You have ${fornum(items.lemons)}!`
+    document.getElementById('dislt3').innerHTML=
+    `You have ${fornum(items.lt3)}!<br>
+    Generating ${fornum((items.lt3*items.pres))} Lemons<br>every 100 sec.`
+    
+
+    disdogName.innerHTML=`Dogs`
+    discatName.innerHTML=`Cats`
+    disfoxName.innerHTML=`Foxes`
+    diswolName.innerHTML=`Wolfs`
+    dishamName.innerHTML=`Hamsters`
+    diswhaName.innerHTML=`Whales`
+    discapName.innerHTML=`Capybaras`
+    displaName.innerHTML=`Platypuses`
+    disporName.innerHTML=`Porcupines`
+    dishipName.innerHTML=`Hippopotamuses`
+    dissnaName.innerHTML=`Snakes`
+    discheName.innerHTML=`Cheetahs`
+    dispytName.innerHTML=`Pythons`
+    disgirName.innerHTML=`Girafes`
+    disottName.innerHTML=`Otters`
+    dismeeName.innerHTML=`Meerkats`
+    disracName.innerHTML=`Racoons`
+    disowlName.innerHTML=`Owls`
+    disbadName.innerHTML=`Badgers`
+    dissquName.innerHTML=`Squirrels`
+    dischaName.innerHTML=`Chameleons`
+    dischiName.innerHTML=`Chickens`
+    diswomName.innerHTML=`Wombats`
+    dispanName.innerHTML=`Panthers`
+    discoyName.innerHTML=`Coyotes`
+    disfroName.innerHTML=`Frogs`
+    disbeaName.innerHTML=`Bears`
+    dispigName.innerHTML=`Pigs`
+    disseaName.innerHTML=`Seals`
+
+
+    dislemName.innerHTML=`Lemons`
+    dislt3Name.innerHTML=`Lemon Trees`
+
+    dg1.innerHTML =  'Buy for 100 clicks'
+    ct1.innerHTML =  'Buy for 10 dogs'
+    fx1.innerHTML =  'Buy for 15 dogs'
+    wl1.innerHTML =  'Buy for:<br> 6 dogs and 5 foxes'
+    hm1.innerHTML =  'Buy for:<br> 1 wolf and 2 cats'
+    wh1.innerHTML =  'Buy for 2 wolfs'
+    cp1.innerHTML =  'Buy for:<br> 1 whale and 4 cats'
+    pl1.innerHTML =  'Buy for:<br> 1 capybara and 1 wolf'
+    pr1.innerHTML =  'Buy for:<br> 1 platypus and 1 whale'
+    hi1.innerHTML =  'Buy for:<br> 1 porcupine and 2 hamsters'
+    sn1.innerHTML =  'Buy for:<br> 2 whales and 4 hamsters'
+    ch1.innerHTML =  'Buy for:<br> 2 snakes and 2 platypuses'
+    py1.innerHTML =  'Buy for:<br> 1 cheetah and 5 hippos'
+    gi1.innerHTML =  'Buy for:<br> 1 python and 20 foxes'
+    ot1.innerHTML =  'Buy for:<br> 1 giraffe and 2 capybaras'
+    me1.innerHTML =  'Buy for:<br> 1 otter and 3 whales'
+    ra1.innerHTML =  'Buy for:<br> 1 meerkat and 7 porcupines'
+    ow1.innerHTML =  'Buy for:<br> 1 racoon and 1 snake'
+    ba1.innerHTML =  'Buy for:<br> 1 owl and 2 pythons'
+    sq1.innerHTML =  'Buy for:<br> 1 badger and 5 cheetah'
+    cha1.innerHTML = 'Buy for:<br> 1 squirrel and 2 meerkats'
+    chi1.innerHTML = 'Buy for:<br> 2 squirrels and 1 owl'
+    wom1.innerHTML = 'Buy for:<br> 1 chicken and 2 chameleons'
+    pan1.innerHTML = 'Buy for:<br> 1 wombat and 2 chickens'
+    coy1.innerHTML = 'Buy for:<br> 1 panther and 4 chameleons'
+    fro1.innerHTML = 'Buy for:<br> 1 coyote and 40 snakes'
+    bea1.innerHTML = 'Buy for:<br> 1 frog and 5 giraffes'
+    pig1.innerHTML = 'Buy for:<br> 1 bear and 6 badgers'
+    sea1.innerHTML = 'Buy for:<br> 1 pig and 9 otters'
+
+    lm1.innerHTML = 'Buy for 20 cats'
+    lt1.innerHTML = 'Buy for 5 lemons'
+
+    // Buying for clicks
+    Cct1.innerHTML =  'Buy for 1.2 k clicks'
+    Cfx1.innerHTML =  'Buy for 1.8 k clicks'
+    Cwl1.innerHTML =  'Buy for 10 k clicks'
+    Chm1.innerHTML =  'Buy for 13 k clicks'
+    Cwh1.innerHTML =  'Buy for 22 k clicks'
+    Ccp1.innerHTML =  'Buy for 28 k clicks'
+    Cpl1.innerHTML =  'Buy for 42 k clicks'
+    Cpr1.innerHTML =  'Buy for 70 k clicks'
+    Chi1.innerHTML =  'Buy for 100 k clicks'
+    Csn1.innerHTML =  'Buy for 150 k clicks'
+    Cch1.innerHTML =  'Buy for 350 k clicks'
+    Cpy1.innerHTML =  'Buy for 820 k clicks'
+    Cgi1.innerHTML =  'Buy for 880 k clicks'
+    Cot1.innerHTML =  'Buy for 950 k clicks'
+    Cme1.innerHTML =  'Buy for 1 mil clicks'
+    Cra1.innerHTML =  'Buy for 1.5 mil clicks'
+    Cow1.innerHTML =  'Buy for 1.8 mil clicks'
+    Cba1.innerHTML =  'Buy for 3.5 mil clicks'
+    Csq1.innerHTML =  'Buy for 5.5 mil clicks'
+    Ccha1.innerHTML = 'Buy for 7.7 mil clicks'
+    Cchi1.innerHTML = 'Buy for 13 mil clicks'
+    Cwom1.innerHTML = 'Buy for 31 mil clicks'
+    Cpan1.innerHTML = 'Buy for 60.5 mil clicks'
+    Ccoy1.innerHTML = 'Buy for 92.4 mil clicks'
+    Cfro1.innerHTML = 'Buy for 99 mil clicks'
+    Cbea1.innerHTML = 'Buy for 104.5 mil clicks'
+    Cpig1.innerHTML = 'Buy for 126.5 mil clicks'
+    Csea1.innerHTML = 'Buy for 143 mil clicks'
   }
 }
-load();
 
-// Upload
-function upload(){update();load();}
-
-function cash(){
-  setTimeout (function money(){
-    items.clicks += cs*items.pres;
-    items.lemons += (items.lt3/100)*items.pres;
-    upload();
-    cash();click();
-  },1000)
-}
-cash();
-
-function click(){
-  setTimeout(function decoration(){
-    document.getElementById('imgcli').src = '../img/icons8-clicked.png'
-  },750);
-  setTimeout(function decoration(){
-    document.getElementById('imgcli').src = '../img/icons8-rest.svg'
-  },1000)
-}
+// uploadShop
+function uploadShop(){update();loadShop();}
 
 // Nákupy 
 function buydog(){
@@ -454,21 +412,21 @@ function buydog(){
     items.clicks -= 100;
     items.dogs += 1;
   }
-  upload();
+  uploadShop();
 }
 function buycat(){
   if(items.dogs>=10){
     items.dogs-=10;
     items.cats+=1;
   }
-  upload();
+  uploadShop();
 }
 function buyfox(){
   if(items.dogs>=15){
     items.dogs-=15;
     items.foxes+=1;
   }
-  upload();
+  uploadShop();
 }
 function buywol(){
   if(items.dogs>=6 && items.foxes>=5){
@@ -476,7 +434,7 @@ function buywol(){
     items.foxes-=5;
     items.wolfs+=1;
   }
-  upload();
+  uploadShop();
 }
 function buyham(){
   if(items.wolfs>=1 && items.cats>=2){
@@ -484,14 +442,14 @@ function buyham(){
     items.cats-=2;
     items.hamsters+=1;
   }
-  upload();
+  uploadShop();
 }
 function buywha(){
   if(items.wolfs>=2){
     items.wolfs-=2;
     items.whales+=1;
   }
-  upload();
+  uploadShop();
 }
 function buycap(){
   if(items.whales>=1 && items.cats>=4){
@@ -499,7 +457,7 @@ function buycap(){
     items.cats-=4;
     items.capybaras+=1;
   } 
-  upload();
+  uploadShop();
 }
 function buypla(){
   if(items.capybaras>=1 && items.wolfs>=1){
@@ -507,7 +465,7 @@ function buypla(){
     items.wolfs-=1;
     items.platapuses+=1;
   } 
-  upload();
+  uploadShop();
 }
 function buypor(){
   if(items.platapuses>=1 && items.whales>=1){
@@ -515,7 +473,7 @@ function buypor(){
     items.whales-=1;
     items.porcupines++;
   } 
-  upload();
+  uploadShop();
 }
 function buyhip(){
   if(items.porcupines>=1 && items.hamsters>=2){
@@ -523,7 +481,7 @@ function buyhip(){
     items.hamsters-=2;
     items.hippos++;
   } 
-  upload();
+  uploadShop();
 }
 function buysna(){
   if(items.whales>=2 && items.hamsters>=4){
@@ -531,7 +489,7 @@ function buysna(){
     items.hamsters-=4;
     items.snakes++;
   } 
-  upload();
+  uploadShop();
 }
 function buyche(){
   if(items.snakes>=2 && items.platapuses>=2){
@@ -539,7 +497,7 @@ function buyche(){
     items.platapuses-=2;
     items.cheetahs++;
   } 
-  upload();
+  uploadShop();
 }
 function buypyt(){
   if(items.cheetahs>=1 && items.hippos>=5){
@@ -547,7 +505,7 @@ function buypyt(){
     items.hippos-=5;
     items.pythons++;
   } 
-  upload();
+  uploadShop();
 }
 function buygir(){
   if(items.pythons>=1 && items.foxes>=20){
@@ -555,7 +513,7 @@ function buygir(){
     items.foxes-=20;
     items.girrafes++;
   } 
-  upload();
+  uploadShop();
 }
 function buyoth(){
   if(items.girrafes>=1 && items.capybaras>=2){
@@ -563,7 +521,7 @@ function buyoth(){
     items.capybaras-=2;
     items.otters++;
   } 
-  upload();
+  uploadShop();
 }
 function buymee(){
   if(items.otters>=1 && items.whales>=3){
@@ -571,7 +529,7 @@ function buymee(){
     items.whales-=3;
     items.meerkat++;
   } 
-  upload();
+  uploadShop();
 }
 function buyrac(){
   if(items.meerkat>=1 && items.porcupines>=7){
@@ -579,7 +537,7 @@ function buyrac(){
     items.porcupines-=7;
     items.raccoon++;
   } 
-  upload();
+  uploadShop();
 }
 function buyowl(){
   if(items.raccoon>=1 && items.snakes>=1){
@@ -587,7 +545,7 @@ function buyowl(){
     items.snakes-=1;
     items.owl++;
   } 
-  upload();
+  uploadShop();
 }
 function buybad(){
   if(items.owl>=1 && items.pythons>=2){
@@ -595,7 +553,7 @@ function buybad(){
     items.pythons-=2;
     items.badger++;
   } 
-  upload();
+  uploadShop();
 }
 function buysqu(){
   if(items.badger>=1 && items.cheetahs>=5){
@@ -603,7 +561,7 @@ function buysqu(){
     items.cheetahs-=5;
     items.squirrel++;
   } 
-  upload();
+  uploadShop();
 }
 function buycha(){
   if(items.squirrel>=1 && items.meerkat>=2){
@@ -611,7 +569,7 @@ function buycha(){
     items.meerkat-=2;
     items.chameleon++;
   } 
-  upload();
+  uploadShop();
 }
 function buychi(){
   if(items.squirrel>=2 && items.owl>=1){
@@ -619,7 +577,7 @@ function buychi(){
     items.owl-=1;
     items.chicken++;
   } 
-  upload();
+  uploadShop();
 }
 function buywom(){
   if(items.chicken>=1 && items.chameleon>=2){
@@ -627,7 +585,7 @@ function buywom(){
     items.chameleon-=2;
     items.wombat++;
   } 
-  upload();
+  uploadShop();
 }
 function buypan(){
   if(items.wombat>=1 && items.chicken>=2){
@@ -635,7 +593,7 @@ function buypan(){
     items.chicken-=2;
     items.panther++;
   } 
-  upload();
+  uploadShop();
 }
 function buycoy(){
   if(items.panther>=1 && items.chameleon>=4){
@@ -643,7 +601,7 @@ function buycoy(){
     items.chameleon-=4;
     items.coyote++;
   } 
-  upload();
+  uploadShop();
 }
 function buyfro(){
   if(items.coyote>=1 && items.snakes>=40){
@@ -651,7 +609,7 @@ function buyfro(){
     items.snakes-=40;
     items.frog++;
   } 
-  upload();
+  uploadShop();
 }
 function buybea(){
   if(items.frog>=1 && items.girrafes>=5){
@@ -659,7 +617,7 @@ function buybea(){
     items.girrafes-=5;
     items.bear++;
   } 
-  upload();
+  uploadShop();
 }
 function buypig(){
   if(items.bear>=1 && items.badger>=6){
@@ -667,7 +625,7 @@ function buypig(){
     items.badger-=6;
     items.pig++;
   } 
-  upload();
+  uploadShop();
 }
 function buysea(){
   if(items.pig>=1 && items.otters>=9){
@@ -675,7 +633,7 @@ function buysea(){
     items.otters-=9;
     items.seal++;
   } 
-  upload();
+  uploadShop();
 }
 
 function buylem(){
@@ -683,17 +641,15 @@ function buylem(){
     items.cats-=20;
     items.lemons+=1;
   }
-  upload();
+  uploadShop();
 }
 function buylt3(){
   if (items.lemons>=5) {
     items.lemons-=5;
     items.lt3+=1;
   }
-  upload();
+  uploadShop();
 }
-
-
 
 /*
  __  __                       _____   _                     
@@ -710,21 +666,21 @@ function mxdg(){
   
   items.clicks -= amount * 100
   items.dogs += amount
-  upload();
+  uploadShop();
 }
 function mxct(){
   const amount = Math.floor(items.dogs / 10)
   
   items.dogs -= amount * 10
   items.cats += amount
-  upload();
+  uploadShop();
 }
 function mxfx(){
   const amount = Math.floor(items.dogs/15)
 
   items.dogs -= amount*15
   items.foxes += amount
-  upload();
+  uploadShop();
 }
 function mxlm(){
   let RanLemCost = Math.floor(Math.random()*100);
@@ -732,21 +688,21 @@ function mxlm(){
   
   items.cats   -= amount*RanLemCost
   items.lemons += amount
-  upload();
+  uploadShop();
 }
 function mxlt(){
   const amount = Math.floor(items.lemons/5)
   
   items.lemons -= amount*5
   items.lt3 += amount
-  upload()
+  uploadShop()
 }
 function mxwh(){
   const amount = Math.floor(items.wolfs/2);
   
   items.wolfs -= amount*2;
   items.whales += amount;
-  upload();
+  uploadShop();
 }
 function mxwl(){
   const amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
@@ -756,7 +712,7 @@ function mxwl(){
     items.dogs  -= amount*6
     items.wolfs += amount
   }
-  upload();
+  uploadShop();
 }
 function mxhm(){
   const amount = Math.min(Math.floor(items.wolfs/1), Math.floor(items.cats/2));
@@ -766,7 +722,7 @@ function mxhm(){
     items.cats  -= amount*2;
     items.hamsters += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxcp(){
   const amount = Math.min(Math.floor(items.whales/1), Math.floor(items.cats/4));
@@ -776,7 +732,7 @@ function mxcp(){
     items.cats  -= amount*4;
     items.capybaras += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxpl(){
   const amount = Math.min(Math.floor(items.capybaras/1), Math.floor(items.wolfs/1));
@@ -786,7 +742,7 @@ function mxpl(){
     items.wolfs  -= amount*1;
     items.platapuses += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxpr(){
   const amount = Math.min(Math.floor(items.platapuses/1), Math.floor(items.whales/1));
@@ -796,7 +752,7 @@ function mxpr(){
     items.whales -= amount*1;
     items.porcupines += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxhi(){
   const amount = Math.min(Math.floor(items.porcupines/1), Math.floor(items.hamsters/2));
@@ -806,7 +762,7 @@ function mxhi(){
     items.hamsters -= amount*2;
     items.hippos += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxsn(){
   const amount = Math.min(Math.floor(items.whales/2), Math.floor(items.hamsters/4));
@@ -816,7 +772,7 @@ function mxsn(){
     items.hamsters -= amount*4;
     items.snakes += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxch(){
   const amount = Math.min(Math.floor(items.snakes/2), Math.floor(items.platapuses/2));
@@ -826,7 +782,7 @@ function mxch(){
     items.platapuses -= amount*2;
     items.cheetahs += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxpy(){
   const amount = Math.min(Math.floor(items.cheetahs/1), Math.floor(items.hippos/5));
@@ -836,7 +792,7 @@ function mxpy(){
     items.hippos -= amount*5;
     items.pythons += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxgi(){
   const amount = Math.min(Math.floor(items.pythons/1), Math.floor(items.foxes/20));
@@ -846,7 +802,7 @@ function mxgi(){
     items.foxes -= amount*20;
     items.girrafes += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxot(){
   const amount = Math.min(Math.floor(items.girrafes/1), Math.floor(items.capybaras/2));
@@ -856,7 +812,7 @@ function mxot(){
     items.capybaras -= amount*2;
     items.otters += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxme(){
   const amount = Math.min(Math.floor(items.otters/1), Math.floor(items.whales/3));
@@ -866,7 +822,7 @@ function mxme(){
     items.whales -= amount*3;
     items.meerkat += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxra(){
   const amount = Math.min(Math.floor(items.meerkat/1), Math.floor(items.porcupines/7));
@@ -876,7 +832,7 @@ function mxra(){
     items.porcupines -= amount*7;
     items.raccoon += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxow(){
   const amount = Math.min(Math.floor(items.raccoon/1), Math.floor(items.snakes/1));
@@ -886,7 +842,7 @@ function mxow(){
     items.snakes -= amount*1;
     items.owl += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxba(){
   const amount = Math.min(Math.floor(items.owl/1), Math.floor(items.pythons/2));
@@ -896,7 +852,7 @@ function mxba(){
     items.pythons -= amount*2;
     items.badger += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxsq(){
   const amount = Math.min(Math.floor(items.badger/1), Math.floor(items.cheetahs/5));
@@ -906,7 +862,7 @@ function mxsq(){
     items.cheetahs -= amount*5;
     items.squirrel += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxcha(){
   const amount = Math.min(Math.floor(items.squirrel/1), Math.floor(items.meerkat/2));
@@ -915,7 +871,7 @@ function mxcha(){
     items.meerkat -= amount*2;
     items.chameleon += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxchi(){
   const amount = Math.min(Math.floor(items.squirrel/2), Math.floor(items.owl/1));
@@ -924,7 +880,7 @@ function mxchi(){
     items.owl -= amount*1;
     items.chicken += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxwom(){
   const amount = Math.min(Math.floor(items.chicken/1), Math.floor(items.chameleon/2));
@@ -933,7 +889,7 @@ function mxwom(){
     items.chameleon -= amount*2;
     items.wombat += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxpan(){
   const amount = Math.min(Math.floor(items.wombat/1), Math.floor(items.chicken/2));
@@ -942,7 +898,7 @@ function mxpan(){
     items.chicken -= amount*2;
     items.panther += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxcoy(){
   const amount = Math.min(Math.floor(items.panther/1), Math.floor(items.chameleon/4));
@@ -951,7 +907,7 @@ function mxcoy(){
     items.chameleon -= amount*4;
     items.coyote += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxfro(){
   const amount = Math.min(Math.floor(items.coyote/1), Math.floor(items.snakes/40));
@@ -960,7 +916,7 @@ function mxfro(){
     items.snakes -= amount*40;
     items.frog += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxbea(){
   const amount = Math.min(Math.floor(items.frog/1), Math.floor(items.girrafes/5));
@@ -969,7 +925,7 @@ function mxbea(){
     items.girrafes -= amount*5;
     items.bear += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxpig(){
   const amount = Math.min(Math.floor(items.bear/1), Math.floor(items.badger/6));
@@ -978,7 +934,7 @@ function mxpig(){
     items.badger -= amount*6;
     items.pig += amount;
   }
-  upload();
+  uploadShop();
 }
 function mxsea(){
   const amount = Math.min(Math.floor(items.pig/1), Math.floor(items.otters/9));
@@ -987,33 +943,7 @@ function mxsea(){
     items.otters -= amount*9;
     items.seal += amount;
   }
-  upload();
-}
-
-// Dark || Light Mode
-function LDmodes(){
-  let Bimts = document.querySelectorAll('.item');
-  if((items.mode||0) == 0){// Light Mode
-    body.style.background = '#ddd';
-    body.style.color = '#000';
-    Bimts.forEach((e) => {
-      e.style.background = '#ffefd5';
-    });
-    logclick.style.background = '#ffefd5';
-    disclick.style.textShadow = "";
-    logclick.style.border = '5px dashed #00f';
-    logclick.style.filter = 'drop-shadow(10px 8px 6px #222)';
-  }else if(items.mode == 1){// Dark Mode
-    body.style.background = '#333';
-    body.style.color = '#fff';
-    Bimts.forEach((e) => {
-      e.style.background = '#666055';
-    });
-    logclick.style.background = '#666055';
-    disclick.style.textShadow = "2px 2px 4px #000";
-    logclick.style.border = '5px dashed #006';
-    logclick.style.filter = 'drop-shadow(10px 8px 6px #222)';
-  }
+  uploadShop();
 }
 
 /* SHOPPING WITH ONLY CLICKS */
@@ -1022,7 +952,7 @@ function canimal(animal, cost){
   if(items.clicks >= cost){
     items[animal]++;
     items.clicks -= cost;
-    upload();
+    uploadShop();
   }
 }
 
@@ -1032,7 +962,7 @@ function cManimal(animal, cost) {
   if (quantity > 0) {
     items[animal] += quantity;
     items.clicks -= quantity * cost;
-    upload();
+    uploadShop();
   }
 }
 
@@ -1147,14 +1077,4 @@ function mxCpig(){cManimal('pig', 126500000)}
 // Seal of approval
 function buyCsea(){canimal('seal', 143000000)}
 function mxCsea(){cManimal('seal', 143000000)}
-
-const upArr = document.querySelector('.upwards');
-
-window.addEventListener('scroll', () => {
-  if(window.scrollY >= 600){
-    upArr.classList.add('active');
-  }else{
-    upArr.classList.remove('active');
-  }
-})
 // 892 před V46 | 1160 ve V46

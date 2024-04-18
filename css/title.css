@@ -27,15 +27,14 @@ header{
     border-radius: 0 0 2rem 2rem;
     box-shadow: 0 0 50px 10px #fff;
 }
-h1{
-
-}
 h3{
     position: absolute;
     margin-bottom: 50vh;
 }
 img{
     width: 300px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 #jonathan{
     z-index: -36;
@@ -137,3 +136,22 @@ footer{
     box-shadow: 0 3px 4px rgba(0,0,0,0.15)
 }
 .socmenu li a img{width:1em;}
+
+@media (prefers-color-scheme: dark){
+  body{
+    background: #333;
+    color: #fff;
+  }
+  h3{
+    color: #fff;
+  }
+}
+@media (prefers-color-scheme: light){
+  body{
+    background: #ddd;
+    color: #000;
+  }
+  h3{
+    color: #000;
+  }
+}

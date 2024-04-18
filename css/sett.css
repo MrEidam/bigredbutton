@@ -66,7 +66,7 @@ main section button{
     position: relative;
     width: 150px;
     height: 50px;
-    background: cornflowerblue;
+    background: var(--cls);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -83,6 +83,7 @@ main section button{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .site img{
     height: 25px;
@@ -95,4 +96,52 @@ main section button{
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(transparent, #00ec00);
     border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Ligt NODE */
+@media (prefers-color-scheme: light){
+    body{
+        background: #ddd;
+    }
+    .item{
+        background: #ffefd5;
+        color: #000;
+    }
+    .change{
+        background: #8fbc8f;
+        color: #fff;
+        text-shadow: none;
+    }
+    h3{
+        color: #000;
+        text-shadow: none;
+    }
+    #sites{
+        color: #000;
+        text-shadow: none;
+    }
+}
+  
+/* DARJ MODE */
+@media (prefers-color-scheme: dark){
+    body{
+        background: #333;
+    }
+    .item{
+        background: #666055;
+        color: #fff;
+    }
+    .change{
+        background: #008b8b;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
+    h3{
+        color: #eee;
+        text-shadow: 2px 2px 4px #000;
+    }
+    #sites{
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
 }

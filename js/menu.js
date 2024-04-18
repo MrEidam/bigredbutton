@@ -1,16 +1,18 @@
-$(document).ready(function(){
-    $('.button').click(function(){
-        if($(this).hasClass('expand')){
-            $('ul').slideUp(function(){
-                $('.button').removeClass('expand');
-                $('.fas').removeClass('expand');
-            })
-        }else{
-            $(this).addClass('expand');
-            setTimeout(function(){
-                $('.fas').addClass('expand');
-                $('ul').stop().slideDown();
-            },50);
-        }
+function menuStart(){
+    $(document).ready(() => {
+        $('.button').click(() => {
+            if($('.button').hasClass('expand')){
+                $('ul').slideUp(() => {
+                    $('.button').removeClass('expand');
+                    $('.fas').removeClass('expand');
+                });
+            }else{
+                $('.button').addClass('expand');
+                setTimeout(() => {
+                    $('.fas').addClass('expand');
+                    $('ul').stop().slideDown();
+                },50);
+            }
+        })
     })
-})
+}

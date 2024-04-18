@@ -191,3 +191,34 @@ h2{
   background: linear-gradient(transparent, #00ec00);
   border-radius: 0 0 0.5rem 0.5rem;
 }
+
+
+/* Ligt NODE */
+@media (prefers-color-scheme: light){
+  body{
+    background: #ddd;
+    color: #000;
+  }
+  #loglm{
+    background: #ffefd5;
+    filter: drop-shadow(10px 8px 6px #222);
+  }
+  .item{
+    background: #ffefd5;
+  }
+}
+
+/* DARJ MODE */
+@media (prefers-color-scheme: dark){
+  body{
+    background: #333;
+    color: #fff;
+  }
+  .item{
+    background: #666055;
+  }
+  #loglm{
+    background: #666055;
+    filter: drop-shadow(10px 8px 6px #222);
+  }
+}

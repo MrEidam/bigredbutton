@@ -78,3 +78,31 @@ body{
 .changelog:hover svg{
   color: #a33;
 }
+
+/* Ligt NODE */
+@media (prefers-color-scheme: light){
+  body{
+    background: #fff;
+  }
+  #jonathan{
+    background: radial-gradient(125% 100% at 50% 0%,#9aff9a 20%,#fff 70%);
+  }
+  #disclick{
+    color: #000;
+    text-shadow: none;
+  }
+}
+
+/* DARJ MODE */
+@media (prefers-color-scheme: dark){
+  body{
+    background: #333;
+  }
+  #jonathan{
+    background: radial-gradient(125% 100% at 50% 0%,#5add5a 20%,#333 70%);
+  }
+  #disclick{
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px #000;
+  }
+}

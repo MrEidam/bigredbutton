@@ -75,59 +75,61 @@ body {
   border: none;
   top: 5px;
   margin: 2rem/* 1.5vw 2rem 1.5vw*/;
-  padding: 1rem;
+  padding: .5rem 1rem 0 .5rem;
   border-radius: 6.9px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 400px;
-  min-height: 340px;
+  width: 300px;
+  min-height: 275px;
   filter: drop-shadow(0px 20px 14px #444);
   text-align: center;
 }
 
-.item img{
-  width: 100px;
+.item .title{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .title img{
+  width: 50px;
   aspect-ratio: 1/1;
-  margin: 0.5rem;
+  margin-right: 1.25rem;
   object-fit: contain;
   filter: drop-shadow(10px 8px 6px #333);
   pointer-events: none
 }
 .buttons{
   display: flex;
-  justify-content: space-around;
 }
 /* By MrEidam */
 .buttons button{
   background-color: var(--Bcolor);
-  border-radius: 8px;
-  margin: 1rem;
 }
 
 .buyone{
-  width: 200px;
+  width: 190px;
   height: 50px;
-  cursor: pointer;
+  border-radius: 8px 0 0 8px;
 }
 
 .buymax{
-  width: 50px;
+  width: 45px;
   height: 50px;
-  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  border-left: #00000033 solid;
 }
 
 /* By MrEidam */
 
 .clickbtn{
   display: flex;
-  justify-content: space-around;
 }
 .clickbtn button{
   background-color: var(--Bcolor);
-  border-radius: 8px;
-  margin: 0 1rem 0.5rem 1rem;
 }
 
 .row{
@@ -138,6 +140,7 @@ body {
 button{
   border: none;
   filter: drop-shadow(8px 6px 4px #555);
+  cursor: pointer;
 }
 
 .upwards{
@@ -173,4 +176,39 @@ button{
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(transparent, #00ec00);
   border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (prefers-color-scheme: dark){
+  body{
+    background: #333;
+    color: #fff;
+  }
+  .item{
+    background: #666055;
+  }
+  #logclick{
+    background: #666055;
+    border: 5px dashed #006;
+    filter: drop-shadow(10px 8px 6px #222);
+  }
+  #disclick{
+    text-shadow: 2px 2px 4px #000;
+  }
+}
+@media (prefers-color-scheme: light){
+  body{
+    background: #ddd;
+    color: #000;
+  }
+  .item{
+    background: #ffefd5;
+  }
+  #logclick{
+    background: #ffefd5;
+    border: 5px dashed #00f;
+    filter: drop-shadow(10px 8px 6px #222);
+  }
+  #disclick{
+    text-shadow: none;
+  }
 }
