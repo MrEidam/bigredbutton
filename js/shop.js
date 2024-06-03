@@ -1,14 +1,15 @@
 while(document.title === 'BRB - Obchod'||document.title === 'BRB - Shop'){ //! Shopdope
-  let upArr = document.querySelector('.upwards');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY >= 600){
-      upArr.classList.add('active');
-    }else{
-      upArr.classList.remove('active');
-    }
-  })
-
 }
+
+addEventListener('scroll', () => {
+  if(document.title === 'BRB - Obchod'||document.title === 'BRB - Shop'){
+    if(window.scrollY >= 460){
+      document.querySelector('.upwards').classList.add('active');
+    }else{
+      document.querySelector('.upwards').classList.remove('active');
+    }
+  }
+})
 
 function loadShop(){
   if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
@@ -313,7 +314,7 @@ function loadShop(){
     discapName.innerHTML=`Capybaras`
     displaName.innerHTML=`Platypuses`
     disporName.innerHTML=`Porcupines`
-    dishipName.innerHTML=`Hippopotamuses`
+    dishipName.innerHTML=`Hippos`
     dissnaName.innerHTML=`Snakes`
     discheName.innerHTML=`Cheetahs`
     dispytName.innerHTML=`Pythons`
@@ -683,7 +684,7 @@ function mxfx(){
   uploadShop();
 }
 function mxlm(){
-  let RanLemCost = Math.floor(Math.random()*100);
+  let RanLemCost = 20;////Math.floor(Math.random()*100);
   const amount = Math.floor(items.cats/RanLemCost)
   
   items.cats   -= amount*RanLemCost
