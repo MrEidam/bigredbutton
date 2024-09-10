@@ -60,23 +60,22 @@ body{
 /* Šmol change */
 .changelog{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 75px;
   height: 75px;
   bottom: 10px;
   right: 10px;
   filter: drop-shadow(0 0 10px #000);
-  background: #0098FF;
+  background: #0377c4;
   border-radius: 50%;
 }
 .changelog svg{
-  border-radius: 50%;
-  height: 99%;
-  filter: drop-shadow(0 0 10px #000);
+  height: 100%;
+  aspect-ratio: 1/1;
+  /*filter: drop-shadow(0 0 10px #000);*/
   color: #fff;
-  transition: 0.5s;
-}
-.changelog:hover svg{
-  color: #a33;
 }
 
 /* Ligt NODE */

@@ -1,17 +1,13 @@
-// Function to convert a number into a more readable format
+//? Function to convert a number into a more readable format
 function fornum(num){
     if(num<1000) return Math.floor(num);
-    else if(items.lang == 0){
-        const suffixes = ['', ' tis', ' mil', ' mld', ' bil', ' bld', ' tril', ' trild', ' kvad', ' kvadld', ' quint', ' quintld', ' sext', ' sextld', ' sept', ' septld', ' okt', ' oktld', ' non', ' nonld', ' dec', ' decld', ' undec', ' undecld', ' duodec', ' duodecld', ' tredec', ' tredecld', ' kvaddec', ' kvaddecld', ' quintdec', ' quintdecld', ' sextdec', ' sextdecld', ' googol'];
-        let i = 0;
-        while (num >= 1000 && i < suffixes.length - 1) {
-            num /= 1000;
-            i++;
-        }
-        num = Math.floor(num * 10) / 10;
-        return num + suffixes[i];
-    }else{
-        const suffixes = ['', ' k', ' mil', ' bil', ' tri', ' quad', ' qui', ' sex', ' sep', ' oct', ' non', ' dec', ' und', ' duo', ' tre', ' qua', ' qui', ' sex', ' sep', ' oct', ' nov', ' vig', ' uvi', ' dvi', ' tvi', ' qvi', ' qv', ' svi', ' spv', ' ov', ' nv', ' cen', ' ucn', ' dcn', ' googol'];
+    else{
+        const suffixes = ['', ' K', ' M', ' B', ' T',
+            ' aa', ' ab', ' ac', ' ad', ' ae', ' af', ' ag', ' ah', ' ai', ' aj', ' ak', ' al', ' am', ' an', ' ao', ' ap', ' aq', ' ar', ' as', ' at', ' au', ' av', ' aw', ' ax', ' ay', ' az', 
+            ' ba', ' bb', ' bc', ' bd', ' be', ' bf', ' bg', ' bh', ' bi', ' bj', ' bk', ' bl', ' bm', ' bn', ' bo', ' bp', ' bq', ' br', ' bs', ' bt', ' bu', ' bv', ' bw', ' bx', ' by', ' bz',
+            ' ca', ' cb', ' cc', ' cd', ' ce', ' cf', ' cg', ' ch', ' ci', ' cj', ' ck', ' cl', ' cm', ' cn', ' co', ' cp', ' cq', ' cr', ' cs', ' ct', ' cu', ' cv', ' cw', ' cx', ' cy', ' cz',
+            ' da', ' db', ' dc', ' dd', ' de', ' df', ' dg', ' dh', ' di', ' dj', ' dk', ' dl', ' dm', ' dn', ' do', ' dp', ' dq', ' dr', ' ds', ' dt', ' du', ' dv', ' dw', ' dx', ' dy', ' dz'];
+            
         let i = 0;
         while (num >= 1000 && i < suffixes.length - 1) {
             num /= 1000;

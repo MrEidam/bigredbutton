@@ -16,11 +16,10 @@ function loadUpgrades(){
     Mc1.innerHTML = `Vylepšení na kliky za <br> ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} citrónů`;
     progva.innerHTML = `Máš ${items.token} lístků z ${1000*items.pres}!`;
 
-   
     presBT1.innerHTML = `1 Lístek za<br>${fornum(2000)} Citrónů`;
     ItsTime.innerHTML = `Pojďme jít!`;
     if(items.pres > 1) got.innerHTML = `Právě máš ${items.pres-1} Prestiž bodů`;
-  }else if(items.lang == 1){  // En
+  }else{  // En
     dislm.innerHTML = `You've got ${fornum(items.lemons)} lemons!`;
     disMcmake.innerHTML = `Every click gives you ${fornum((items.Mclick||1)*items.pres)} clicks!`;
     Mc1.innerHTML = `Upgrade for your clicks<br> for ${fornum(10+(items.Mclick||1)*(items.Mclick||1)-1)} lemons`;

@@ -51,13 +51,7 @@ function beriba(){
 // Languages
 function checklang(){
   if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-    shop.innerHTML = 'Obchod';
-    upg.innerHTML = 'Vylepšení';
-    sett.innerHTML = 'Nastavení';
   }else{
-    shop.innerHTML = 'Shop';
-    upg.innerHTML = 'Upgrades';
-    sett.innerHTML = 'Settings';
   }
 }
 
