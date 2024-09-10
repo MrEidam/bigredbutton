@@ -86,7 +86,7 @@ ul li:hover{
     inset 0 0 10px #66ff66;
 }
 ul li:last-child{
-    border-bottom: none;
+    border-right: none;
 }
 ul li a{
     display: flex;
