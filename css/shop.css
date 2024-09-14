@@ -89,39 +89,55 @@ body {
 
 .item .title{
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
-
+.item .title h3{
+  margin-right: .5rem;
+}
 .item .title img{
-  width: 50px;
+  width: 45px;
   aspect-ratio: 1/1;
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   object-fit: contain;
   filter: drop-shadow(10px 8px 6px #333);
   pointer-events: none
 }
+.item .title span{
+  color: #00ec00;
+  font-size: 15px;
+}
+
 .buttons{
   display: flex;
+  flex-direction: row;
+}
+.buttons .column{
+  display: flex;
+  flex-direction: column;
 }
 /* By MrEidam */
 .buttons button{
   background-color: var(--Bcolor);
 }
 
-.buyone{
+.buyone, .buyone0, .buyone1{
   width: 190px;
   height: 50px;
-  border-radius: 8px 0 0 8px;
 }
+.buyone{border-radius: 8px 0 0 8px;}
+.buyone0{border-radius: 8px 0 0 0;border-bottom: #00000022 solid;}
+.buyone1{border-radius: 0 0 0 8px;}
 
-.buymax{
+.buymax, .buymax0, .buymax1{
   width: 45px;
   height: 50px;
-  border-radius: 0 8px 8px 0;
   border-left: #00000033 solid;
 }
+.buymax{border-radius: 0 8px 8px 0;}
+.buymax0{border-radius: 0 8px 0 0;border-bottom: #00000022 solid;}
+.buymax1{border-radius: 0 0 8px 0;}
 
 /* By MrEidam */
 

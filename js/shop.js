@@ -13,7 +13,7 @@ addEventListener('scroll', () => {
 
 function loadShop(){
   if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-    document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
+   /* document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
 
 
     disdog.innerHTML=
@@ -400,7 +400,7 @@ function loadShop(){
     Cfro1.innerHTML = 'Buy for 99 mil clicks'
     Cbea1.innerHTML = 'Buy for 104.5 mil clicks'
     Cpig1.innerHTML = 'Buy for 126.5 mil clicks'
-    Csea1.innerHTML = 'Buy for 143 mil clicks'
+    Csea1.innerHTML = 'Buy for 143 mil clicks'*/
   }
 }
 

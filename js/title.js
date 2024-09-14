@@ -67,6 +67,7 @@ window.onload = function(){
     toggle.onclick = () => {
       socmenu.classList.toggle('active');
     };
+    toShop()
 }
 
 function click(){

@@ -90,8 +90,9 @@ const htmlShop = `
         <!-- Dog -->
         <div class="item">
           <section class="title">
-            <h2 id="disdogName"></h2>
             <img src="../img/dog.svg">
+            <h3 id="disdogName">Dog</h3>
+            <span id="dogMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: darkorange">
             <button onclick="buydog()" class="buyone" id="dg1">
@@ -108,701 +109,785 @@ const htmlShop = `
         <!-- Cat -->
         <div class="item">
           <section class="title">
-            <h2 id="discatName"></h2>
             <img src="../img/cat-body.svg">
+            <h3 id="discatName">Cat</h3>
+            <span id="catMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: orange">
-            <button onclick="buycat()" class="buyone" id="ct1">
-              Buy a Cat for 10 dogs
-            </button>
-            <button onclick="mxct()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buycat()" class="buyone0" id="ct1">
+                Buy a Cat for 10 dogs
+              </button>
+              <button onclick="buyCcat()" class="buyone1" id="Cct1">
+                Buy a Cat for 1,2 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCct()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxct()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: orange">
-            <button onclick="buyCcat()" class="buyone" id="Cct1">
-              Buy a Cat for 1,2 k clicks
-            </button>
-            <button onclick="mxCct()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="discat"></p>
+          <p id="discat">Make hafef<br>havev</p>
         </div>
   
         <!-- Fox -->
         <div class="item">
           <section class="title">
-            <h2 id="disfoxName"></h2>
             <img src="../img/fox.svg">
+            <h3 id="disfoxName">Fox</h3>
+            <span id="foxMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: lightsalmon">
-            <button onclick="buyfox()" class="buyone" id="fx1">
-              Buy a Fox for 15 dogs
-            </button>
-            <button onclick="mxfx()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyfox()" class="buyone0" id="fx1">
+                Buy a Fox for 15 dogs
+              </button>
+              <button onclick="buyCfox()" class="buyone1" id="Cfx1">
+                Buy a Fox for 1,8 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCfx()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxfx()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: lightsalmon">
-            <button onclick="buyCfox()" class="buyone" id="Cfx1">
-              Buy a Fox for 1,8 k clicks
-            </button>
-            <button onclick="mxCfx()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disfox"></p>
+          <p id="disfox">Make hafef<br>havev</p>
         </div>
   
         <!-- Wolf -->
         <div class="item">
           <section class="title">
-            <h2 id="diswolName"></h2>
             <img src="../img/wolf.svg">
+            <h3 id="diswolName">Wolf</h3>
+            <span id="wolMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: lightgray">
-            <button onclick="buywol()" class="buyone" id="wl1">
-              Buy a Wolf for 6 dogs and 5 foxes
-            </button>
-            <button onclick="mxwl()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buywol()" class="buyone0" id="wl1">
+                Buy a Wolf for 6 dogs and 5 foxes
+              </button>
+              <button onclick="buyCwol()" class="buyone1" id="Cwl1">
+                Buy a Wolf for 10 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCwl()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxwl()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: lightgray">
-            <button onclick="buyCwol()" class="buyone" id="Cwl1">
-              Buy a Wolf for 10 k clicks
-            </button>
-            <button onclick="mxCwl()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="diswol"></p>
+          <p id="diswol">Make hafef<br>havev</p>
         </div>
   
         <!-- Hamster -->
         <div class="item">
           <section class="title">
-            <h2 id="dishamName"></h2>
             <img src="../img/hamster.svg" draggable="false">
+            <h3 id="dishamName">Hamster</h3>
+            <span id="hamMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: wheat">
-            <button onclick="buyham()" class="buyone" id="hm1">
-              Buy a Hamster for 1 wolf and 2 cats
-            </button>
-            <button onclick="mxhm()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyham()" class="buyone0" id="hm1">
+                Buy a Hamster for 1 wolf and 2 cats
+              </button>
+              <button onclick="buyCham()" class="buyone1" id="Chm1">
+                Buy a Hamster for 13 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxChm()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxhm()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: wheat">
-            <button onclick="buyCham()" class="buyone" id="Chm1">
-              Buy a Hamster for 13 k clicks
-            </button>
-            <button onclick="mxChm()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disham"></p>
+          <p id="disham">Make hafef<br>havev</p>
         </div>
   
         <!-- Whales -->
         <div class="item">
           <section class="title">
-            <h2 id="diswhaName"></h2>
             <img src="../img/whale.svg" draggable="false">
+            <h3 id="diswhaName">Whales</h3>
+            <span id="whaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: MediumAquamarine">
-            <button onclick="buywha()" class="buyone" id="wh1">
-              Buy a Whale for 2 wolfs
-            </button>
-            <button onclick="mxwh()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buywha()" class="buyone0" id="wh1">
+                Buy a Whale for 2 wolfs
+              </button>
+              <button onclick="buyCwha()" class="buyone1" id="Cwh1">
+                Buy a Whale for 22 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCwh()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxwh()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: MediumAquamarine">
-            <button onclick="buyCwha()" class="buyone" id="Cwh1">
-              Buy a Whale for 22 k clicks
-            </button>
-            <button onclick="mxCwh()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="diswha"></p>
+          <p id="diswha">Make hafef<br>havev</p>
         </div>
   
         <!-- Capybara -->
         <div class="item">
           <section class="title">
-            <h2 id="discapName"></h2>
             <img src="../img/capybara.svg" draggable="false">
+            <h3 id="discapName">Capybara</h3>
+            <span id="capMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: rosybrown">
-            <button onclick="buycap()" class="buyone" id="cp1">
-              Buy a Capybara for 1 whale and 4 cats
-            </button>
-            <button onclick="mxcp()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buycap()" class="buyone0" id="cp1">
+                Buy a Capybara for 1 whale and 4 cats
+              </button>
+              <button onclick="buyCcap()" class="buyone1" id="Ccp1">
+                Buy a Capybara for 28 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCcp()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxcp()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: rosybrown">
-            <button onclick="buyCcap()" class="buyone" id="Ccp1">
-              Buy a Capybara for 28 k clicks
-            </button>
-            <button onclick="mxCcp()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="discap"></p>
+          <p id="discap">Make hafef<br>havev</p>
         </div>
   
-        <!-- Platypus-->
+        <!-- Platypus
         <div class="item">
           <section class="title">
-            <h2 id="displaName"></h2>
             <img src="../img/platypus.svg" draggable="false">
+            <h3 id="displaName">Platypu</h3>
+            <span id="plaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: Sienna">
-            <button onclick="buypla()" class="buyone" id="pl1">
-              Buy a Platypus for 1 cappybarra and 1 wolf
-            </button>
-            <button onclick="mxpl()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buypla()" class="buyone0" id="pl1">
+                Buy a Platypus for 1 cappybarra and 1 wolf
+              </button>
+              <button onclick="buyCpla()" class="buyone1" id="Cpl1">
+                Buy a Platapuse for 420 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCpl()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxpl()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: Sienna">
-            <button onclick="buyCpla()" class="buyone" id="Cpl1">
-              Buy a Platapuse for 420 k clicks
-            </button>
-            <button onclick="mxCpl()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="displa"></p>
-        </div>
+          <p id="displa">Make hafef<br>havev</p>
+        </div>-->
   
-        <!-- Porcupine -->
+        <!-- Porcupine
         <div class="item">
           <section class="title">
-            <h2 id="disporName"></h2>
             <img src="../img/porcupine.svg" draggable="false">
+            <h3 id="disporName">Porcupine</h3>
+            <span id="porMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: SaddleBrown">
-            <button onclick="buypor()" class="buyone" id="pr1">
-              Buy a Porcupine for 1 whale and 4 cats
-            </button>
-            <button onclick="mxpr()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buypor()" class="buyone0" id="pr1">
+                Buy a Porcupine for 1 whale and 4 cats
+              </button>
+              <button onclick="buyCpor()" class="buyone1" id="Cpr1">
+                Buy a Porcupine for 28 k clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCpr()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxpr()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: SaddleBrown">
-            <button onclick="buyCpor()" class="buyone" id="Cpr1">
-              Buy a Porcupine for 28 k clicks
-            </button>
-            <button onclick="mxCpr()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dispor"></p>
-        </div>
+          <p id="dispor">Make hafef<br>havev</p>
+        </div> -->
   
-        <!-- Hippopotamus -->
+        <!-- Hippopotamus
         <div class="item">
           <section class="title">
-            <h2 id="dishipName"></h2>
             <img src="../img/hippopotamus.svg" draggable="false">
+            <h3 id="dishipName">Hippopotamus</h3>
+            <span id="hipMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: LightSlateGray">
-            <button onclick="buyhip()" class="buyone" id="hi1">
-              Buy a Hippopotamus for
-            </button>
-            <button onclick="mxhi()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyhip()" class="buyone0" id="hi1">
+                Buy a Hippopotamus for
+              </button>
+              <button onclick="buyChip()" class="buyone1" id="Chi1">
+                Buy a Hippopotamus for 
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxChi()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxhi()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: LightSlateGray">
-            <button onclick="buyChip()" class="buyone" id="Chi1">
-              Buy a Hippopotamus for 
-            </button>
-            <button onclick="mxChi()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="diship"></p>
-        </div>
+          <p id="diship">Make hafef<br>havev</p>
+        </div> -->
   
         <!-- Snake -->
         <div class="item">
           <section class="title">
-            <h2 id="dissnaName"></h2>
             <img src="../img/snake.svg">
+            <h3 id="dissnaName">Snake</h3>
+            <span id="snaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: green">
-            <button onclick="buysna()" class="buyone" id="sn1">
-              Buy a Snake
-            </button>
-            <button onclick="mxsn()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buysna()" class="buyone0" id="sn1">
+                Buy a Snake
+              </button>
+              <button onclick="buyCsna()" class="buyone1" id="Csn1">
+                Buy a Snake for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCsn()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxsn()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: green">
-            <button onclick="buyCsna()" class="buyone" id="Csn1">
-              Buy a Snake for clicks
-            </button>
-            <button onclick="mxCsn()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dissna"></p>
+          <p id="dissna">Make hafef<br>havev</p>
         </div>
   
         <!-- Cheetah -->
         <div class="item">
           <section class="title">
-            <h2 id="discheName"></h2>
             <img src="../img/cheetah.svg">
+            <h3 id="discheName">Cheetah</h3>
+            <span id="cheMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: GoldenRod">
-            <button onclick="buyche()" class="buyone" id="ch1">
-              Buy a Cheetah
-            </button>
-            <button onclick="mxch()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyche()" class="buyone0" id="ch1">
+                Buy a Cheetah
+              </button>
+              <button onclick="buyCche()" class="buyone1" id="Cch1">
+                Buy a Cheetah for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCch()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxch()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: GoldenRod">
-            <button onclick="buyCche()" class="buyone" id="Cch1">
-              Buy a Cheetah for clicks
-            </button>
-            <button onclick="mxCch()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dische"></p>
+          <p id="dische">Make hafef<br>havev</p>
         </div>
   
-        <!-- Pythons -->
+        <!-- Pythons
         <div class="item">
           <section class="title">
-            <h2 id="dispytName"></h2>
             <img src="../img/python.svg">
+            <h3 id="dispytName">Pythons</h3>
+            <span id="pytMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: CornflowerBlue">
-            <button onclick="buypyt()" class="buyone" id="py1">
-              Buy a Python
-            </button>
-            <button onclick="mxpy()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buypyt()" class="buyone0" id="py1">
+                Buy a Python
+              </button>
+              <button onclick="buyCpyt()" class="buyone1" id="Cpy1">
+                Buy a Python for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCpy()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxpy()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: CornflowerBlue">
-            <button onclick="buyCpyt()" class="buyone" id="Cpy1">
-              Buy a Python for clicks
-            </button>
-            <button onclick="mxCpy()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dispyt"></p>
-        </div>
+          <p id="dispyt">Make hafef<br>havev</p>
+        </div> -->
   
         <!-- Giraffe -->
         <div class="item">
           <section class="title">
-            <h2 id="disgirName"></h2>
             <img src="../img/girafe.svg">
+            <h3 id="disgirName">Giraffe</h3>
+            <span id="girMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #ffdb4d">
-            <button onclick="buygir()" class="buyone" id="gi1">
-              Buy a Giraffe
-            </button>
-            <button onclick="mxgi()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buygir()" class="buyone0" id="gi1">
+                Buy a Giraffe
+              </button>
+              <button onclick="buyCgir()" class="buyone1" id="Cgi1">
+                Buy a Giraffe for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCgi()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxgi()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #ffdb4d">
-            <button onclick="buyCgir()" class="buyone" id="Cgi1">
-              Buy a Giraffe for clicks
-            </button>
-            <button onclick="mxCgi()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disgir"></p>
+          <p id="disgir">Make hafef<br>havev</p>
         </div>
   
         <!-- Otter -->
         <div class="item">
           <section class="title">
-            <h2 id="disottName"></h2>
             <img src="../img/otter.svg">
+            <h3 id="disottName">Otter</h3>
+            <span id="ottMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #bc8f8f">
-            <button onclick="buyoth()" class="buyone" id="ot1">
-              Buy a Otter
-            </button>
-            <button onclick="mxot()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyoth()" class="buyone0" id="ot1">
+                Buy a Otter
+              </button>
+              <button onclick="buyCoth()" class="buyone1" id="Cot1">
+                Buy a Otter for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCot()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxot()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #bc8f8f">
-            <button onclick="buyCoth()" class="buyone" id="Cot1">
-              Buy a Otter for clicks
-            </button>
-            <button onclick="mxCot()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disoth"></p>
+          <p id="disoth">Make hafef<br>havev</p>
         </div>
   
-        <!-- Meerkat -->
+        <!-- Meerkat
         <div class="item">
           <section class="title">
-            <h2 id="dismeeName"></h2>
             <img src="../img/meerkat.svg">
+            <h3 id="dismeeName">Meerkat</h3>
+            <span id="meeMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #cd853f">
-            <button onclick="buymee()" class="buyone" id="me1">
-              Buy a Meerkat
-            </button>
-            <button onclick="mxme()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buymee()" class="buyone0" id="me1">
+                Buy a Meerkat
+              </button>
+              <button onclick="buyCmee()" class="buyone1" id="Cme1">
+                Buy a Meerkat for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCme()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxme()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #cd853f">
-            <button onclick="buyCmee()" class="buyone" id="Cme1">
-              Buy a Meerkat for clicks
-            </button>
-            <button onclick="mxCme()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dismee"></p>
-        </div>
+          <p id="dismee">Make hafef<br>havev</p>
+        </div> -->
   
         <!-- Racoon -->
         <div class="item">
           <section class="title">
-            <h2 id="disracName"></h2>
             <img src="../img/racoon.svg">
+            <h3 id="disracName">Racoon</h3>
+            <span id="racMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #708090">
-            <button onclick="buyrac()" class="buyone" id="ra1">
-              Buy a Racoon
-            </button>
-            <button onclick="mxra()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyrac()" class="buyone0" id="ra1">
+                Buy a Racoon
+              </button>
+              <button onclick="buyCrac()" class="buyone1" id="Cra1">
+                Buy a Racoon for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCra()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxra()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #708090">
-            <button onclick="buyCrac()" class="buyone" id="Cra1">
-              Buy a Racoon for clicks
-            </button>
-            <button onclick="mxCra()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disrac"></p>
+          <p id="disrac">Make hafef<br>havev</p>
         </div>
   
-        <!-- Owl -->
+        <!-- Owl 
         <div class="item">
           <section class="title">
-            <h2 id="disowlName"></h2>
             <img src="../img/owl.svg">
+            <h3 id="disowlName">Owl</h3>
+            <span id="owlMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #f4a460">
-            <button onclick="buyowl()" class="buyone" id="ow1">
-              Buy a Owl
-            </button>
-            <button onclick="mxow()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyowl()" class="buyone0" id="ow1">
+                Buy a Owl
+              </button>
+              <button onclick="buyCowl()" class="buyone1" id="Cow1">
+                Buy a Owl for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCow()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxow()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #f4a460">
-            <button onclick="buyCowl()" class="buyone" id="Cow1">
-              Buy a Owl for clicks
-            </button>
-            <button onclick="mxCow()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disowl"></p>
-        </div>
+          <p id="disowl">Make hafef<br>havev</p>
+        </div>-->
   
         <!-- Badger -->
         <div class="item">
           <section class="title">
-            <h2 id="disbadName"></h2>
             <img src="../img/badger.svg">
+            <h3 id="disbadName">Badger</h3>
+            <span id="badMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #D8D6CA">
-            <button onclick="buybad()" class="buyone" id="ba1">
-              Buy a Badger
-            </button>
-            <button onclick="mxba()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buybad()" class="buyone0" id="ba1">
+                Buy a Badger
+              </button>
+              <button onclick="buyCbad()" class="buyone1" id="Cba1">
+                Buy a Badger for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCba()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxba()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #D8D6CA">
-            <button onclick="buyCbad()" class="buyone" id="Cba1">
-              Buy a Badger for clicks
-            </button>
-            <button onclick="mxCba()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disbad"></p>
+          <p id="disbad">Make hafef<br>havev</p>
         </div>
   
         <!-- Squirrel -->
         <div class="item">
           <section class="title">
-            <h2 id="dissquName"></h2>
             <img src="../img/squirell.svg">
+            <h3 id="dissquName">Squirrel</h3>
+            <span id="squMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #CFB190">
-            <button onclick="buysqu()" class="buyone" id="sq1">
-              Buy a Squirrel
-            </button>
-            <button onclick="mxsq()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buysqu()" class="buyone0" id="sq1">
+                Buy a Squirrel
+              </button>
+              <button onclick="buyCsqu()" class="buyone1" id="Csq1">
+                Buy a Squirrel for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCsq()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxsq()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #CFB190">
-            <button onclick="buyCsqu()" class="buyone" id="Csq1">
-              Buy a Squirrel for clicks
-            </button>
-            <button onclick="mxCsq()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dissqu"></p>
+          <p id="dissqu">Make hafef<br>havev</p>
         </div>
   
         <!-- Chameleon -->
         <div class="item">
           <section class="title">
-            <h2 id="dischaName"></h2>
             <img src="../img/chameleon.svg">
+            <h3 id="dischaName">Chameleon</h3>
+            <span id="chaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #BED15F">
-            <button onclick="buycha()" class="buyone" id="cha1">
-              Buy a Chameleon
-            </button>
-            <button onclick="mxcha()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buycha()" class="buyone0" id="cha1">
+                Buy a Chameleon
+              </button>
+              <button onclick="buyCcha()" class="buyone1" id="Ccha1">
+                Buy a Chameleon for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCcha()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxcha()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #BED15F">
-            <button onclick="buyCcha()" class="buyone" id="Ccha1">
-              Buy a Chameleon for clicks
-            </button>
-            <button onclick="mxCcha()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="discha"></p>
+          <p id="discha">Make hafef<br>havev</p>
         </div>
   
         <!-- Chicken -->
         <div class="item">
           <section class="title">
-            <h2 id="dischiName"></h2>
             <img src="../img/chickens.svg">
+            <h3 id="dischiName">Chicken</h3>
+            <span id="chiMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #D1DCE6">
-            <button onclick="buychi()" class="buyone" id="chi1">
-              Buy a Chicken
-            </button>
-            <button onclick="mxchi()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buychi()" class="buyone0" id="chi1">
+                Buy a Chicken
+              </button>
+              <button onclick="buyCchi()" class="buyone1" id="Cchi1">
+                Buy a Chicken for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCchi()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxchi()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #D1DCE6">
-            <button onclick="buyCchi()" class="buyone" id="Cchi1">
-              Buy a Chicken for clicks
-            </button>
-            <button onclick="mxCchi()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dischi"></p>
+          <p id="dischi">Make hafef<br>havev</p>
         </div>
   
         <!-- Wombat -->
         <div class="item">
           <section class="title">
-            <h2 id="diswomName"></h2>
             <img src="../img/wombats.svg">
+            <h3 id="diswomName">Wombat</h3>
+            <span id="womMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #B3B3B3">
-            <button onclick="buywom()" class="buyone" id="wom1">
-              Buy a Wombat
-            </button>
-            <button onclick="mxwom()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buywom()" class="buyone0" id="wom1">
+                Buy a Wombat
+              </button>
+              <button onclick="buyCwom()" class="buyone1" id="Cwom1">
+                Buy a Wombat for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCwom()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxwom()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #B3B3B3">
-            <button onclick="buyCwom()" class="buyone" id="Cwom1">
-              Buy a Wombat for clicks
-            </button>
-            <button onclick="mxCwom()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="diswom"></p>
+          <p id="diswom">Make hafef<br>havev</p>
         </div>
   
-        <!-- Panther -->
+        <!-- Panther 
         <div class="item">
           <section class="title">
-            <h2 id="dispanName"></h2>
             <img src="../img/panther.svg">
+            <h3 id="dispanName">Panther</h3>
+            <span id="panMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #000;">
-            <button onclick="buypan()" class="buyone" id="pan1" style="color:#fff;">
-              Buy a Panther
-            </button>
-            <button onclick="mxpan()" class="buymax" style="color:#fff;border-left: #dddddd33 solid;">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buypan()" class="buyone" id="pan1" style0="color:#fff;">
+                Buy a Panther
+              </button>
+              <button onclick="buyCpan()" class="buyone" id="Cpan1" styl1e="color:#fff;">
+                Buy a Panther for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCpan()" class="buymax0" style="color:#fff;border-left: #dddddd33 solid;">
+                MAX
+              </button>
+              <button onclick="mxpan()" class="buymax1" style="color:#fff;border-left: #dddddd33 solid;">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #000;">
-            <button onclick="buyCpan()" class="buyone" id="Cpan1" style="color:#fff;">
-              Buy a Panther for clicks
-            </button>
-            <button onclick="mxCpan()" class="buymax" style="color:#fff;border-left: #dddddd33 solid;">
-              MAX
-            </button>
-          </div>
-          <p id="dispan"></p>
-        </div>
+          <p id="dispan">Make hafef<br>havev</p>
+        </div>-->
   
-        <!-- Coyote -->
+        <!-- Coyote 
         <div class="item">
           <section class="title">
-            <h2 id="discoyName"></h2>
             <img src="../img/coyote.svg">
+            <h3 id="discoyName">Coyote</h3>
+            <span id="coyMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #E7B76B;">
-            <button onclick="buycoy()" class="buyone" id="coy1">
-              Buy a Coyote
-            </button>
-            <button onclick="mxcoy()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buycoy()" class="buyone0" id="coy1">
+                Buy a Coyote
+              </button>
+              <button onclick="buyCcoy()" class="buyone1" id="Ccoy1">
+                Buy a Coyote for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCcoy()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxcoy()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #E7B76B;">
-            <button onclick="buyCcoy()" class="buyone" id="Ccoy1">
-              Buy a Coyote for clicks
-            </button>
-            <button onclick="mxCcoy()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="discoy"></p>
-        </div>
+          <p id="discoy">Make hafef<br>havev</p>
+        </div>-->
   
         <!-- Frog -->
         <div class="item">
           <section class="title">
-            <h2 id="disfroName"></h2>
             <img src="../img/frog.svg">
+            <h3 id="disfroName">Frog</h3>
+            <span id="froMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #97BF0D;">
-            <button onclick="buyfro()" class="buyone" id="fro1">
-              Buy a Frog
-            </button>
-            <button onclick="mxfro()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buyfro()" class="buyone0" id="fro1">
+                Buy a Frog
+              </button>
+              <button onclick="buyCfro()" class="buyone1" id="Cfro1">
+                Buy a Frog for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCfro()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxfro()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #97BF0D;">
-            <button onclick="buyCfro()" class="buyone" id="Cfro1">
-              Buy a Frog for clicks
-            </button>
-            <button onclick="mxCfro()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disfro"></p>
+          <p id="disfro">Make hafef<br>havev</p>
         </div>
   
-        <!-- Bear -->
+        <!-- Bear 
         <div class="item">
           <section class="title">
-            <h2 id="disbeaName"></h2>
             <img src="../img/bear.svg">
+            <h3 id="disbeaName">Bear</h3>
+            <span id="beaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #7C512C;">
-            <button onclick="buybea()" class="buyone" id="bea1">
-              Buy a Bear
-            </button>
-            <button onclick="mxbea()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buybea()" class="buyone0" id="bea1">
+                Buy a Bear
+              </button>
+              <button onclick="buyCbea()" class="buyone1" id="Cbea1">
+                Buy a Bear for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCbea()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxbea()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #7C512C;">
-            <button onclick="buyCbea()" class="buyone" id="Cbea1">
-              Buy a Bear for clicks
-            </button>
-            <button onclick="mxCbea()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="disbea"></p>
-        </div>
+          <p id="disbea">Make hafef<br>havev</p>
+        </div>-->
   
         <!-- Pig -->
         <div class="item">
           <section class="title">
-            <h2 id="dispigName"></h2>
             <img src="../img/pig.svg">
+            <h3 id="dispigName">Pig</h3>
+            <span id="pigMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #F9CCCE;">
-            <button onclick="buypig()" class="buyone" id="pig1">
-              Buy a Pig
-            </button>
-            <button onclick="mxpig()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buypig()" class="buyone0" id="pig1">
+                Buy a Pig
+              </button>
+              <button onclick="buyCpig()" class="buyone1" id="Cpig1">
+                Buy a Pig for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCpig()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxpig()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #F9CCCE;">
-            <button onclick="buyCpig()" class="buyone" id="Cpig1">
-              Buy a Pig for clicks
-            </button>
-            <button onclick="mxCpig()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dispig"></p>
+          <p id="dispig">Make hafef<br>havev</p>
         </div>
   
         <!-- Seal -->
         <div class="item">
           <section class="title">
-            <h2 id="disseaName"></h2>
             <img src="../img/seal.svg">
+            <h3 id="disseaName">Seal</h3>
+            <span id="seaMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #7B7E87;">
-            <button onclick="buysea()" class="buyone" id="sea1">
-              Buy a Seal
-            </button>
-            <button onclick="mxsea()" class="buymax">
-              MAX
-            </button>
+            <div class="column">
+              <button onclick="buysea()" class="buyone0" id="sea1">
+                Buy a Seal
+              </button>
+              <button onclick="buyCsea()" class="buyone1" id="Csea1">
+                Buy a Seal for clicks
+              </button>
+            </div>
+            <div class="column">
+              <button onclick="mxCsea()" class="buymax0">
+                MAX
+              </button>
+              <button onclick="mxsea()" class="buymax1">
+                MAX
+              </button>
+            </div>
           </div>
-          <div class="clickbtn" style="--Bcolor: #7B7E87;">
-            <button onclick="buyCsea()" class="buyone" id="Csea1">
-              Buy a Seal for clicks
-            </button>
-            <button onclick="mxCsea()" class="buymax">
-              MAX
-            </button>
-          </div>
-          <p id="dissea"></p>
+          <p id="dissea">Make hafef<br>havev</p>
         </div>
   
       </article>
@@ -813,8 +898,9 @@ const htmlShop = `
         <!-- Lemons -->
         <div class="item">
           <section class="title">
-            <h2 id="dislemName"></h2>
             <img src="../img/lemon.svg" draggable="false">
+            <h3 id="dislemName">Lemons</h3>
+            <span id="lemMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: yellow">
             <button onclick="buylem()" class="buyone" id="lm1">
@@ -830,8 +916,9 @@ const htmlShop = `
         <!-- Lemon t3-->
         <div class="item">
           <section class="title">
-            <h2 id="dislt3Name"></h2>
             <img src="../img/lemon-tree.svg" draggable="false">
+            <h3 id="dislt3Name">Lemon t</h3>
+            <span id="lt3Make">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: lightgoldenrodyellow">
             <button onclick="buylt3()" class="buyone" id="lt1">
