@@ -38,6 +38,8 @@ function uploadUpgrades(){update();loadUpgrades();}
 /* U P G R A D E S */
 
 function buyMcc(){
+  alert("Doesn't work");
+  return 0;
   if(items.lemons>=10+(items.Mclick||1)*(items.Mclick||1)-1){
     items.lemons -= 10+(items.Mclick||1)*(items.Mclick||1)-1;
     if((items.Mclick != 1)&&(items.Mclick < 2)){
@@ -123,7 +125,7 @@ function TheThing(){
     }
     toClick();
   }else{
-    if(items.lang == 1 && items.token >= (1000*items.pres) && confirm(`For Prestige You'll earn more clicks, but your progress resets (except prestige points). Do you wish to 'Rebirth'?`)){  // En
+    if(items.token >= (1000*items.pres) && confirm(`For Prestige You'll earn more clicks, but your progress resets (except prestige points). Do you wish to 'Rebirth'?`)){  // En
       if(items.pres>=5){
         alert(`You've earn 1 prestige point!`);
         items.pres += 1;

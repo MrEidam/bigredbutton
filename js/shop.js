@@ -12,8 +12,8 @@ addEventListener('scroll', () => {
 })
 
 function loadShop(){
-  if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-   /* document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
+  if(navigator.language == 'csd' || navigator.language == 'cs-CZd'){
+  document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
 
 
     disdog.innerHTML=
@@ -37,39 +37,21 @@ function loadShop(){
     discap.innerHTML=
     `Máš ${fornum(items.capybaras)}<br>
     Tvořící ${fornum((items.capybaras*280)*items.pres)} kliků!`
-    displa.innerHTML=
-    `Máš ${fornum(items.platapuses)}<br>
-    Tvořící ${fornum((items.platapuses*400)*items.pres)} kliků!`
-    dispor.innerHTML=
-    `Máš ${fornum(items.porcupines)}<br>
-    Tvořící ${fornum((items.porcupines*650)*items.pres)} kliků!`
-    diship.innerHTML=
-    `Máš ${fornum(items.hippos)}<br>
-    Tvořící ${fornum((items.hippos*950)*items.pres)} kliků!`
     dissna.innerHTML=
     `Máš ${fornum(items.snakes)}<br>
     Tvořící ${fornum((items.snakes*1000)*items.pres)} kliků!`
     dische.innerHTML=
     `Máš ${fornum(items.cheetahs)}<br>
     Tvořící ${fornum((items.cheetahs*3000)*items.pres)} kliků!`
-    dispyt.innerHTML=
-    `Máš ${fornum(items.pythons)}<br>
-    Tvořící ${fornum((items.pythons*7800)*items.pres)} kliků!`
     disgir.innerHTML=
     `Máš ${fornum(items.girrafes)}<br>
     Tvořící ${fornum((items.girrafes*8400)*items.pres)} kliků!`
     disoth.innerHTML=
     `Máš ${fornum(items.otters)}<br>
     Tvořící ${fornum((items.otters*9000)*items.pres)} kliků!`
-    dismee.innerHTML=
-    `Máš ${fornum(items.meerkat)}<br>
-    Tvořící ${fornum((items.meerkat*9800)*items.pres)} kliků!`
     disrac.innerHTML=
     `Máš ${fornum(items.raccoon)}<br>
     Tvořící ${fornum((items.raccoon*14500)*items.pres)} kliků!`
-    disowl.innerHTML=
-    `Máš ${fornum(items.owl)}<br>
-    Tvořící ${fornum((items.owl*16000)*items.pres)} kliků!`
     disbad.innerHTML=
     `Máš ${fornum(items.badger)}<br>
     Tvořící ${fornum((items.badger*32000)*items.pres)} kliků!`
@@ -85,18 +67,9 @@ function loadShop(){
     diswom.innerHTML=
     `Máš ${fornum(items.wombat)}<br>
     Tvořící ${fornum((items.wombat*280000)*items.pres)} kliků!`
-    dispan.innerHTML=
-    `Máš ${fornum(items.panther)}<br>
-    Tvořící ${fornum((items.panther*550000)*items.pres)} kliků!`
-    discoy.innerHTML=
-    `Máš ${fornum(items.coyote)}<br>
-    Tvořící ${fornum((items.coyote*840000)*items.pres)} kliků!`
     disfro.innerHTML=
     `Máš ${fornum(items.frog)}<br>
     Tvořící ${fornum((items.frog*900000)*items.pres)} kliků!`
-    disbea.innerHTML=
-    `Máš ${fornum(items.bear)}<br>
-    Tvořící ${fornum((items.bear*950000)*items.pres)} kliků!`
     dispig.innerHTML=
     `Máš ${fornum(items.pig)}<br>
     Tvořící ${fornum((items.pig*1150000)*items.pres)} kliků!`
@@ -118,26 +91,17 @@ function loadShop(){
     dishamName.innerHTML=`Křečci`
     diswhaName.innerHTML=`Velryby`
     discapName.innerHTML=`Kapybary`
-    displaName.innerHTML=`Ptakopyskové`
-    disporName.innerHTML=`Dikobrazové`
-    dishipName.innerHTML=`Hrochové`
     dissnaName.innerHTML=`Hadi`
     discheName.innerHTML=`Gepardi`
-    dispytName.innerHTML=`Kobry`
     disgirName.innerHTML=`Žirafy`
     disottName.innerHTML=`Vydry`
-    dismeeName.innerHTML=`Surikaty`
     disracName.innerHTML=`Mývalové`
-    disowlName.innerHTML=`Sovy`
     disbadName.innerHTML=`Jezevci`
     dissquName.innerHTML=`Veverky`
     dischaName.innerHTML=`Chameleóni`
     dischiName.innerHTML=`Slepice`
     diswomName.innerHTML=`Wombati`
-    dispanName.innerHTML=`Panteři`
-    discoyName.innerHTML=`Kojoti`
     disfroName.innerHTML=`Žáby`
-    disbeaName.innerHTML=`Medvědi`
     dispigName.innerHTML=`Prasata`
     disseaName.innerHTML=`Tuleni`
     dislemName.innerHTML=`Citróny`
@@ -150,26 +114,17 @@ function loadShop(){
     hm1.innerHTML =  'Kup za:<br> 1 vlka a 2 kočky'
     wh1.innerHTML =  'Kup za 2 vlky'
     cp1.innerHTML =  'Kup za:<br> 1 velrybu a 4 kočky'
-    pl1.innerHTML =  'Kup za:<br> 1 kapybaru a 1 vlka'
-    pr1.innerHTML =  'Kup za:<br> 1 ptakopyska a 1 velrybu'
-    hi1.innerHTML =  'Kup za:<br> 1 dikobraza a 2 křečků'
     sn1.innerHTML =  'Kup za:<br> 2 velryby a 4 křečky'
     ch1.innerHTML =  'Kup za:<br> 2 hady a 2 ptakopysky'
-    py1.innerHTML =  'Kup za:<br> 1 geparda a 5 hrochů'
     gi1.innerHTML =  'Kup za:<br> 1 kobru a 20 lišek'
     ot1.innerHTML =  'Kup za:<br> 1 žirafu a 2 kapybary'
-    me1.innerHTML =  'Kup za:<br> 1 vydru a 3 velryby'
     ra1.innerHTML =  'Kup za:<br> 1 surikatu a 7 dikobrazů'
-    ow1.innerHTML =  'Kup za:<br> 1 mývala a 1 hada'
     ba1.innerHTML =  'Kup za:<br> 1 sovu a 2 kobry'
     sq1.innerHTML =  'Kup za:<br> 1 jezevce a 5 gepardů'
     cha1.innerHTML = 'Kup za:<br> 1 veverku a 2 surikaty'
     chi1.innerHTML = 'Kup za:<br> 2 veverky a 1 sovu'
     wom1.innerHTML = 'Kup za:<br> 1 slepici a 2 chameleóny'
-    pan1.innerHTML = 'Kup za:<br> 1 wombata a 2 slepice'
-    coy1.innerHTML = 'Kup za:<br> 1 pantera a 4 chameleóny'
     fro1.innerHTML = 'Kup za:<br> 1 kojota a 40 hadů'
-    bea1.innerHTML = 'Kup za:<br> 1 žábu a 5 žiraf'
     pig1.innerHTML = 'Kup za:<br> 1 medvěda a 6 jezevců'
     sea1.innerHTML = 'Kup za:<br> 1 prase a 9 vyder'
 
@@ -183,119 +138,83 @@ function loadShop(){
     Chm1.innerHTML =  'Kup za 13 k kliků'
     Cwh1.innerHTML =  'Kup za 22 k kliků'
     Ccp1.innerHTML =  'Kup za 28 k kliků'
-    Cpl1.innerHTML =  'Kup za 42 k kliků'
-    Cpr1.innerHTML =  'Kup za 70 k kliků'
-    Chi1.innerHTML =  'Kup za 100 k kliků'
     Csn1.innerHTML =  'Kup za 150 k kliků'
     Cch1.innerHTML =  'Kup za 350 k kliků'
-    Cpy1.innerHTML =  'Kup za 820 k kliků'
     Cgi1.innerHTML =  'Kup za 880 k kliků'
     Cot1.innerHTML =  'Kup za 950 k kliků'
-    Cme1.innerHTML =  'Kup za 1 mil kliků'
     Cra1.innerHTML =  'Kup za 1,5 mil kliků'
-    Cow1.innerHTML =  'Kup za 1,8 mil kliků'
     Cba1.innerHTML =  'Kup za 3,5 mil kliků'
     Csq1.innerHTML =  'Kup za 5,5 mil kliků'
     Ccha1.innerHTML = 'Kup za 7,7 mil kliků'
     Cchi1.innerHTML = 'Kup za 13 mil kliků'
     Cwom1.innerHTML = 'Kup za 31 mil kliků'
-    Cpan1.innerHTML = 'Kup za 60,5 mil kliků'
-    Ccoy1.innerHTML = 'Kup za 92,4 mil kliků'
     Cfro1.innerHTML = 'Kup za 99 mil kliků'
-    Cbea1.innerHTML = 'Kup za 104,5 mil kliků'
     Cpig1.innerHTML = 'Kup za 126,5 mil kliků'
     Csea1.innerHTML = 'Kup za 143 mil kliků'
   }else{
     disclick.innerHTML=`You have ${fornum(items.clicks)} clicks, and making ${fornum(cs*items.pres)} per second!`
 
-
+/*
     disdog.innerHTML=
     `You have ${fornum(items.dogs)}<br>
-    Generating ${fornum((items.dogs*1)*items.pres)} clicks!`
+    Generating ${fornum((items.dogs*1)*bigredbutton.settings.prestige)} clicks!`
     discat.innerHTML=
     `You have ${fornum(items.cats)}<br>
-    Generating ${fornum((items.cats*12)*items.pres)} clicks!`
+    Generating ${fornum((items.cats*12)*bigredbutton.settings.prestige)} clicks!`
     disfox.innerHTML=
     `You have ${fornum(items.foxes)}<br>
-    Generating ${fornum((items.foxes*18)*items.pres)} clicks!`
+    Generating ${fornum((items.foxes*18)*bigredbutton.settings.prestige)} clicks!`
     diswol.innerHTML=
     `You have ${fornum(items.wolfs)}<br>
-    Generating ${fornum((items.wolfs*100)*items.pres)} clicks!`
+    Generating ${fornum((items.wolfs*100)*bigredbutton.settings.prestige)} clicks!`
     disham.innerHTML=
     `You have ${fornum(items.hamsters)}<br>
-    Generating ${fornum((items.hamsters*130)*items.pres)} clicks!`
+    Generating ${fornum((items.hamsters*130)*bigredbutton.settings.prestige)} clicks!`
     diswha.innerHTML=
     `You have ${fornum(items.whales)}<br>
-    Generating ${fornum((items.whales*220)*items.pres)} clicks!`
+    Generating ${fornum((items.whales*220)*bigredbutton.settings.prestige)} clicks!`
     discap.innerHTML=
     `You have ${fornum(items.capybaras)}<br>
-    Generating ${fornum((items.capybaras*280)*items.pres)} clicks!`
-    displa.innerHTML=
-    `You have ${fornum(items.platapuses)}<br>
-    Generating ${fornum((items.platapuses*400)*items.pres)} clicks!`
-    dispor.innerHTML=
-    `You have ${fornum(items.porcupines)}<br>
-    Generating ${fornum((items.porcupines*650)*items.pres)} clicks!`
-    diship.innerHTML=
-    `You have ${fornum(items.hippos)}<br>
-    Generating ${fornum((items.hippos*950)*items.pres)} clicks!`
+    Generating ${fornum((items.capybaras*280)*bigredbutton.settings.prestige)} clicks!`
     dissna.innerHTML=
     `You have ${fornum(items.snakes)}<br>
-    Generating ${fornum((items.snakes*1000)*items.pres)} clicks!`
+    Generating ${fornum((items.snakes*1000)*bigredbutton.settings.prestige)} clicks!`
     dische.innerHTML=
     `You have ${fornum(items.cheetahs)}<br>
-    Generating ${fornum((items.cheetahs*3000)*items.pres)} clicks!`
-    dispyt.innerHTML=
-    `You have ${fornum(items.pythons)}<br>
-    Generating ${fornum((items.pythons*7800)*items.pres)} clicks!`
+    Generating ${fornum((items.cheetahs*3000)*bigredbutton.settings.prestige)} clicks!`
     disgir.innerHTML=
     `You have ${fornum(items.girrafes)}<br>
-    Generating ${fornum((items.girrafes*8400)*items.pres)} clicks!`
+    Generating ${fornum((items.girrafes*8400)*bigredbutton.settings.prestige)} clicks!`
     disoth.innerHTML=
     `You have ${fornum(items.otters)}<br>
-    Generating ${fornum((items.otters*9000)*items.pres)} clicks!`
-    dismee.innerHTML=
-    `You have ${fornum(items.meerkat)}<br>
-    Generating ${fornum((items.meerkat*9800)*items.pres)} clicks!`
+    Generating ${fornum((items.otters*9000)*bigredbutton.settings.prestige)} clicks!`
     disrac.innerHTML=
     `You have ${fornum(items.raccoon)}<br>
-    Generating ${fornum((items.raccoon*14500)*items.pres)} clicks!`
-    disowl.innerHTML=
-    `You have ${fornum(items.owl)}<br>
-    Generating ${fornum((items.owl*16000)*items.pres)} clicks!`
+    Generating ${fornum((items.raccoon*14500)*bigredbutton.settings.prestige)} clicks!`
     disbad.innerHTML=
     `You have ${fornum(items.badger)}<br>
-    Generating ${fornum((items.badger*32000)*items.pres)} clicks!`
+    Generating ${fornum((items.badger*32000)*bigredbutton.settings.prestige)} clicks!`
     dissqu.innerHTML=
     `You have ${fornum(items.squirrel)}<br>
-    Generating ${fornum((items.squirrel*50000)*items.pres)} clicks!`
+    Generating ${fornum((items.squirrel*50000)*bigredbutton.settings.prestige)} clicks!`
     discha.innerHTML=
     `You have ${fornum(items.chameleon)}<br>
-    Generating ${fornum((items.chameleon*70000)*items.pres)} clicks!`
+    Generating ${fornum((items.chameleon*70000)*bigredbutton.settings.prestige)} clicks!`
     dischi.innerHTML=
     `You have ${fornum(items.chicken)}<br>
-    Generating ${fornum((items.chicken*120000)*items.pres)} clicks!`
+    Generating ${fornum((items.chicken*120000)*bigredbutton.settings.prestige)} clicks!`
     diswom.innerHTML=
     `You have ${fornum(items.wombat)}<br>
-    Generating ${fornum((items.wombat*280000)*items.pres)} clicks!`
-    dispan.innerHTML=
-    `You have ${fornum(items.panther)}<br>
-    Generating ${fornum((items.panther*550000)*items.pres)} clicks!`
-    discoy.innerHTML=
-    `You have ${fornum(items.coyote)}<br>
-    Generating ${fornum((items.coyote*840000)*items.pres)} clicks!`
+    Generating ${fornum((items.wombat*280000)*bigredbutton.settings.prestige)} clicks!`
     disfro.innerHTML=
     `You have ${fornum(items.frog)}<br>
-    Generating ${fornum((items.frog*900000)*items.pres)} clicks!`
-    disbea.innerHTML=
-    `You have ${fornum(items.bear)}<br>
-    Generating ${fornum((items.bear*950000)*items.pres)} clicks!`
+    Generating ${fornum((items.frog*900000)*bigredbutton.settings.prestige)} clicks!`
     dispig.innerHTML=
     `You have ${fornum(items.pig)}<br>
-    Generating ${fornum((items.pig*1150000)*items.pres)} clicks!`
+    Generating ${fornum((items.pig*1150000)*bigredbutton.settings.prestige)} clicks!`
     dissea.innerHTML=
     `You have ${fornum((items.seal||0))}<br>
-    Generating ${fornum(((items.seal||0)*1300000)*items.pres)} clicks!`
+    Generating ${fornum(((items.seal||0)*1300000)*bigredbutton.settings.prestige)} clicks!`
     
     
     document.getElementById('dislem').innerHTML=
@@ -312,26 +231,17 @@ function loadShop(){
     dishamName.innerHTML=`Hamsters`
     diswhaName.innerHTML=`Whales`
     discapName.innerHTML=`Capybaras`
-    displaName.innerHTML=`Platypuses`
-    disporName.innerHTML=`Porcupines`
-    dishipName.innerHTML=`Hippos`
     dissnaName.innerHTML=`Snakes`
     discheName.innerHTML=`Cheetahs`
-    dispytName.innerHTML=`Pythons`
     disgirName.innerHTML=`Girafes`
     disottName.innerHTML=`Otters`
-    dismeeName.innerHTML=`Meerkats`
     disracName.innerHTML=`Racoons`
-    disowlName.innerHTML=`Owls`
     disbadName.innerHTML=`Badgers`
     dissquName.innerHTML=`Squirrels`
     dischaName.innerHTML=`Chameleons`
     dischiName.innerHTML=`Chickens`
     diswomName.innerHTML=`Wombats`
-    dispanName.innerHTML=`Panthers`
-    discoyName.innerHTML=`Coyotes`
     disfroName.innerHTML=`Frogs`
-    disbeaName.innerHTML=`Bears`
     dispigName.innerHTML=`Pigs`
     disseaName.innerHTML=`Seals`
 
@@ -346,61 +256,59 @@ function loadShop(){
     hm1.innerHTML =  'Buy for:<br> 1 wolf and 2 cats'
     wh1.innerHTML =  'Buy for 2 wolfs'
     cp1.innerHTML =  'Buy for:<br> 1 whale and 4 cats'
-    pl1.innerHTML =  'Buy for:<br> 1 capybara and 1 wolf'
-    pr1.innerHTML =  'Buy for:<br> 1 platypus and 1 whale'
-    hi1.innerHTML =  'Buy for:<br> 1 porcupine and 2 hamsters'
     sn1.innerHTML =  'Buy for:<br> 2 whales and 4 hamsters'
     ch1.innerHTML =  'Buy for:<br> 2 snakes and 2 platypuses'
-    py1.innerHTML =  'Buy for:<br> 1 cheetah and 5 hippos'
     gi1.innerHTML =  'Buy for:<br> 1 python and 20 foxes'
     ot1.innerHTML =  'Buy for:<br> 1 giraffe and 2 capybaras'
-    me1.innerHTML =  'Buy for:<br> 1 otter and 3 whales'
     ra1.innerHTML =  'Buy for:<br> 1 meerkat and 7 porcupines'
-    ow1.innerHTML =  'Buy for:<br> 1 racoon and 1 snake'
     ba1.innerHTML =  'Buy for:<br> 1 owl and 2 pythons'
     sq1.innerHTML =  'Buy for:<br> 1 badger and 5 cheetah'
     cha1.innerHTML = 'Buy for:<br> 1 squirrel and 2 meerkats'
     chi1.innerHTML = 'Buy for:<br> 2 squirrels and 1 owl'
     wom1.innerHTML = 'Buy for:<br> 1 chicken and 2 chameleons'
-    pan1.innerHTML = 'Buy for:<br> 1 wombat and 2 chickens'
-    coy1.innerHTML = 'Buy for:<br> 1 panther and 4 chameleons'
     fro1.innerHTML = 'Buy for:<br> 1 coyote and 40 snakes'
-    bea1.innerHTML = 'Buy for:<br> 1 frog and 5 giraffes'
     pig1.innerHTML = 'Buy for:<br> 1 bear and 6 badgers'
     sea1.innerHTML = 'Buy for:<br> 1 pig and 9 otters'
 
     lm1.innerHTML = 'Buy for 20 cats'
     lt1.innerHTML = 'Buy for 5 lemons'
-
+*/
     // Buying for clicks
+    /*
     Cct1.innerHTML =  'Buy for 1.2 k clicks'
     Cfx1.innerHTML =  'Buy for 1.8 k clicks'
     Cwl1.innerHTML =  'Buy for 10 k clicks'
     Chm1.innerHTML =  'Buy for 13 k clicks'
     Cwh1.innerHTML =  'Buy for 22 k clicks'
     Ccp1.innerHTML =  'Buy for 28 k clicks'
-    Cpl1.innerHTML =  'Buy for 42 k clicks'
-    Cpr1.innerHTML =  'Buy for 70 k clicks'
-    Chi1.innerHTML =  'Buy for 100 k clicks'
     Csn1.innerHTML =  'Buy for 150 k clicks'
     Cch1.innerHTML =  'Buy for 350 k clicks'
-    Cpy1.innerHTML =  'Buy for 820 k clicks'
     Cgi1.innerHTML =  'Buy for 880 k clicks'
     Cot1.innerHTML =  'Buy for 950 k clicks'
-    Cme1.innerHTML =  'Buy for 1 mil clicks'
     Cra1.innerHTML =  'Buy for 1.5 mil clicks'
-    Cow1.innerHTML =  'Buy for 1.8 mil clicks'
     Cba1.innerHTML =  'Buy for 3.5 mil clicks'
     Csq1.innerHTML =  'Buy for 5.5 mil clicks'
     Ccha1.innerHTML = 'Buy for 7.7 mil clicks'
     Cchi1.innerHTML = 'Buy for 13 mil clicks'
     Cwom1.innerHTML = 'Buy for 31 mil clicks'
-    Cpan1.innerHTML = 'Buy for 60.5 mil clicks'
-    Ccoy1.innerHTML = 'Buy for 92.4 mil clicks'
     Cfro1.innerHTML = 'Buy for 99 mil clicks'
-    Cbea1.innerHTML = 'Buy for 104.5 mil clicks'
     Cpig1.innerHTML = 'Buy for 126.5 mil clicks'
     Csea1.innerHTML = 'Buy for 143 mil clicks'*/
+
+    //? BUYING FOR CLICKS DISPLAY
+
+    function internationalClicksDisplay(animal, cost){
+      const animalElement = document.querySelector(`#C${animal}1`);
+
+      if (animalElement) {
+          animalElement.innerHTML = `Buy for ${fornum(cost)} clicks!`;
+      }
+    }
+
+    bigredbutton.items.animals.forEach(({ name , cost }) => {
+        internationalClicksDisplay(name, cost);
+    });
+
   }
 }
 
