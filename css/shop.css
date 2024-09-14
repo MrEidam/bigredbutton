@@ -30,6 +30,7 @@ body {
 }
 
 #search{
+  display: none;
   min-width: 230px;
   height: 30px;
   padding-left: .5rem;
@@ -41,9 +42,9 @@ body {
 #logclick{
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 5ch;
+  align-items: center;
+  gap: 2ch;
   margin: 0 5vw 0 5vw;
   padding: 1rem;
   border-radius: 1rem;
@@ -57,20 +58,10 @@ body {
 #imgcli{
   width: 50px;
   height: 50px;
-  margin: 0.1rem;
   width: 100px;
   aspect-ratio: 1/1;
-  margin: 0.5rem;
   object-fit: contain;
   pointer-events: none;
-}
-
-.backtop{
-  height: 230px;
-  max-width: auto;
-  margin: 0 1.5vw 0 1.5vw;
-  border-radius: 0 0 90px 90px;
-  background: linear-gradient(#11ABFF, #ccccccab);
 }
 
 .main{
@@ -84,7 +75,7 @@ body {
 .item{
   border: none;
   top: 5px;
-  margin: 2rem/* 1.5vw 2rem 1.5vw*/;
+  margin: 1.5rem/* 1.5vw 2rem 1.5vw*/;
   padding: .5rem 1rem 0 .5rem;
   border-radius: 6.9px;
   display: flex;
@@ -104,6 +95,7 @@ body {
   align-items: center;
 }
 .item .title h3{
+  text-transform: capitalize;
   margin-right: .5rem;
 }
 .item .title img{
@@ -114,7 +106,7 @@ body {
   filter: drop-shadow(10px 8px 6px #333);
   pointer-events: none
 }
-.item .title span{
+.item .title span, #logclick span{
   color: #00ec00;
   font-size: 12.5px;
 }

@@ -79,6 +79,7 @@ const htmlShop = `
       <div id="logclick">
         <img src="../img/icons8-rest.svg" id="imgcli" draggable="false">
         <p id="disclick"></p>
+        <span id="clickMake">+69k/s</span>
       </div>
       <input type="text" id="search" onkeyup="/*search()*/" placeholder="Search.." title="Type in a category">
     </section>
@@ -335,28 +336,28 @@ const htmlShop = `
         <div class="item">
           <section class="title">
             <img src="../img/girafe.svg">
-            <h3 id="disgirafeName">girafe</h3>
-            <span id="girafeMake">+69k/s</span>
+            <h3 id="disgiraffeName">giraffe</h3>
+            <span id="giraffeMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #ffdb4d">
             <div class="column">
-              <button onclick="buygirafe()" class="buyone0" id="girafe1">
-                Buy a girafe
+              <button onclick="buygiraffe()" class="buyone0" id="giraffe1">
+                Buy a giraffe
               </button>
-              <button onclick="buyCgirafe()" class="buyone1" id="Cgirafe1">
-                Buy a girafe for clicks
+              <button onclick="buyCgiraffe()" class="buyone1" id="Cgiraffe1">
+                Buy a giraffe for clicks
               </button>
             </div>
             <div class="column">
-              <button onclick="mxCgirafe()" class="buymax0">
+              <button onclick="mxCgiraffe()" class="buymax0">
                 MAX
               </button>
-              <button onclick="mxgirafe()" class="buymax1">
+              <button onclick="mxgiraffe()" class="buymax1">
                 MAX
               </button>
             </div>
           </div>
-          <p id="disgirafe">You've got OUTPUT</p>
+          <p id="disgiraffe">You've got OUTPUT</p>
         </div>
   
         <!-- Otter -->
@@ -447,28 +448,28 @@ const htmlShop = `
         <div class="item">
           <section class="title">
             <img src="../img/squirell.svg">
-            <h3 id="dissquirellName">Squirrel</h3>
-            <span id="squirellMake">+69k/s</span>
+            <h3 id="dissquirrelName">Squirrel</h3>
+            <span id="squirrelMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: #CFB190">
             <div class="column">
-              <button onclick="buysquirell()" class="buyone0" id="squirell1">
+              <button onclick="buysquirrel()" class="buyone0" id="squirrel1">
                 Buy a Squirrel
               </button>
-              <button onclick="buyCsquirell()" class="buyone1" id="Csquirell1">
+              <button onclick="buyCsquirrel()" class="buyone1" id="Csquirrel1">
                 Buy a Squirrel for clicks
               </button>
             </div>
             <div class="column">
-              <button onclick="mxCsquirell()" class="buymax0">
+              <button onclick="mxCsquirrel()" class="buymax0">
                 MAX
               </button>
-              <button onclick="mxsquirell()" class="buymax1">
+              <button onclick="mxsquirrel()" class="buymax1">
                 MAX
               </button>
             </div>
           </div>
-          <p id="dissquirell">You've got OUTPUT</p>
+          <p id="dissquirrel">You've got OUTPUT</p>
         </div>
   
         <!-- Chameleon -->

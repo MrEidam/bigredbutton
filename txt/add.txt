@@ -21,7 +21,7 @@ max 5 hour
 1 wombat     = 30 000 c/s     =  1 651 900 | 1 chim + 6 wha
 1 frog       = 50 000 c/s     =  2 782 400 | 1 wom + 1 cham
 1 pig        = 135 000 c/s    =  7 624 300 | 2 frog + 5 racc
-1 seal       = 270 900 c/s    = 15 323 600 | 2 pig + 10 foxes
+1 seal       = 275 900 c/s    = 15 323 600 | 2 pig + 10 foxes
 
 1 platypus
 1 porcupine

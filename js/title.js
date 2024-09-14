@@ -225,7 +225,7 @@ let bigredbutton = {
               upgrade: 1,
           },
           {
-              name: 'raccoon',
+              name: 'racoon',
               number: 0,
               history: 0,
               cost: 650000,
