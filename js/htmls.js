@@ -646,33 +646,32 @@ const htmlShop = `
   
       <article class="main">
         <!-- Lemons -->
-        <div class="item">
+        <div class="item" onclick="log()">
           <section class="title">
             <img src="../img/lemon.svg" draggable="false">
-            <h3 id="dislemName">Lemons</h3>
-            <span id="lemMake">+69k/s</span>
+            <h3 id="dislemonName">Lemons</h3>
+            <span id="lemonMake">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: yellow">
-            <button onclick="buylem()" class="buyone" id="lm1">
+            <button onclick="buylemon()" class="buyone" id="lemon1">
               Buy a Lemon
             </button>
-            <button onclick="mxlm()" class="buymax">
+            <button onclick="mxlemon()" class="buymax">
               MAX
             </button>
           </div>
-          <p id="dislem">You've got OUTPUT</p>
+          <p id="dislemon">You've got OUTPUT</p>
         </div>
   
         <!-- Lemon t3-->
-        <div class="item">
+        <div class="item" onclick="log()">
           <section class="title">
             <img src="../img/lemon-tree.svg" draggable="false">
             <h3 id="dislt3Name">Lemon t</h3>
-            <span id="lt3Make">+69k/s</span>
           </section>
           <div class="buttons" style="--Bcolor: lightgoldenrodyellow">
             <button onclick="buylt3()" class="buyone" id="lt1">
-              Buy a Lemon Tree for 5 lemons
+              Buy a Lemon Tree
             </button>
             <button onclick="mxlt()" class="buymax">
               MAX
@@ -684,32 +683,32 @@ const htmlShop = `
         
     </main>
   
-    ${menu}
-    
     <a href="#" class="upwards">
       <img src="../img/arrow-up.svg" alt="">
-</a>`;
+    </a>
+
+${menu}`;
 
 const htmlUpgrade = `
 <!-- lemons -->
   <section class="joe" id="jonathan">
-    <div id="loglm">
+    <!-- <div id="loglm">
       <img src="../img/lemon.svg" id="imglm" draggable="false">
       <p id="dislm"></p>
-    </div>
+    </div>-->
   </section>
   
   <main style="margin-top: 175px;">
-    <!-- Example -->
+    <!-- Example--><!--
     <div class="item">
       <h2>BRB</h2>
       <img src="../img/brb-still.png">
       <div class="buttons" style="--Bcolor: darkred">
         <button onclick="buyMcc()" class="buyone" id="Mc1">
-        </button><!--
+        </button>
         <button onclick="mxMc()" class="buymax">
           MAX
-        </button>-->
+        </button>
       </div>
       
       <p id="disMcmake"></p>
@@ -733,7 +732,13 @@ const htmlUpgrade = `
       <button id="ItsTime" onclick="TheThing();"></button>
       <p id="progva"></p>
       <p id="got"></p>
+    </div> -->
+
+    <div class="inMaking">
+      <h1> In Making </h1>
+      <img src="./img/underconstuction.png">
     </div>
+
   </main>
 
   ${menu}`;

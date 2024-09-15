@@ -1,3 +1,5 @@
+let animal;
+
 while(document.title === 'BRB - Obchod'||document.title === 'BRB - Shop'){ //! Shopdope
 }
 
@@ -11,161 +13,150 @@ addEventListener('scroll', () => {
   }
 })
 
+//* DISPLAYING THE GENERATION OF CLICKS
+function displayClickGen(animal, make, upgrade, number){
+  const animalElement = document.querySelector(`#${animal}Make`);
+
+  if(animalElement){
+      animalElement.innerHTML = `<pre>+${fornum(make*upgrade*number*bigredbutton.settings.prestige)}/s`;
+  }
+}
+
 function loadShop(){
-  if(navigator.language == 'csd' || navigator.language == 'cs-CZd'){
-  document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a děláš ${fornum(cs*items.pres)} za sekundu!`
+  animal = bigredbutton.items.animals;
 
-
-    disdog.innerHTML=
-    `Máš ${fornum(items.dogs)}<br>
-    Tvořící ${fornum((items.dogs*1)*items.pres)} kliků!`
-    discat.innerHTML=
-    `Máš ${fornum(items.cats)}<br>
-    Tvořící ${fornum((items.cats*12)*items.pres)} kliků!`
-    disfox.innerHTML=
-    `Máš ${fornum(items.foxes)}<br>
-    Tvořící ${fornum((items.foxes*18)*items.pres)} kliků!`
-    diswol.innerHTML=
-    `Máš ${fornum(items.wolfs)}<br>
-    Tvořící ${fornum((items.wolfs*100)*items.pres)} kliků!`
-    disham.innerHTML=
-    `Máš ${fornum(items.hamsters)}<br>
-    Tvořící ${fornum((items.hamsters*130)*items.pres)} kliků!`
-    diswha.innerHTML=
-    `Máš ${fornum(items.whales)}<br>
-    Tvořící ${fornum((items.whales*220)*items.pres)} kliků!`
-    discap.innerHTML=
-    `Máš ${fornum(items.capybaras)}<br>
-    Tvořící ${fornum((items.capybaras*280)*items.pres)} kliků!`
-    dissna.innerHTML=
-    `Máš ${fornum(items.snakes)}<br>
-    Tvořící ${fornum((items.snakes*1000)*items.pres)} kliků!`
-    dische.innerHTML=
-    `Máš ${fornum(items.cheetahs)}<br>
-    Tvořící ${fornum((items.cheetahs*3000)*items.pres)} kliků!`
-    disgir.innerHTML=
-    `Máš ${fornum(items.girrafes)}<br>
-    Tvořící ${fornum((items.girrafes*8400)*items.pres)} kliků!`
-    disoth.innerHTML=
-    `Máš ${fornum(items.otters)}<br>
-    Tvořící ${fornum((items.otters*9000)*items.pres)} kliků!`
-    disrac.innerHTML=
-    `Máš ${fornum(items.raccoon)}<br>
-    Tvořící ${fornum((items.raccoon*14500)*items.pres)} kliků!`
-    disbad.innerHTML=
-    `Máš ${fornum(items.badger)}<br>
-    Tvořící ${fornum((items.badger*32000)*items.pres)} kliků!`
-    dissqu.innerHTML=
-    `Máš ${fornum(items.squirrel)}<br>
-    Tvořící ${fornum((items.squirrel*50000)*items.pres)} kliků!`
-    discha.innerHTML=
-    `Máš ${fornum(items.chameleon)}<br>
-    Tvořící ${fornum((items.chameleon*70000)*items.pres)} kliků!`
-    dischi.innerHTML=
-    `Máš ${fornum(items.chicken)}<br>
-    Tvořící ${fornum((items.chicken*120000)*items.pres)} kliků!`
-    diswom.innerHTML=
-    `Máš ${fornum(items.wombat)}<br>
-    Tvořící ${fornum((items.wombat*280000)*items.pres)} kliků!`
-    disfro.innerHTML=
-    `Máš ${fornum(items.frog)}<br>
-    Tvořící ${fornum((items.frog*900000)*items.pres)} kliků!`
-    dispig.innerHTML=
-    `Máš ${fornum(items.pig)}<br>
-    Tvořící ${fornum((items.pig*1150000)*items.pres)} kliků!`
-    dissea.innerHTML=
-    `Máš ${fornum((items.seal||0))}<br>
-    Tvořící ${fornum(((items.seal||0)*1300000)*items.pres)} kliků!`
-    
-    
-    document.getElementById('dislem').innerHTML=
-    `Máš ${fornum(items.lemons)} citrónů!`
-    document.getElementById('dislt3').innerHTML=
-    `Máš ${fornum(items.lt3)} citronovníků!<br>
-    Tvořící ${fornum((items.lt3*items.pres))} citrónů<br>za 100 sec.`
-    
-    disdogName.innerHTML=`Psi`
-    discatName.innerHTML=`Kočky`
-    disfoxName.innerHTML=`Lišky`
-    diswolName.innerHTML=`Vlci`
-    dishamName.innerHTML=`Křečci`
-    diswhaName.innerHTML=`Velryby`
-    discapName.innerHTML=`Kapybary`
-    dissnaName.innerHTML=`Hadi`
-    discheName.innerHTML=`Gepardi`
-    disgirName.innerHTML=`Žirafy`
-    disottName.innerHTML=`Vydry`
-    disracName.innerHTML=`Mývalové`
-    disbadName.innerHTML=`Jezevci`
-    dissquName.innerHTML=`Veverky`
-    dischaName.innerHTML=`Chameleóni`
-    dischiName.innerHTML=`Slepice`
-    diswomName.innerHTML=`Wombati`
-    disfroName.innerHTML=`Žáby`
-    dispigName.innerHTML=`Prasata`
-    disseaName.innerHTML=`Tuleni`
-    dislemName.innerHTML=`Citróny`
-    dislt3Name.innerHTML=`Citrónovníky`
-
-    dg1.innerHTML =  'Kup za 100 kliků'
-    ct1.innerHTML =  'Kup za 10 psů'
-    fx1.innerHTML =  'Kup za 15 psů'
-    wl1.innerHTML =  'Kup za:<br> 6 psů a 5 lišek'
-    hm1.innerHTML =  'Kup za:<br> 1 vlka a 2 kočky'
-    wh1.innerHTML =  'Kup za 2 vlky'
-    cp1.innerHTML =  'Kup za:<br> 1 velrybu a 4 kočky'
-    sn1.innerHTML =  'Kup za:<br> 2 velryby a 4 křečky'
-    ch1.innerHTML =  'Kup za:<br> 2 hady a 2 ptakopysky'
-    gi1.innerHTML =  'Kup za:<br> 1 kobru a 20 lišek'
-    ot1.innerHTML =  'Kup za:<br> 1 žirafu a 2 kapybary'
-    ra1.innerHTML =  'Kup za:<br> 1 surikatu a 7 dikobrazů'
-    ba1.innerHTML =  'Kup za:<br> 1 sovu a 2 kobry'
-    sq1.innerHTML =  'Kup za:<br> 1 jezevce a 5 gepardů'
-    cha1.innerHTML = 'Kup za:<br> 1 veverku a 2 surikaty'
-    chi1.innerHTML = 'Kup za:<br> 2 veverky a 1 sovu'
-    wom1.innerHTML = 'Kup za:<br> 1 slepici a 2 chameleóny'
-    fro1.innerHTML = 'Kup za:<br> 1 kojota a 40 hadů'
-    pig1.innerHTML = 'Kup za:<br> 1 medvěda a 6 jezevců'
-    sea1.innerHTML = 'Kup za:<br> 1 prase a 9 vyder'
-
-    lm1.innerHTML = 'Kup za 20 koček'
-    lt1.innerHTML = 'Kup za 5 citrónů'
-
-    // Buying for clicks
-    Cct1.innerHTML =  'Kup za 1,2 k kliků'
-    Cfx1.innerHTML =  'Kup za 1,8 k kliků'
-    Cwl1.innerHTML =  'Kup za 10 k kliků'
-    Chm1.innerHTML =  'Kup za 13 k kliků'
-    Cwh1.innerHTML =  'Kup za 22 k kliků'
-    Ccp1.innerHTML =  'Kup za 28 k kliků'
-    Csn1.innerHTML =  'Kup za 150 k kliků'
-    Cch1.innerHTML =  'Kup za 350 k kliků'
-    Cgi1.innerHTML =  'Kup za 880 k kliků'
-    Cot1.innerHTML =  'Kup za 950 k kliků'
-    Cra1.innerHTML =  'Kup za 1,5 mil kliků'
-    Cba1.innerHTML =  'Kup za 3,5 mil kliků'
-    Csq1.innerHTML =  'Kup za 5,5 mil kliků'
-    Ccha1.innerHTML = 'Kup za 7,7 mil kliků'
-    Cchi1.innerHTML = 'Kup za 13 mil kliků'
-    Cwom1.innerHTML = 'Kup za 31 mil kliků'
-    Cfro1.innerHTML = 'Kup za 99 mil kliků'
-    Cpig1.innerHTML = 'Kup za 126,5 mil kliků'
-    Csea1.innerHTML = 'Kup za 143 mil kliků'
-  }else{
-    disclick.innerHTML=`You've got ${fornum(items.clicks)} clicks`;
+  if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
+    document.querySelector('#disclick').innerHTML=`<pre>Máš ${fornum(bigredbutton.items.special[0].number)} kliků`;
     document.querySelector('#clickMake').innerHTML = `+${fornum(cs)}/s`
-    //* DISPLAYING THE GENERATION OF CLICKS
-    function displayClickGen(animal, make, upgrade, number){
-      const animalElement = document.querySelector(`#${animal}Make`);
+
+    //* DISPLAYING THE NUMBER OF ANIMALS
+    function czechDisplayAnimal(animal, number){
+      const animalElement = document.querySelector(`#dis${animal}`);
 
       if(animalElement){
-          animalElement.innerHTML = `+ ${fornum(make*upgrade*number*bigredbutton.settings.prestige)}/s`;
+          animalElement.innerHTML = `Máš jich ${fornum(number)}`;
       }
     }
 
-    bigredbutton.items.animals.forEach(({ name , make , upgrade , number}) => {
-        displayClickGen(name, make, upgrade, number);
+    bigredbutton.items.animals.forEach(({ name, number }) => {
+      czechDisplayAnimal(name, number);
     });
+
+
+    //* DISPLAYING THE COST OF ANIMAL BUY
+    function purchaseTextCzech(animal, text = null){
+      const animalElement = document.querySelector(`#${animal}1`);
+  
+      if(animalElement){
+          if(text){
+              animalElement.innerHTML = text;
+          }else{
+              animalElement.innerHTML = `${animal}`;
+          }
+      }
+    }
+
+    const purchases = [
+      { id: 'dog', text: 'Kup za 100 kliků' },
+      { id: 'cat', text: 'Kup za 10 psů' },
+      { id: 'fox', text: 'Kup za 15 psů' },
+      { id: 'wolf', text: 'Kup za:<br> 5 lišek a 6 psů' },
+      { id: 'hamster', text: 'Kup za:<br> 1 vlka a 2 kočky' },
+      { id: 'whale', text: 'Kup za:<br> 2 vlky a 1 křečeka' },
+      { id: 'capybara', text: 'Kup za:<br> 1 velrybu a 4 koček' },
+      { id: 'snake', text: 'Kup za:<br> 1 kapybaru a 4 lišky' },
+      { id: 'cheetah', text: 'Kup za:<br> 2 hady a 20 psů' },
+      { id: 'giraffe', text: 'Kup za:<br> 1 geparda a 2 velryby' },
+      { id: 'otter', text: 'Kup za:<br> 2 žirafy a 3 hady' },
+      { id: 'racoon', text: 'Kup za:<br> 1 vydru a 4 kapybary' },
+      { id: 'badger', text: 'Kup za:<br> 1 mývala a 6 křečeků' },
+      { id: 'squirrel', text: 'Kup za:<br> 1 jezevce a 2 gepardy' },
+      { id: 'chameleon', text: 'Kup za:<br> 1 veverku a 2 vydry'},
+      { id: 'chicken', text: 'Kup za:<br> 1 chameleóna a 4 žirafy' },
+      { id: 'wombat', text: 'Kup za:<br> 1 slepici a 6 velryb' },
+      { id: 'frog', text: 'Kup za:<br> 1 vombata a 1 chameleóna' },
+      { id: 'pig', text: 'Kup za:<br> 2 žáby a 5 mývalů' },
+      { id: 'seal', text: 'Kup za:<br> 2 prasata a 10 lišek' }
+    ];
+    function getPurchaseTextCzech(animalName){
+      const purchase = purchases.find(p => p.id === animalName);
+      return purchase ? purchase.text : null;
+    }
+    //? Updating animal names from bigredbutton.items.animals with purchase text
+    bigredbutton.items.animals.forEach(({ name }) => {
+      const text = getPurchaseTextCzech(name);
+      purchaseTextCzech(name, text);
+    });
+
+
+    //* DISPLAYING THE COST OF ANIMAL BUY
+    animal.forEach(a => {
+      const animalId = `dis${a.name}Name`;
+      const animalElement = document.getElementById(animalId);
+
+      if(animalElement){
+        animalElement.innerHTML = transtaleAnimalName(a.name);
+      }
+    });
+
+    function transtaleAnimalName(animalName){
+      const translation = {
+        dog: 'Psi',
+        cat: 'Kočky',
+        fox: 'Lišky',
+        wolf: 'Vlci',
+        hamster: 'Křečci',
+        whale: 'Velryby',
+        capybara: 'Kapybary',
+        snake: 'Hadi',
+        cheetah: 'Gepardi',
+        giraffe: 'Žirafy',
+        otter: 'Vydry',
+        racoon: 'Mývalové',
+        badger: 'Jezevci',
+        squirrel: 'Veverky',
+        chameleon: 'Chameleóni',
+        chicken: 'Slepice',
+        wombat: 'Wombati',
+        frog: 'Žáby',
+        pig: 'Prasata',
+        seal: 'Tuleni',
+      };
+      return translation[animalName] || animalName;
+    }
+
+
+    /*
+    dislem
+    `Máš fornum citrónů!`
+
+    dislt3
+    `Máš fornum citronovníků!<br>
+    Tvořící fornum citrónů<br>za 100 sec.`
+
+    dislemName.innerHTML=`Citróny`
+    dislt3Name.innerHTML=`Citrónovníky`
+
+    lm1.innerHTML = 'Kup za 20 koček'
+    lt1.innerHTML = 'Kup za 5 citrónů'
+*/
+    
+
+    //* BUYING FOR CLICKS DISPLAY
+    function czechClickDisplay(animal, cost){
+      const animalElement = document.querySelector(`#C${animal}1`);
+
+      if(animalElement){
+          animalElement.innerHTML = `Kup za ${fornum(cost)} kliků!`;
+      }
+    }
+    bigredbutton.items.animals.forEach(({ name , cost }) => {
+        czechClickDisplay(name, cost);
+    });
+
+  }else{
+    document.querySelector('#disclick').innerHTML=`You've got ${fornum(bigredbutton.items.special[0].number)} clicks`;
+    document.querySelector('#clickMake').innerHTML = `+${fornum(cs)}/s`;
 
 
     //* DISPLAYING THE NUMBER OF ANIMALS
@@ -195,6 +186,7 @@ function loadShop(){
       displayAnimalName(name);
     });
 
+
     //* DISPLAYING THE COST OF ANIMAL BUY
     function purchaseText(animal, text = null){
       const animalElement = document.querySelector(`#${animal}1`);
@@ -209,35 +201,32 @@ function loadShop(){
     }
 
     const purchases = [
-      { id: 'dog', text: 'Buy for 10 dogs' },
-      { id: 'cat', text: 'Buy for 15 dogs' },
-      { id: 'fox', text: 'Buy for:<br> 6 dogs and 5 foxes' },
-      { id: 'wolf', text: 'Buy for:<br> 1 wolf and 2 cats' },
-      { id: 'hamster', text: 'Buy for:<br>' },
-      { id: 'whale', text: 'Buy for 2 wolfs' },
+      { id: 'dog', text: 'Buy for 100 clicks' },
+      { id: 'cat', text: 'Buy for 10 dogs' },
+      { id: 'fox', text: 'Buy for 15 dogs' },
+      { id: 'wolf', text: 'Buy for:<br> 5 foxes and 6 dogs' },
+      { id: 'hamster', text: 'Buy for:<br> 1 wolf and 2 cats' },
+      { id: 'whale', text: 'Buy for:<br> 2 wolfs and 1 hamster' },
       { id: 'capybara', text: 'Buy for:<br> 1 whale and 4 cats' },
-      { id: 'snake', text: 'Buy for:<br> 2 whales and 4 hamsters' },
-      { id: 'cheetah', text: 'Buy for:<br> 2 snakes and 2 platypuses' },
-      { id: 'giraffe', text: 'Buy for:<br> 1 python and 20 foxes' },
-      { id: 'otter', text: 'Buy for:<br> 1 giraffe and 2 capybaras' },
-      { id: 'racoon', text: 'Buy for:<br> 1 meerkat and 7 porcupines' },
-      { id: 'badger', text: 'Buy for:<br> 1 owl and 2 pythons' },
-      { id: 'squirrel', text: 'Buy for:<br> 1 badger and 5 cheetah' },
-      { id: 'chameleon', text: 'Buy for:<br> 1 squirrel and 2 meerkats' },
-      { id: 'chicken', text: 'Buy for:<br> 2 squirrels and 1 owl' },
-      { id: 'wombat', text: 'Buy for:<br> 1 chicken and 2 chameleons' },
-      { id: 'frog', text: 'Buy for:<br> 1 coyote and 40 snakes' },
-      { id: 'pig', text: 'Buy for:<br> 1 bear and 6 badgers' },
-      { id: 'seal', text: 'Buy for:<br> 1 pig and 9 otters' }
+      { id: 'snake', text: 'Buy for:<br> 1 capybara and 4 foxes' },
+      { id: 'cheetah', text: 'Buy for:<br> 2 snakes and 20 dogs' },
+      { id: 'giraffe', text: 'Buy for:<br> 1 cheetah and 2 whales' },
+      { id: 'otter', text: 'Buy for:<br> 2 giraffes and 3 snakes' },
+      { id: 'racoon', text: 'Buy for:<br> 1 otter and 4 capybaras' },
+      { id: 'badger', text: 'Buy for:<br> 1 racoon and 6 hamsters' },
+      { id: 'squirrel', text: 'Buy for:<br> 1 badger and 2 cheetahs' },
+      { id: 'chameleon', text: 'Buy for:<br> 1 squirrel and 2 otters'},
+      { id: 'chicken', text: 'Buy for:<br> 1 chameleon and 4 giraffes' },
+      { id: 'wombat', text: 'Buy for:<br> 1 chicken and 6 whales' },
+      { id: 'frog', text: 'Buy for:<br> 1 wombat and 1 chameleon' },
+      { id: 'pig', text: 'Buy for:<br> 2 frogs and 5 racoons' },
+      { id: 'seal', text: 'Buy for:<br> 2 pigs and 10 foxes' }
     ];
-
-    // Function to find corresponding text for a given animal
     function getPurchaseText(animalName){
       const purchase = purchases.find(p => p.id === animalName);
       return purchase ? purchase.text : null;
     }
-
-    // Updating animal names from bigredbutton.items.animals with purchase text
+    //? Updating animal names from bigredbutton.items.animals with purchase text
     bigredbutton.items.animals.forEach(({ name }) => {
       const text = getPurchaseText(name);
       purchaseText(name, text);
@@ -252,11 +241,12 @@ function loadShop(){
           animalElement.innerHTML = `Buy for ${fornum(cost)} clicks!`;
       }
     }
-
     bigredbutton.items.animals.forEach(({ name , cost }) => {
         internationalClicksDisplay(name, cost);
     });
-  }/*
+  }
+  
+  /*
     dislem.innerHTML=
     `You have ${fornum(items.lemons)}!`
     dislt3.innerHTML=
@@ -268,296 +258,121 @@ function loadShop(){
 
     lm1.innerHTML = 'Buy for 20 cats'
     lt1.innerHTML = 'Buy for 5 lemons'*/
+
+
+    bigredbutton.items.animals.forEach(({ name , make , upgrade , number}) => {
+      displayClickGen(name, make, upgrade, number);
+  });
 }
 
 // uploadShop
 function uploadShop(){update();loadShop();}
 
-// Nákupy 
+/*
+               _____   _                     
+              / ____| | |                    
+             | (___   | |__     ___     _ __  
+              \___ \  | '_ \   / _ \   | '_ \ 
+              ____) | | | | | | (_) |  | |_) |
+             |_____/  |_| |_|  \___/   | .__/ 
+                                       | |    
+                                       |_|    
+*/
 
-let animal = bigredbutton.items.animals;
-
-function numHis(animals, num){
-  animal[animals].number += num;
-  animal[animals].history += num;
+function numHis(animalIndex, num){
+  animal[animalIndex].number += num;
+  animal[animalIndex].history += num;
 }
 
-function buydog(){
-  if(bigredbutton.items.special[0].number>=100){
-    bigredbutton.items.special[0] -= 100;
-    numHis(0,1);
+function buyAnimal(animalName, conditions, amount = 1){
+  const animalIndex = animal.findIndex(a => a.name === animalName);
+  if(animalIndex === -1) return; //? Error 404: Animal
+
+  //? Calcs the max you can buy
+  let maxAffordable = Infinity;
+  for(const [item, requiredAmount] of Object.entries(conditions)){
+    const resourceIndex = animal.findIndex(a => a.name === item);
+    if(resourceIndex === -1) return; //? Requirement doesn't exist
+
+    const availableAmount = animal[resourceIndex].number;
+    const affordableByThisResource = Math.floor(availableAmount/requiredAmount);
+
+    //? What limits you
+    maxAffordable = Math.min(maxAffordable, affordableByThisResource);
   }
-  uploadShop();
-}
-function buycat(){
-  if(items.dogs>=10){
-    items.dogs-=10;
-    items.cats+=1;
+
+  //? Was 'max' used?
+  const buyAmount = (amount === 'max') ? maxAffordable : Math.min(amount, maxAffordable);
+
+  if(buyAmount === 0) return; //? Broke
+
+  for(const [item, requiredAmount] of Object.entries(conditions)){
+    const resourceIndex = animal.findIndex(a => a.name === item);
+    animal[resourceIndex].number -= requiredAmount * buyAmount;
   }
-  uploadShop();
-}
-function buyfox(){
-  if(items.dogs>=15){
-    items.dogs-=15;
-    items.foxes+=1;
-  }
-  uploadShop();
-}
-function buywol(){
-  if(items.dogs>=6 && items.foxes>=5){
-    items.dogs-=6;
-    items.foxes-=5;
-    items.wolfs+=1;
-  }
-  uploadShop();
-}
-function buyham(){
-  if(items.wolfs>=1 && items.cats>=2){
-    items.wolfs-=1;
-    items.cats-=2;
-    items.hamsters+=1;
-  }
-  uploadShop();
-}
-function buywha(){
-  if(items.wolfs>=2){
-    items.wolfs-=2;
-    items.whales+=1;
-  }
-  uploadShop();
-}
-function buycap(){
-  if(items.whales>=1 && items.cats>=4){
-    items.whales-=1;
-    items.cats-=4;
-    items.capybaras+=1;
-  } 
-  uploadShop();
-}
-function buypla(){
-  if(items.capybaras>=1 && items.wolfs>=1){
-    items.capybaras-=1;
-    items.wolfs-=1;
-    items.platapuses+=1;
-  } 
-  uploadShop();
-}
-function buypor(){
-  if(items.platapuses>=1 && items.whales>=1){
-    items.platapuses-=1;
-    items.whales-=1;
-    items.porcupines++;
-  } 
-  uploadShop();
-}
-function buyhip(){
-  if(items.porcupines>=1 && items.hamsters>=2){
-    items.porcupines-=1;
-    items.hamsters-=2;
-    items.hippos++;
-  } 
-  uploadShop();
-}
-function buysna(){
-  if(items.whales>=2 && items.hamsters>=4){
-    items.whales-=2;
-    items.hamsters-=4;
-    items.snakes++;
-  } 
-  uploadShop();
-}
-function buyche(){
-  if(items.snakes>=2 && items.platapuses>=2){
-    items.snakes-=2;
-    items.platapuses-=2;
-    items.cheetahs++;
-  } 
-  uploadShop();
-}
-function buypyt(){
-  if(items.cheetahs>=1 && items.hippos>=5){
-    items.cheetahs-=1;
-    items.hippos-=5;
-    items.pythons++;
-  } 
-  uploadShop();
-}
-function buygir(){
-  if(items.pythons>=1 && items.foxes>=20){
-    items.pythons-=1;
-    items.foxes-=20;
-    items.girrafes++;
-  } 
-  uploadShop();
-}
-function buyoth(){
-  if(items.girrafes>=1 && items.capybaras>=2){
-    items.girrafes-=1;
-    items.capybaras-=2;
-    items.otters++;
-  } 
-  uploadShop();
-}
-function buymee(){
-  if(items.otters>=1 && items.whales>=3){
-    items.otters-=1;
-    items.whales-=3;
-    items.meerkat++;
-  } 
-  uploadShop();
-}
-function buyrac(){
-  if(items.meerkat>=1 && items.porcupines>=7){
-    items.meerkat-=1;
-    items.porcupines-=7;
-    items.raccoon++;
-  } 
-  uploadShop();
-}
-function buyowl(){
-  if(items.raccoon>=1 && items.snakes>=1){
-    items.raccoon-=1;
-    items.snakes-=1;
-    items.owl++;
-  } 
-  uploadShop();
-}
-function buybad(){
-  if(items.owl>=1 && items.pythons>=2){
-    items.owl-=1;
-    items.pythons-=2;
-    items.badger++;
-  } 
-  uploadShop();
-}
-function buysqu(){
-  if(items.badger>=1 && items.cheetahs>=5){
-    items.badger-=1;
-    items.cheetahs-=5;
-    items.squirrel++;
-  } 
-  uploadShop();
-}
-function buycha(){
-  if(items.squirrel>=1 && items.meerkat>=2){
-    items.squirrel-=1;
-    items.meerkat-=2;
-    items.chameleon++;
-  } 
-  uploadShop();
-}
-function buychi(){
-  if(items.squirrel>=2 && items.owl>=1){
-    items.squirrel-=2;
-    items.owl-=1;
-    items.chicken++;
-  } 
-  uploadShop();
-}
-function buywom(){
-  if(items.chicken>=1 && items.chameleon>=2){
-    items.chicken-=1;
-    items.chameleon-=2;
-    items.wombat++;
-  } 
-  uploadShop();
-}
-function buypan(){
-  if(items.wombat>=1 && items.chicken>=2){
-    items.wombat-=1;
-    items.chicken-=2;
-    items.panther++;
-  } 
-  uploadShop();
-}
-function buycoy(){
-  if(items.panther>=1 && items.chameleon>=4){
-    items.panther-=1;
-    items.chameleon-=4;
-    items.coyote++;
-  } 
-  uploadShop();
-}
-function buyfro(){
-  if(items.coyote>=1 && items.snakes>=40){
-    items.coyote-=1;
-    items.snakes-=40;
-    items.frog++;
-  } 
-  uploadShop();
-}
-function buybea(){
-  if(items.frog>=1 && items.girrafes>=5){
-    items.frog-=1;
-    items.girrafes-=5;
-    items.bear++;
-  } 
-  uploadShop();
-}
-function buypig(){
-  if(items.bear>=1 && items.badger>=6){
-    items.bear-=1;
-    items.badger-=6;
-    items.pig++;
-  } 
-  uploadShop();
-}
-function buysea(){
-  if(items.pig>=1 && items.otters>=9){
-    items.pig-=1;
-    items.otters-=9;
-    items.seal++;
-  } 
+
+  numHis(animalIndex, buyAmount);
   uploadShop();
 }
 
-function buylem(){
+function buycat(){buyAnimal('cat',{ dog: 10 });}
+function mxCcat(){buyAnimal('cat',{ dog: 10 }, 'max');}
+function buyfox(){buyAnimal('fox',{ dog: 15 });}
+function mxCfox(){buyAnimal('fox',{ dog: 15 }, 'max');}
+function buywolf(){buyAnimal('wolf',{ dog: 6, fox: 5 });}
+function mxCwolf(){buyAnimal('wolf',{ dog: 6, fox: 5 }, 'max');}
+function buyhamster(){buyAnimal('hamster',{ wolf: 1, cat: 2 });}
+function mxChamster(){buyAnimal('hamster',{ wolf: 1, cat: 2 }, 'max');}
+function buywhale(){buyAnimal('whale', { wolf: 2, hamster: 1});}
+function mxCwhale(){buyAnimal('whale', { wolf: 2, hamster: 1}, 'max');}
+function buycapybara(){buyAnimal('capybara', { whale: 1, cat: 4});}
+function mxCcapybara(){buyAnimal('capybara', { whale: 1, cat: 4}, 'max');}
+function buysnake(){buyAnimal('snake', { capybara: 1, fox: 4 });}
+function mxCsnake(){buyAnimal('snake', { capybara: 1, fox: 4 }, 'max');}
+function buycheetah(){buyAnimal('cheetah', { snake: 2, dog: 20 });}
+function mxCcheetah(){buyAnimal('cheetah', { snake: 2, dog: 20 }, 'max');}
+function buygiraffe(){buyAnimal('giraffe', { cheetah: 1, whale: 2 });}
+function mxCgiraffe(){buyAnimal('giraffe', { cheetah: 1, whale: 2 }, 'max');}
+function buyotter(){buyAnimal('otter', { giraffe: 2, snake: 3 });}
+function mxCotter(){buyAnimal('otter', { giraffe: 2, snake: 3 }, 'max');}
+function buyracoon(){buyAnimal('racoon', { otter: 1, capybara: 4 });}
+function mxCracoon(){buyAnimal('racoon', { otter: 1, capybara: 4 }, 'max');}
+function buybadger(){buyAnimal('badger', { racoon: 1, hamster: 6 });}
+function mxCbadger(){buyAnimal('badger', { racoon: 1, hamster: 6 }, 'max');}
+function buysquirrel(){buyAnimal('squirrel', { badger: 1, cheetah: 2 });}
+function mxCsquirrel(){buyAnimal('squirrel', { badger: 1, cheetah: 2 }, 'max');}
+function buychameleon(){buyAnimal('chameleon', { squirrel: 1, otter: 2 });}
+function mxCchameleon(){buyAnimal('chameleon', { squirrel: 1, otter: 2 }, 'max');}
+function buychicken(){buyAnimal('chicken', { chameleon: 1, giraffe: 4 });}
+function mxCchicken(){buyAnimal('chicken', { chameleon: 1, giraffe: 4 }, 'max');}
+function buywombat(){buyAnimal('wombat', { chicken: 1, whale: 6 });}
+function mxCwombat(){buyAnimal('wombat', { chicken: 1, whale: 6 }, 'max');}
+function buyfrog(){buyAnimal('frog', { wombat: 1, chameleon: 1 });}
+function mxCfrog(){buyAnimal('frog', { wombat: 1, chameleon: 1 }, 'max');}
+function buypig(){buyAnimal('pig', { frog: 2, racoon: 5 });}
+function mxCpig(){buyAnimal('pig', { frog: 2, racoon: 5 }, 'max');}
+function buyseal(){buyAnimal('seal', { pig: 2, fox: 10 });}
+function mxCseal(){buyAnimal('seal', { pig: 2, fox: 10 }, 'max');}
+
+/*
+ _
+| |
+| |
+| |
+| |__
+|____|
+
+*/
+function buylemom(){
+  return;
   if(items.cats>=20){
     items.cats-=20;
     items.lemons+=1;
   }
   uploadShop();
 }
-function buylt3(){
-  if(items.lemons>=5){
-    items.lemons-=5;
-    items.lt3+=1;
-  }
-  uploadShop();
-}
-
-/*
- __  __                       _____   _                     
-|  \/  |                     / ____| | |                    
-| \  / |   __ _  __  __     | (___   | |__     ___     _ __  
-| |\/| |  / _` | \ \/ /      \___ \  | '_ \   / _ \   | '_ \ 
-| |  | | | (_| |  >  <       ____) | | | | | | (_) |  | |_) |
-|_|  |_|  \__,_| /_/\_\     |_____/  |_| |_|  \___/   | .__/ 
-                                                      | |    
-                                                      |_|    
-*/
-function mxdg(){
-  const amount = Math.floor(items.clicks / 100)
-  
-  items.clicks -= amount * 100
-  items.dogs += amount
-  uploadShop();
-}
-function mxct(){
-  const amount = Math.floor(items.dogs / 10)
-  
-  items.dogs -= amount * 10
-  items.cats += amount
-  uploadShop();
-}
-function mxfx(){
-  const amount = Math.floor(items.dogs/15)
-
-  items.dogs -= amount*15
-  items.foxes += amount
-  uploadShop();
-}
-function mxlm(){
+function mxlemon(){
+  return;
   let RanLemCost = 20;////Math.floor(Math.random()*100);
   const amount = Math.floor(items.cats/RanLemCost)
   
@@ -565,391 +380,133 @@ function mxlm(){
   items.lemons += amount
   uploadShop();
 }
+function buylt3(){
+  return;
+  if(items.lemons>=5){
+    items.lemons-=5;
+    items.lt3+=1;
+  }
+  uploadShop();
+}
 function mxlt(){
+  return;
   const amount = Math.floor(items.lemons/5)
   
   items.lemons -= amount*5
   items.lt3 += amount
   uploadShop()
 }
-function mxwh(){
-  const amount = Math.floor(items.wolfs/2);
-  
-  items.wolfs -= amount*2;
-  items.whales += amount;
-  uploadShop();
-}
-function mxwl(){
-  const amount = Math.min(Math.floor(items.foxes/5), Math.floor(items.dogs/6));
 
-  if(amount > 0){
-    items.foxes -= amount*5
-    items.dogs  -= amount*6
-    items.wolfs += amount
-  }
-  uploadShop();
-}
-function mxhm(){
-  const amount = Math.min(Math.floor(items.wolfs/1), Math.floor(items.cats/2));
+/* SHOPPING WITH ONLY
+               _____   _   _          _          
+              / ____| | | (_)        | |         
+             | |      | |  _    ___  | | __  ___ 
+             | |      | | | |  / __| | |/ / / __|
+             | |____  | | | | | (__  |   <  \__ \
+              \_____| |_| |_|  \___| |_|\_\ |___/
+*/
 
-  if(amount > 0){
-    items.wolfs -= amount*1;
-    items.cats  -= amount*2;
-    items.hamsters += amount;
-  }
-  uploadShop();
-}
-function mxcp(){
-  const amount = Math.min(Math.floor(items.whales/1), Math.floor(items.cats/4));
-  
-  if(amount > 0){
-    items.whales -= amount*1;
-    items.cats  -= amount*4;
-    items.capybaras += amount;
-  }
-  uploadShop();
-}
-function mxpl(){
-  const amount = Math.min(Math.floor(items.capybaras/1), Math.floor(items.wolfs/1));
-  
-  if(amount > 0){
-    items.capybaras -= amount*1;
-    items.wolfs  -= amount*1;
-    items.platapuses += amount;
-  }
-  uploadShop();
-}
-function mxpr(){
-  const amount = Math.min(Math.floor(items.platapuses/1), Math.floor(items.whales/1));
-  
-  if(amount > 0){
-    items.platapuses -= amount*1;
-    items.whales -= amount*1;
-    items.porcupines += amount;
-  }
-  uploadShop();
-}
-function mxhi(){
-  const amount = Math.min(Math.floor(items.porcupines/1), Math.floor(items.hamsters/2));
-  
-  if(amount > 0){
-    items.porcupines -= amount*1;
-    items.hamsters -= amount*2;
-    items.hippos += amount;
-  }
-  uploadShop();
-}
-function mxsn(){
-  const amount = Math.min(Math.floor(items.whales/2), Math.floor(items.hamsters/4));
-  
-  if(amount > 0){
-    items.whales -= amount*2;
-    items.hamsters -= amount*4;
-    items.snakes += amount;
-  }
-  uploadShop();
-}
-function mxch(){
-  const amount = Math.min(Math.floor(items.snakes/2), Math.floor(items.platapuses/2));
-  
-  if(amount > 0){
-    items.snakes -= amount*2;
-    items.platapuses -= amount*2;
-    items.cheetahs += amount;
-  }
-  uploadShop();
-}
-function mxpy(){
-  const amount = Math.min(Math.floor(items.cheetahs/1), Math.floor(items.hippos/5));
-  
-  if(amount > 0){
-    items.cheetahs -= amount*1;
-    items.hippos -= amount*5;
-    items.pythons += amount;
-  }
-  uploadShop();
-}
-function mxgi(){
-  const amount = Math.min(Math.floor(items.pythons/1), Math.floor(items.foxes/20));
-  
-  if(amount){
-    items.pythons -= amount*1;
-    items.foxes -= amount*20;
-    items.girrafes += amount;
-  }
-  uploadShop();
-}
-function mxot(){
-  const amount = Math.min(Math.floor(items.girrafes/1), Math.floor(items.capybaras/2));
-  
-  if(amount > 0){
-    items.girrafes -= amount*1;
-    items.capybaras -= amount*2;
-    items.otters += amount;
-  }
-  uploadShop();
-}
-function mxme(){
-  const amount = Math.min(Math.floor(items.otters/1), Math.floor(items.whales/3));
-  
-  if(amount > 0){
-    items.otters -= amount*1;
-    items.whales -= amount*3;
-    items.meerkat += amount;
-  }
-  uploadShop();
-}
-function mxra(){
-  const amount = Math.min(Math.floor(items.meerkat/1), Math.floor(items.porcupines/7));
-  
-  if(amount > 0){
-    items.meerkat -= amount*1;
-    items.porcupines -= amount*7;
-    items.raccoon += amount;
-  }
-  uploadShop();
-}
-function mxow(){
-  const amount = Math.min(Math.floor(items.raccoon/1), Math.floor(items.snakes/1));
-  
-  if(amount > 0){
-    items.raccoon -= amount*1;
-    items.snakes -= amount*1;
-    items.owl += amount;
-  }
-  uploadShop();
-}
-function mxba(){
-  const amount = Math.min(Math.floor(items.owl/1), Math.floor(items.pythons/2));
-  
-  if(amount > 0){
-    items.owl -= amount*1;
-    items.pythons -= amount*2;
-    items.badger += amount;
-  }
-  uploadShop();
-}
-function mxsq(){
-  const amount = Math.min(Math.floor(items.badger/1), Math.floor(items.cheetahs/5));
-  
-  if(amount > 0){
-    items.badger -= amount*1;
-    items.cheetahs -= amount*5;
-    items.squirrel += amount;
-  }
-  uploadShop();
-}
-function mxcha(){
-  const amount = Math.min(Math.floor(items.squirrel/1), Math.floor(items.meerkat/2));
-  if(amount > 0){
-    items.squirrel -= amount*1;
-    items.meerkat -= amount*2;
-    items.chameleon += amount;
-  }
-  uploadShop();
-}
-function mxchi(){
-  const amount = Math.min(Math.floor(items.squirrel/2), Math.floor(items.owl/1));
-  if(amount > 0){
-    items.squirrel -= amount*2;
-    items.owl -= amount*1;
-    items.chicken += amount;
-  }
-  uploadShop();
-}
-function mxwom(){
-  const amount = Math.min(Math.floor(items.chicken/1), Math.floor(items.chameleon/2));
-  if(amount > 0){
-    items.chicken -= amount*1;
-    items.chameleon -= amount*2;
-    items.wombat += amount;
-  }
-  uploadShop();
-}
-function mxpan(){
-  const amount = Math.min(Math.floor(items.wombat/1), Math.floor(items.chicken/2));
-  if(amount > 0){
-    items.wombat -= amount*1;
-    items.chicken -= amount*2;
-    items.panther += amount;
-  }
-  uploadShop();
-}
-function mxcoy(){
-  const amount = Math.min(Math.floor(items.panther/1), Math.floor(items.chameleon/4));
-  if(amount > 0){
-    items.panther -= amount*1;
-    items.chameleon -= amount*4;
-    items.coyote += amount;
-  }
-  uploadShop();
-}
-function mxfro(){
-  const amount = Math.min(Math.floor(items.coyote/1), Math.floor(items.snakes/40));
-  if(amount > 0){
-    items.coyote -= amount*1;
-    items.snakes -= amount*40;
-    items.frog += amount;
-  }
-  uploadShop();
-}
-function mxbea(){
-  const amount = Math.min(Math.floor(items.frog/1), Math.floor(items.girrafes/5));
-  if(amount > 0){
-    items.frog -= amount*1;
-    items.girrafes -= amount*5;
-    items.bear += amount;
-  }
-  uploadShop();
-}
-function mxpig(){
-  const amount = Math.min(Math.floor(items.bear/1), Math.floor(items.badger/6));
-  if(amount > 0){
-    items.bear -= amount*1;
-    items.badger -= amount*6;
-    items.pig += amount;
-  }
-  uploadShop();
-}
-function mxsea(){
-  const amount = Math.min(Math.floor(items.pig/1), Math.floor(items.otters/9));
-  if(amount > 0){
-    items.pig -= amount*1;
-    items.otters -= amount*9;
-    items.seal += amount;
-  }
-  uploadShop();
-}
+function buyAnimalWithClicks(animalName, amount = 1){
+  const animal = bigredbutton.items.animals.find(a => a.name === animalName);
+  const clicksAvailable = bigredbutton.items.special[0].number; //Clicks
+  const costInClicks = animal?.cost; //? optional chaining. It is used to safely access properties of an object that might be null or undefined.
 
-/* SHOPPING WITH ONLY CLICKS */
+  if(animal){
+    const maxAffordable = Math.floor(clicksAvailable/costInClicks);
+    //? If amount is 'max' use maxAffordable
+    const buyAmount = (amount === 'max') ? maxAffordable : Math.min(amount, maxAffordable);
 
-function canimal(animal, cost){
-  if(items.clicks >= cost){
-    items[animal]++;
-    items.clicks -= cost;
-    uploadShop();
+    if(buyAmount >= 0){
+      const totalCost = costInClicks * buyAmount;
+
+      bigredbutton.items.special[0].number -= totalCost;
+      numHis(bigredbutton.items.animals.indexOf(animal), buyAmount);
+      uploadShop();
+    }else{
+      console.log(`Not enough clicks to buy ${amount} ${animalName}(s).`);
+    }
+  }else{
+    console.log(`Animal not found: ${animalName}`);
   }
 }
 
-function cManimal(animal, cost) {
-  const quantity = Math.floor(items.clicks / cost);
-
-  if(quantity > 0){
-    items[animal] += quantity;
-    items.clicks -= quantity * cost;
-    uploadShop();
-  }
-}
+// dog
+function buydog(){buyAnimalWithClicks('dog');}
+function mxdog(){buyAnimalWithClicks('dog', 'max')}
 
 // cat
-function buyCcat(){canimal('cats', 1200)}
-function mxCct(){cManimal('cats', 1200)}
+function buyCcat(){buyAnimalWithClicks('cat')}
+function mxcat(){buyAnimalWithClicks('cat', 'max')}
 
 // fox
-function buyCfox(){canimal('foxes', 1800)}
-function mxCfx(){cManimal('foxes', 1800)}
+function buyCfox(){buyAnimalWithClicks('fox')}
+function mxfox(){buyAnimalWithClicks('fox', 'max')}
 
 // wolf
-function buyCwol(){canimal('wolfs', 10000)}
-function mxCwl(){cManimal('wolfs', 10000)}
+function buyCwolf(){buyAnimalWithClicks('wolf')}
+function mxwolf(){buyAnimalWithClicks('wolf', 'max')}
 
 // hamster
-function buyCham(){canimal('hamsters', 13000)}
-function mxChm(){cManimal('hamsters', 13000)}
+function buyChamster(){buyAnimalWithClicks('hamster')}
+function mxhamster(){buyAnimalWithClicks('hamster', 'max')}
 
 // whale
-function buyCwha(){canimal('whales', 22000)}
-function mxCwh(){cManimal('whales', 22000)}
+function buyCwhale(){buyAnimalWithClicks('whale')}
+function mxwhale(){buyAnimalWithClicks('whale', 'max')}
 
 // cappybarra
-function buyCcap(){canimal('capybaras', 28000)}
-function mxCcp(){cManimal('capybaras', 28000)}
-
-// platypussy
-function buyCpla(){canimal('platapuses', 42000)}
-function mxCpl(){cManimal('platapuses', 42000)}
-
-// porcupine
-function buyCpor(){canimal('porcupines', 70000)}
-function mxCpr(){cManimal('porcupines', 70000)}
-
-// hippopopopotamusss
-function buyChip(){canimal('hippos', 100000)}
-function mxChi(){cManimal('hippos', 100000)}
+function buyCcapybara(){buyAnimalWithClicks('capybara')}
+function mxcapybara(){buyAnimalWithClicks('capybara', 'max')}
 
 // Snuk
-function buyCsna(){canimal('snakes', 150000)}
-function mxCsn(){cManimal('snakes', 150000)}
+function buyCsnake(){buyAnimalWithClicks('snake')}
+function mxsnake(){buyAnimalWithClicks('snake', 'max')}
 
 // Chetuch
-function buyCche(){canimal('cheetahs', 350000)}
-function mxCch(){cManimal('cheetahs', 350000)}
-
-// .py
-function buyCpyt(){canimal('pythons', 820000)}
-function mxCpy(){cManimal('pythons', 820000)}
+function buyCcheetah(){buyAnimalWithClicks('cheetah')}
+function mxcheetah(){buyAnimalWithClicks('cheetah', 'max')}
 
 // Gurllaf
-function buyCgir(){canimal('girrafes', 880000)}
-function mxCgi(){cManimal('girrafes', 880000)}
+function buyCgiraffe(){buyAnimalWithClicks('giraffe')}
+function mxgiraffe(){buyAnimalWithClicks('giraffe', 'max')}
 
 // Other space
-function buyCoth(){canimal('otters', 950000)}
-function mxCot(){cManimal('otters', 950000)}
-
-// Mii Cat
-function buyCmee(){canimal('meerkat', 1000000)}
-function mxCme(){cManimal('meerkat', 1000000)}
+function buyCotter(){buyAnimalWithClicks('otter')}
+function mxotter(){buyAnimalWithClicks('otter', 'max')}
 
 // C rac
-function buyCrac(){canimal('raccoon', 1500000)}
-function mxCra(){cManimal('raccoon', 1500000)}
-
-// O
-function buyCowl(){canimal('owl', 1800000)}
-function mxCow(){cManimal('owl', 1800000)}
+function buyCracoon(){buyAnimalWithClicks('racoon')}
+function mxracoon(){buyAnimalWithClicks('racoon', 'max')}
 
 // bad
-function buyCbad(){canimal('badger', 3500000)}
-function mxCba(){cManimal('badger', 3500000)}
+function buyCbadger(){buyAnimalWithClicks('badger')}
+function mxbadger(){buyAnimalWithClicks('badger', 'max')}
 
 // squirt
-function buyCsqu(){canimal('squirrel', 5500000)}
-function mxCsq(){cManimal('squirrel', 5500000)}
+function buyCsquirrel(){buyAnimalWithClicks('squirrel')}
+function mxsquirrel(){buyAnimalWithClicks('squirrel', 'max')}
 
 // cha cha
-function buyCcha(){canimal('chameleon', 7700000)}
-function mxCcha(){cManimal('chameleon', 7700000)}
+function buyCchameleon(){buyAnimalWithClicks('chameleon')}
+function mxchameleon(){buyAnimalWithClicks('chameleon', 'max')}
 
 // chimken
-function buyCchi(){canimal('chicken', 13000000)}
-function mxCchi(){cManimal('chicken', 13000000)}
+function buyCchicken(){buyAnimalWithClicks('chicken')}
+function mxchicken(){buyAnimalWithClicks('chicken', 'max')}
 
 // Write Only Memory
-function buyCwom(){canimal('wombat', 31000000)}
-function mxCwom(){cManimal('wombat', 31000000)}
-
-// panta
-function buyCpan(){canimal('panther', 60500000)}
-function mxCpan(){cManimal('panther', 60500000)}
-
-// cojojojojojo
-function buyCcoy(){canimal('coyote', 92400000)}
-function mxCcoy(){cManimal('coyote', 92400000)}
+function buyCwombat(){buyAnimalWithClicks('wombat')}
+function mxwombat(){buyAnimalWithClicks('wombat', 'max')}
 
 // fjog
-function buyCfro(){canimal('frog', 99000000)}
-function mxCfro(){cManimal('frog', 99000000)}
-
-// cocaina bear
-function buyCbea(){canimal('bear', 104500000)}
-function mxCbea(){cManimal('bear', 104500000)}
+function buyCfrog(){buyAnimalWithClicks('frog')}
+function mxfrog(){buyAnimalWithClicks('frog', 'max')}
 
 // TECHNOBLADE
-function buyCpig(){canimal('pig', 126500000)}
-function mxCpig(){cManimal('pig', 126500000)}
+function buyCpig(){buyAnimalWithClicks('pig')}
+function mxpig(){buyAnimalWithClicks('pig', 'max')}
 
 // Seal of approval
-function buyCsea(){canimal('seal', 143000000)}
-function mxCsea(){cManimal('seal', 143000000)}
+function buyCseal(){buyAnimalWithClicks('seal')}
+function mxseal(){buyAnimalWithClicks('seal', 'max')}
 // 892 před V46 | 1160 ve V46

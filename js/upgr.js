@@ -1,5 +1,5 @@
 function loadUpgrades(){
-  if (localStorage.getItem('items')!=null){
+  /*if (localStorage.getItem('items')!=null){
     items = JSON.parse(localStorage.getItem('items'));
     prog.max = 1000*items.pres;
   }
@@ -29,14 +29,14 @@ function loadUpgrades(){
     presBT1.innerHTML = `1 Ticket for ${fornum(2000)} Lemons`;
     ItsTime.innerHTML = `Let's do this!`;
     if(items.pres > 1) got.innerHTML = `You have ${items.pres-1} Prestige points`;
-  }
+  }*/
 }
 
 // UploadUpgrades
-function uploadUpgrades(){update();loadUpgrades();}
+//function uploadUpgrades(){update();loadUpgrades();}
 
 /* U P G R A D E S */
-
+/*
 function buyMcc(){
   alert("Doesn't work");
   return 0;
@@ -176,4 +176,4 @@ function TheThing(){
       toClick();
     }
   }
-}
+}*/

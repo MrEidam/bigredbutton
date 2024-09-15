@@ -23,6 +23,7 @@ max 5 hour
 1 pig        = 135 000 c/s    =  7 624 300 | 2 frog + 5 racc
 1 seal       = 275 900 c/s    = 15 323 600 | 2 pig + 10 foxes
 
+//Removed
 1 platypus
 1 porcupine
 1 hippo
@@ -40,29 +41,3 @@ compile to .exe and add it to the play store
 add complete history of clicks, dogs, cats, lemons, ...
 
 Wiki on a new page - https://wiki.mreidam-brb.com
-
-BRB = {
-  items: {
-    animals: [
-      {
-        name: 'dog',
-        number: 0,
-        history: 25,
-        cost: 100,
-        make: 1,
-        upgrade: 1, // min 1
-      },
-      {
-        name: 'cat',
-        number: 5,
-        history: 6,
-        cost: 1200,
-        make: 12,
-        upgrade: 1,
-      }
-    ]
-  },
-  settings :{
-
-  },
-}

@@ -1,4 +1,4 @@
-let contextBRBCONST = {
+const contextBRBCONST = {
     items: {
         special:[
             {
@@ -130,7 +130,7 @@ let contextBRBCONST = {
                 name: 'squirrel',
                 number: 0,
                 history: 0,
-                cost: 9000000,
+                cost: 900000,
                 make: 9000,
                 upgrade: 1,
             },
@@ -187,6 +187,8 @@ let contextBRBCONST = {
     settings: {
         prestige: 1,
         tokens: 0,
+        quality: 0,
+        numberOfAnimals: 3,
     },
 }
 
@@ -205,3 +207,7 @@ const updateContext = (context) => {
     context.settings.tokens = 0; // Set tokens to 0
     context.settings.prestige += 0.5; // Add 0.5 to prestige
 };
+
+function log(mess = 'If you see this then message MrEidam that it doesn\'t work'){
+    alert(mess);
+}

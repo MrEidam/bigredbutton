@@ -21,19 +21,19 @@ Upraveno: Načítání obchodu
 Smazáno: Možnost výběru změny jazyka a S/T módu`
 
 function loadClicking(){
-  if (localStorage.getItem('items')!=null){
-    items = JSON.parse(localStorage.getItem('items'));
-  }
+  if (localStorage.getItem('BRB-Progress')!=null){
+    bigredbutton = JSON.parse(localStorage.getItem('BRB-Progress'));
+}
 }
 
 // updateClicking
 function updateClicking(){
-  let i = JSON.stringify(items);
-  localStorage.setItem('items', i);
+  let i = JSON.stringify(bigredbutton);
+  localStorage.setItem('BRB-Progress', i);
   if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-    document.getElementById('disclick').innerHTML=`Máš ${fornum(items.clicks)} kliků a generuješ ${fornum(cs*items.pres)} k/s!`
+    document.getElementById('disclick').innerHTML=`Máš ${fornum(bigredbutton.items.special[0].number)} kliků a generuješ ${fornum(cs*bigredbutton.settings.prestige)} k/s!`
   }else{
-    document.getElementById('disclick').innerHTML=`You have ${fornum(items.clicks)} clicks, and generating ${fornum(cs*items.pres)} c/s!`
+    document.getElementById('disclick').innerHTML=`You have ${fornum(bigredbutton.items.special[0].number)} clicks, and generating ${fornum(cs*bigredbutton.settings.prestige)} c/s!`
   }
   checklang();
 }
@@ -65,7 +65,7 @@ function change(){
 }
 
 function clicking(){
-  items.clicks += 1*(items.Mclick||1)*items.pres;
+  bigredbutton.items.special[0].number += 1; //*(items.Mclick||1)*items.pres;
   updateClicking();
   
   document.getElementById('unpressed').style.visibility='hidden'
