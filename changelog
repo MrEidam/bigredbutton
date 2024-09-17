@@ -1,6 +1,16 @@
                         v48
-  Added: Icons to menu
-  Fixed: (i) centered
+  Added:
+       Icons to menu
+       Discord link
+       New Design for clicks per second in shop
+       SHOP 4.0
+       Info GUI
+
+  Removed:
+       Few animals for better performance
+       Upgrades (For now)
+  Fixed:
+       BRB#45 - Scam with buying lemons (New Shop buying function
 
                         v47
   Added: Forced Dark/Light mode

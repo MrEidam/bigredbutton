@@ -65,18 +65,70 @@ body{
   align-items: center;
   width: 75px;
   height: 75px;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
   filter: drop-shadow(0 0 10px #000);
-  background: #0377c4;
+  background: #046baf;
   border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  color: #000;
 }
 .changelog svg{
   height: 100%;
   aspect-ratio: 1/1;
   /*filter: drop-shadow(0 0 10px #000);*/
   color: #fff;
+  cursor: pointer;
 }
+.changelog.large{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  min-width: 270px;
+  min-height: 420px;
+  
+  border-radius: 1rem;
+  transition: .5s;
+
+  padding: 1rem 2.5rem;
+}
+.changelog.large svg{
+  position: absolute;
+  z-index: 999;
+  color: #fff;
+  top: 10px;
+  right: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background-color: #046baf;
+  border-radius: 50%;
+}
+.changelog.large div{
+  background-color: #eee;
+  box-shadow: inset 10px 10px 15px #333;
+  border-radius: 1.5rem;
+  width: 250px;
+  height: 400px;
+  padding: .5rem 1.5rem;
+  overflow-y: scroll;
+  transition: .5s;
+  scroll-behavior: smooth;
+}
+.changelog.large div h1{
+  text-align: center;
+  text-decoration: underline;
+}
+.changelog.large div h2{text-align: center;transition: .5s;}
+.changelog.large div h3{text-align: center;transition: .5s;}
+.changelog.large div p {text-align: justify;transition: .5s;}
 
 /* Ligt NODE */
 @media (prefers-color-scheme: light){
@@ -89,6 +141,9 @@ body{
   #disclick{
     color: #000;
     text-shadow: none;
+  }
+  .changelog{
+    background: #0377c4;
   }
 }
 

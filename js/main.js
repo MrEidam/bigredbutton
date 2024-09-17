@@ -1,24 +1,52 @@
 let anime = false;
+let version = 48;
+let content;
 
-const changeEN = `                                          Version - 47
-Added: Forced Dark/Light mode
-            Forced Language depending on the browser
-            Shop 3.5!!!
-            RPG in Settings...
+const changeEN = `
+<h1>Version - <span>${version}</span></h1>
+<h3>Added:</h3>
+<ul>
+  <li>Discord link</li>
+  <li>New Design for clicks per second in shop</li>
+  <li>SHOP 4.0!!!</li>
+  <li>This Info</li>
+  <li>Icons to Menu</li>
+</ul>
+<h3>Removed:</h3>
+<ul>
+  <li>Few animals for better performance</li>
+  <li>Upgrades (For now)</li>
+</ul>
+<h3>Fixed:</h3>
+<ul>
+  <li>BRB#45 - Scam with buying lemons (New Shop buying function)</li>
+</ul>
+<h3>Notes:</h3>
+<p>This is one of the or THE biggest BRB redesign ever. So if something you like is missing or you want to be added then message me on my <a href="https://discord.gg/kQy3AAUgSq" target="_blank">discord</a></p>
+`
 
-Fixed: Loading time
-
-Removed: Option for changing Language or L/D mode`
-
-const changeCZ = `                                            Verze - 47
-Přidáno: Automatické vybrání Světlého/Tmavého módu
-              Automatické vybrání jazyka
-              Obchod 3.5!!!
-              RPG v Nastavení...
-
-Upraveno: Načítání obchodu
-
-Smazáno: Možnost výběru změny jazyka a S/T módu`
+const changeCZ = `
+<h1>Verze - <span>${version}</span></h1>
+<h3>Přidáno:</h3>
+<ul>
+  <li>Discord odkaz</li>
+  <li>Kliky za sec. Nový design</li>
+  <li>Obchod 4.0</li>
+  <li>Toto Info</li>
+  <li>Ikonu pro Menu</li>
+</ul>
+<h3>Smazáno:</h3>
+<ul>
+  <li>Pár Zvířat pro zlepšenou efektivitu</li>
+  <li>Vylepšení (prozatím)</li>
+</ul>
+<h3>Zpraveno:</h3>
+<ul>
+  <li>BRB#45 - kupování citrónů byl scam (nové funkce na nákupy)</li>
+</ul>
+<h3>Poznámky:</h3>
+<p>Toto byl největší redesign BRB takže ne vše po vydání nové verze bude fungovat tak jako předtím, když něco najdete tak mi napiště na <a href="https://discord.gg/kQy3AAUgSq" target="_blank">discord</a></p>
+`
 
 function loadClicking(){
   if (localStorage.getItem('BRB-Progress')!=null){
@@ -35,7 +63,6 @@ function updateClicking(){
   }else{
     document.getElementById('disclick').innerHTML=`You have ${fornum(bigredbutton.items.special[0].number)} clicks, and generating ${fornum(cs*bigredbutton.settings.prestige)} c/s!`
   }
-  checklang();
 }
 
 // UploadClicking
@@ -48,20 +75,31 @@ function beriba(){
   anime=true;
 }
 
-// Languages
-function checklang(){
-  if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-  }else{
-  }
-}
-
 // šmol change
 function change(){
+  document.getElementById('smallI').classList.add('large');
+  document.getElementById('info').style.display = 'none';
+  document.getElementById('ex').style.display = 'flex';
+
+  content = document.createElement('article');
+
   if(navigator.language == 'cs' || navigator.language == 'cs-CZ'){
-    alert(changeCZ);
+    content.innerHTML = changeCZ;
+    //-alert(changeCZ);
   }else{
-    alert(changeEN);
+    content.innerHTML = changeEN;
+    //-alert(changeEN);
   }
+  
+  document.getElementById('changePlace').append(content);
+}
+
+function closeChange(){
+  document.getElementById('smallI').classList.remove('large');
+  document.getElementById('info').style.display = 'flex';
+  document.getElementById('ex').style.display = 'none';
+
+  content.remove();
 }
 
 function clicking(){

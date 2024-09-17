@@ -7,7 +7,7 @@ const menu = `
           <svg height="1em" viewBox="0 0 384 512"><style>svg{fill:#ffffff}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
         </span>
     </div>
-    <ul style="display: none">
+    <ul id="ula" style="display: none">
       <li><a onclick="toClick()" id="brb">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M0 55.2L0 426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320l118.1 0c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z"/></svg>
       </a></li>
@@ -67,8 +67,10 @@ const htmlClicking = `
   </div>
 
   <!-- Šmol changelog -->
-  <div class="changelog" onclick="change()">
-    <svg height="1em" viewBox="0 0 512 512"><path d="M256 56C145.72 56 56 145.72 56 256s89.72 200 200 200 200-89.72 200-200S366.28 56 256 56zm0 82a26 26 0 11-26 26 26 26 0 0126-26zm48 226h-88a16 16 0 010-32h28v-88h-16a16 16 0 010-32h32a16 16 0 0116 16v104h28a16 16 0 010 32z" fill="currentColor"/></svg>
+  <div id="smallI" class="changelog">
+    <div id="changePlace"></div>
+    <svg id="info"  onclick="change()" height="1em" viewBox="0 0 512 512"><path d="M256 56C145.72 56 56 145.72 56 256s89.72 200 200 200 200-89.72 200-200S366.28 56 256 56zm0 82a26 26 0 11-26 26 26 26 0 0126-26zm48 226h-88a16 16 0 010-32h28v-88h-16a16 16 0 010-32h32a16 16 0 0116 16v104h28a16 16 0 010 32z" fill="currentColor"/></svg>
+    <svg id="ex"    onclick="closeChange()" style="display:none" height="1em" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
   </div>
 
   ${menu}`;
@@ -768,6 +770,10 @@ const htmlSettings = `
                     <h3 id="rpg">RPG</h3>
                     <img src="../img/rpg.svg" alt="">
                 </a>
+                <a class="site" href="https://petpet.mreidam.com" target="_blank" style="--cls: #ffad48; margin-top: .5rem">
+                    <h3 id="rpg">PetPet</h3>
+                    <img src="../img/petpet.png" alt="">
+                </a>
             </section>
         </section>
 
@@ -791,7 +797,6 @@ function toClick(){
     document.title = 'BRB - Clicking';
   }
   document.body.innerHTML = htmlClicking;
-  checklang();
   uploadClicking();
   menuStart();
 }
@@ -807,7 +812,6 @@ function toShop(){
     document.title = 'BRB - Shop';
   }
   document.body.innerHTML = htmlShop;
-  checklang();
   loadShop();
   menuStart();
 }
@@ -823,7 +827,6 @@ function toUpgrade(){
     document.title = 'BRB - Upgrades';
   }
   document.body.innerHTML = htmlUpgrade;
-  checklang();
   loadUpgrades();
   menuStart();
 }
@@ -839,7 +842,6 @@ function toSetting(){
     document.title = 'BRB - Settings';
   } 
   document.body.innerHTML = htmlSettings;
-  checklang();
   loadSettings();
   menuStart();
 }
