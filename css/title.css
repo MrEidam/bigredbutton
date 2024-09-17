@@ -47,7 +47,9 @@ footer{
     position: absolute;
     bottom: 0;
 }
-
+footer a{
+    color: #ff0;
+}
 /* Social */
 .socmenu{
     position: absolute;
@@ -59,6 +61,11 @@ footer{
     justify-content: center;
     align-items: center;
     z-index: 50000;
+    transition: .5s;
+}
+.socmenu.active{
+    bottom: 0;
+    transition: .5s;
 }
 .socmenu .toggle{
     position: relative;
@@ -138,20 +145,20 @@ footer{
 .socmenu li a img{width:1em;}
 
 @media (prefers-color-scheme: dark){
-  body{
-    background: #333;
-    color: #fff;
-  }
-  h3{
-    color: #fff;
-  }
+    body{
+        background: #333;
+        color: #fff;
+    }
+    h3{
+        color: #fff;
+    }
 }
 @media (prefers-color-scheme: light){
-  body{
-    background: #ddd;
-    color: #000;
-  }
-  h3{
-    color: #000;
-  }
+    body{
+        background: #ddd;
+        color: #000;
+    }
+    h3{
+        color: #000;
+    }
 }

@@ -42,9 +42,9 @@ const htmlTitle = `
 <li style="--i:2;--clr:#FF4500;">
     <a href="https://www.reddit.com/r/BRBGame/" target="_blank"><img src="./img/reddit.svg"></a>
 </li>
-<!-- <li style="--i:2;--clr:#00acee;">
-    <a href="https://twitter.com/EidamMr" target="_blank"><img src="./img/twitter.svg"></a>
-</li> -->
+<li style="--i:3;--clr:#7289DA;">
+    <a href="https://discord.gg/kQy3AAUgSq" target="_blank"><img src="./img/discord.svg"></a>
+</li>
 <div class="toggle" id="soctog">
     <svg height="1em" viewBox="0 0 512 512"><path d="M384 336a63.78 63.78 0 00-46.12 19.7l-148-83.27a63.85 63.85 0 000-32.86l148-83.27a63.8 63.8 0 10-15.73-27.87l-148 83.27a64 64 0 100 88.6l148 83.27A64 64 0 10384 336z" fill="currentColor"/></svg>
     <svg height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" fill="currentColor"/></svg>
